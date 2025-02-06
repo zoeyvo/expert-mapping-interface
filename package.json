@@ -5,6 +5,9 @@
     "react-dom": "^18.2.0",
     "react-leaflet": "^4.2.1",
     "react-scripts": "^5.0.1",
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "@babel/preset-react": "^7.23.3",
     "web-vitals": "^3.0.0",
     "papaparse": "^5.5.2"
   },
@@ -28,7 +31,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/zoeyvo/geo-data-visualizer/issues"
   },
