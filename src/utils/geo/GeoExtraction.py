@@ -1,5 +1,6 @@
 # Organizing the CSV file and Extracting location
 # Store to Json files for now. Will be database later
+import os
 
 # Need to install spaCy and its model: en_core_web_trf (https://spacy.io/usage)
 
@@ -51,7 +52,10 @@ def geoProfileMappingToJson(mapping: GeoProfileMapping):
     
   
 nlp = spacy.load("en_core_web_trf")
-data = pd.read_csv("geoset_capstone_init.csv")
+file_path = os.path.join(os.pardir, os.pardir, "geoset_capstone_init.csv")
+file_path = os.path.abspath(file_path)  # Convert to absolute path if needed
+
+data = pd.read_csv(file_path)
 
 # Temporary storage. Convert to database later
 profiles = dict()       # Expert's name : Profile
