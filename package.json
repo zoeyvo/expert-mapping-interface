@@ -4,13 +4,11 @@
     "@babel/preset-env": "^7.24.0",
     "@babel/preset-react": "^7.23.3",
     "leaflet": "^1.9.4",
-    "pandas": "^0.0.3",
     "papaparse": "^5.5.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-leaflet": "^4.2.1",
     "react-scripts": "^5.0.1",
-    "spacy": "^0.0.4",
     "web-vitals": "^3.0.0"
   },
   "name": "geo-data-visualizer",
