@@ -46,11 +46,17 @@ function generateGeoJSON() {
     }
 
     for (const [researcherName, data] of Object.entries(researchers)) {
-        const lastName = researcherName.split(",")[0].toLowerCase();
-        const url = researcherUrls[lastName] || null;
+      const lastName = researcherName.split(",")[0].toLowerCase();
+      const url = researcherUrls[lastName] || null;
 
       if (!url) {
         console.warn(`❌ No URL found for: ${researcherName}`);
+      }
+
+      // Display only titles, not abstracts
+      let titles = new Array();
+      for (let work of data.works) {
+        titles.push(work["title"])
       }
 
       geoJson.features.push({
@@ -60,8 +66,9 @@ function generateGeoJSON() {
           coordinates: coordinates,
         },
         properties: {
+          location: location,
           researcher: researcherName,
-          works: data.works,
+          works: titles,
           url: url,
         },
       });

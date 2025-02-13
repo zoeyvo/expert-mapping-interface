@@ -16,39 +16,52 @@ import json
 class Profile:
   def __init__(self, name):
     self.name = name
-    self.titles = list()
+    self.works = list()
     self.locations = list()
     
-  def addTitle(self, title):
-    self.titles.append(title)
+  def addWork(self, title, abstract):
+    self.works.append(Work(title, abstract))
     
   def addLocation(self, location):
     self.locations.append(location)
     
 def profileToJson(profile: Profile):
+  worksJson = []
+  for work in profile.works:
+    worksJson.append({"title" : work.title, "abstract" : work.abstract})
+  
   return {
-    "titles": profile.titles,
+    "works": worksJson,
     "locations": profile.locations
   }
   
 # Temporary structure to visualize data for now
-# location-based-expert_profiles.json
+# location_based_profiles.json
 class GeoProfileMapping:
   def __init__(self, name, location):
     self.name = name
     self.location = location
-    self.relatedWork = list()
+    self.relatedWorks = list()
     self.matchesCount = 0
     
-  def addRelatedWork(self, work):
-    self.relatedWork.append(work)
+  def addRelatedWork(self, title, abstract):
+    self.relatedWorks.append(Work(title, abstract))
     self.matchesCount += 1
     
 def geoProfileMappingToJson(mapping: GeoProfileMapping):
+  worksJson = []
+  for work in mapping.relatedWorks:
+    worksJson.append({"title" : work.title, "abstract" : work.abstract})
+  
   return {
     "matches" : mapping.matchesCount,
-    "works" : mapping.relatedWork
+    "works" : worksJson
   }
+  
+class Work:
+  def __init__(self, title, abstract):
+    self.title = title
+    self.abstract = abstract
     
   
 nlp = spacy.load("en_core_web_trf")
@@ -56,6 +69,7 @@ file_path = os.path.join(os.pardir, os.pardir, "expert_profiles.csv")
 file_path = os.path.abspath(file_path)  # Convert to absolute path if needed
 
 data = pd.read_csv(file_path)
+data = data.fillna('')
 
 # Temporary storage. Convert to database later
 profiles = dict()       # Expert's name : Profile
@@ -65,17 +79,25 @@ locations = dict()      # Location : dict of (Expert's name : GeoProfileMapping)
 for _, row in data.iterrows():
   name = row["Name"]
   title = row["title"]
+  abstract = row["abstract"]
   
-  # Add title to correspoding expert's profile
+  # Add work to correspoding expert's profile
   if name not in profiles:
     profiles[name] = Profile(name)
-  profiles[name].addTitle(title)
+  profiles[name].addWork(title, abstract)
   
   # Extract location
-  txt = nlp(title)
+  txt = nlp(title + ". " + abstract)
+  processedLocation = set()
   for ent in txt.ents:
     if ent.label_ == "GPE":
       geo = ent.text
+      
+      # Handle when a location appears multiple times in a text
+      if geo in processedLocation:
+        continue
+      else:
+        processedLocation.add(geo)
       
       # Add location to corresponding expert's profile
       profiles[name].addLocation(geo)
@@ -88,7 +110,7 @@ for _, row in data.iterrows():
         locations[geo][name] = GeoProfileMapping(name, geo)
       
       # Add matching work to location
-      locations[geo][name].addRelatedWork(title)
+      locations[geo][name].addRelatedWork(title, abstract)
       
   
 with open("data/json/expert_profiles.json", "w") as file_profiles:
