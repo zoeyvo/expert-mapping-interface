@@ -2,9 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
 
-const LOCATIONS_FILE = path.join(__dirname, 'geoData', 'location-based-profiles.json');
+const LOCATIONS_FILE = path.join(__dirname, 'geoData', 'location_based_profiles.json');
 const CACHE_FILE = path.join(__dirname, 'geoData', 'location_coordinates.json');
-const DELAY_MS = 1500; // 1.5 second delay between requests
+const DELAY_MS = 500; // 0.5 second delay between requests
 
 async function geocodeLocation(location) {
     try {
