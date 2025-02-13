@@ -1,5 +1,5 @@
-import locations from './geoData/locations.json';
-import locationCoordinates from './geoData/locationCoordinates.json';
+import locations from './geoData/location-based-profiles.json';
+import locationCoordinates from './geoData/location_coordinates.json';
 
 export const loadGeoData = async () => {
     try {
@@ -18,7 +18,8 @@ export const loadGeoData = async () => {
                     researchers: Object.entries(experts).map(([name, data]) => ({
                         name,
                         works: data.works || [],
-                        matches: data.matches || 0
+                        matches: data.matches || 0,
+                        url: data.url || null
                     }))
                 }
             }];

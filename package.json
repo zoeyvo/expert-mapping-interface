@@ -5,13 +5,11 @@
     "@babel/preset-react": "^7.23.3",
     "axios": "^1.7.9",
     "leaflet": "^1.9.4",
-    "nominatim-geocoder": "^0.1.4",
     "papaparse": "^5.5.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-leaflet": "^4.2.1",
-    "react-scripts": "^3.0.1",
-    "web-vitals": "^3.0.0"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-leaflet": "^3.2.5",
+    "react-scripts": "5.0.1"
   },
   "name": "geo-data-visualizer",
   "version": "1.0.0",
@@ -21,10 +19,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint src/**/*.{js,jsx}",
-    "lint:fix": "eslint src/**/*.{js,jsx} --fix",
-    "format": "prettier --write src/**/*.{js,jsx,css,md}"
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
@@ -54,5 +49,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "engines": {
+    "node": ">=16.0.0 <19.0.0"
+  },
+  "resolutions": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "nth-check": "^2.0.1",
+    "postcss": "^8.4.31"
+  },
+  "overrides": {
+    "nth-check": "^2.0.1",
+    "postcss": "^8.4.31"
   }
 }
