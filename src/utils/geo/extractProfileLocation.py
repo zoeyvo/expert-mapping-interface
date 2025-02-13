@@ -91,8 +91,8 @@ for _, row in data.iterrows():
       locations[geo][name].addRelatedWork(title)
       
   
-with open("geoData/expert_profiles.json", "w") as file_profiles:
+with open("data/json/expert_profiles.json", "w") as file_profiles:
   json.dump(profiles, file_profiles, default=profileToJson, indent=2)
   
-with open("geoData/location_based_profiles.json", "w") as file_locations:
+with open("data/json/location_based_profiles.json", "w") as file_locations:
   json.dump(locations, file_locations, default=geoProfileMappingToJson, indent=2)

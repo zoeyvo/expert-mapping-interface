@@ -1,8 +1,8 @@
 import React from 'react';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import './utils/icon-fix';
-import './index.css';
+import './styles/icon-fix';
+import './styles/index.css';
 
 function App() {
   return (

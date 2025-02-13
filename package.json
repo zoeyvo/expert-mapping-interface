@@ -1,12 +1,8 @@
 {
   "dependencies": {
-    "@babel/core": "^7.24.0",
-    "@babel/preset-env": "^7.24.0",
-    "@babel/preset-react": "^7.23.3",
     "axios": "^1.7.9",
     "csv-parser": "^3.2.0",
     "leaflet": "^1.9.4",
-    "papaparse": "^5.5.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-leaflet": "^3.2.5",
@@ -15,7 +11,7 @@
   "name": "geo-data-visualizer",
   "version": "1.0.0",
   "description": "",
-  "main": "tailwind.config.js",
+  "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -28,13 +24,12 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/zoeyvo/geo-data-visualizer/issues"
   },
   "homepage": ".",
   "devDependencies": {
-    "@types/papaparse": "^5.3.15",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.4.1"

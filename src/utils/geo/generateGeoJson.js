@@ -3,10 +3,10 @@ const path = require("path");
 const csv = require("csv-parser");
 
 // Define file paths
-const profilesPath = path.join(__dirname, "geoData", "location_based_profiles.json");
-const urlsPath = path.join(__dirname, "geoData", "expert_url_subset.csv");
-const coordsPath = path.join(__dirname, "geoData", "location_coordinates.json");
-const outputPath = path.join(__dirname, "geoData", "research_profiles.geojson");
+const profilesPath = path.join(__dirname, 'data', "json", "location_based_profiles.json");
+const urlsPath = path.join(__dirname, 'data', "csv", "expert_url_subset.csv");
+const coordsPath = path.join(__dirname, 'data', "json", "location_coordinates.json");
+const outputPath = path.join(__dirname, 'data', "json", "research_profiles.geojson");
 
 // Step 1: Load location coordinates
 const locationCoordinates = JSON.parse(fs.readFileSync(coordsPath, "utf-8"));
