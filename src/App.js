@@ -1,15 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import './utils/icon-fix';
 import './index.css';
-import { loadGeoData } from './utils/geo/geoData/geoDataLoader';
-import Map from './components/map';
+import { loadGeoData } from './utils/geo/geoDataLoader';
+import Map from './components/Map';
 
 function App() {
-  const [geoData, setGeoData] = useState([]);
+  const [geoData, setGeoData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const data = loadGeoData();
-    setGeoData(data);
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        const data = await loadGeoData();
+        setGeoData(data);
+      } catch (error) {
+        console.error("Error loading GeoJSON data:", error);
+        setError("Failed to load map data");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
   }, []);
 
   return (
@@ -18,7 +32,9 @@ function App() {
         Geo Data Visualizer
       </h1>
       <div className="container mx-auto p-4">
-        <Map data={geoData} />
+        {loading && <p>Loading map data...</p>}
+        {error && <p className="text-red-500">{error}</p>}
+        {!loading && !error && geoData && <Map data={geoData} />}
       </div>
     </div>
   );

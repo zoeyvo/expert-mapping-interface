@@ -12,7 +12,7 @@ import spacy
 import json
 
 # Temporary structure to visualize data for now
-# profiles.json
+# expert_profiles.json
 class Profile:
   def __init__(self, name):
     self.name = name
@@ -32,7 +32,7 @@ def profileToJson(profile: Profile):
   }
   
 # Temporary structure to visualize data for now
-# locations.json
+# location-based-expert_profiles.json
 class GeoProfileMapping:
   def __init__(self, name, location):
     self.name = name
@@ -52,7 +52,7 @@ def geoProfileMappingToJson(mapping: GeoProfileMapping):
     
   
 nlp = spacy.load("en_core_web_trf")
-file_path = os.path.join(os.pardir, os.pardir, "geoset_capstone_init.csv")
+file_path = os.path.join(os.pardir, os.pardir, "expert_profiles.csv")
 file_path = os.path.abspath(file_path)  # Convert to absolute path if needed
 
 data = pd.read_csv(file_path)
@@ -80,7 +80,7 @@ for _, row in data.iterrows():
       # Add location to corresponding expert's profile
       profiles[name].addLocation(geo)
       
-      # For locations.json:
+      # For location-based-expert_profiles.json:
       # Initialize location/expert if necessary
       if geo not in locations:
         locations[geo] = dict()
@@ -91,8 +91,8 @@ for _, row in data.iterrows():
       locations[geo][name].addRelatedWork(title)
       
   
-with open("geoData/profiles.json", "w") as file_profiles:
+with open("geoData/expert_profiles.json", "w") as file_profiles:
   json.dump(profiles, file_profiles, default=profileToJson, indent=2)
   
-with open("geoData/locations.json", "w") as file_locations:
+with open("geoData/location-based-profiles.json", "w") as file_locations:
   json.dump(locations, file_locations, default=geoProfileMappingToJson, indent=2)
