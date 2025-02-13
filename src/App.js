@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './utils/icon-fix';
 import './index.css';
-import { loadGeoData } from './utils/geo/geoDataLoader';
+import { loadGeoData } from './utils/geo/geoData/geoDataLoader';
 import Map from './components/map';
 
 function App() {
