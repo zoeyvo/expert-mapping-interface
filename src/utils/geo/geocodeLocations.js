@@ -2,7 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
 
-const CACHE_FILE = path.join(__dirname, 'geoData', 'locationCoordinates.json');
+const LOCATIONS_FILE = path.join(__dirname, 'geoData', 'location-based-profiles.json');
+const CACHE_FILE = path.join(__dirname, 'geoData', 'location_coordinates.json');
 const DELAY_MS = 1500; // 1.5 second delay between requests
 
 async function geocodeLocation(location) {
@@ -14,7 +15,7 @@ async function geocodeLocation(location) {
                 q: location
             },
             headers: {
-                'User-Agent': 'GeoDataVisualizer/1.0 (https://github.com/yourusername/geo-data-visualizer)',
+                'User-Agent': 'GeoDataVisualizer/1.0 (https://github.com/zoeyvo/geo-data-visualizer)',
                 'Accept-Language': 'en-US,en;q=0.5'
             }
         });
@@ -43,10 +44,8 @@ async function createLocationCoordinates() {
         locationCoordinates = JSON.parse(fs.readFileSync(CACHE_FILE, 'utf8'));
     }
 
-    // Load locations from locations.json
-    const locationsData = JSON.parse(
-        fs.readFileSync(path.join(__dirname, 'geoData', 'locations.json'), 'utf8')
-    );
+    // Load locations from location-based-profiles.json
+    const locationsData = JSON.parse(fs.readFileSync(LOCATIONS_FILE, 'utf8'));
 
     // Get unique locations that haven't been geocoded yet
     const locations = Object.keys(locationsData).filter(
