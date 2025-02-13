@@ -26,7 +26,7 @@ fs.createReadStream(urlsPath)
     }
   })
   .on("end", () => {
-    console.log("✅ CSV Parsed. Sample Data:", researcherUrls);
+    console.log("✅ CSV Parsed.");
     generateGeoJSON();
   });
 
