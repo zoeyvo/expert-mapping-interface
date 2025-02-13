@@ -1,28 +1,22 @@
 {
   "dependencies": {
+    "axios": "^1.7.9",
+    "csv-parser": "^3.2.0",
     "leaflet": "^1.9.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-leaflet": "^4.2.1",
-    "react-scripts": "^5.0.1",
-    "@babel/core": "^7.24.0",
-    "@babel/preset-env": "^7.24.0",
-    "@babel/preset-react": "^7.23.3",
-    "web-vitals": "^3.0.0",
-    "papaparse": "^5.5.2"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-leaflet": "^3.2.5",
+    "react-scripts": "5.0.1"
   },
   "name": "geo-data-visualizer",
   "version": "1.0.0",
   "description": "",
-  "main": "tailwind.config.js",
+  "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint src/**/*.{js,jsx}",
-    "lint:fix": "eslint src/**/*.{js,jsx} --fix",
-    "format": "prettier --write src/**/*.{js,jsx,css,md}"
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
@@ -30,13 +24,12 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/zoeyvo/geo-data-visualizer/issues"
   },
   "homepage": ".",
   "devDependencies": {
-    "@types/papaparse": "^5.3.15",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.4.1"
@@ -52,5 +45,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "engines": {
+    "node": ">=16.0.0 <19.0.0"
+  },
+  "resolutions": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "nth-check": "^2.0.1",
+    "postcss": "^8.4.31"
+  },
+  "overrides": {
+    "nth-check": "^2.0.1",
+    "postcss": "^8.4.31"
   }
 }

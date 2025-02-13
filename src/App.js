@@ -1,8 +1,8 @@
 import React from 'react';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import './utils/icon-fix';
-import './index.css';
+import './styles/icon-fix';
+import './styles/index.css';
 
 function App() {
   return (
@@ -11,9 +11,9 @@ function App() {
         Geo Data Visualizer
       </h1>
       <div className="container mx-auto p-4">
-        <MapContainer 
-          center={[0, 0]} 
-          zoom={2} 
+        <MapContainer
+          center={[0, 0]}
+          zoom={2}
           style={{ height: '500px', width: '100%' }}
         >
           <TileLayer
