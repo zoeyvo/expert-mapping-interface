@@ -28,7 +28,7 @@ const ResearchMap = () => {
   }, []);
 
   return (
-    <MapContainer center={[20, 0]} zoom={2} style={{ height: "500px", width: "100%" }}>
+    <MapContainer center={[20, 0]} zoom={2} style={{ height: "100%", width: "100%" }}>
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" attribution='&copy; OpenStreetMap contributors' />
       
       {geoData &&
@@ -38,6 +38,8 @@ const ResearchMap = () => {
           <Marker key={index} position={[lat, lng]} icon={customMarker}>      
               <Popup>
                 <strong>{feature.properties.researcher}</strong>
+                <br /> 
+                <strong> Related Works: </strong>
                 <br />
                 {feature.properties.works?.[0]}
                 <br />
