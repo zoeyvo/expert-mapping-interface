@@ -44,6 +44,7 @@ function generateGeoJSON() {
   
   const seenErrorMessages = new Set();
   
+  // Initialize GeoJSON structure
   const geoJson = {
     type: "FeatureCollection",
     features: []
@@ -94,16 +95,29 @@ function generateGeoJSON() {
     }
   }
 
-  fs.writeFileSync(outputPath, JSON.stringify(geoJson, null, 2));
-  
-  const endTime = Date.now();
-  const duration = (endTime - startTime) / 1000;
+  // Create public/data directory if it doesn't exist
+  const publicDataDir = path.join(process.cwd(), 'public', 'data');
+  if (!fs.existsSync(publicDataDir)) {
+    fs.mkdirSync(publicDataDir, { recursive: true });
+  }
 
-  console.log('\n📊 GeoJSON Generation Statistics:');
-  console.log(`Total time: ${duration.toFixed(2)} seconds`);
-  console.log(`Processed locations: ${locationCount}`);
-  console.log(`Processed researchers: ${researcherCount}`);
-  console.log(`Processed works: ${workCount}`);
-  console.log(`Features generated: ${geoJson.features.length}`);
-  console.log(`🎉 GeoJSON file created: ${outputPath}`);
+  // Write to both locations (public and src)
+  const publicPath = path.join(publicDataDir, 'research_profiles.geojson');
+  const srcPath = path.join(__dirname, '../data/json/research_profiles.geojson');
+
+  // Write the files
+  fs.writeFileSync(publicPath, JSON.stringify(geoJson, null, 2), 'utf-8');
+  fs.writeFileSync(srcPath, JSON.stringify(geoJson, null, 2), 'utf-8');
+
+  const endTime = Date.now();
+  console.log(`✨ Generated GeoJSON with:
+    - ${locationCount} locations
+    - ${researcherCount} researchers
+    - ${workCount} works
+    Files written to:
+    - ${publicPath}
+    - ${srcPath}
+    Time taken: ${(endTime - startTime) / 1000}s`);
+
+  return geoJson;
 }
