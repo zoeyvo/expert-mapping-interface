@@ -17,9 +17,9 @@ async function createTables() {
       CREATE TABLE IF NOT EXISTS ${tables.locations} (
         id SERIAL PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
-        normalized_name VARCHAR(255) NOT NULL,
         geom GEOMETRY(Point, 4326),
-        UNIQUE(normalized_name)
+        original_coordinates JSONB,
+        UNIQUE(name)
       );
     `);
 
@@ -28,7 +28,7 @@ async function createTables() {
       CREATE TABLE IF NOT EXISTS ${tables.researchers} (
         id SERIAL PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
-        url VARCHAR(255),
+        url VARCHAR(512),
         location_id INTEGER REFERENCES ${tables.locations}(id),
         UNIQUE(name, location_id)
       );
@@ -40,6 +40,7 @@ async function createTables() {
         id SERIAL PRIMARY KEY,
         title TEXT NOT NULL,
         researcher_id INTEGER REFERENCES ${tables.researchers}(id),
+        metadata JSONB,
         UNIQUE(title, researcher_id)
       );
     `);
@@ -67,4 +68,4 @@ if (require.main === module) {
     .catch(() => process.exit(1));
 }
 
-module.exports = { createTables }; 
+module.exports = createTables; 
