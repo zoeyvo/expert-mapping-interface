@@ -1,3 +1,5 @@
+// ~ 0.07 sec for sample data
+
 const fs = require("fs");
 const path = require("path");
 const csv = require("csv-parser");

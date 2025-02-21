@@ -14,7 +14,7 @@ if os.path.exists(log_file):
 logging.basicConfig(filename=log_file, level=logging.INFO, format="%(asctime)s - %(message)s")
 
 # Define batch size for NLP processing
-BATCH_SIZE = 50  # Adjust based on system performance
+BATCH_SIZE = 10  # ~ 1.8 min to process sample data
 
 # Temporary storage
 profiles = {}  # Expert's name -> Profile object

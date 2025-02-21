@@ -110,4 +110,4 @@ if (require.main === module) {
         });
 }
 
-module.exports = { createLocationCoordinates }; 
+module.exports = { createLocationCoordinates };

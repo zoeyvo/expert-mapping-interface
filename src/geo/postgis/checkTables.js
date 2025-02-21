@@ -14,7 +14,7 @@ async function checkTables() {
     // Sample locations
     console.log('\n📍 Sample Locations:');
     const locations = await client.query(`
-      SELECT name, normalized_name, ST_AsText(geom) as coordinates 
+      SELECT name, ST_AsText(geom) as coordinates
       FROM ${tables.locations} 
       LIMIT 5
     `);
