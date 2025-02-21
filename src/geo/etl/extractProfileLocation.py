@@ -1,98 +1,178 @@
-# Organizing the CSV file and Extracting location
-# Store to Json files for now. Will be database later
 import os
-
-# Need to install spaCy and its model: en_core_web_trf (https://spacy.io/usage)
-
-# This code takes 10+ mins to run :(
-# Results already in the 2 Json files
-
+import time
+import logging
 import pandas as pd
 import spacy
 import json
 
-# Temporary structure to visualize data for now
-# expert_profiles.json
+# Setup logging
+logging.basicConfig(filename="processing.log", level=logging.INFO, format="%(asctime)s - %(message)s")
+
+# Define batch size for NLP processing
+BATCH_SIZE = 50  # Adjust based on system performance
+
+# Temporary storage
+profiles = {}  # Expert's name -> Profile object
+locations = {}  # Location -> {Expert's name -> GeoProfileMapping object}
+
+unique_titles = set()
+unique_locations = set()
+unique_researchers = set()
+
 class Profile:
   def __init__(self, name):
     self.name = name
-    self.titles = list()
-    self.locations = list()
-    
+    self.titles = []
+    self.locations = []
+
   def addTitle(self, title):
     self.titles.append(title)
-    
+    unique_titles.add(title)
+
   def addLocation(self, location):
     self.locations.append(location)
-    
+    unique_locations.add(location)
+
 def profileToJson(profile: Profile):
-  return {
-    "titles": profile.titles,
-    "locations": profile.locations
-  }
-  
-# Temporary structure to visualize data for now
-# location-based-expert_profiles.json
+  return {"titles": profile.titles, "locations": profile.locations}
+
 class GeoProfileMapping:
   def __init__(self, name, location):
     self.name = name
     self.location = location
-    self.relatedWork = list()
+    self.relatedWork = []
     self.matchesCount = 0
-    
+
   def addRelatedWork(self, work):
     self.relatedWork.append(work)
     self.matchesCount += 1
-    
+
 def geoProfileMappingToJson(mapping: GeoProfileMapping):
-  return {
-    "matches" : mapping.matchesCount,
-    "works" : mapping.relatedWork
-  }
-    
-  
+  return {"matches": mapping.matchesCount, "works": mapping.relatedWork}
+
+# Load NLP model
+start_time = time.time()
 nlp = spacy.load("en_core_web_trf")
-file_path = os.path.join(os.pardir, os.pardir, "expert_profiles.csv")
-file_path = os.path.abspath(file_path)  # Convert to absolute path if needed
+logging.info("Loaded spaCy model in %.2f seconds", time.time() - start_time)
 
-data = pd.read_csv(file_path)
+# Locate the CSV file
+script_dir = os.path.dirname(os.path.abspath(__file__))
+csv_file_path = os.path.join(script_dir, "..", "data", "csv", "expert_profiles.csv")
+csv_file_path = os.path.abspath(csv_file_path)
 
-# Temporary storage. Convert to database later
-profiles = dict()       # Expert's name : Profile
-locations = dict()      # Location : dict of (Expert's name : GeoProfileMapping)
+if not os.path.exists(csv_file_path):
+  raise FileNotFoundError(f"CSV file not found at: {csv_file_path}")
 
-# Iterate through each line of CSV file
-for _, row in data.iterrows():
-  name = row["Name"]
-  title = row["title"]
-  
-  # Add title to correspoding expert's profile
-  if name not in profiles:
-    profiles[name] = Profile(name)
-  profiles[name].addTitle(title)
-  
-  # Extract location
-  txt = nlp(title)
-  for ent in txt.ents:
-    if ent.label_ == "GPE":
-      geo = ent.text
-      
-      # Add location to corresponding expert's profile
-      profiles[name].addLocation(geo)
-      
-      # For location-based-expert_profiles.json:
-      # Initialize location/expert if necessary
-      if geo not in locations:
-        locations[geo] = dict()
-      if name not in locations[geo]:
-        locations[geo][name] = GeoProfileMapping(name, geo)
-      
-      # Add matching work to location
-      locations[geo][name].addRelatedWork(title)
-      
-  
-with open("../data/json/expert_profiles.json", "w") as file_profiles:
+logging.info("Processing file: %s", csv_file_path)
+
+# Read data
+data = pd.read_csv(csv_file_path)
+total_rows = len(data)
+titles = data["title"].tolist()
+names = data["Name"].tolist()
+
+# Process in batches
+start_nlp_time = time.time()
+total_locations = 0
+
+for batch_start in range(0, total_rows, BATCH_SIZE):
+  batch_end = min(batch_start + BATCH_SIZE, total_rows)
+  batch_titles = titles[batch_start:batch_end]
+  batch_names = names[batch_start:batch_end]
+
+  batch_start_time = time.time()
+  batch_docs = list(nlp.pipe(batch_titles, batch_size=BATCH_SIZE))
+
+  batch_location_count = 0
+
+  for name, title, doc in zip(batch_names, batch_titles, batch_docs):
+    unique_researchers.add(name)  # Track unique researchers
+
+    # Add title to corresponding expert profile
+    if name not in profiles:
+      profiles[name] = Profile(name)
+    profiles[name].addTitle(title)
+
+    # Extract locations
+    found_location = False  # Track if any location was found
+    for ent in doc.ents:
+      if ent.label_ == "GPE":
+        geo = ent.text
+        found_location = True
+        batch_location_count += 1
+
+        # Add location to expert's profile
+        profiles[name].addLocation(geo)
+
+        # Update location-based profile mapping
+        if geo not in locations:
+          locations[geo] = {}
+        if name not in locations[geo]:
+          locations[geo][name] = GeoProfileMapping(name, geo)
+
+        locations[geo][name].addRelatedWork(title)
+
+    if not found_location:
+      # If no location found, we can consider this as a non-geo profile
+      profiles[name].addLocation("None")  # Or any other way to represent no location
+
+  batch_time = time.time() - batch_start_time
+  total_locations += batch_location_count
+
+  logging.info(
+    "Batch %d-%d processed in %.2f seconds | Locations found: %d | Total locations: %d",
+    batch_start, batch_end, batch_time, batch_location_count, total_locations
+  )
+  print(
+    f"Processed batch {batch_start}-{batch_end} in {batch_time:.2f}s | "
+    f"Locations found: {batch_location_count}"
+  )
+
+logging.info("Completed NLP processing in %.2f seconds", time.time() - start_nlp_time)
+
+# Save JSON files, creating them if they don't exist
+start_save = time.time()
+
+# Create directories if they don't exist
+json_dir = os.path.join(script_dir, "..", "data", "json")
+os.makedirs(json_dir, exist_ok=True)
+
+geo_profiles_dir = os.path.join(json_dir, "geo_profiles")
+os.makedirs(geo_profiles_dir, exist_ok=True)
+
+non_geo_profiles_dir = os.path.join(json_dir, "non_geo_profiles")
+os.makedirs(non_geo_profiles_dir, exist_ok=True)
+
+# Save expert profiles
+expert_profiles_path = os.path.join(geo_profiles_dir, "expert_profiles.json")
+with open(expert_profiles_path, "w") as file_profiles:
   json.dump(profiles, file_profiles, default=profileToJson, indent=2)
-  
-with open("../data/json/location_based_profiles.json", "w") as file_locations:
+
+# Save location-based profiles
+location_based_profiles_path = os.path.join(geo_profiles_dir, "location_based_profiles.json")
+with open(location_based_profiles_path, "w") as file_locations:
   json.dump(locations, file_locations, default=geoProfileMappingToJson, indent=2)
+
+# Save non-geo profiles
+non_geo_profiles = {name: profile for name, profile in profiles.items() if "None" in profile.locations}
+non_geo_profiles_path = os.path.join(non_geo_profiles_dir, "non_geo_profiles.json")
+with open(non_geo_profiles_path, "w") as file_non_geo_profiles:
+  json.dump(non_geo_profiles, file_non_geo_profiles, default=profileToJson, indent=2)
+
+logging.info("Saved JSON files in %.2f seconds", time.time() - start_save)
+
+# Final Stats
+total_time = time.time() - start_time
+logging.info("Final Statistics:")
+logging.info("Total unique researchers: %d", len(unique_researchers))
+logging.info("Total unique works (titles) parsed: %d", len(unique_titles))
+logging.info("Total unique locations extracted: %d", len(unique_locations))
+logging.info("Total execution time: %.2f minutes", total_time / 60)
+
+print("\nFinal Statistics:")
+print(f"Total unique researchers: {len(unique_researchers)}")
+print(f"Total unique works (titles) parsed: {len(unique_titles)}")
+print(f"Total unique locations extracted: {len(unique_locations)}")
+print(f"Total execution time: {total_time / 60:.2f} minutes")
+
+print("Processing complete. Check processing.log for batch statistics.")
