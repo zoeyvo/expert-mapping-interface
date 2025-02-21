@@ -5,8 +5,13 @@ import pandas as pd
 import spacy
 import json
 
+# Clear the log file on each run
+log_file = "processing.log"
+if os.path.exists(log_file):
+  os.remove(log_file)
+
 # Setup logging
-logging.basicConfig(filename="processing.log", level=logging.INFO, format="%(asctime)s - %(message)s")
+logging.basicConfig(filename=log_file, level=logging.INFO, format="%(asctime)s - %(message)s")
 
 # Define batch size for NLP processing
 BATCH_SIZE = 50  # Adjust based on system performance
@@ -137,25 +142,19 @@ start_save = time.time()
 json_dir = os.path.join(script_dir, "..", "data", "json")
 os.makedirs(json_dir, exist_ok=True)
 
-geo_profiles_dir = os.path.join(json_dir, "geo_profiles")
-os.makedirs(geo_profiles_dir, exist_ok=True)
-
-non_geo_profiles_dir = os.path.join(json_dir, "non_geo_profiles")
-os.makedirs(non_geo_profiles_dir, exist_ok=True)
-
 # Save expert profiles
-expert_profiles_path = os.path.join(geo_profiles_dir, "expert_profiles.json")
+expert_profiles_path = os.path.join(json_dir, "expert_profiles.json")
 with open(expert_profiles_path, "w") as file_profiles:
   json.dump(profiles, file_profiles, default=profileToJson, indent=2)
 
 # Save location-based profiles
-location_based_profiles_path = os.path.join(geo_profiles_dir, "location_based_profiles.json")
+location_based_profiles_path = os.path.join(json_dir, "location_based_profiles.json")
 with open(location_based_profiles_path, "w") as file_locations:
   json.dump(locations, file_locations, default=geoProfileMappingToJson, indent=2)
 
 # Save non-geo profiles
 non_geo_profiles = {name: profile for name, profile in profiles.items() if "None" in profile.locations}
-non_geo_profiles_path = os.path.join(non_geo_profiles_dir, "non_geo_profiles.json")
+non_geo_profiles_path = os.path.join(json_dir, "non_geo_profiles.json")
 with open(non_geo_profiles_path, "w") as file_non_geo_profiles:
   json.dump(non_geo_profiles, file_non_geo_profiles, default=profileToJson, indent=2)
 
