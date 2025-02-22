@@ -233,7 +233,8 @@
       "None",
       "None",
       "None",
-      "US",
+      "United States",
+      "None",
       "None",
       "None",
       "None"
@@ -323,7 +324,8 @@
       "None",
       "None",
       "None",
-      "the United States",
+      "The (old?) Hood",
+      "None",
       "None",
       "None",
       "None"
@@ -714,7 +716,8 @@
       "None",
       "None",
       "None",
-      "Ghana"
+      "Ghana",
+      "None"
     ]
   },
   "HUANG, Liping": {
@@ -746,11 +749,12 @@
       "Emergence of behavioural avoidance strategies of malaria vectors in areas of high LLIN coverage in Tanzania"
     ],
     "locations": [
-      "Banambani Village",
+      "Banambani",
       "Mali",
       "None",
       "None",
-      "America",
+      "United States",
+      "None",
       "Tanzania"
     ]
   },
@@ -892,8 +896,8 @@
       "None",
       "None",
       "None",
-      "Poland",
-      "Davis",
+      "Polska",
+      "Davis County",
       "California",
       "None"
     ]
@@ -913,6 +917,7 @@
       "None",
       "None",
       "Nova Scotia",
+      "None",
       "None"
     ]
   },
@@ -1266,7 +1271,6 @@
     ],
     "locations": [
       "Baltimore",
-      "Maryland1",
       "None",
       "None",
       "None",
@@ -1432,7 +1436,8 @@
       "None",
       "None",
       "None",
-      "Thailand",
+      "praethsaithy",
+      "None",
       "None"
     ]
   },
@@ -1503,6 +1508,7 @@
       "None",
       "None",
       "California",
+      "None",
       "None",
       "None",
       "None",
@@ -1745,7 +1751,8 @@
       "None",
       "None",
       "None",
-      "the United States",
+      "The (old?) Hood",
+      "None",
       "None",
       "None",
       "None",
@@ -1780,8 +1787,9 @@
     "locations": [
       "None",
       "None",
-      "US",
-      "US",
+      "United States",
+      "United States",
+      "None",
       "None",
       "None",
       "None"
@@ -1846,7 +1854,8 @@
       "None",
       "None",
       "None",
-      "California"
+      "California",
+      "None"
     ]
   },
   "GRANDI, Eleonora": {
@@ -1958,9 +1967,9 @@
       "Neutral-to-positive cadmium effects on germination and seedling vigor, with and without seed priming"
     ],
     "locations": [
-      "Huanglongbing",
       "None",
-      "Auckland, New Zealand",
+      "None",
+      "Auckland",
       "None",
       "None",
       "None",
@@ -2305,7 +2314,7 @@
     ],
     "locations": [
       "Sabah",
-      "Sarawak, Malaysia",
+      "Sarawak",
       "None",
       "None",
       "None",
@@ -2316,7 +2325,7 @@
       "None",
       "None",
       "None",
-      "Turkey",
+      "Turkiye",
       "Malaysia",
       "None",
       "None"
@@ -2329,7 +2338,7 @@
     ],
     "locations": [
       "None",
-      "Japan"
+      "Ri Ben "
     ]
   },
   "PREBYS, Eric J": {
@@ -2535,6 +2544,7 @@
       "None",
       "None",
       "None",
+      "None",
       "None"
     ]
   },
@@ -2724,7 +2734,7 @@
     ],
     "locations": [
       "None",
-      "Barbatene",
+      "None",
       "None",
       "None",
       "None",
@@ -2774,7 +2784,8 @@
       "None",
       "None",
       "None",
-      "the United States",
+      "The (old?) Hood",
+      "None",
       "None"
     ]
   },
@@ -2903,7 +2914,7 @@
       "Remotely Sensed Data Characterization, Classification, and Accuracies"
     ],
     "locations": [
-      "CA",
+      "Canada",
       "None",
       "None"
     ]
@@ -3016,12 +3027,14 @@
       "Ghana",
       "None",
       "Bethesda",
-      "MD",
-      "Mexico",
-      "Bangladesh",
+      "Moldova",
+      "Ciudad de Mexico",
+      "None",
+      "baaNlaadesh",
       "None",
       "None",
       "California",
+      "None",
       "None",
       "None",
       "Malawi",
@@ -3087,7 +3100,7 @@
       "None",
       "None",
       "None",
-      "Thailand",
+      "praethsaithy",
       "None",
       "None",
       "None",
@@ -3200,7 +3213,7 @@
       "Percutaneous biopsy of abdominal masses using 25-gauge needles"
     ],
     "locations": [
-      "US",
+      "United States",
       "None",
       "None"
     ]
@@ -3216,14 +3229,15 @@
     ],
     "locations": [
       "None",
-      "Aedes aegypti",
+      "Equipe Municipal de Combate ao Aedes aegypti",
       "Iquitos",
       "Peru",
       "None",
       "Iquitos",
       "Peru",
-      "IQUITOS",
-      "PERU"
+      "None",
+      "Iquitos",
+      "Peru"
     ]
   },
   "WOODALL, Jerry M": {
@@ -3268,8 +3282,10 @@
       "None",
       "None",
       "None",
-      "the United States",
-      "US",
+      "The (old?) Hood",
+      "None",
+      "United States",
+      "None",
       "None",
       "None"
     ]
@@ -3382,6 +3398,7 @@
       "None",
       "California",
       "None",
+      "None",
       "None"
     ]
   },
@@ -3447,14 +3464,16 @@
       "Implementation of warm-cloud processes in a source-oriented WRF/Chem model to study the effect of aerosol mixing state on fog formation in the Central Valley of California"
     ],
     "locations": [
-      "Xi'an, China",
+      "Xi An Shi ",
       "None",
       "None",
       "California",
       "None",
       "None",
       "None",
-      "California"
+      "None",
+      "California",
+      "None"
     ]
   },
   "DALL'ERA, Marc": {
@@ -3598,7 +3617,7 @@
       "None",
       "None",
       "None",
-      "INDIA",
+      "India",
       "None",
       "None"
     ]
@@ -3766,7 +3785,8 @@
     ],
     "locations": [
       "None",
-      "California"
+      "California",
+      "None"
     ]
   },
   "LI, Chai-Fei": {
@@ -3840,7 +3860,8 @@
       "None",
       "None",
       "None",
-      "the United States"
+      "The (old?) Hood",
+      "None"
     ]
   },
   "KOLNER, Brian H": {
@@ -3862,8 +3883,7 @@
       "Evaluation of minimally invasive sampling methods for detecting Avipoxvirus: Hummingbirds as a case example."
     ],
     "locations": [
-      "HAEMOSPORIDA",
-      "LEUCOCYTOZOIDAE",
+      "None",
       "None",
       "None",
       "None",
@@ -3944,8 +3964,9 @@
       "None",
       "None",
       "None",
-      "Taiwan",
-      "Taiwan",
+      "Tai Wan ",
+      "Tai Wan ",
+      "None",
       "None",
       "None",
       "None",
@@ -3973,7 +3994,8 @@
       "Researchers' Degrees-of-Flexibility and the Credibility of Difference-in-Differences Estimates: Evidence from the Pandemic Policy Evaluations"
     ],
     "locations": [
-      "US",
+      "United States",
+      "None",
       "None",
       "None"
     ]
@@ -4143,7 +4165,7 @@
     ],
     "locations": [
       "None",
-      "the United States",
+      "The (old?) Hood",
       "None",
       "None",
       "None",
@@ -4232,10 +4254,11 @@
     ],
     "locations": [
       "None",
-      "Washington, DC",
+      "Washington",
       "None",
       "None",
-      "California"
+      "California",
+      "None"
     ]
   },
   "BENNETT, Brian J": {
@@ -4267,7 +4290,7 @@
       "None",
       "None",
       "None",
-      "GILGIT-BALTISTAN PAKISTAN",
+      "glgt bltstn",
       "None",
       "None"
     ]
@@ -4355,7 +4378,9 @@
       "None",
       "None",
       "None",
-      "California"
+      "None",
+      "California",
+      "None"
     ]
   },
   "BRADAC, Marusa": {
@@ -4398,7 +4423,8 @@
       "North Carolina",
       "None",
       "California",
-      "China",
+      "None",
+      "Zhong Guo ",
       "None",
       "None",
       "None",
@@ -4659,7 +4685,9 @@
       "California",
       "None",
       "None",
-      "California"
+      "None",
+      "California",
+      "None"
     ]
   },
   "ZHAO, Min": {
@@ -4713,15 +4741,16 @@
       "None",
       "None",
       "None",
-      "EHRLICHIA",
-      "CALIFORNIA",
+      "California",
       "None",
       "None",
       "California",
       "None",
+      "None",
       "California",
+      "None",
       "Mexicali",
-      "Mexico",
+      "Ciudad de Mexico",
       "None",
       "None"
     ]
@@ -5155,11 +5184,12 @@
       "Serious psychological distress and higher associations with tobacco and cannabis use among college students in the United States"
     ],
     "locations": [
-      "Sichuan Province, China",
+      "Si Chuan Sheng ",
       "None",
       "None",
       "None",
-      "the United States"
+      "The (old?) Hood",
+      "None"
     ]
   },
   "TERAN, Joseph M": {
@@ -5241,9 +5271,9 @@
       "None",
       "None",
       "None",
-      "US",
+      "United States",
       "Matamoros",
-      "Mexico"
+      "Ciudad de Mexico"
     ]
   },
   "CHEN, Shuai": {
@@ -5361,6 +5391,16 @@
     "locations": [
       "None",
       "None",
+      "None"
+    ]
+  },
+  "STYNE, Dennis M": {
+    "titles": [
+      "Prevalence and risk factors for vitamin D deficiency among healthy infants and young children in Sacramento, California"
+    ],
+    "locations": [
+      "Sacramento",
+      "California",
       "None"
     ]
   },
@@ -5526,7 +5566,8 @@
       "None",
       "None",
       "None",
-      "US",
+      "United States",
+      "None",
       "None"
     ]
   },
@@ -5543,11 +5584,12 @@
     "locations": [
       "None",
       "None",
-      "U.S.",
+      "U&S",
       "None",
       "None",
       "None",
-      "Lima",
+      "None",
+      "Lima Metropolitana",
       "Peru"
     ]
   },
@@ -5562,7 +5604,9 @@
     "locations": [
       "California",
       "None",
-      "U.S.",
+      "None",
+      "U&S",
+      "None",
       "None",
       "None"
     ]
@@ -5694,12 +5738,14 @@
     "locations": [
       "None",
       "California",
-      "USA",
+      "United States",
+      "None",
       "None",
       "None",
       "None",
       "California",
-      "South Korea",
+      "None",
+      "daehanmingug",
       "None",
       "None"
     ]
@@ -5979,11 +6025,12 @@
     "locations": [
       "None",
       "None",
-      "USA",
+      "United States",
       "None",
       "None",
       "None",
       "California",
+      "None",
       "None",
       "None"
     ]
@@ -6019,6 +6066,7 @@
       "None",
       "None",
       "None",
+      "None",
       "None"
     ]
   },
@@ -6028,7 +6076,7 @@
       "Locating Pleistocene Refugia: Comparing Phylogeographic and Ecological Niche Model Predictions"
     ],
     "locations": [
-      "Mexico",
+      "Ciudad de Mexico",
       "None"
     ]
   },
@@ -6062,6 +6110,7 @@
       "None",
       "Sacramento",
       "California",
+      "None",
       "None"
     ]
   },
@@ -6149,11 +6198,12 @@
       "California",
       "None",
       "None",
-      "Western Germany",
       "None",
-      "Italy",
+      "Western",
       "None",
-      "Switzerland",
+      "Italia",
+      "None",
+      "Schweiz/Suisse/Svizzera/Svizra",
       "None",
       "None",
       "None"
@@ -6170,7 +6220,8 @@
       "None",
       "None",
       "California",
-      "TUNISIA"
+      "None",
+      "twns"
     ]
   },
   "DAANE, Kent M": {
@@ -6194,14 +6245,18 @@
       "None",
       "None",
       "California",
-      "California",
-      "None",
       "None",
       "California",
       "None",
       "None",
       "None",
       "California",
+      "None",
+      "None",
+      "None",
+      "None",
+      "California",
+      "None",
       "None",
       "None",
       "None"
@@ -6227,6 +6282,7 @@
     "locations": [
       "None",
       "California",
+      "None",
       "None",
       "None"
     ]
@@ -6346,7 +6402,9 @@
       "None",
       "California",
       "None",
-      "the United States",
+      "None",
+      "The (old?) Hood",
+      "None",
       "None",
       "None",
       "None",
@@ -6533,12 +6591,13 @@
       "None",
       "None",
       "None",
-      "cadeia da polimerase",
-      "Cavia porcellus",
+      "None",
+      "None",
       "None",
       "None",
       "None",
       "California",
+      "None",
       "None",
       "None",
       "None"
@@ -6698,8 +6757,8 @@
     "locations": [
       "None",
       "None",
-      "Haifa",
-      "Israel",
+      "Hyph",
+      "ySHrAl",
       "None"
     ]
   },
@@ -7001,7 +7060,8 @@
       "None",
       "None",
       "None",
-      "US",
+      "United States",
+      "None",
       "None"
     ]
   },
@@ -7073,8 +7133,8 @@
     ],
     "locations": [
       "None",
-      "Shanghai",
-      "China",
+      "Shang Hai Shi ",
+      "Zhong Guo ",
       "None"
     ]
   },
@@ -7333,6 +7393,7 @@
       "None",
       "Australia",
       "None",
+      "None",
       "None"
     ]
   },
@@ -7347,7 +7408,17 @@
       "None",
       "None",
       "None",
-      "United States"
+      "United States",
+      "None"
+    ]
+  },
+  "NOVAN, Kevin": {
+    "titles": [
+      "Gasoline taxes and revenue volatility: An application to California"
+    ],
+    "locations": [
+      "California",
+      "None"
     ]
   },
   "HUBENY, Veronika E": {
@@ -7723,6 +7794,7 @@
     "locations": [
       "None",
       "California",
+      "None",
       "None"
     ]
   },
@@ -7808,11 +7880,13 @@
     ],
     "locations": [
       "California",
+      "None",
       "California",
       "None",
       "None",
       "None",
-      "North Korea",
+      "None",
+      "joseonminjujuyiinmingonghwagug",
       "None"
     ]
   },
@@ -7930,7 +8004,9 @@
     "locations": [
       "California",
       "None",
-      "Thailand",
+      "None",
+      "praethsaithy",
+      "None",
       "None"
     ]
   },
@@ -7955,7 +8031,8 @@
     "locations": [
       "None",
       "None",
-      "US"
+      "United States",
+      "None"
     ]
   },
   "HORWATH, William R": {
@@ -8018,7 +8095,7 @@
       "None",
       "None",
       "Oregon",
-      "USA"
+      "United States"
     ]
   },
   "ANDREWS, Josephine T": {
@@ -8100,6 +8177,7 @@
       "None",
       "None",
       "California",
+      "None",
       "None"
     ]
   },
@@ -8182,6 +8260,7 @@
     "locations": [
       "None",
       "California",
+      "None",
       "None"
     ]
   },
@@ -8204,7 +8283,7 @@
       "None",
       "None",
       "Taranto",
-      "Italy",
+      "Italia",
       "None"
     ]
   },
@@ -8337,9 +8416,11 @@
     ],
     "locations": [
       "None",
-      "U.S.",
+      "U&S",
       "None",
-      "United States"
+      "None",
+      "United States",
+      "None"
     ]
   },
   "GRADZIEL, Thomas": {
@@ -8349,7 +8430,7 @@
       "The Peach Canning Industry"
     ],
     "locations": [
-      "Almond",
+      "Village of Almond",
       "None",
       "None"
     ]
@@ -8365,7 +8446,8 @@
     "locations": [
       "None",
       "None",
-      "US",
+      "United States",
+      "None",
       "None",
       "None"
     ]
@@ -8380,6 +8462,7 @@
     "locations": [
       "None",
       "California",
+      "None",
       "None",
       "None"
     ]
@@ -8479,8 +8562,11 @@
     ],
     "locations": [
       "California",
-      "CALIFORNIA",
+      "None",
       "California",
+      "None",
+      "California",
+      "None",
       "None"
     ]
   },
@@ -8599,7 +8685,7 @@
       "126 Hepatobiliary Infections"
     ],
     "locations": [
-      "LYMPHANGIECTASIA",
+      "None",
       "None",
       "None"
     ]
@@ -8729,7 +8815,8 @@
       "None",
       "None",
       "None",
-      "California"
+      "California",
+      "None"
     ]
   },
   "THURMAN, Angela John J": {
@@ -8749,6 +8836,7 @@
     ],
     "locations": [
       "California",
+      "None",
       "None",
       "None",
       "None"
@@ -8785,7 +8873,9 @@
       "None",
       "None",
       "None",
-      "California"
+      "None",
+      "California",
+      "None"
     ]
   },
   "LOGE, Frank J": {
@@ -8883,6 +8973,7 @@
     "locations": [
       "None",
       "California",
+      "None",
       "California",
       "South Africa"
     ]
@@ -8906,6 +8997,15 @@
     ],
     "locations": [
       "None",
+      "None"
+    ]
+  },
+  "MITLOEHNER, Frank M": {
+    "titles": [
+      "A Survey of Particulate Matter on California Dairy Farms"
+    ],
+    "locations": [
+      "California",
       "None"
     ]
   },
@@ -9276,8 +9376,8 @@
       "None",
       "None",
       "None",
-      "GEORGIA",
-      "UNITED STATES"
+      "Georgia",
+      "United States"
     ]
   },
   "BAI, Zhaojun": {
@@ -9480,6 +9580,7 @@
       "None",
       "None",
       "California",
+      "None",
       "None"
     ]
   },
@@ -9599,7 +9700,7 @@
       "None",
       "None",
       "None",
-      "Medicago",
+      "Medicago Drive",
       "None"
     ]
   },
@@ -9633,7 +9734,8 @@
     "locations": [
       "None",
       "None",
-      "China",
+      "Zhong Guo ",
+      "None",
       "None"
     ]
   },
@@ -9658,7 +9760,9 @@
     "locations": [
       "None",
       "California",
-      "U.S."
+      "None",
+      "U&S",
+      "None"
     ]
   },
   "SZE, Julie": {
@@ -9679,7 +9783,8 @@
       "Introduction"
     ],
     "locations": [
-      "America",
+      "United States",
+      "None",
       "None",
       "None",
       "None"
@@ -9909,13 +10014,15 @@
     ],
     "locations": [
       "Sonora",
-      "M\u00c3",
-      "\u00a9",
-      "xico",
+      "Maroc  lmGrb",
+      "Xico",
+      "California",
+      "None",
+      "None",
       "California",
       "None",
       "California",
-      "California"
+      "None"
     ]
   },
   "GYGI, Francois": {
@@ -9945,7 +10052,8 @@
       "Tranexamic Acid use in Trauma: Effective but not Without Consequences"
     ],
     "locations": [
-      "US",
+      "United States",
+      "None",
       "None",
       "None"
     ]
@@ -9971,7 +10079,8 @@
     ],
     "locations": [
       "None",
-      "the United States"
+      "The (old?) Hood",
+      "None"
     ]
   },
   "GRAY, John A": {
@@ -10144,7 +10253,7 @@
       "None",
       "None",
       "None",
-      "Juglans regia",
+      "Juglans Regia",
       "None",
       "None",
       "None"
@@ -10158,6 +10267,7 @@
     ],
     "locations": [
       "California",
+      "None",
       "None",
       "None"
     ]
@@ -10183,7 +10293,8 @@
       "None",
       "None",
       "None",
-      "California"
+      "California",
+      "None"
     ]
   },
   "VAZQUEZ, Mariel": {
@@ -10495,6 +10606,7 @@
       "None",
       "None",
       "California",
+      "None",
       "None"
     ]
   },
@@ -10622,8 +10734,9 @@
     ],
     "locations": [
       "None",
-      "the United States",
-      "Mexico",
+      "The (old?) Hood",
+      "Ciudad de Mexico",
+      "None",
       "None"
     ]
   },
@@ -10719,7 +10832,8 @@
       "None",
       "None",
       "None",
-      "the United States",
+      "The (old?) Hood",
+      "None",
       "None"
     ]
   },
@@ -10768,7 +10882,7 @@
     ],
     "locations": [
       "None",
-      "Ontario, Canada",
+      "Ontario",
       "None",
       "None",
       "None",
@@ -10845,7 +10959,8 @@
     "locations": [
       "None",
       "None",
-      "Thailand",
+      "praethsaithy",
+      "None",
       "None"
     ]
   },
@@ -11001,8 +11116,8 @@
     ],
     "locations": [
       "None",
-      "Iqaluit",
-      "Nunavut",
+      "Iqaluit iqaloit",
+      "nonafot Nunavut",
       "Canada",
       "None"
     ]
@@ -11036,15 +11151,19 @@
     ],
     "locations": [
       "California",
-      "California",
-      "None",
-      "None",
       "None",
       "California",
       "None",
       "None",
       "None",
-      "the United States"
+      "None",
+      "California",
+      "None",
+      "None",
+      "None",
+      "None",
+      "The (old?) Hood",
+      "None"
     ]
   },
   "HILBERT, Martin R": {
@@ -11599,6 +11718,7 @@
       "None",
       "None",
       "None",
+      "None",
       "None"
     ]
   },
@@ -11626,7 +11746,7 @@
     "locations": [
       "Alaska",
       "None",
-      "Philippines",
+      "Pilipinas",
       "None",
       "None",
       "None",
@@ -11666,6 +11786,7 @@
       "None",
       "None",
       "Australia",
+      "None",
       "None",
       "None",
       "None"
@@ -11722,6 +11843,7 @@
       "None",
       "Texas",
       "None",
+      "None",
       "None"
     ]
   },
@@ -11773,9 +11895,11 @@
       "None",
       "None",
       "California",
-      "USA",
-      "CA",
-      "US",
+      "United States",
+      "None",
+      "Canada",
+      "United States",
+      "None",
       "None"
     ]
   },
@@ -11808,7 +11932,7 @@
       "Supplementary Figure S1 from Impact of BMI on Prevalence of Dense Breasts by Race and Ethnicity"
     ],
     "locations": [
-      "U.S.",
+      "U&S",
       "None",
       "None"
     ]
@@ -11858,7 +11982,8 @@
     "locations": [
       "None",
       "None",
-      "Texas"
+      "Texas",
+      "None"
     ]
   },
   "HSU, Greta": {
@@ -11869,8 +11994,10 @@
     ],
     "locations": [
       "None",
-      "U.S.",
-      "US"
+      "U&S",
+      "None",
+      "United States",
+      "None"
     ]
   },
   "HIGGINS, Chelle": {
@@ -12140,8 +12267,9 @@
       "Source Apportionment of Soot Particles and Aqueous-Phase Processing of Black Carbon Coatings in an Urban Environment"
     ],
     "locations": [
-      "Seoul, Korea",
-      "Shanghai",
+      "seoulteugbyeolsi",
+      "Shang Hai Shi ",
+      "None",
       "None"
     ]
   },
@@ -12290,7 +12418,8 @@
     "locations": [
       "None",
       "None",
-      "California"
+      "California",
+      "None"
     ]
   },
   "HUISING, Mark O": {
@@ -12322,11 +12451,12 @@
       "Botryosphaeriaceae associated with almond trunk cankers: A threat to the almond industry?"
     ],
     "locations": [
-      "Brazil",
+      "Brasil",
       "California",
       "California",
-      "california",
-      "Greece",
+      "None",
+      "California",
+      "Ellas",
       "None"
     ]
   },
@@ -12336,7 +12466,7 @@
       "The KwaZulu-Natal Income Dynamics Study (KIDS) third wave: methods, first findings and an agenda for future research"
     ],
     "locations": [
-      "Mozambique",
+      "Mocambique",
       "None"
     ]
   },
@@ -12351,7 +12481,8 @@
       "None",
       "None",
       "None",
-      "Sacramento"
+      "Sacramento",
+      "None"
     ]
   },
   "RALSTON, Katherine S": {
@@ -12513,7 +12644,8 @@
     "locations": [
       "None",
       "None",
-      "US",
+      "United States",
+      "None",
       "None",
       "None",
       "None",
@@ -12662,7 +12794,7 @@
       "A New Statistical Method for Estimating Usual Intakes of Nearly-Daily Consumed Foods and Nutrients Through Use of Only One 24-hour Dietary Recall"
     ],
     "locations": [
-      "Cameroon",
+      "Cameroun",
       "None"
     ]
   },
@@ -12819,6 +12951,7 @@
     "locations": [
       "California",
       "None",
+      "None",
       "None"
     ]
   },
@@ -12913,7 +13046,9 @@
     "locations": [
       "None",
       "California",
-      "California"
+      "None",
+      "California",
+      "None"
     ]
   },
   "MCLARTY, Ehren M": {
@@ -12954,9 +13089,10 @@
       "Developing guidelines for waste designation of biofuel feedstocks in carbon footprints and life cycle assessment"
     ],
     "locations": [
-      "the Treasure Island",
+      "Treasure Island",
       "California",
       "California",
+      "None",
       "None",
       "None"
     ]
@@ -13326,8 +13462,9 @@
       "Making plans findable, accessible, interoperable, and reusable with data infrastructure: A search engine for constructing, analyzing, and visualizing planning documents"
     ],
     "locations": [
-      "Sweden",
-      "the United States",
+      "Sverige",
+      "The (old?) Hood",
+      "None",
       "None"
     ]
   },
@@ -13429,8 +13566,8 @@
     ],
     "locations": [
       "None",
-      "New York City",
-      "Mexico City"
+      "City of New York",
+      "Ciudad de Mexico"
     ]
   },
   "CHEN, Xiaomo": {
@@ -13798,6 +13935,7 @@
     ],
     "locations": [
       "United States",
+      "None",
       "None"
     ]
   },
@@ -14267,7 +14405,9 @@
       "None",
       "None",
       "None",
+      "None",
       "California",
+      "None",
       "None"
     ]
   },
@@ -14374,7 +14514,8 @@
     "locations": [
       "None",
       "None",
-      "US"
+      "United States",
+      "None"
     ]
   },
   "HADDAD, Maha": {
@@ -14397,6 +14538,15 @@
       "None"
     ]
   },
+  "VISSER, Marjorie A": {
+    "titles": [
+      "Restructuring opportunity: employment change and job quality in the United States during the Great Recession"
+    ],
+    "locations": [
+      "The (old?) Hood",
+      "None"
+    ]
+  },
   "RUMBEIHA, Wilson K": {
     "titles": [
       "Combined effects of methylmercury and ethanol on renal metallothionein and mercury residue in rats fed restricted amounts of a liquid diet",
@@ -14404,7 +14554,7 @@
     ],
     "locations": [
       "None",
-      "Mongolia"
+      "Mongol uls munggul ulus"
     ]
   },
   "WANG, Hao-Chuan": {
@@ -14436,7 +14586,8 @@
     ],
     "locations": [
       "None",
-      "China"
+      "Zhong Guo ",
+      "None"
     ]
   },
   "ROSE, John S": {
@@ -14627,7 +14778,8 @@
       "Residential Segregation and Racial/Ethnic Disparities in Ambient Air Pollution"
     ],
     "locations": [
-      "the United States",
+      "The (old?) Hood",
+      "None",
       "None"
     ]
   },
@@ -14696,7 +14848,8 @@
       "None",
       "None",
       "None",
-      "California"
+      "California",
+      "None"
     ]
   },
   "LOWE-POWER, Jason": {
@@ -14821,6 +14974,19 @@
       "None"
     ]
   },
+  "BARKER, Christopher M": {
+    "titles": [
+      "Correction: Dengue illness impacts daily human mobility patterns in Iquitos, Peru",
+      "Quantifying sociodemographic heterogeneities in the distribution of Aedes aegypti among California households"
+    ],
+    "locations": [
+      "Iquitos",
+      "Peru",
+      "None",
+      "California",
+      "None"
+    ]
+  },
   "JIMENEZ-SILVA, Margarita": {
     "titles": [
       "STEMSS STRATEGIES PROFESSIONAL DEVELOPMENT TO SUPPORT ACADEMIC LANGUAGE DEVELOPMENT",
@@ -14907,7 +15073,8 @@
       "CMS national partnership to improve dementia care in nursing homes"
     ],
     "locations": [
-      "U.S.",
+      "U&S",
+      "None",
       "None"
     ]
   },
@@ -15127,7 +15294,8 @@
       "Extended soil surface drying triggered by subsurface drip irrigation decouples carbon and nitrogen cycles and alters microbiome composition"
     ],
     "locations": [
-      "Brazil",
+      "Brasil",
+      "None",
       "None"
     ]
   },
@@ -15181,6 +15349,7 @@
     ],
     "locations": [
       "California",
+      "None",
       "None",
       "None"
     ]
@@ -15246,7 +15415,9 @@
     "locations": [
       "California",
       "None",
-      "US"
+      "None",
+      "United States",
+      "None"
     ]
   },
   "YEH, Jay": {
@@ -15304,6 +15475,7 @@
     "locations": [
       "None",
       "California",
+      "None",
       "None"
     ]
   },
@@ -15496,7 +15668,9 @@
       "California",
       "None",
       "None",
-      "California"
+      "None",
+      "California",
+      "None"
     ]
   },
   "MCELROY, Steven J": {
@@ -15681,6 +15855,15 @@
       "None"
     ]
   },
+  "PEAR, Veronica A": {
+    "titles": [
+      "Understanding the circumstances and stakeholder perceptions of gun violence restraining order use in California: A qualitative study"
+    ],
+    "locations": [
+      "California",
+      "None"
+    ]
+  },
   "CHIEN, Jeremy R": {
     "titles": [
       "HSulf-1 modulates HGF-mediated tumor cell invasion and signaling in head and neck squamous carcinoma",
@@ -15819,6 +16002,15 @@
       "None"
     ]
   },
+  "GRETTENBERGER, Ian M": {
+    "titles": [
+      "Balancing Bees and Pest Management: Projected Costs of Proposed Bee-Protective Neonicotinoid Regulation in California"
+    ],
+    "locations": [
+      "California",
+      "None"
+    ]
+  },
   "DOVE, Melanie": {
     "titles": [
       "Comparative Effectiveness and Safety of Intrauterine Contraception and Tubal Ligation.",
@@ -15828,7 +16020,8 @@
     "locations": [
       "None",
       "None",
-      "California"
+      "California",
+      "None"
     ]
   },
   "FRAGOSO, Ruben C": {
@@ -15887,6 +16080,15 @@
       "None"
     ]
   },
+  "KIM, Tae Youn Y": {
+    "titles": [
+      "A community-based survey to assess risk for one health challenges in rural Philippines using a mobile application"
+    ],
+    "locations": [
+      "Pilipinas",
+      "None"
+    ]
+  },
   "MUNIR, Bilal": {
     "titles": [
       "Abstract 12854: Long Term Outcomes of Pulmonary Vein Isolation With Additional Linear Ablation: Insights From the UC San Diego Atrial Fibrillation Registry",
@@ -15898,7 +16100,8 @@
     ],
     "locations": [
       "None",
-      "the United States",
+      "The (old?) Hood",
+      "None",
       "None",
       "None",
       "None",
@@ -16158,6 +16361,7 @@
     ],
     "locations": [
       "California",
+      "None",
       "None"
     ]
   },
@@ -16662,6 +16866,7 @@
     "locations": [
       "California",
       "None",
+      "None",
       "None"
     ]
   },
@@ -16677,8 +16882,11 @@
     "locations": [
       "California",
       "None",
+      "None",
       "California",
+      "None",
       "California",
+      "None",
       "None",
       "Potchefstroom",
       "South Africa"
@@ -16808,7 +17016,8 @@
       "Experimental reduction in dietary omega-3 polyunsaturated fatty acids depresses sperm competitiveness"
     ],
     "locations": [
-      "Bangladesh",
+      "baaNlaadesh",
+      "None",
       "None"
     ]
   },
@@ -16949,6 +17158,7 @@
       "None",
       "Canada",
       "None",
+      "None",
       "None"
     ]
   },
@@ -17031,8 +17241,7 @@
       "None",
       "None",
       "None",
-      "AYTHYA NYROCA",
-      "ISRAEL"
+      "ySHrAl"
     ]
   },
   "LEMAY, Danielle G": {
@@ -17060,6 +17269,15 @@
       "Effects of Magnetic Doping on Weak Antilocalization in Narrow Bi2Se3 Nanoribbons"
     ],
     "locations": [
+      "None"
+    ]
+  },
+  "KO, Michelle J": {
+    "titles": [
+      "US Medical School Admissions Leaders\u00e2\u20ac\u2122 Experiences With Barriers to and Advancements in Diversity, Equity, and Inclusion"
+    ],
+    "locations": [
+      "United States",
       "None"
     ]
   },
@@ -17160,7 +17378,7 @@
     ],
     "locations": [
       "None",
-      "Korea"
+      "joseon/hangug"
     ]
   },
   "TIMMER, Susan Goff G": {
@@ -17178,6 +17396,15 @@
     ],
     "locations": [
       "None",
+      "None"
+    ]
+  },
+  "ESTEGHAMAT, Naseem S": {
+    "titles": [
+      "Utilization of Autologous HCT in Multiple Myeloma: A Novel Linkage of CIBMTR, Cancer Registry and Hospitalization Data in California"
+    ],
+    "locations": [
+      "California",
       "None"
     ]
   },
@@ -17222,8 +17449,8 @@
     "locations": [
       "None",
       "None",
-      "Trondheim Region",
-      "Norway"
+      "Trondheim Crescent",
+      "Norge"
     ]
   },
   "ANDERSON, Hana": {
@@ -17291,6 +17518,15 @@
     ],
     "locations": [
       "None",
+      "None"
+    ]
+  },
+  "ATEKWANA, Estella A": {
+    "titles": [
+      "Lithospheric Structure Beneath the Cretaceous Chilwa Alkaline Province (CAP) in Southern Malawi and Northeastern Mozambique"
+    ],
+    "locations": [
+      "Malawi",
       "None"
     ]
   },
@@ -17541,6 +17777,15 @@
       "None",
       "None",
       "None",
+      "None"
+    ]
+  },
+  "GRANDIA, Liza": {
+    "titles": [
+      "Poisonous Exports: Pesticides, Peasants, and Conservation Paradigms in Guatemala"
+    ],
+    "locations": [
+      "Guatemala",
       "None"
     ]
   },
@@ -17848,6 +18093,15 @@
       "None"
     ]
   },
+  "FAUER, Alex J": {
+    "titles": [
+      "Use of gabapentinoid medications among US adults with cancer, 2005-2015."
+    ],
+    "locations": [
+      "United States",
+      "None"
+    ]
+  },
   "HESS, Matthias": {
     "titles": [
       "Recovery of genomes from metagenomes via a dereplication, aggregation, and scoring strategy"
@@ -17908,6 +18162,15 @@
       "None"
     ]
   },
+  "FINGER, Amanda": {
+    "titles": [
+      "Lampreys in California (Lampetra spp. and Entosphenus spp.): Mitochondrial phylogenetic analysis reveals previously unrecognized lamprey diversity"
+    ],
+    "locations": [
+      "California",
+      "None"
+    ]
+  },
   "TARTAR, Danielle M": {
     "titles": [
       "When a travel bug gets you down[SS1]: severe, hypotensive African tick bite fever and response to therapy"
@@ -17945,6 +18208,15 @@
       "The hippocampus contributes to retroactive stimulus associations during trace fear conditioning"
     ],
     "locations": [
+      "None"
+    ]
+  },
+  "ADAMS, Katherine P": {
+    "titles": [
+      "Consumption of Discretionary Salt and Salt from Bouillon among Households, Women, and Young Children in Northern Region, Ghana: A Mixed-Methods Study with the Condiment Micronutrient Innovation Trial (CoMIT) Project."
+    ],
+    "locations": [
+      "Ghana",
       "None"
     ]
   },
@@ -18011,6 +18283,15 @@
       "Stability of a dispersion of elongated particles embedded in a viscous membrane"
     ],
     "locations": [
+      "None"
+    ]
+  },
+  "TAYLOR, Keith": {
+    "titles": [
+      "The Role of Rural Electric Cooperatives in Achieving Universal Broadband Access: Evidence from the United States"
+    ],
+    "locations": [
+      "The (old?) Hood",
       "None"
     ]
   },

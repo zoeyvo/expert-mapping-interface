@@ -4,6 +4,8 @@ import logging
 import pandas as pd
 import spacy
 import json
+from geopy.geocoders import Nominatim
+from unidecode import unidecode
 
 # Clear the log file on each run
 log_file = "processing.log"
@@ -13,12 +15,19 @@ if os.path.exists(log_file):
 # Setup logging
 logging.basicConfig(filename=log_file, level=logging.INFO, format="%(asctime)s - %(message)s")
 
+# Geocoding API
+geolocator = Nominatim(user_agent="lctnguyen@ucdavis.edu")
+  
 # Define batch size for NLP processing
 BATCH_SIZE = 10  # ~ 1.8 min to process sample data
 
-# Temporary storage
-profiles = {}  # Expert's name -> Profile object
-locations = {}  # Location -> {Expert's name -> GeoProfileMapping object}
+# Temporary storage. Store in Json file
+profiles = {}     # Expert's name -> Profile object
+locations = {}    # Location -> {Expert's name -> GeoProfileMapping object}
+coordinates = {}  # Location -> Coordinate
+
+# Use in this script only. Store geocoded locations
+geoData = {}      # Location's name -> its info (normalized name, coordinate, type)
 
 unique_titles = set()
 unique_locations = set()
@@ -103,19 +112,43 @@ for batch_start in range(0, total_rows, BATCH_SIZE):
     for ent in doc.ents:
       if ent.label_ == "GPE":
         geo = ent.text
-        found_location = True
-        batch_location_count += 1
+        # Geocode if it's a new location
+        if geo not in geoData:
+          # Waiting for API
+          time.sleep(0.1)
+          
+          location = geolocator.geocode(geo)
+          if location:
+            found_location = True
+            batch_location_count += 1
+            
+            full_info = location.raw
+            info = {
+              "geo_name" : unidecode(full_info["name"]),
+              "coordinate" : [location.latitude, location.longitude],
+              "type" : full_info["place_rank"]      # Country = 4, State = 8, City = 16
+            }
+            geoData[geo] = info
+          else:
+            continue
+        
+        # Use location's normalized name
+        geo_name = geoData[geo]["geo_name"]
+        
+        # Store new coordinates
+        if geo_name not in coordinates:
+          coordinates[geo_name] = geoData[geo]["coordinate"]
 
         # Add location to expert's profile
-        profiles[name].addLocation(geo)
+        profiles[name].addLocation(geo_name)
 
         # Update location-based profile mapping
-        if geo not in locations:
-          locations[geo] = {}
-        if name not in locations[geo]:
-          locations[geo][name] = GeoProfileMapping(name, geo)
+        if geo_name not in locations:
+          locations[geo_name] = {}
+        if name not in locations[geo_name]:
+          locations[geo_name][name] = GeoProfileMapping(name, geo_name)
 
-        locations[geo][name].addRelatedWork(title)
+        locations[geo_name][name].addRelatedWork(title)
 
     if not found_location:
       # If no location found, we can consider this as a non-geo profile
@@ -151,6 +184,11 @@ with open(expert_profiles_path, "w") as file_profiles:
 location_based_profiles_path = os.path.join(json_dir, "location_based_profiles.json")
 with open(location_based_profiles_path, "w") as file_locations:
   json.dump(locations, file_locations, default=geoProfileMappingToJson, indent=2)
+  
+# Save coordinate
+coordinates_path = os.path.join(json_dir, "location_coordinates.json")
+with open(coordinates_path, "w") as file_profiles:
+  json.dump(coordinates, file_profiles, indent=2)
 
 # Save non-geo profiles
 non_geo_profiles = {name: profile for name, profile in profiles.items() if "None" in profile.locations}

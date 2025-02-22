@@ -7,7 +7,7 @@
       ]
     }
   },
-  "Banambani Village": {
+  "Banambani": {
     "LANZARO, Gregory": {
       "matches": 1,
       "works": [
@@ -31,27 +31,19 @@
       ]
     }
   },
-  "Maryland": {
-    "CADENASSO, Mary L": {
-      "matches": 1,
-      "works": [
-        "Evaluation of the National Land Cover Database for Hydrologic Applications in Urban and Suburban Baltimore, Maryland1"
-      ]
-    }
-  },
-  "Huang long bing": {
-    "BROWN, Patrick H": {
-      "matches": 1,
-      "works": [
-        "Spatial imaging of Zn and other elements in Huanglongbing-affected grapefruit by synchrotron-based micro X-ray fluorescence investigation"
-      ]
-    }
-  },
   "California": {
     "MCROBERTS, Neil": {
       "matches": 1,
       "works": [
         "Development and application of a degree-day model to predict thrips growth and development of <i>Tomato spotted wilt virus</i> in California tomato fields"
+      ]
+    },
+    "FOLEY, Janet E": {
+      "matches": 3,
+      "works": [
+        "SEROLOGIC AND MOLECULAR EVIDENCE OF EHRLICHIA SPP. IN COYOTES IN CALIFORNIA",
+        "Patterns of Natural and Human-Caused Mortality Factors of a Rare Forest Carnivore, the Fisher (Pekania pennanti) in California",
+        "Endemic Skunk amdoparvovirus in free\u00e2\u20ac\u0090ranging striped skunks (Mephitis mephitis) in California"
       ]
     },
     "STYNE, Dennis M": {
@@ -64,13 +56,6 @@
       "matches": 1,
       "works": [
         "Ozone, nitric acid, and ammonia air pollution is unhealthy for people and ecosystems in southern Sierra Nevada, California"
-      ]
-    },
-    "FOLEY, Janet E": {
-      "matches": 2,
-      "works": [
-        "Patterns of Natural and Human-Caused Mortality Factors of a Rare Forest Carnivore, the Fisher (Pekania pennanti) in California",
-        "Endemic Skunk amdoparvovirus in free\u00e2\u20ac\u0090ranging striped skunks (Mephitis mephitis) in California"
       ]
     },
     "HANSON, Bradley": {
@@ -180,9 +165,10 @@
       ]
     },
     "KELT, Douglas A": {
-      "matches": 2,
+      "matches": 3,
       "works": [
         "Spatial organization and habitat use of feral cats (Felis catus L.) in Mediterranean California",
+        "NEST TREES OF NORTHERN FLYING SQUIRRELS IN YOSEMITE NATIONAL PARK, CALIFORNIA",
         "Reproductive parameters of the fisher (Pekania pennanti) in the southern Sierra Nevada, California"
       ]
     },
@@ -260,10 +246,11 @@
       ]
     },
     "MICHAILIDES, Themis J": {
-      "matches": 2,
+      "matches": 3,
       "works": [
         "Comparative in vivo and in vitro study on Monilia fructicola causing brown rot of stone fruit in Brazil and California",
-        "Aflatoxin producing potential and community structure of <i>Aspergillus</i> section <i>Flavi</i> in almond orchards of the Central Valley of California"
+        "Aflatoxin producing potential and community structure of <i>Aspergillus</i> section <i>Flavi</i> in almond orchards of the Central Valley of California",
+        "Inoculum dynamics, fruit infection, and development of brown rot in prune orchards in california."
       ]
     },
     "MEIER, Alan K": {
@@ -527,7 +514,7 @@
       ]
     }
   },
-  "Sarawak, Malaysia": {
+  "Sarawak": {
     "KAVVAS, M L": {
       "matches": 1,
       "works": [
@@ -535,25 +522,29 @@
       ]
     }
   },
-  "Barbatene": {
-    "TANTILLO, Dean J": {
-      "matches": 1,
-      "works": [
-        "Branching Out from the Bisabolyl Cation. Unifying Mechanistic Pathways to Barbatene, Bazzanene, Chamigrene, Chamipinene, Cumacrene, Cuprenene, Dunniene, Isobazzanene, Iso-\u00ce\u00b3-bisabolene, Isochamigrene, Laurene, Microbiotene, Sesquithujene, Sesquisabinene, Thujopsene, Trichodiene, and Widdradiene Sesquiterpenes"
-      ]
-    }
-  },
-  "CA": {
+  "Canada": {
     "KELLY, Maggi": {
       "matches": 1,
       "works": [
         "Allometric equation choice impacts lidar-based forest biomass estimates: A case study from the Sierra National Forest, CA"
       ]
     },
+    "SHAPIRO, Karen": {
+      "matches": 1,
+      "works": [
+        "Prevalence and genetic characterization of Giardia spp. and Cryptosporidium spp. in dogs in Iqaluit, Nunavut, Canada"
+      ]
+    },
     "SAFFORD, Hugh D": {
       "matches": 1,
       "works": [
         "Twentieth century shifts in abundance and composition of vegetation types of the Sierra Nevada, CA, US"
+      ]
+    },
+    "BEATTY, Timothy K": {
+      "matches": 1,
+      "works": [
+        "Expenditure dispersion and dietary quality: evidence from Canada"
       ]
     }
   },
@@ -577,7 +568,7 @@
       ]
     }
   },
-  "US": {
+  "United States": {
     "LAMBA, Ramit": {
       "matches": 1,
       "works": [
@@ -590,11 +581,29 @@
         "Pathway\u00e2\u20ac\u0090level risk analysis: the net present value of an invasive species policy in the US"
       ]
     },
+    "GARCIA, Lorena": {
+      "matches": 1,
+      "works": [
+        "Unintended Pregnancy and Intimate Partner Violence Before and During Pregnancy Among Latina Women in Los Angeles, California"
+      ]
+    },
+    "HARTER, Thomas": {
+      "matches": 1,
+      "works": [
+        "Hydro-economic analysis of groundwater pumping for irrigated agriculture in California\u00e2\u20ac\u2122s Central Valley, USA"
+      ]
+    },
     "RICHARDS, John R": {
       "matches": 2,
       "works": [
         "Comparison of US Utilization and Technical Costs before and after Establishment of 24-hour In-house Coverage for US Examinations",
         "Comparison of US Utilization and Technical Costs before and after Establishment of 24-hour In-house Coverage for US Examinations"
+      ]
+    },
+    "THORNE, James H": {
+      "matches": 1,
+      "works": [
+        "Integration of landscape fragmentation analysis into regional planning: A statewide multi-scale case study from California, USA"
       ]
     },
     "SPERLING, Daniel": {
@@ -603,10 +612,34 @@
         "Public-Private Technology R&amp;D Partnerships: Lessons from US Partnership for a New Generation of Vehicles"
       ]
     },
+    "RUIZ, Jeanette B": {
+      "matches": 1,
+      "works": [
+        "Empowerment and Aggression: Understanding Violence in America's Girls"
+      ]
+    },
+    "MAIRA, Sunaina": {
+      "matches": 1,
+      "works": [
+        "Flexible Citizenship/Flexible Empire: South Asian Muslim Youth in Post-9/11 America"
+      ]
+    },
+    "LANZARO, Gregory": {
+      "matches": 1,
+      "works": [
+        "Characterization of Anopheles pseudopunctipennis sensu lato from three countries of neotropical America from variation in allozymes and ribosomal DNA."
+      ]
+    },
     "UTTER, Garth H": {
       "matches": 1,
       "works": [
         "Microchimerism decades after transfusion among combat\u00e2\u20ac\u0090injured US veterans from the Vietnam, Korean, and World War II conflicts"
+      ]
+    },
+    "JOH, Elizabeth E": {
+      "matches": 1,
+      "works": [
+        "\"If it suffices to accuse\":: <i>United States v. Watts</i> and the reassessment of acquittals"
       ]
     },
     "HILL, Ashley E": {
@@ -615,10 +648,29 @@
         "A needs-assessment and demographic survey of infection-control and disease awareness in western US animal shelters"
       ]
     },
+    "SAFFORD, Hugh D": {
+      "matches": 2,
+      "works": [
+        "Modern departures in fire severity and area vary by forest type, Sierra Nevada and southern Cascades, California, USA",
+        "Twentieth century shifts in abundance and composition of vegetation types of the Sierra Nevada, CA, US"
+      ]
+    },
     "FARMER, Diana L": {
       "matches": 1,
       "works": [
         "Value of Global Surgical Activities for US Academic Health Centers: A Position Paper by the Association for Academic Surgery Global Affairs Committee, Society of University Surgeons Committee on Global Academic Surgery, and American College of Surgeons' Operation Giving Back"
+      ]
+    },
+    "LIM, Michele C": {
+      "matches": 1,
+      "works": [
+        "Medicare Incentive Payments to United States Ophthalmologists for Use of Electronic Health Records 2011\u00e2\u20ac\u201c2016"
+      ]
+    },
+    "MONIER, Erwan": {
+      "matches": 1,
+      "works": [
+        "Premature mortality related to United States cross-state air pollution"
       ]
     },
     "BARBATO, Michele": {
@@ -639,12 +691,6 @@
         "Investigation of cross\u00e2\u20ac\u0090regional spread and evolution of equine influenza H3N8 at US and global scales using Bayesian phylogeography based on balanced subsampling"
       ]
     },
-    "SAFFORD, Hugh D": {
-      "matches": 1,
-      "works": [
-        "Twentieth century shifts in abundance and composition of vegetation types of the Sierra Nevada, CA, US"
-      ]
-    },
     "MAGDESIAN, K G": {
       "matches": 1,
       "works": [
@@ -657,6 +703,12 @@
         "Greenhouse Gas Emissions and Management Practices that Affect Emissions in US Rice Systems"
       ]
     },
+    "HARRISON, Susan": {
+      "matches": 1,
+      "works": [
+        "Climate change effects on an endemic\u00e2\u20ac\u0090rich edaphic flora: resurveying Robert H. Whittaker's Siskiyou sites (Oregon, USA)"
+      ]
+    },
     "KO, Michelle J": {
       "matches": 1,
       "works": [
@@ -667,6 +719,18 @@
       "matches": 1,
       "works": [
         "Implications of a New Definition of Vitamin D Deficiency in a Multiracial US Adolescent Population: The National Health and Nutrition Examination Survey III"
+      ]
+    },
+    "POPPENGA, Robert H": {
+      "matches": 1,
+      "works": [
+        "HEALTH AND NUTRITIONAL ASSESSMENT OF FREE-RANGING EASTERN INDIGO SNAKES (DRYMARCHON COUPERI) IN GEORGIA, UNITED STATES"
+      ]
+    },
+    "BOURGEOIS, James A": {
+      "matches": 1,
+      "works": [
+        "The Management of Fitness for Duty in the United States Military"
       ]
     },
     "FAUER, Alex J": {
@@ -704,7 +768,7 @@
       ]
     }
   },
-  "Xi'an, China": {
+  "Xi An Shi ": {
     "KLEEMAN, Michael J": {
       "matches": 1,
       "works": [
@@ -712,23 +776,7 @@
       ]
     }
   },
-  "HAEMOSPORIDA": {
-    "TELL, Lisa A": {
-      "matches": 1,
-      "works": [
-        "EVIDENCE FOR CRYPTIC SPECIATION OF LEUCOCYTOZOON SPP. (HAEMOSPORIDA, LEUCOCYTOZOIDAE) IN DIURNAL RAPTORS"
-      ]
-    }
-  },
-  "LEUCOCYTOZOIDAE": {
-    "TELL, Lisa A": {
-      "matches": 1,
-      "works": [
-        "EVIDENCE FOR CRYPTIC SPECIATION OF LEUCOCYTOZOON SPP. (HAEMOSPORIDA, LEUCOCYTOZOIDAE) IN DIURNAL RAPTORS"
-      ]
-    }
-  },
-  "Japan": {
+  "Ri Ben ": {
     "KIM, Kyu H": {
       "matches": 1,
       "works": [
@@ -736,7 +784,7 @@
       ]
     }
   },
-  "the United States": {
+  "The (old?) Hood": {
     "BROOKS, Rebecca A": {
       "matches": 1,
       "works": [
@@ -848,7 +896,7 @@
       ]
     }
   },
-  "MD": {
+  "Moldova": {
     "DEWEY, Kathryn G": {
       "matches": 1,
       "works": [
@@ -856,29 +904,7 @@
       ]
     }
   },
-  "EHRLICHIA": {
-    "FOLEY, Janet E": {
-      "matches": 1,
-      "works": [
-        "SEROLOGIC AND MOLECULAR EVIDENCE OF EHRLICHIA SPP. IN COYOTES IN CALIFORNIA"
-      ]
-    }
-  },
-  "CALIFORNIA": {
-    "FOLEY, Janet E": {
-      "matches": 1,
-      "works": [
-        "SEROLOGIC AND MOLECULAR EVIDENCE OF EHRLICHIA SPP. IN COYOTES IN CALIFORNIA"
-      ]
-    },
-    "KELT, Douglas A": {
-      "matches": 1,
-      "works": [
-        "NEST TREES OF NORTHERN FLYING SQUIRRELS IN YOSEMITE NATIONAL PARK, CALIFORNIA"
-      ]
-    }
-  },
-  "Sichuan Province, China": {
+  "Si Chuan Sheng ": {
     "TONG, Elisa K": {
       "matches": 1,
       "works": [
@@ -886,7 +912,7 @@
       ]
     }
   },
-  "Mexico": {
+  "Ciudad de Mexico": {
     "HIJMANS, Robert J": {
       "matches": 1,
       "works": [
@@ -911,6 +937,12 @@
         "An exploratory analysis of demography and movement patterns of dogs: New insights in the ecology of endemic Rocky Mountain-Spotted Fever in Mexicali, Mexico"
       ]
     },
+    "JALLER MARTELO, Miguel A": {
+      "matches": 1,
+      "works": [
+        "Quantifying the Impacts of Sustainable City Logistics Measures in the Mexico City Metropolitan Area"
+      ]
+    },
     "THOMPSON, George R": {
       "matches": 1,
       "works": [
@@ -918,7 +950,7 @@
       ]
     }
   },
-  "Haifa": {
+  "Hyph": {
     "FARRENS, Matthew K": {
       "matches": 1,
       "works": [
@@ -926,11 +958,17 @@
       ]
     }
   },
-  "Israel": {
+  "ySHrAl": {
     "FARRENS, Matthew K": {
       "matches": 1,
       "works": [
         "Proceedings of the 32nd Annual IEEE/ACM International Symposium on Microarchitecture, MICRO 32, Haifa, Israel, November 16-18, 1999"
+      ]
+    },
+    "BEAUFRERE, Hugues H": {
+      "matches": 1,
+      "works": [
+        "SELECTED HEMATOLOGIC AND PLASMA BIOCHEMISTRY ANALYSIS OF FERRUGINOUS DUCKS (AYTHYA NYROCA) IN ISRAEL"
       ]
     }
   },
@@ -942,7 +980,7 @@
       ]
     }
   },
-  "China": {
+  "Zhong Guo ": {
     "HERTZ-PICCIOTTO, Irva": {
       "matches": 1,
       "works": [
@@ -968,7 +1006,7 @@
       ]
     }
   },
-  "Western Germany": {
+  "Western": {
     "PERI, Giovanni": {
       "matches": 1,
       "works": [
@@ -976,15 +1014,7 @@
       ]
     }
   },
-  "Los Angeles": {
-    "GARCIA, Lorena": {
-      "matches": 1,
-      "works": [
-        "Unintended Pregnancy and Intimate Partner Violence Before and During Pregnancy Among Latina Women in Los Angeles, California"
-      ]
-    }
-  },
-  "Sardinia": {
+  "Sardigna/Sardegna": {
     "MARTINEZ LOPEZ, Beatriz": {
       "matches": 1,
       "works": [
@@ -1000,33 +1030,7 @@
       ]
     }
   },
-  "USA": {
-    "HARTER, Thomas": {
-      "matches": 1,
-      "works": [
-        "Hydro-economic analysis of groundwater pumping for irrigated agriculture in California\u00e2\u20ac\u2122s Central Valley, USA"
-      ]
-    },
-    "THORNE, James H": {
-      "matches": 1,
-      "works": [
-        "Integration of landscape fragmentation analysis into regional planning: A statewide multi-scale case study from California, USA"
-      ]
-    },
-    "SAFFORD, Hugh D": {
-      "matches": 1,
-      "works": [
-        "Modern departures in fire severity and area vary by forest type, Sierra Nevada and southern Cascades, California, USA"
-      ]
-    },
-    "HARRISON, Susan": {
-      "matches": 1,
-      "works": [
-        "Climate change effects on an endemic\u00e2\u20ac\u0090rich edaphic flora: resurveying Robert H. Whittaker's Siskiyou sites (Oregon, USA)"
-      ]
-    }
-  },
-  "Bangladesh": {
+  "baaNlaadesh": {
     "DEWEY, Kathryn G": {
       "matches": 1,
       "works": [
@@ -1054,7 +1058,7 @@
       ]
     }
   },
-  "Aedes aegypti": {
+  "Equipe Municipal de Combate ao Aedes aegypti": {
     "MORRISON, Amy C": {
       "matches": 1,
       "works": [
@@ -1064,10 +1068,11 @@
   },
   "Iquitos": {
     "MORRISON, Amy C": {
-      "matches": 2,
+      "matches": 3,
       "works": [
         "Strengths and Weaknesses of Global Positioning System (GPS) Data-Loggers and Semi-structured Interviews for Capturing Fine-scale Human Mobility: Findings from Iquitos, Peru",
-        "Measuring health related quality of life for dengue patients in Iquitos, Peru"
+        "Measuring health related quality of life for dengue patients in Iquitos, Peru",
+        "EVALUATION OF <i>AEDES AEGYPTI</i> RESTING PREFERENCES IN EXPERIMENTAL HUTS IN IQUITOS, PERU"
       ]
     },
     "BARKER, Christopher M": {
@@ -1079,10 +1084,11 @@
   },
   "Peru": {
     "MORRISON, Amy C": {
-      "matches": 2,
+      "matches": 3,
       "works": [
         "Strengths and Weaknesses of Global Positioning System (GPS) Data-Loggers and Semi-structured Interviews for Capturing Fine-scale Human Mobility: Findings from Iquitos, Peru",
-        "Measuring health related quality of life for dengue patients in Iquitos, Peru"
+        "Measuring health related quality of life for dengue patients in Iquitos, Peru",
+        "EVALUATION OF <i>AEDES AEGYPTI</i> RESTING PREFERENCES IN EXPERIMENTAL HUTS IN IQUITOS, PERU"
       ]
     },
     "FEJERMAN, Laura": {
@@ -1104,7 +1110,7 @@
       ]
     }
   },
-  "Taiwan": {
+  "Tai Wan ": {
     "KASS, Philip H": {
       "matches": 2,
       "works": [
@@ -1113,7 +1119,7 @@
       ]
     }
   },
-  "Thailand": {
+  "praethsaithy": {
     "HAMMOCK, Bruce": {
       "matches": 1,
       "works": [
@@ -1153,7 +1159,7 @@
       ]
     }
   },
-  "Almond": {
+  "Village of Almond": {
     "GRADZIEL, Thomas": {
       "matches": 1,
       "works": [
@@ -1161,7 +1167,7 @@
       ]
     }
   },
-  "Geneva": {
+  "Geneve": {
     "GUYNN, Noah D": {
       "matches": 1,
       "works": [
@@ -1177,15 +1183,7 @@
       ]
     }
   },
-  "LYMPHANGIECTASIA": {
-    "MARKS, Stanley L": {
-      "matches": 1,
-      "works": [
-        "EFFECTS OF CORN OIL ADMINISTERED ORALLY ON CONSPICUITY OF ULTRASONOGRAPHIC SMALL INTESTINAL LESIONS IN DOGS WITH LYMPHANGIECTASIA"
-      ]
-    }
-  },
-  "Osaka": {
+  "Da Ban Shi ": {
     "MENDOZA, Zoila S": {
       "matches": 1,
       "works": [
@@ -1198,26 +1196,6 @@
       "matches": 1,
       "works": [
         "Cerebral Microbleeds: Prevalence and Risk Factors in the Framingham Study"
-      ]
-    }
-  },
-  "America": {
-    "RUIZ, Jeanette B": {
-      "matches": 1,
-      "works": [
-        "Empowerment and Aggression: Understanding Violence in America's Girls"
-      ]
-    },
-    "MAIRA, Sunaina": {
-      "matches": 1,
-      "works": [
-        "Flexible Citizenship/Flexible Empire: South Asian Muslim Youth in Post-9/11 America"
-      ]
-    },
-    "LANZARO, Gregory": {
-      "matches": 1,
-      "works": [
-        "Characterization of Anopheles pseudopunctipennis sensu lato from three countries of neotropical America from variation in allozymes and ribosomal DNA."
       ]
     }
   },
@@ -1257,7 +1235,7 @@
       ]
     }
   },
-  "M\u00c3": {
+  "Maroc  lmGrb": {
     "OSKIN, Michael E": {
       "matches": 1,
       "works": [
@@ -1265,7 +1243,7 @@
       ]
     }
   },
-  "\u00a9": {
+  "Xico": {
     "OSKIN, Michael E": {
       "matches": 1,
       "works": [
@@ -1273,15 +1251,7 @@
       ]
     }
   },
-  "xico": {
-    "OSKIN, Michael E": {
-      "matches": 1,
-      "works": [
-        "Transtensional rifting in the proto\u00e2\u20ac\u201cGulf of California near Bah\u00c3\u00ada Kino, Sonora, M\u00c3\u00a9xico"
-      ]
-    }
-  },
-  "Italy": {
+  "Italia": {
     "PERI, Giovanni": {
       "matches": 1,
       "works": [
@@ -1295,7 +1265,7 @@
       ]
     }
   },
-  "Bulgaria": {
+  "B'lgariia": {
     "MARTINEZ LOPEZ, Beatriz": {
       "matches": 1,
       "works": [
@@ -1303,7 +1273,7 @@
       ]
     }
   },
-  "Shanghai": {
+  "Shang Hai Shi ": {
     "QI, Lihong": {
       "matches": 1,
       "works": [
@@ -1317,7 +1287,7 @@
       ]
     }
   },
-  "OTTOMAN ALEPPO": {
+  "Bagdat Demiryolu / Reya hesini li Bexda / sk@ Hdyd bGdd": {
     "WATENPAUGH, Heghnar": {
       "matches": 1,
       "works": [
@@ -1333,15 +1303,21 @@
       ]
     }
   },
-  "Ontario, Canada": {
+  "Ontario": {
     "DEWA, Carolyn S": {
       "matches": 1,
       "works": [
         "Exposure to client aggression and burnout among community staff who support adults with intellectual disabilities in Ontario, Canada"
       ]
+    },
+    "HOCH, Jeffrey S": {
+      "matches": 1,
+      "works": [
+        "Estimating the Cost of Cancer Care in British Columbia and Ontario: A Canadian Inter-Provincial Comparison."
+      ]
     }
   },
-  "Washington, DC": {
+  "Washington": {
     "MCELRONE, Andrew J": {
       "matches": 1,
       "works": [
@@ -1365,7 +1341,7 @@
       ]
     }
   },
-  "Auckland, New Zealand": {
+  "Auckland": {
     "BROWN, Patrick H": {
       "matches": 1,
       "works": [
@@ -1373,11 +1349,17 @@
       ]
     }
   },
-  "New York": {
+  "City of New York": {
     "ELKO, Heather L": {
       "matches": 1,
       "works": [
         "Dangerous Trade: Arms Exports, Human Rights, and International Reputation. By Jennifer L. Erickson. New York: Columbia University Press, 2015. 288p. $50.00."
+      ]
+    },
+    "JALLER MARTELO, Miguel A": {
+      "matches": 1,
+      "works": [
+        "The New York City Off-Hour Delivery Program: A Business and Community-Friendly Sustainability Program"
       ]
     }
   },
@@ -1397,7 +1379,7 @@
       ]
     }
   },
-  "U.S.": {
+  "U&S": {
     "BISSELL, Michael": {
       "matches": 1,
       "works": [
@@ -1441,7 +1423,7 @@
       ]
     }
   },
-  "North Korea": {
+  "joseonminjujuyiinmingonghwagug": {
     "SUMNER, Daniel A": {
       "matches": 1,
       "works": [
@@ -1449,7 +1431,7 @@
       ]
     }
   },
-  "Switzerland": {
+  "Schweiz/Suisse/Svizzera/Svizra": {
     "PERI, Giovanni": {
       "matches": 1,
       "works": [
@@ -1473,15 +1455,7 @@
       ]
     }
   },
-  "Ontario": {
-    "HOCH, Jeffrey S": {
-      "matches": 1,
-      "works": [
-        "Estimating the Cost of Cancer Care in British Columbia and Ontario: A Canadian Inter-Provincial Comparison."
-      ]
-    }
-  },
-  "Poland": {
+  "Polska": {
     "PAW U, Kyaw T": {
       "matches": 1,
       "works": [
@@ -1489,7 +1463,7 @@
       ]
     }
   },
-  "Davis": {
+  "Davis County": {
     "PAW U, Kyaw T": {
       "matches": 1,
       "works": [
@@ -1497,7 +1471,7 @@
       ]
     }
   },
-  "Seoul, Korea": {
+  "seoulteugbyeolsi": {
     "ZHANG, Qi": {
       "matches": 1,
       "works": [
@@ -1505,7 +1479,7 @@
       ]
     }
   },
-  "Juglans regia": {
+  "Juglans Regia": {
     "ZWIENIECKI, Maciej A": {
       "matches": 1,
       "works": [
@@ -1519,9 +1493,15 @@
       "works": [
         "Modeling the live-pig trade network in Georgia: Implications for disease prevention and control"
       ]
+    },
+    "POPPENGA, Robert H": {
+      "matches": 1,
+      "works": [
+        "HEALTH AND NUTRITIONAL ASSESSMENT OF FREE-RANGING EASTERN INDIGO SNAKES (DRYMARCHON COUPERI) IN GEORGIA, UNITED STATES"
+      ]
     }
   },
-  "Brazil": {
+  "Brasil": {
     "MICHAILIDES, Themis J": {
       "matches": 1,
       "works": [
@@ -1535,7 +1515,7 @@
       ]
     }
   },
-  "Mozambique": {
+  "Mocambique": {
     "CARTER, Michael R": {
       "matches": 1,
       "works": [
@@ -1551,49 +1531,7 @@
       ]
     }
   },
-  "cadeia da polimerase": {
-    "UZAL, Francisco A": {
-      "matches": 1,
-      "works": [
-        "Rea\u00c3\u00a7\u00c3\u00a3o em cadeia da polimerase para detec\u00c3\u00a7\u00c3\u00a3o de Clostridium chauvoei em tecidos de Cavia porcellus"
-      ]
-    }
-  },
-  "Cavia porcellus": {
-    "UZAL, Francisco A": {
-      "matches": 1,
-      "works": [
-        "Rea\u00c3\u00a7\u00c3\u00a3o em cadeia da polimerase para detec\u00c3\u00a7\u00c3\u00a3o de Clostridium chauvoei em tecidos de Cavia porcellus"
-      ]
-    }
-  },
-  "United States": {
-    "JOH, Elizabeth E": {
-      "matches": 1,
-      "works": [
-        "\"If it suffices to accuse\":: <i>United States v. Watts</i> and the reassessment of acquittals"
-      ]
-    },
-    "LIM, Michele C": {
-      "matches": 1,
-      "works": [
-        "Medicare Incentive Payments to United States Ophthalmologists for Use of Electronic Health Records 2011\u00e2\u20ac\u201c2016"
-      ]
-    },
-    "MONIER, Erwan": {
-      "matches": 1,
-      "works": [
-        "Premature mortality related to United States cross-state air pollution"
-      ]
-    },
-    "BOURGEOIS, James A": {
-      "matches": 1,
-      "works": [
-        "The Management of Fitness for Duty in the United States Military"
-      ]
-    }
-  },
-  "Cameroon": {
+  "Cameroun": {
     "ENGLE-STONE, Reina": {
       "matches": 1,
       "works": [
@@ -1625,7 +1563,7 @@
       ]
     }
   },
-  "Iran": {
+  "yrn": {
     "MESGARAN, Mohsen B": {
       "matches": 1,
       "works": [
@@ -1653,7 +1591,7 @@
       ]
     }
   },
-  "the Treasure Island": {
+  "Treasure Island": {
     "KENDALL, Alissa": {
       "matches": 1,
       "works": [
@@ -1677,7 +1615,7 @@
       ]
     }
   },
-  "Turkey": {
+  "Turkiye": {
     "KAVVAS, M L": {
       "matches": 1,
       "works": [
@@ -1685,7 +1623,7 @@
       ]
     }
   },
-  "Sweden": {
+  "Sverige": {
     "BRINKLEY, Catherine": {
       "matches": 1,
       "works": [
@@ -1723,7 +1661,7 @@
       ]
     }
   },
-  "TUNISIA": {
+  "twns": {
     "HOLYOAK, Marcel": {
       "matches": 1,
       "works": [
@@ -1731,7 +1669,7 @@
       ]
     }
   },
-  "Iqaluit": {
+  "Iqaluit iqaloit": {
     "SHAPIRO, Karen": {
       "matches": 1,
       "works": [
@@ -1739,25 +1677,11 @@
       ]
     }
   },
-  "Nunavut": {
+  "nonafot Nunavut": {
     "SHAPIRO, Karen": {
       "matches": 1,
       "works": [
         "Prevalence and genetic characterization of Giardia spp. and Cryptosporidium spp. in dogs in Iqaluit, Nunavut, Canada"
-      ]
-    }
-  },
-  "Canada": {
-    "SHAPIRO, Karen": {
-      "matches": 1,
-      "works": [
-        "Prevalence and genetic characterization of Giardia spp. and Cryptosporidium spp. in dogs in Iqaluit, Nunavut, Canada"
-      ]
-    },
-    "BEATTY, Timothy K": {
-      "matches": 1,
-      "works": [
-        "Expenditure dispersion and dietary quality: evidence from Canada"
       ]
     }
   },
@@ -1777,7 +1701,7 @@
       ]
     }
   },
-  "Mongolia": {
+  "Mongol uls munggul ulus": {
     "RUMBEIHA, Wilson K": {
       "matches": 1,
       "works": [
@@ -1785,23 +1709,21 @@
       ]
     }
   },
-  "INDIA": {
+  "India": {
     "MAZET, Jonna A": {
       "matches": 1,
       "works": [
         "CARNIVORE PROTOPARVOVIRUS 1 (PARVOVIRUSES) AT THE DOMESTICWILD CARNIVORE INTERFACE IN INDIA"
       ]
-    }
-  },
-  "california": {
-    "MICHAILIDES, Themis J": {
+    },
+    "CHAUDHARI, Abhijit": {
       "matches": 1,
       "works": [
-        "Inoculum dynamics, fruit infection, and development of brown rot in prune orchards in california."
+        "Treatment and follow-up of the first case of human trypanosomiasis caused by Trypanosoma evansi in India"
       ]
     }
   },
-  "Greece": {
+  "Ellas": {
     "MICHAILIDES, Themis J": {
       "matches": 1,
       "works": [
@@ -1809,7 +1731,7 @@
       ]
     }
   },
-  "GILGIT-BALTISTAN PAKISTAN": {
+  "glgt bltstn": {
     "POTTER, Daniel": {
       "matches": 1,
       "works": [
@@ -1833,7 +1755,7 @@
       ]
     }
   },
-  "Philippines": {
+  "Pilipinas": {
     "SANCHIRICO, James N": {
       "matches": 1,
       "works": [
@@ -1855,30 +1777,6 @@
       ]
     }
   },
-  "India": {
-    "CHAUDHARI, Abhijit": {
-      "matches": 1,
-      "works": [
-        "Treatment and follow-up of the first case of human trypanosomiasis caused by Trypanosoma evansi in India"
-      ]
-    }
-  },
-  "New York City": {
-    "JALLER MARTELO, Miguel A": {
-      "matches": 1,
-      "works": [
-        "The New York City Off-Hour Delivery Program: A Business and Community-Friendly Sustainability Program"
-      ]
-    }
-  },
-  "Mexico City": {
-    "JALLER MARTELO, Miguel A": {
-      "matches": 1,
-      "works": [
-        "Quantifying the Impacts of Sustainable City Logistics Measures in the Mexico City Metropolitan Area"
-      ]
-    }
-  },
   "Nicaragua": {
     "JAMES, Michelle": {
       "matches": 1,
@@ -1887,7 +1785,7 @@
       ]
     }
   },
-  "South Korea": {
+  "daehanmingug": {
     "THORNE, James H": {
       "matches": 1,
       "works": [
@@ -1933,7 +1831,7 @@
       ]
     }
   },
-  "Medicago": {
+  "Medicago Drive": {
     "COOK, Douglas R": {
       "matches": 1,
       "works": [
@@ -1957,7 +1855,7 @@
       ]
     }
   },
-  "Lima": {
+  "Lima Metropolitana": {
     "STEPHENSEN, Charles B": {
       "matches": 1,
       "works": [
@@ -1965,7 +1863,7 @@
       ]
     }
   },
-  "Korea": {
+  "joseon/hangug": {
     "LEE, Jee-Yon": {
       "matches": 1,
       "works": [
@@ -1973,39 +1871,7 @@
       ]
     }
   },
-  "IQUITOS": {
-    "MORRISON, Amy C": {
-      "matches": 1,
-      "works": [
-        "EVALUATION OF <i>AEDES AEGYPTI</i> RESTING PREFERENCES IN EXPERIMENTAL HUTS IN IQUITOS, PERU"
-      ]
-    }
-  },
-  "PERU": {
-    "MORRISON, Amy C": {
-      "matches": 1,
-      "works": [
-        "EVALUATION OF <i>AEDES AEGYPTI</i> RESTING PREFERENCES IN EXPERIMENTAL HUTS IN IQUITOS, PERU"
-      ]
-    }
-  },
-  "AYTHYA NYROCA": {
-    "BEAUFRERE, Hugues H": {
-      "matches": 1,
-      "works": [
-        "SELECTED HEMATOLOGIC AND PLASMA BIOCHEMISTRY ANALYSIS OF FERRUGINOUS DUCKS (AYTHYA NYROCA) IN ISRAEL"
-      ]
-    }
-  },
-  "ISRAEL": {
-    "BEAUFRERE, Hugues H": {
-      "matches": 1,
-      "works": [
-        "SELECTED HEMATOLOGIC AND PLASMA BIOCHEMISTRY ANALYSIS OF FERRUGINOUS DUCKS (AYTHYA NYROCA) IN ISRAEL"
-      ]
-    }
-  },
-  "WA": {
+  "Western Australia": {
     "GILARDI, Kirsten V": {
       "matches": 1,
       "works": [
@@ -2013,23 +1879,7 @@
       ]
     }
   },
-  "GEORGIA": {
-    "POPPENGA, Robert H": {
-      "matches": 1,
-      "works": [
-        "HEALTH AND NUTRITIONAL ASSESSMENT OF FREE-RANGING EASTERN INDIGO SNAKES (DRYMARCHON COUPERI) IN GEORGIA, UNITED STATES"
-      ]
-    }
-  },
-  "UNITED STATES": {
-    "POPPENGA, Robert H": {
-      "matches": 1,
-      "works": [
-        "HEALTH AND NUTRITIONAL ASSESSMENT OF FREE-RANGING EASTERN INDIGO SNAKES (DRYMARCHON COUPERI) IN GEORGIA, UNITED STATES"
-      ]
-    }
-  },
-  "UK": {
+  "Ouaka": {
     "HENN, Brenna M": {
       "matches": 1,
       "works": [
@@ -2037,7 +1887,7 @@
       ]
     }
   },
-  "Trondheim Region": {
+  "Trondheim Crescent": {
     "THY, Peter": {
       "matches": 1,
       "works": [
@@ -2045,7 +1895,7 @@
       ]
     }
   },
-  "Norway": {
+  "Norge": {
     "THY, Peter": {
       "matches": 1,
       "works": [
@@ -2061,7 +1911,7 @@
       ]
     }
   },
-  "Rome": {
+  "Roma": {
     "HENRICSON, Erik K": {
       "matches": 1,
       "works": [
@@ -2077,7 +1927,7 @@
       ]
     }
   },
-  "Myanmar": {
+  "mnmaa": {
     "GILARDI, Kirsten V": {
       "matches": 1,
       "works": [
