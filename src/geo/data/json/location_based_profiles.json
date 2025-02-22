@@ -15,14 +15,6 @@
       ]
     }
   },
-  "Mali": {
-    "LANZARO, Gregory": {
-      "matches": 1,
-      "works": [
-        "Spatial and Habitat Distribution of Anopheles gambiae and Anopheles arabiensis (Diptera: Culicidae) in Banambani Village, Mali"
-      ]
-    }
-  },
   "Baltimore": {
     "CADENASSO, Mary L": {
       "matches": 1,
@@ -38,18 +30,18 @@
         "Development and application of a degree-day model to predict thrips growth and development of <i>Tomato spotted wilt virus</i> in California tomato fields"
       ]
     },
+    "KELLY, Maggi": {
+      "matches": 1,
+      "works": [
+        "Allometric equation choice impacts lidar-based forest biomass estimates: A case study from the Sierra National Forest, CA"
+      ]
+    },
     "FOLEY, Janet E": {
       "matches": 3,
       "works": [
         "SEROLOGIC AND MOLECULAR EVIDENCE OF EHRLICHIA SPP. IN COYOTES IN CALIFORNIA",
         "Patterns of Natural and Human-Caused Mortality Factors of a Rare Forest Carnivore, the Fisher (Pekania pennanti) in California",
         "Endemic Skunk amdoparvovirus in free\u00e2\u20ac\u0090ranging striped skunks (Mephitis mephitis) in California"
-      ]
-    },
-    "STYNE, Dennis M": {
-      "matches": 1,
-      "works": [
-        "Prevalence and risk factors for vitamin D deficiency among healthy infants and young children in Sacramento, California"
       ]
     },
     "BENNETT, Deborah": {
@@ -172,13 +164,6 @@
         "Reproductive parameters of the fisher (Pekania pennanti) in the southern Sierra Nevada, California"
       ]
     },
-    "NADLER, Steven A": {
-      "matches": 2,
-      "works": [
-        "Investigations of peritoneal and intestinal infections of adult hookworms (Uncinaria spp.) in northern fur seal (Callorhinus ursinus) and California sea lion (Zalophus californianus) pups on San Miguel Island, California (2003)",
-        "Investigations of peritoneal and intestinal infections of adult hookworms (Uncinaria spp.) in northern fur seal (Callorhinus ursinus) and California sea lion (Zalophus californianus) pups on San Miguel Island, California (2003)"
-      ]
-    },
     "CHEN, Moon S": {
       "matches": 1,
       "works": [
@@ -233,12 +218,6 @@
         "Determining Marginal Electricity for Near-term Plug-in and Fuel Cell Vehicle Demands in California: Impacts on Vehicle Greenhouse Gas Emissions"
       ]
     },
-    "PAW U, Kyaw T": {
-      "matches": 1,
-      "works": [
-        "Respirable airborne fibers in the home environment in upper silesia, Poland, compared with Davis, California"
-      ]
-    },
     "HARTER, Thomas": {
       "matches": 1,
       "works": [
@@ -257,12 +236,6 @@
       "matches": 1,
       "works": [
         "Standby Energy Use in California Homes"
-      ]
-    },
-    "FALOONA, Ian": {
-      "matches": 1,
-      "works": [
-        "Measurement of fossil fuel derived carbon dioxide and other anthropogenic trace gases above Sacramento, California in Spring 2009"
       ]
     },
     "EVINER, Valerie": {
@@ -300,9 +273,8 @@
       ]
     },
     "KENDALL, Alissa": {
-      "matches": 2,
+      "matches": 1,
       "works": [
-        "Life-Cycle Assessment of Ground Improvement Alternatives for the Treasure Island, California, Redevelopment",
         "Closing loops in California processing and fresh tomato agricultural and production practices"
       ]
     },
@@ -313,9 +285,10 @@
       ]
     },
     "SAFFORD, Hugh D": {
-      "matches": 1,
+      "matches": 2,
       "works": [
-        "Modern departures in fire severity and area vary by forest type, Sierra Nevada and southern Cascades, California, USA"
+        "Modern departures in fire severity and area vary by forest type, Sierra Nevada and southern Cascades, California, USA",
+        "Twentieth century shifts in abundance and composition of vegetation types of the Sierra Nevada, CA, US"
       ]
     },
     "KAGAWA, Rose": {
@@ -522,32 +495,6 @@
       ]
     }
   },
-  "Canada": {
-    "KELLY, Maggi": {
-      "matches": 1,
-      "works": [
-        "Allometric equation choice impacts lidar-based forest biomass estimates: A case study from the Sierra National Forest, CA"
-      ]
-    },
-    "SHAPIRO, Karen": {
-      "matches": 1,
-      "works": [
-        "Prevalence and genetic characterization of Giardia spp. and Cryptosporidium spp. in dogs in Iqaluit, Nunavut, Canada"
-      ]
-    },
-    "SAFFORD, Hugh D": {
-      "matches": 1,
-      "works": [
-        "Twentieth century shifts in abundance and composition of vegetation types of the Sierra Nevada, CA, US"
-      ]
-    },
-    "BEATTY, Timothy K": {
-      "matches": 1,
-      "works": [
-        "Expenditure dispersion and dietary quality: evidence from Canada"
-      ]
-    }
-  },
   "Ghana": {
     "DEWEY, Kathryn G": {
       "matches": 1,
@@ -581,10 +528,10 @@
         "Pathway\u00e2\u20ac\u0090level risk analysis: the net present value of an invasive species policy in the US"
       ]
     },
-    "GARCIA, Lorena": {
+    "BROOKS, Rebecca A": {
       "matches": 1,
       "works": [
-        "Unintended Pregnancy and Intimate Partner Violence Before and During Pregnancy Among Latina Women in Los Angeles, California"
+        "Survival differences of Asian and Caucasian epithelial ovarian cancer patients in the United States"
       ]
     },
     "HARTER, Thomas": {
@@ -593,17 +540,16 @@
         "Hydro-economic analysis of groundwater pumping for irrigated agriculture in California\u00e2\u20ac\u2122s Central Valley, USA"
       ]
     },
-    "RICHARDS, John R": {
-      "matches": 2,
-      "works": [
-        "Comparison of US Utilization and Technical Costs before and after Establishment of 24-hour In-house Coverage for US Examinations",
-        "Comparison of US Utilization and Technical Costs before and after Establishment of 24-hour In-house Coverage for US Examinations"
-      ]
-    },
-    "THORNE, James H": {
+    "ROMANO, Patrick": {
       "matches": 1,
       "works": [
-        "Integration of landscape fragmentation analysis into regional planning: A statewide multi-scale case study from California, USA"
+        "Reduced Costs of Congenital Anomalies from Fetal Ultrasound: Are They Sufficient to Justify Routine Screening in the United States?"
+      ]
+    },
+    "RICHARDS, John R": {
+      "matches": 1,
+      "works": [
+        "Comparison of US Utilization and Technical Costs before and after Establishment of 24-hour In-house Coverage for US Examinations"
       ]
     },
     "SPERLING, Daniel": {
@@ -636,6 +582,12 @@
         "Microchimerism decades after transfusion among combat\u00e2\u20ac\u0090injured US veterans from the Vietnam, Korean, and World War II conflicts"
       ]
     },
+    "BISSELL, Michael": {
+      "matches": 1,
+      "works": [
+        "Family History of Breast Cancer, Breast Density, and Breast Cancer Risk in a U.S. Breast Cancer Screening Population"
+      ]
+    },
     "JOH, Elizabeth E": {
       "matches": 1,
       "works": [
@@ -648,11 +600,17 @@
         "A needs-assessment and demographic survey of infection-control and disease awareness in western US animal shelters"
       ]
     },
-    "SAFFORD, Hugh D": {
+    "MALOGOLOWKIN, Marcio": {
+      "matches": 1,
+      "works": [
+        "Increased clinical trial enrollment among adolescent and young adult cancer patients between 2006 and 2012-2013 in the United States."
+      ]
+    },
+    "MONIER, Erwan": {
       "matches": 2,
       "works": [
-        "Modern departures in fire severity and area vary by forest type, Sierra Nevada and southern Cascades, California, USA",
-        "Twentieth century shifts in abundance and composition of vegetation types of the Sierra Nevada, CA, US"
+        "U.S. Air Quality and Health Benefits from Avoided Climate Change under Greenhouse Gas Mitigation",
+        "Premature mortality related to United States cross-state air pollution"
       ]
     },
     "FARMER, Diana L": {
@@ -661,152 +619,28 @@
         "Value of Global Surgical Activities for US Academic Health Centers: A Position Paper by the Association for Academic Surgery Global Affairs Committee, Society of University Surgeons Committee on Global Academic Surgery, and American College of Surgeons' Operation Giving Back"
       ]
     },
+    "YANG, Christopher": {
+      "matches": 1,
+      "works": [
+        "Development of Integrated Vehicle and Fuel Scenarios in a National Energy System Model for Low Carbon U.S. Transportation Futures"
+      ]
+    },
+    "BENNETT, Deborah": {
+      "matches": 1,
+      "works": [
+        "Consensus Modeling of Median Chemical Intake for the U.S. Population Based on Predictions of Exposure Pathways"
+      ]
+    },
     "LIM, Michele C": {
       "matches": 1,
       "works": [
         "Medicare Incentive Payments to United States Ophthalmologists for Use of Electronic Health Records 2011\u00e2\u20ac\u201c2016"
       ]
     },
-    "MONIER, Erwan": {
+    "STEPHENSEN, Charles B": {
       "matches": 1,
       "works": [
-        "Premature mortality related to United States cross-state air pollution"
-      ]
-    },
-    "BARBATO, Michele": {
-      "matches": 1,
-      "works": [
-        "Climate change effects on the performance of single-family residential buildings in the US Gulf Coast"
-      ]
-    },
-    "MAGNEY, Troy": {
-      "matches": 1,
-      "works": [
-        "Extreme events driving year-to-year differences in gross primary productivity across the US"
-      ]
-    },
-    "PUSTERLA, Nicola": {
-      "matches": 1,
-      "works": [
-        "Investigation of cross\u00e2\u20ac\u0090regional spread and evolution of equine influenza H3N8 at US and global scales using Bayesian phylogeography based on balanced subsampling"
-      ]
-    },
-    "MAGDESIAN, K G": {
-      "matches": 1,
-      "works": [
-        "Prevalence of the RAPGEF5 c.2624C>A and PLOD1 c.2032G>A variants associated with equine familial isolated hypoparathyroidism and fragile foal syndrome in the US Thoroughbred population (1988\u00e2\u20ac\u201c2019)"
-      ]
-    },
-    "LINQUIST, Bruce A": {
-      "matches": 1,
-      "works": [
-        "Greenhouse Gas Emissions and Management Practices that Affect Emissions in US Rice Systems"
-      ]
-    },
-    "HARRISON, Susan": {
-      "matches": 1,
-      "works": [
-        "Climate change effects on an endemic\u00e2\u20ac\u0090rich edaphic flora: resurveying Robert H. Whittaker's Siskiyou sites (Oregon, USA)"
-      ]
-    },
-    "KO, Michelle J": {
-      "matches": 1,
-      "works": [
-        "US Medical School Admissions Leaders\u00e2\u20ac\u2122 Experiences With Barriers to and Advancements in Diversity, Equity, and Inclusion"
-      ]
-    },
-    "BANG, Heejung": {
-      "matches": 1,
-      "works": [
-        "Implications of a New Definition of Vitamin D Deficiency in a Multiracial US Adolescent Population: The National Health and Nutrition Examination Survey III"
-      ]
-    },
-    "POPPENGA, Robert H": {
-      "matches": 1,
-      "works": [
-        "HEALTH AND NUTRITIONAL ASSESSMENT OF FREE-RANGING EASTERN INDIGO SNAKES (DRYMARCHON COUPERI) IN GEORGIA, UNITED STATES"
-      ]
-    },
-    "BOURGEOIS, James A": {
-      "matches": 1,
-      "works": [
-        "The Management of Fitness for Duty in the United States Military"
-      ]
-    },
-    "FAUER, Alex J": {
-      "matches": 1,
-      "works": [
-        "Use of gabapentinoid medications among US adults with cancer, 2005-2015."
-      ]
-    },
-    "THOMPSON, George R": {
-      "matches": 1,
-      "works": [
-        "Update on Outbreak of Fungal Meningitis Among US Residents Who Received Epidural Anesthesia at Two Clinics in Matamoros, Mexico"
-      ]
-    },
-    "HSU, Greta": {
-      "matches": 1,
-      "works": [
-        "Collaborative Dynamics Among Market Incumbents in the US Airline Industry, 1989\u00e2\u20ac\u201c2010"
-      ]
-    }
-  },
-  "Nairobi": {
-    "MEIER, Alan K": {
-      "matches": 1,
-      "works": [
-        "Chronic diarrhoea in HIV-1-infected adults in Nairobi, Kenya"
-      ]
-    }
-  },
-  "Kenya": {
-    "MEIER, Alan K": {
-      "matches": 1,
-      "works": [
-        "Chronic diarrhoea in HIV-1-infected adults in Nairobi, Kenya"
-      ]
-    }
-  },
-  "Xi An Shi ": {
-    "KLEEMAN, Michael J": {
-      "matches": 1,
-      "works": [
-        "Source contributions to primary and secondary inorganic particulate matter during a severe wintertime PM2.5 pollution episode in Xi'an, China"
-      ]
-    }
-  },
-  "Ri Ben ": {
-    "KIM, Kyu H": {
-      "matches": 1,
-      "works": [
-        "Darryl E. Flaherty. Public Law, Private Practice: Politics, Profit, and the Legal Profession in Nineteenth-Century Japan."
-      ]
-    }
-  },
-  "The (old?) Hood": {
-    "BROOKS, Rebecca A": {
-      "matches": 1,
-      "works": [
-        "Survival differences of Asian and Caucasian epithelial ovarian cancer patients in the United States"
-      ]
-    },
-    "ROMANO, Patrick": {
-      "matches": 1,
-      "works": [
-        "Reduced Costs of Congenital Anomalies from Fetal Ultrasound: Are They Sufficient to Justify Routine Screening in the United States?"
-      ]
-    },
-    "SANDOVAL SOLIS, Samuel": {
-      "matches": 1,
-      "works": [
-        "Risk Analysis of the 1944 Treaty between the United States and Mexico for the Rio Grande/Bravo Basin"
-      ]
-    },
-    "MALOGOLOWKIN, Marcio": {
-      "matches": 1,
-      "works": [
-        "Increased clinical trial enrollment among adolescent and young adult cancer patients between 2006 and 2012-2013 in the United States."
+        "Association of Lactase Persistence Genotypes (rs4988235) and Ethnicity with Dairy Intake in a Healthy U.S. Population."
       ]
     },
     "BITLER, Marianne P": {
@@ -827,10 +661,23 @@
         "Association of Medicaid Expansion With Opioid Overdose Mortality in the United States"
       ]
     },
+    "HSU, Greta": {
+      "matches": 2,
+      "works": [
+        "EVALUATIVE SCHEMAS AND THE ATTENTION OF CRITICS IN THE U.S. FILM INDUSTRY.",
+        "Collaborative Dynamics Among Market Incumbents in the US Airline Industry, 1989\u00e2\u20ac\u201c2010"
+      ]
+    },
     "FENG, Bo": {
       "matches": 1,
       "works": [
         "Internet Use, Risk Awareness, and Demographic Characteristics Associated With Engagement in Preventive Behaviors and Testing: Cross-Sectional Survey on COVID-19 in the United States (Preprint)"
+      ]
+    },
+    "BAKERJIAN, Deb": {
+      "matches": 1,
+      "works": [
+        "Appropriate Nurse Staffing Levels for U.S. Nursing Homes."
       ]
     },
     "LANE, Nancy E": {
@@ -840,9 +687,22 @@
       ]
     },
     "PUSTERLA, Nicola": {
+      "matches": 2,
+      "works": [
+        "Investigation of an EHV-1 Outbreak in the United States Caused by a New H752 Genotype",
+        "Investigation of cross\u00e2\u20ac\u0090regional spread and evolution of equine influenza H3N8 at US and global scales using Bayesian phylogeography based on balanced subsampling"
+      ]
+    },
+    "BARBATO, Michele": {
       "matches": 1,
       "works": [
-        "Investigation of an EHV-1 Outbreak in the United States Caused by a New H752 Genotype"
+        "Climate change effects on the performance of single-family residential buildings in the US Gulf Coast"
+      ]
+    },
+    "MAGNEY, Troy": {
+      "matches": 1,
+      "works": [
+        "Extreme events driving year-to-year differences in gross primary productivity across the US"
       ]
     },
     "BRINKLEY, Catherine": {
@@ -851,10 +711,34 @@
         "Urban land teleconnections in the United States: A graphical network approach"
       ]
     },
+    "MAGDESIAN, K G": {
+      "matches": 1,
+      "works": [
+        "Prevalence of the RAPGEF5 c.2624C>A and PLOD1 c.2032G>A variants associated with equine familial isolated hypoparathyroidism and fragile foal syndrome in the US Thoroughbred population (1988\u00e2\u20ac\u201c2019)"
+      ]
+    },
     "MUNIR, Bilal": {
       "matches": 1,
       "works": [
         "Combined atrial fibrillation ablation and left atrial appendage occlusion procedure in the United States: a propensity score matched analysis from 2016\u00e2\u20ac\u201c2019 national readmission database"
+      ]
+    },
+    "LINQUIST, Bruce A": {
+      "matches": 1,
+      "works": [
+        "Greenhouse Gas Emissions and Management Practices that Affect Emissions in US Rice Systems"
+      ]
+    },
+    "KO, Michelle J": {
+      "matches": 1,
+      "works": [
+        "US Medical School Admissions Leaders\u00e2\u20ac\u2122 Experiences With Barriers to and Advancements in Diversity, Equity, and Inclusion"
+      ]
+    },
+    "BANG, Heejung": {
+      "matches": 1,
+      "works": [
+        "Implications of a New Definition of Vitamin D Deficiency in a Multiracial US Adolescent Population: The National Health and Nutrition Examination Survey III"
       ]
     },
     "KEEGAN, Theresa H": {
@@ -875,6 +759,18 @@
         "O790 Pregnancy after tubal sterilization in the United States"
       ]
     },
+    "BOURGEOIS, James A": {
+      "matches": 1,
+      "works": [
+        "The Management of Fitness for Duty in the United States Military"
+      ]
+    },
+    "FAUER, Alex J": {
+      "matches": 1,
+      "works": [
+        "Use of gabapentinoid medications among US adults with cancer, 2005-2015."
+      ]
+    },
     "TONG, Elisa K": {
       "matches": 1,
       "works": [
@@ -888,6 +784,30 @@
       ]
     }
   },
+  "Nairobi": {
+    "MEIER, Alan K": {
+      "matches": 1,
+      "works": [
+        "Chronic diarrhoea in HIV-1-infected adults in Nairobi, Kenya"
+      ]
+    }
+  },
+  "Xi An Shi": {
+    "KLEEMAN, Michael J": {
+      "matches": 1,
+      "works": [
+        "Source contributions to primary and secondary inorganic particulate matter during a severe wintertime PM2.5 pollution episode in Xi'an, China"
+      ]
+    }
+  },
+  "Ri Ben": {
+    "KIM, Kyu H": {
+      "matches": 1,
+      "works": [
+        "Darryl E. Flaherty. Public Law, Private Practice: Politics, Profit, and the Legal Profession in Nineteenth-Century Japan."
+      ]
+    }
+  },
   "Bethesda": {
     "DEWEY, Kathryn G": {
       "matches": 1,
@@ -896,15 +816,7 @@
       ]
     }
   },
-  "Moldova": {
-    "DEWEY, Kathryn G": {
-      "matches": 1,
-      "works": [
-        "Human microbiome science: vision for the future, Bethesda, MD, July 24 to 26, 2013"
-      ]
-    }
-  },
-  "Si Chuan Sheng ": {
+  "Si Chuan Sheng": {
     "TONG, Elisa K": {
       "matches": 1,
       "works": [
@@ -912,7 +824,7 @@
       ]
     }
   },
-  "Ciudad de Mexico": {
+  "Ciudad De Mexico": {
     "HIJMANS, Robert J": {
       "matches": 1,
       "works": [
@@ -931,22 +843,10 @@
         "Risk Analysis of the 1944 Treaty between the United States and Mexico for the Rio Grande/Bravo Basin"
       ]
     },
-    "FOLEY, Janet E": {
-      "matches": 1,
-      "works": [
-        "An exploratory analysis of demography and movement patterns of dogs: New insights in the ecology of endemic Rocky Mountain-Spotted Fever in Mexicali, Mexico"
-      ]
-    },
     "JALLER MARTELO, Miguel A": {
       "matches": 1,
       "works": [
         "Quantifying the Impacts of Sustainable City Logistics Measures in the Mexico City Metropolitan Area"
-      ]
-    },
-    "THOMPSON, George R": {
-      "matches": 1,
-      "works": [
-        "Update on Outbreak of Fungal Meningitis Among US Residents Who Received Epidural Anesthesia at Two Clinics in Matamoros, Mexico"
       ]
     }
   },
@@ -958,20 +858,6 @@
       ]
     }
   },
-  "ySHrAl": {
-    "FARRENS, Matthew K": {
-      "matches": 1,
-      "works": [
-        "Proceedings of the 32nd Annual IEEE/ACM International Symposium on Microarchitecture, MICRO 32, Haifa, Israel, November 16-18, 1999"
-      ]
-    },
-    "BEAUFRERE, Hugues H": {
-      "matches": 1,
-      "works": [
-        "SELECTED HEMATOLOGIC AND PLASMA BIOCHEMISTRY ANALYSIS OF FERRUGINOUS DUCKS (AYTHYA NYROCA) IN ISRAEL"
-      ]
-    }
-  },
   "North Carolina": {
     "HERTZ-PICCIOTTO, Irva": {
       "matches": 1,
@@ -980,17 +866,11 @@
       ]
     }
   },
-  "Zhong Guo ": {
+  "Zhong Guo": {
     "HERTZ-PICCIOTTO, Irva": {
       "matches": 1,
       "works": [
         "Prenatal and Perinatal Risk Factors for Autism in China"
-      ]
-    },
-    "QI, Lihong": {
-      "matches": 1,
-      "works": [
-        "Which Urban Migrants Default from Tuberculosis Treatment in Shanghai, China?"
       ]
     },
     "WILKES, Michael S": {
@@ -1030,7 +910,7 @@
       ]
     }
   },
-  "baaNlaadesh": {
+  "Baanlaadesh": {
     "DEWEY, Kathryn G": {
       "matches": 1,
       "works": [
@@ -1058,7 +938,7 @@
       ]
     }
   },
-  "Equipe Municipal de Combate ao Aedes aegypti": {
+  "Equipe Municipal De Combate Ao Aedes Aegypti": {
     "MORRISON, Amy C": {
       "matches": 1,
       "works": [
@@ -1082,35 +962,7 @@
       ]
     }
   },
-  "Peru": {
-    "MORRISON, Amy C": {
-      "matches": 3,
-      "works": [
-        "Strengths and Weaknesses of Global Positioning System (GPS) Data-Loggers and Semi-structured Interviews for Capturing Fine-scale Human Mobility: Findings from Iquitos, Peru",
-        "Measuring health related quality of life for dengue patients in Iquitos, Peru",
-        "EVALUATION OF <i>AEDES AEGYPTI</i> RESTING PREFERENCES IN EXPERIMENTAL HUTS IN IQUITOS, PERU"
-      ]
-    },
-    "FEJERMAN, Laura": {
-      "matches": 1,
-      "works": [
-        "Abstract 4184: Tumor and risk factor characteristics among breast cancer patients from different geographic regions in Peru"
-      ]
-    },
-    "BARKER, Christopher M": {
-      "matches": 1,
-      "works": [
-        "Correction: Dengue illness impacts daily human mobility patterns in Iquitos, Peru"
-      ]
-    },
-    "STEPHENSEN, Charles B": {
-      "matches": 1,
-      "works": [
-        "A randomized, placebo-controlled, double-blind clinical trial of high-dose vitamin A supplements in children hospitalized with pneumonia in Lima, Peru."
-      ]
-    }
-  },
-  "Tai Wan ": {
+  "Tai Wan": {
     "KASS, Philip H": {
       "matches": 2,
       "works": [
@@ -1119,7 +971,7 @@
       ]
     }
   },
-  "praethsaithy": {
+  "Praethsaithy": {
     "HAMMOCK, Bruce": {
       "matches": 1,
       "works": [
@@ -1159,7 +1011,7 @@
       ]
     }
   },
-  "Village of Almond": {
+  "Village Of Almond": {
     "GRADZIEL, Thomas": {
       "matches": 1,
       "works": [
@@ -1183,7 +1035,7 @@
       ]
     }
   },
-  "Da Ban Shi ": {
+  "Da Ban Shi": {
     "MENDOZA, Zoila S": {
       "matches": 1,
       "works": [
@@ -1227,22 +1079,6 @@
       ]
     }
   },
-  "Sonora": {
-    "OSKIN, Michael E": {
-      "matches": 1,
-      "works": [
-        "Transtensional rifting in the proto\u00e2\u20ac\u201cGulf of California near Bah\u00c3\u00ada Kino, Sonora, M\u00c3\u00a9xico"
-      ]
-    }
-  },
-  "Maroc  lmGrb": {
-    "OSKIN, Michael E": {
-      "matches": 1,
-      "works": [
-        "Transtensional rifting in the proto\u00e2\u20ac\u201cGulf of California near Bah\u00c3\u00ada Kino, Sonora, M\u00c3\u00a9xico"
-      ]
-    }
-  },
   "Xico": {
     "OSKIN, Michael E": {
       "matches": 1,
@@ -1257,15 +1093,9 @@
       "works": [
         "Gender Gap in Italy: The Role of College Majors"
       ]
-    },
-    "FOGLIA, Laura": {
-      "matches": 1,
-      "works": [
-        "Seawater intrusion in karstic, coastal aquifers: Current challenges and future scenarios in the Taranto area (southern Italy)"
-      ]
     }
   },
-  "B'lgariia": {
+  "B'Lgariia": {
     "MARTINEZ LOPEZ, Beatriz": {
       "matches": 1,
       "works": [
@@ -1273,7 +1103,7 @@
       ]
     }
   },
-  "Shang Hai Shi ": {
+  "Shang Hai Shi": {
     "QI, Lihong": {
       "matches": 1,
       "works": [
@@ -1287,7 +1117,7 @@
       ]
     }
   },
-  "Bagdat Demiryolu / Reya hesini li Bexda / sk@ Hdyd bGdd": {
+  "Bagdat Demiryolu / Reya Hesini Li Bexda / Sk@ Hdyd Bgdd": {
     "WATENPAUGH, Heghnar": {
       "matches": 1,
       "works": [
@@ -1333,14 +1163,6 @@
       ]
     }
   },
-  "Colorado": {
-    "JURKOVICH, Gregory J": {
-      "matches": 1,
-      "works": [
-        "An analysis of advanced prehospital airway management1 1Selected Topics\u00e2\u20ac\u201dPrehospital Care is coordinated by Peter Pons, MD, of Denver Health Medical Center, Denver, Colorado"
-      ]
-    }
-  },
   "Auckland": {
     "BROWN, Patrick H": {
       "matches": 1,
@@ -1349,7 +1171,7 @@
       ]
     }
   },
-  "City of New York": {
+  "City Of New York": {
     "ELKO, Heather L": {
       "matches": 1,
       "works": [
@@ -1379,51 +1201,7 @@
       ]
     }
   },
-  "U&S": {
-    "BISSELL, Michael": {
-      "matches": 1,
-      "works": [
-        "Family History of Breast Cancer, Breast Density, and Breast Cancer Risk in a U.S. Breast Cancer Screening Population"
-      ]
-    },
-    "MONIER, Erwan": {
-      "matches": 1,
-      "works": [
-        "U.S. Air Quality and Health Benefits from Avoided Climate Change under Greenhouse Gas Mitigation"
-      ]
-    },
-    "YANG, Christopher": {
-      "matches": 1,
-      "works": [
-        "Development of Integrated Vehicle and Fuel Scenarios in a National Energy System Model for Low Carbon U.S. Transportation Futures"
-      ]
-    },
-    "BENNETT, Deborah": {
-      "matches": 1,
-      "works": [
-        "Consensus Modeling of Median Chemical Intake for the U.S. Population Based on Predictions of Exposure Pathways"
-      ]
-    },
-    "STEPHENSEN, Charles B": {
-      "matches": 1,
-      "works": [
-        "Association of Lactase Persistence Genotypes (rs4988235) and Ethnicity with Dairy Intake in a Healthy U.S. Population."
-      ]
-    },
-    "HSU, Greta": {
-      "matches": 1,
-      "works": [
-        "EVALUATIVE SCHEMAS AND THE ATTENTION OF CRITICS IN THE U.S. FILM INDUSTRY."
-      ]
-    },
-    "BAKERJIAN, Deb": {
-      "matches": 1,
-      "works": [
-        "Appropriate Nurse Staffing Levels for U.S. Nursing Homes."
-      ]
-    }
-  },
-  "joseonminjujuyiinmingonghwagug": {
+  "Joseonminjujuyiinmingonghwagug": {
     "SUMNER, Daniel A": {
       "matches": 1,
       "works": [
@@ -1455,14 +1233,6 @@
       ]
     }
   },
-  "Polska": {
-    "PAW U, Kyaw T": {
-      "matches": 1,
-      "works": [
-        "Respirable airborne fibers in the home environment in upper silesia, Poland, compared with Davis, California"
-      ]
-    }
-  },
   "Davis County": {
     "PAW U, Kyaw T": {
       "matches": 1,
@@ -1471,7 +1241,7 @@
       ]
     }
   },
-  "seoulteugbyeolsi": {
+  "Seoulteugbyeolsi": {
     "ZHANG, Qi": {
       "matches": 1,
       "works": [
@@ -1498,20 +1268,6 @@
       "matches": 1,
       "works": [
         "HEALTH AND NUTRITIONAL ASSESSMENT OF FREE-RANGING EASTERN INDIGO SNAKES (DRYMARCHON COUPERI) IN GEORGIA, UNITED STATES"
-      ]
-    }
-  },
-  "Brasil": {
-    "MICHAILIDES, Themis J": {
-      "matches": 1,
-      "works": [
-        "Comparative in vivo and in vitro study on Monilia fructicola causing brown rot of stone fruit in Brazil and California"
-      ]
-    },
-    "GAUDIN, Amelie": {
-      "matches": 1,
-      "works": [
-        "Resilience of an Integrated Crop\u00e2\u20ac\u201cLivestock System to Climate Change: A Simulation Analysis of Cover Crop Grazing in Southern Brazil"
       ]
     }
   },
@@ -1563,7 +1319,7 @@
       ]
     }
   },
-  "yrn": {
+  "Yrn": {
     "MESGARAN, Mohsen B": {
       "matches": 1,
       "works": [
@@ -1639,29 +1395,7 @@
       ]
     }
   },
-  "Colombia": {
-    "HAGERMAN, Randi J": {
-      "matches": 1,
-      "works": [
-        "Increased severity of fragile X spectrum disorders in the agricultural community of Ricaurte, Colombia"
-      ]
-    }
-  },
-  "South Africa": {
-    "CORNEL, Anthony": {
-      "matches": 1,
-      "works": [
-        "Complete mitogenome sequence of Aedes (Stegomyia) aegypti derived from field isolates from California and South Africa"
-      ]
-    },
-    "TROUILLAS, Florent P": {
-      "matches": 1,
-      "works": [
-        "Genome sequence of <i>Colletotrichum karsti</i> isolated from rose leaves exhibiting anthracnose symptoms in Potchefstroom, South Africa."
-      ]
-    }
-  },
-  "twns": {
+  "Twns": {
     "HOLYOAK, Marcel": {
       "matches": 1,
       "works": [
@@ -1669,15 +1403,7 @@
       ]
     }
   },
-  "Iqaluit iqaloit": {
-    "SHAPIRO, Karen": {
-      "matches": 1,
-      "works": [
-        "Prevalence and genetic characterization of Giardia spp. and Cryptosporidium spp. in dogs in Iqaluit, Nunavut, Canada"
-      ]
-    }
-  },
-  "nonafot Nunavut": {
+  "Iqaluit Iqaloit": {
     "SHAPIRO, Karen": {
       "matches": 1,
       "works": [
@@ -1701,7 +1427,15 @@
       ]
     }
   },
-  "Mongol uls munggul ulus": {
+  "Peru": {
+    "FEJERMAN, Laura": {
+      "matches": 1,
+      "works": [
+        "Abstract 4184: Tumor and risk factor characteristics among breast cancer patients from different geographic regions in Peru"
+      ]
+    }
+  },
+  "Mongol Uls Munggul Ulus": {
     "RUMBEIHA, Wilson K": {
       "matches": 1,
       "works": [
@@ -1731,7 +1465,7 @@
       ]
     }
   },
-  "glgt bltstn": {
+  "Glgt Bltstn": {
     "POTTER, Daniel": {
       "matches": 1,
       "works": [
@@ -1777,6 +1511,14 @@
       ]
     }
   },
+  "Brasil": {
+    "GAUDIN, Amelie": {
+      "matches": 1,
+      "works": [
+        "Resilience of an Integrated Crop\u00e2\u20ac\u201cLivestock System to Climate Change: A Simulation Analysis of Cover Crop Grazing in Southern Brazil"
+      ]
+    }
+  },
   "Nicaragua": {
     "JAMES, Michelle": {
       "matches": 1,
@@ -1785,7 +1527,7 @@
       ]
     }
   },
-  "daehanmingug": {
+  "Daehanmingug": {
     "THORNE, James H": {
       "matches": 1,
       "works": [
@@ -1855,6 +1597,14 @@
       ]
     }
   },
+  "Canada": {
+    "BEATTY, Timothy K": {
+      "matches": 1,
+      "works": [
+        "Expenditure dispersion and dietary quality: evidence from Canada"
+      ]
+    }
+  },
   "Lima Metropolitana": {
     "STEPHENSEN, Charles B": {
       "matches": 1,
@@ -1863,11 +1613,19 @@
       ]
     }
   },
-  "joseon/hangug": {
+  "Joseon/Hangug": {
     "LEE, Jee-Yon": {
       "matches": 1,
       "works": [
         "Association between serum osteocalcin and insulin resistance in postmenopausal, but not premenopausal, women in Korea"
+      ]
+    }
+  },
+  "Yshral": {
+    "BEAUFRERE, Hugues H": {
+      "matches": 1,
+      "works": [
+        "SELECTED HEMATOLOGIC AND PLASMA BIOCHEMISTRY ANALYSIS OF FERRUGINOUS DUCKS (AYTHYA NYROCA) IN ISRAEL"
       ]
     }
   },
@@ -1888,14 +1646,6 @@
     }
   },
   "Trondheim Crescent": {
-    "THY, Peter": {
-      "matches": 1,
-      "works": [
-        "Primary igneous load-cast deformation structures in the Fongen-Hyllingen layered basic intrusion, Trondheim Region, Norway"
-      ]
-    }
-  },
-  "Norge": {
     "THY, Peter": {
       "matches": 1,
       "works": [
@@ -1927,7 +1677,7 @@
       ]
     }
   },
-  "mnmaa": {
+  "Mnmaa": {
     "GILARDI, Kirsten V": {
       "matches": 1,
       "works": [

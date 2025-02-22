@@ -4,6 +4,7 @@ import logging
 import pandas as pd
 import spacy
 import json
+import re
 from geopy.geocoders import Nominatim
 from unidecode import unidecode
 
@@ -17,6 +18,19 @@ logging.basicConfig(filename=log_file, level=logging.INFO, format="%(asctime)s -
 
 # Geocoding API
 geolocator = Nominatim(user_agent="lctnguyen@ucdavis.edu")
+# Some names (the key) are read incorrectly by the api
+manual_geo_name = {
+  "CA" : "California",
+  "the United States" : "USA",
+  "U.S." : "USA"
+}
+
+def normalizeLocationName(location):
+  location = location.strip().lower()
+  location = re.sub(r'\s+', ' ', location)
+  location = re.sub(r'^the\s+', '', location, flags=re.IGNORECASE)
+  location = re.sub(r'\b\w', lambda c: c.group(0).upper(), location)
+  return location
   
 # Define batch size for NLP processing
 BATCH_SIZE = 10  # ~ 1.8 min to process sample data
@@ -27,7 +41,7 @@ locations = {}    # Location -> {Expert's name -> GeoProfileMapping object}
 coordinates = {}  # Location -> Coordinate
 
 # Use in this script only. Store geocoded locations
-geoData = {}      # Location's name -> its info (normalized name, coordinate, type)
+geoData = {}      # Location's name -> its info (normalized name, coordinate, level)
 
 unique_titles = set()
 unique_locations = set()
@@ -107,50 +121,63 @@ for batch_start in range(0, total_rows, BATCH_SIZE):
       profiles[name] = Profile(name)
     profiles[name].addTitle(title)
 
-    # Extract locations
-    found_location = False  # Track if any location was found
+    found_locations = set()
+    specific_level = 2    # Continent = 2, Country = 4, State = 8, City = 16
+    
+    # Extract geographical entities and geocode
     for ent in doc.ents:
       if ent.label_ == "GPE":
-        geo = ent.text
-        # Geocode if it's a new location
-        if geo not in geoData:
-          # Waiting for API
-          time.sleep(0.1)
+        geo_name = ent.text
+        if geo_name in manual_geo_name:
+          geo_name = manual_geo_name[geo_name]
           
-          location = geolocator.geocode(geo)
-          if location:
-            found_location = True
+        # Geocode and store to 'geoData' if it's a new location
+        if geo_name not in geoData:
+          # Waiting for API
+          time.sleep(0.5)
+          
+          geo = geolocator.geocode(geo_name)
+          if geo:
             batch_location_count += 1
             
-            full_info = location.raw
-            info = {
-              "geo_name" : unidecode(full_info["name"]),
-              "coordinate" : [location.latitude, location.longitude],
-              "type" : full_info["place_rank"]      # Country = 4, State = 8, City = 16
+            full_info = geo.raw
+            geoData[geo_name] = {
+              "geo_name" : normalizeLocationName(unidecode(full_info["name"])),
+              "coordinate" : [geo.latitude, geo.longitude],
+              "level" : full_info["place_rank"]
             }
-            geoData[geo] = info
           else:
             continue
         
+        # Keep track of found locations for this expert
+        found_locations.add(geo_name)
+        
+        # Find the most specific location in the work
+        if geoData[geo_name]["level"] > specific_level:
+          specific_level = geoData[geo_name]["level"]
+          
+    for location in found_locations:
+      if geoData[location]["level"] == specific_level:
+        
         # Use location's normalized name
-        geo_name = geoData[geo]["geo_name"]
+        location_name = geoData[location]["geo_name"]
         
         # Store new coordinates
-        if geo_name not in coordinates:
-          coordinates[geo_name] = geoData[geo]["coordinate"]
+        if location_name not in coordinates:
+          coordinates[location_name] = geoData[location]["coordinate"]
 
         # Add location to expert's profile
-        profiles[name].addLocation(geo_name)
+        profiles[name].addLocation(location_name)
 
         # Update location-based profile mapping
-        if geo_name not in locations:
-          locations[geo_name] = {}
-        if name not in locations[geo_name]:
-          locations[geo_name][name] = GeoProfileMapping(name, geo_name)
+        if location_name not in locations:
+          locations[location_name] = {}
+        if name not in locations[location_name]:
+          locations[location_name][name] = GeoProfileMapping(name, location_name)
 
-        locations[geo_name][name].addRelatedWork(title)
+        locations[location_name][name].addRelatedWork(title)
 
-    if not found_location:
+    if not found_locations:
       # If no location found, we can consider this as a non-geo profile
       profiles[name].addLocation("None")  # Or any other way to represent no location
 
