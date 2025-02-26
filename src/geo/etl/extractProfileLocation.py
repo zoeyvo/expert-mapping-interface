@@ -21,6 +21,7 @@ geolocator = Nominatim(user_agent="lctnguyen@ucdavis.edu")
 # Some names (the key) are read incorrectly by the api
 manual_geo_name = {
   "CA" : "California",
+  "California, U.S.A." : "California",
   "the United States" : "USA",
   "U.S." : "USA"
 }
@@ -50,11 +51,11 @@ unique_researchers = set()
 class Profile:
   def __init__(self, name):
     self.name = name
-    self.titles = []
+    self.works = []
     self.locations = []
 
-  def addTitle(self, title):
-    self.titles.append(title)
+  def addWork(self, title, abstract):
+    self.works.append(Work(title, abstract))
     unique_titles.add(title)
 
   def addLocation(self, location):
@@ -62,21 +63,34 @@ class Profile:
     unique_locations.add(location)
 
 def profileToJson(profile: Profile):
-  return {"titles": profile.titles, "locations": profile.locations}
+  worksJson = []
+  for work in profile.works:
+    worksJson.append({"title" : work.title, "abstract" : work.abstract})
+    
+  return {"works": worksJson, "locations": profile.locations}
 
 class GeoProfileMapping:
   def __init__(self, name, location):
     self.name = name
     self.location = location
-    self.relatedWork = []
+    self.relatedWorks = []
     self.matchesCount = 0
 
-  def addRelatedWork(self, work):
-    self.relatedWork.append(work)
+  def addRelatedWork(self, title, abstract):
+    self.relatedWorks.append(Work(title, abstract))
     self.matchesCount += 1
 
 def geoProfileMappingToJson(mapping: GeoProfileMapping):
-  return {"matches": mapping.matchesCount, "works": mapping.relatedWork}
+  worksJson = []
+  for work in mapping.relatedWorks:
+    worksJson.append({"title" : work.title, "abstract" : work.abstract})
+    
+  return {"matches": mapping.matchesCount, "works": worksJson}
+
+class Work:
+  def __init__(self, title, abstract):
+    self.title = title
+    self.abstract = abstract
 
 # Load NLP model
 start_time = time.time()
@@ -95,9 +109,12 @@ logging.info("Processing file: %s", csv_file_path)
 
 # Read data
 data = pd.read_csv(csv_file_path)
+data = data.fillna('')
+
 total_rows = len(data)
 titles = data["title"].tolist()
 names = data["Name"].tolist()
+abstracts = data["abstract"].tolist()
 
 # Process in batches
 start_nlp_time = time.time()
@@ -107,19 +124,22 @@ for batch_start in range(0, total_rows, BATCH_SIZE):
   batch_end = min(batch_start + BATCH_SIZE, total_rows)
   batch_titles = titles[batch_start:batch_end]
   batch_names = names[batch_start:batch_end]
+  batch_abstracts = abstracts[batch_start:batch_end]
+
+  batch_works = [title + ". " + abstract for title, abstract in zip(batch_titles, batch_abstracts)]
 
   batch_start_time = time.time()
-  batch_docs = list(nlp.pipe(batch_titles, batch_size=BATCH_SIZE))
+  batch_docs = list(nlp.pipe(batch_works, batch_size=BATCH_SIZE))
 
   batch_location_count = 0
 
-  for name, title, doc in zip(batch_names, batch_titles, batch_docs):
+  for name, title, abstract, doc in zip(batch_names, batch_titles, batch_abstracts, batch_docs):
     unique_researchers.add(name)  # Track unique researchers
 
     # Add title to corresponding expert profile
     if name not in profiles:
       profiles[name] = Profile(name)
-    profiles[name].addTitle(title)
+    profiles[name].addWork(title, abstract)
 
     found_locations = set()
     specific_level = 2    # Continent = 2, Country = 4, State = 8, City = 16
@@ -134,12 +154,10 @@ for batch_start in range(0, total_rows, BATCH_SIZE):
         # Geocode and store to 'geoData' if it's a new location
         if geo_name not in geoData:
           # Waiting for API
-          time.sleep(0.5)
-          
+          time.sleep(0.6)
+
           geo = geolocator.geocode(geo_name)
           if geo:
-            batch_location_count += 1
-            
             full_info = geo.raw
             geoData[geo_name] = {
               "geo_name" : normalizeLocationName(unidecode(full_info["name"])),
@@ -155,6 +173,8 @@ for batch_start in range(0, total_rows, BATCH_SIZE):
         # Find the most specific location in the work
         if geoData[geo_name]["level"] > specific_level:
           specific_level = geoData[geo_name]["level"]
+          
+    batch_location_count += len(found_locations)
           
     for location in found_locations:
       if geoData[location]["level"] == specific_level:
@@ -175,7 +195,7 @@ for batch_start in range(0, total_rows, BATCH_SIZE):
         if name not in locations[location_name]:
           locations[location_name][name] = GeoProfileMapping(name, location_name)
 
-        locations[location_name][name].addRelatedWork(title)
+        locations[location_name][name].addRelatedWork(title, abstract)
 
     if not found_locations:
       # If no location found, we can consider this as a non-geo profile

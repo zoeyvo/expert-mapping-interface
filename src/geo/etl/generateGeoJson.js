@@ -43,9 +43,9 @@ function generateGeoJSON() {
 
   const locationProfiles = JSON.parse(fs.readFileSync(profilesPath, "utf-8"));
   const locationCoordinates = JSON.parse(fs.readFileSync(coordsPath, "utf-8"));
-  
+
   const seenErrorMessages = new Set();
-  
+
   // Initialize GeoJSON structure
   const geoJson = {
     type: "FeatureCollection",
@@ -55,7 +55,7 @@ function generateGeoJSON() {
   for (const [location, researchers] of Object.entries(locationProfiles)) {
     const normalizedLocation = normalizeLocationName(location);
     const coordinates = locationCoordinates[normalizedLocation];
-    
+
     if (!coordinates) {
       const errorMsg = `No coordinates found for: ${normalizedLocation}`;
       if (!seenErrorMessages.has(errorMsg)) {
@@ -79,6 +79,12 @@ function generateGeoJSON() {
         }
       }
 
+      // Display only titles, not abstracts
+      let titles = new Array();
+      for (let work of data.works) {
+        titles.push(work["title"])
+      }
+
       geoJson.features.push({
         type: "Feature",
         geometry: {
@@ -88,7 +94,7 @@ function generateGeoJSON() {
         properties: {
           researcher: normalizedResearcher,
           location: normalizedLocation,
-          works: data.works,
+          works: titles,
           url: url
         }
       });
