@@ -72,7 +72,7 @@ const ResearchMap = () => {
 
   return (
     <div style={{ display: "flex", justifyContent: "center", height: "100vh" }}>
-      <div style={{ height: "80vh", width: "300vh" }} className="leaflet-container"></div>
+      <div style={{ height: "100vh", width: "300vh",paddingBottom: "100px" }} className="leaflet-container"></div>
         {/* The map will be initialized dynamically */}
       </div>
   );
