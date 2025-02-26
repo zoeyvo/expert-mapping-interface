@@ -23,6 +23,13 @@ const customMarker = new L.Icon({
   shadowSize: [41, 41],
 });
 
+// const updateMarkerSize = (zoom) => {
+//   const size = 25 + (zoom - 2) * 2; // Adjust the multiplier as needed
+//   customMarker.options.iconSize = [size, size * 1.64];
+//   customMarker.options.iconAnchor = [size / 2, size * 1.64];
+//   customMarker.options.shadowSize = [size * 1.64, size * 1.64];
+// };
+
 const ResearchMap = () => {
   const [geoData, setGeoData] = useState(null);
 
@@ -55,18 +62,19 @@ const ResearchMap = () => {
       });
 
       // Initialize the map and add the markerClusters layer
-      const mapInstance = L.map(map).setView([20, 0], 2);
-      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        attribution: '&copy; OpenStreetMap contributors',
+      const mapInstance = L.map(map, { minZoom: 2, maxZoom: 8 }).setView([20, 0], 2);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       }).addTo(mapInstance);
-      mapInstance.addLayer(markerClusters); 
+      mapInstance.addLayer(markerClusters);
     }
   }, [geoData]);
 
   return (
-    <div style={{ height: "100vh", marginTop: "-100px", paddingBottom: "100px" }} className="leaflet-container">
-      {/* The map will be initialized dynamically */}
-    </div>
+    <div style={{ display: "flex", justifyContent: "center", height: "100vh" }}>
+      <div style={{ height: "80vh", width: "300vh" }} className="leaflet-container"></div>
+        {/* The map will be initialized dynamically */}
+      </div>
   );
 };
 
