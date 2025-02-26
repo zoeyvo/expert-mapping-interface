@@ -51,12 +51,17 @@ const ResearchMap = () => {
         const [lng, lat] = feature.geometry.coordinates; // GeoJSON is [longitude, latitude]
         const marker = L.marker([lat, lng], { icon: customMarker });
 
-        marker.bindPopup(`
+        marker.bindTooltip(`
           <strong>${feature.properties.researcher}</strong><br />
           <strong>Related Works:</strong><br />
           ${feature.properties.works?.[0]}<br />
           ${feature.properties.url ? `<a href="${feature.properties.url}" target="_blank" rel="noopener noreferrer">Profile</a>` : ''}
-        `);
+        `, { 
+          direction: "top", 
+          offset: [0, -10], 
+          sticky: true, 
+          opacity: 0.9 
+        });
 
         markerClusters.addLayer(marker); // Add marker to cluster group
       });
