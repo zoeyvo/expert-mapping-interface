@@ -1,18 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { MapContainer, TileLayer } from "react-leaflet";
-
-// import "leaflet/dist/leaflet.css";
-// import "leaflet.markercluster/dist/leaflet.markercluster.css";
-// import "leaflet.markercluster/dist/MarkerCluster.Default.css";
-import L from "leaflet"; // Ensure you're importing leaflet
-import "leaflet.markercluster"; // Import leaflet.markercluster
+import L from "leaflet";
+import "leaflet.markercluster";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
 
 import "leaflet/dist/leaflet.css";
 import "leaflet.markercluster/dist/MarkerCluster.css";
 import "leaflet.markercluster/dist/MarkerCluster.Default.css";
-
 
 const customMarker = new L.Icon({
   iconUrl: markerIcon,
@@ -23,65 +18,78 @@ const customMarker = new L.Icon({
   shadowSize: [41, 41],
 });
 
-// const updateMarkerSize = (zoom) => {
-//   const size = 25 + (zoom - 2) * 2; // Adjust the multiplier as needed
-//   customMarker.options.iconSize = [size, size * 1.64];
-//   customMarker.options.iconAnchor = [size / 2, size * 1.64];
-//   customMarker.options.shadowSize = [size * 1.64, size * 1.64];
-// };
-
 const ResearchMap = () => {
   const [geoData, setGeoData] = useState(null);
+  const mapRef = useRef(null);
+  const markerClusterGroupRef = useRef(null);
 
   useEffect(() => {
     fetch("/data/research_profiles.geojson")
       .then((response) => response.json())
-      .then((data) => {
-        setGeoData(data);
-      })
+      .then((data) => setGeoData(data))
       .catch((error) => console.error("Error loading GeoJSON:", error));
   }, []);
 
   useEffect(() => {
+    if (!mapRef.current) {
+      mapRef.current = L.map("map", { minZoom: 2, maxZoom: 8 }).setView([20, 0], 2);
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      }).addTo(mapRef.current);
+
+      markerClusterGroupRef.current = L.markerClusterGroup();
+      mapRef.current.addLayer(markerClusterGroupRef.current);
+    }
+
     if (geoData) {
-      const markerClusters = L.markerClusterGroup(); // Creating a cluster group
-      const map = document.querySelector('.leaflet-container'); // Getting the map container for layer control
+      markerClusterGroupRef.current.clearLayers();
 
       geoData.features.forEach((feature, index) => {
-        const [lng, lat] = feature.geometry.coordinates; // GeoJSON is [longitude, latitude]
+        const [lng, lat] = feature.geometry.coordinates;
         const marker = L.marker([lat, lng], { icon: customMarker });
 
-        marker.bindTooltip(`
-          <strong>${feature.properties.researcher}</strong><br />
-          <strong>Related Works:</strong><br />
-          ${feature.properties.works?.[0]}<br />
-          ${feature.properties.url ? `<a href="${feature.properties.url}" target="_blank" rel="noopener noreferrer">Profile</a>` : ''}
-        `, { 
-          direction: "top", 
-          offset: [0, -10], 
-          sticky: true, 
-          opacity: 0.9 
+        const popupContent = document.createElement("div");
+        popupContent.innerHTML = `
+          <div id="popup-${index}" class="custom-popup" style="padding: 10px; background: white; border-radius: 5px;">
+            <strong>${feature.properties.researcher}</strong><br />
+            <strong>Related Works:</strong><br />
+            ${feature.properties.works?.[0]}<br />
+            ${feature.properties.url ? `<a href="${feature.properties.url}" target="_blank" rel="noopener noreferrer">Profile</a>` : ''}
+          </div>
+        `;
+
+        const popup = L.popup({ autoClose: false, closeOnClick: false }).setContent(popupContent);
+        marker.bindPopup(popup);
+
+        // Ensure pop-up stays open when hovering
+        marker.on("mouseover", () => {
+          marker.openPopup();
         });
 
-        markerClusters.addLayer(marker); // Add marker to cluster group
-      });
+        marker.on("mouseout", () => {
+          setTimeout(() => {
+            const popupDiv = document.getElementById(`popup-${index}`);
+            if (!popupDiv || !popupDiv.matches(":hover")) {
+              marker.closePopup();
+            }
+          }, 300);
+        });
 
-      // Initialize the map and add the markerClusters layer
-      const mapInstance = L.map(map, { minZoom: 2, maxZoom: 8 }).setView([20, 0], 2);
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      }).addTo(mapInstance);
-      mapInstance.addLayer(markerClusters);
+        setTimeout(() => {
+          const popupDiv = document.getElementById(`popup-${index}`);
+          if (popupDiv) {
+            popupDiv.addEventListener("mouseenter", () => marker.openPopup());
+            popupDiv.addEventListener("mouseleave", () => marker.closePopup());
+          }
+        }, 500);
+
+        markerClusterGroupRef.current.addLayer(marker);
+      });
     }
   }, [geoData]);
 
-  return (
-    <div style={{ display: "flex", justifyContent: "center", height: "100vh" }}>
-      <div style={{ height: "100vh", width: "300vh",paddingBottom: "100px" }} className="leaflet-container"></div>
-        {/* The map will be initialized dynamically */}
-      </div>
-  );
+  return <div id="map" style={{ height: "100vh", width: "300vh", paddingBottom: "100px" }} />;
 };
 
 export default ResearchMap;
-
