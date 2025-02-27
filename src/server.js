@@ -25,6 +25,12 @@ app.get('/api/research-locations', async (req, res) => {
   try {
     console.log('🔍 Executing PostGIS query...');
     const result = await client.query(`
+      WITH sample_locations AS (
+        SELECT *
+        FROM research_locations
+        WHERE geom IS NOT NULL
+        LIMIT 5
+      )
       SELECT json_build_object(
         'type', 'FeatureCollection',
         'features', COALESCE(
@@ -49,24 +55,16 @@ app.get('/api/research-locations', async (req, res) => {
           ARRAY[]::json[]
         )
       ) as geojson
-      FROM research_locations
-      WHERE geom IS NOT NULL;
+      FROM sample_locations;
     `);
 
     const geojson = result.rows[0].geojson;
-    console.log(`✅ Query successful - Found ${geojson.features.length} features`);
     
-    // Log a complete sample feature
-    if (geojson.features.length > 0) {
-      const sample = geojson.features[0];
-      console.log('📋 Sample feature:', JSON.stringify({
-        researcher: sample.properties.researcher,
-        location: sample.properties.location,
-        coordinates: sample.geometry.coordinates,
-        works: sample.properties.works
-      }, null, 2));
-    }
-
+    // Set proper headers
+    res.setHeader('Content-Type', 'application/json');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    
+    // Send response
     res.json(geojson);
   } catch (error) {
     console.error('❌ Error fetching locations:', error);
