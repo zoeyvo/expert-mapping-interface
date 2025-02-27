@@ -6,3 +6,19 @@
   width: 100%;
   height: 100vh;
 }
+html, body {
+  transform: scale(0.9);
+  transform-origin: top left;
+  width: 111.1%; 
+  height: 111.1%;
+  overflow-x: hidden;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.bg-cover {
+  background-size: 90%; 
+  background-position: center; 
+}
+
+
