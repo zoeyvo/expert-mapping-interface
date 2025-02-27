@@ -1,3 +1,19 @@
+/**
+ * utils.js
+ * 
+ * Purpose:
+ * Shared utility functions for ETL process.
+ * Provides helper functions for name normalization and data processing.
+ * 
+ * Usage:
+ * const { normalizeLocation, processName } = require('./utils');
+ * 
+ * Functions:
+ * - normalizeLocation: Standardizes location names
+ * - processName: Formats researcher names
+ * - Other utility functions for data processing
+ */
+
 function normalizeLocationName(location) {
   return location.trim()
     .toLowerCase()

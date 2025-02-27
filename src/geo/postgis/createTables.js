@@ -1,3 +1,22 @@
+/**
+ * createTables.js
+ *
+ * Purpose:
+ * Creates and initializes the PostgreSQL/PostGIS tables needed for the application.
+ * Sets up research_locations table with geometry and JSON properties support.
+ *
+ * Usage:
+ * node src/geo/postgis/createTables.js
+ *
+ * Schema:
+ * research_locations
+ *   - id: Serial primary key
+ *   - geom: PostGIS geometry (Point, SRID: 4326)
+ *   - properties: JSONB (researcher, location, works, url)
+ *   - created_at: Timestamp
+ *   - updated_at: Timestamp
+ */
+
 const { pool, tables } = require('./config');
 
 async function createTables() {

@@ -1,3 +1,21 @@
+/**
+ * checkTables.js
+ * 
+ * Purpose:
+ * Utility to check database tables and their contents.
+ * Provides detailed information about row counts, sample data, and spatial extent.
+ * 
+ * Usage:
+ * node src/geo/postgis/checkTables.js
+ * 
+ * Output:
+ * - Row counts
+ * - Sample research locations
+ * - Spatial extent
+ * - Sample works
+ * - Raw data sample
+ */
+
 const { pool } = require('./config');
 
 async function checkTables() {
@@ -60,6 +78,18 @@ async function checkTables() {
       LIMIT 1;
     `);
     console.log(JSON.stringify(sampleData.rows[0], null, 2));
+
+    // Add this to your checkTables function
+    console.log('\n📊 Detailed Count:');
+    const detailedCount = await client.query(`
+      SELECT 
+        COUNT(*) as total,
+        COUNT(CASE WHEN geom IS NOT NULL THEN 1 END) as with_geometry,
+        COUNT(DISTINCT properties->>'researcher') as unique_researchers,
+        COUNT(DISTINCT properties->>'location') as unique_locations
+      FROM research_locations;
+    `);
+    console.table(detailedCount.rows[0]);
 
   } catch (error) {
     console.error('❌ Error checking tables:', error);

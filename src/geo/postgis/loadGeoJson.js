@@ -1,3 +1,21 @@
+/**
+ * loadGeoJson.js
+ * 
+ * Purpose:
+ * Loads GeoJSON data into PostGIS database with upsert functionality.
+ * Updates existing records or inserts new ones based on researcher and location.
+ * 
+ * Usage:
+ * node src/geo/postgis/loadGeoJson.js ./public/data/research_profiles.geojson
+ * 
+ * Process:
+ * 1. Reads GeoJSON file
+ * 2. For each feature:
+ *    - Attempts to update existing record
+ *    - If no record exists, inserts new one
+ * 3. Uses transaction to ensure data integrity
+ */
+
 const fs = require('fs');
 const path = require('path');
 const { pool } = require('./config');

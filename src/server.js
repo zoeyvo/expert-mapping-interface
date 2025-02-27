@@ -23,48 +23,56 @@ app.get('/api/research-locations', async (req, res) => {
   const client = await pool.connect();
   
   try {
-    console.log('🔍 Executing PostGIS query...');
-    const result = await client.query(`
-      WITH sample_locations AS (
-        SELECT *
+    // Get total count first
+    const countResult = await client.query(`
+      SELECT COUNT(*) FROM research_locations WHERE geom IS NOT NULL;
+    `);
+    const totalCount = parseInt(countResult.rows[0].count);
+    console.log(`📊 Total locations in database: ${totalCount}`);
+
+    // Get all features in batches
+    const batchSize = 100;
+    let allFeatures = [];
+    
+    for (let offset = 0; offset < totalCount; offset += batchSize) {
+      console.log(`🔍 Fetching batch ${offset / batchSize + 1}...`);
+      
+      const result = await client.query(`
+        SELECT json_build_object(
+          'type', 'Feature',
+          'geometry', json_build_object(
+            'type', 'Point',
+            'coordinates', ARRAY[
+              ST_X(geom),
+              ST_Y(geom)
+            ]
+          ),
+          'properties', json_build_object(
+            'researcher', properties->>'researcher',
+            'location', properties->>'location',
+            'works', properties->'works',
+            'url', properties->>'url'
+          )
+        ) as feature
         FROM research_locations
         WHERE geom IS NOT NULL
-        LIMIT 5
-      )
-      SELECT json_build_object(
-        'type', 'FeatureCollection',
-        'features', COALESCE(
-          array_agg(
-            json_build_object(
-              'type', 'Feature',
-              'geometry', json_build_object(
-                'type', 'Point',
-                'coordinates', ARRAY[
-                  ST_X(geom),
-                  ST_Y(geom)
-                ]
-              ),
-              'properties', json_build_object(
-                'researcher', properties->>'researcher',
-                'location', properties->>'location',
-                'works', properties->'works',
-                'url', properties->>'url'
-              )
-            )
-          ),
-          ARRAY[]::json[]
-        )
-      ) as geojson
-      FROM sample_locations;
-    `);
+        ORDER BY properties->>'researcher'
+        LIMIT $1 OFFSET $2;
+      `, [batchSize, offset]);
+      
+      allFeatures = allFeatures.concat(result.rows.map(row => row.feature));
+    }
 
-    const geojson = result.rows[0].geojson;
-    
-    // Set proper headers
+    const geojson = {
+      type: 'FeatureCollection',
+      features: allFeatures
+    };
+
+    console.log(`✅ Query successful - Found ${geojson.features.length} features`);
+    console.log(`📋 First feature: ${geojson.features[0].properties.researcher}`);
+    console.log(`📋 Last feature: ${geojson.features[geojson.features.length - 1].properties.researcher}`);
+
     res.setHeader('Content-Type', 'application/json');
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    
-    // Send response
     res.json(geojson);
   } catch (error) {
     console.error('❌ Error fetching locations:', error);

@@ -1,3 +1,23 @@
+/**
+ * viewTables.js
+ *
+ * Purpose:
+ * Provides detailed view of database tables, including:
+ * - Table structure and columns
+ * - Row counts and data samples
+ * - Index information
+ * - Table sizes and statistics
+ *
+ * Usage:
+ * node src/geo/postgis/viewTables.js
+ *
+ * Output:
+ * - Table structure
+ * - Sample data
+ * - Index information
+ * - Storage statistics
+ */
+
 const { pool } = require('./config');
 
 async function viewTables(limit = 50, offset = 0) {
