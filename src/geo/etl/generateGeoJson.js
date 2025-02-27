@@ -1,3 +1,18 @@
+/**
+ * generateGeoJson.js
+ * 
+ * Purpose:
+ * Generates GeoJSON from processed location and researcher data.
+ * Creates files in both public and src directories for different use cases.
+ * 
+ * Usage:
+ * node src/geo/etl/generateGeoJson.js
+ * 
+ * Output:
+ * - public/data/research_profiles.geojson
+ * - src/geo/data/json/research_profiles.geojson
+ */
+
 // ~ 0.07 sec for sample data
 
 const fs = require("fs");

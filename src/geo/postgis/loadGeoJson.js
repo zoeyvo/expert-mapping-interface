@@ -1,85 +1,78 @@
+/**
+ * loadGeoJson.js
+ * 
+ * Purpose:
+ * Loads GeoJSON data into PostGIS database with upsert functionality.
+ * Updates existing records or inserts new ones based on researcher and location.
+ * 
+ * Usage:
+ * node src/geo/postgis/loadGeoJson.js ./public/data/research_profiles.geojson
+ * 
+ * Process:
+ * 1. Reads GeoJSON file
+ * 2. For each feature:
+ *    - Attempts to update existing record
+ *    - If no record exists, inserts new one
+ * 3. Uses transaction to ensure data integrity
+ */
+
 const fs = require('fs');
 const path = require('path');
-const { pool, tables } = require('./config');
+const { pool } = require('./config');
 
 async function loadGeoJson(geoJsonPath) {
   const client = await pool.connect();
   
   try {
     const geoJson = JSON.parse(fs.readFileSync(geoJsonPath, 'utf-8'));
+    console.log(`📖 Loading ${geoJson.features.length} features...`);
+    
     await client.query('BEGIN');
 
     for (const feature of geoJson.features) {
-      const {
-        geometry: { coordinates },
-        properties: { researcher, location, works, url }
-      } = feature;
-
-      // Insert location
-      const locationResult = await client.query(`
-        INSERT INTO ${tables.locations} (
-          name, 
-          geom,
-          original_coordinates
-        )
-        VALUES (
-          $1, 
-          ST_SetSRID(ST_MakePoint($2, $3), 4326),
-          $4::jsonb
-        )
-        ON CONFLICT (name) 
-        DO UPDATE SET 
-          geom = EXCLUDED.geom,
-          original_coordinates = EXCLUDED.original_coordinates
-        RETURNING id;
+      const { geometry, properties } = feature;
+      
+      // Extract researcher and location for the WHERE clause
+      const researcher = properties.researcher;
+      const location = properties.location;
+      
+      // First try to update
+      const updateResult = await client.query(`
+        UPDATE research_locations 
+        SET 
+          geom = ST_SetSRID(ST_GeomFromGeoJSON($1), 4326),
+          properties = $2::jsonb,
+          updated_at = CURRENT_TIMESTAMP
+        WHERE 
+          properties->>'researcher' = $3 
+          AND properties->>'location' = $4
+        RETURNING id
       `, [
-        location,
-        coordinates[0],
-        coordinates[1],
-        JSON.stringify(coordinates)
-      ]);
-
-      const locationId = locationResult.rows[0].id;
-
-      // Insert researcher
-      const researcherResult = await client.query(`
-        INSERT INTO ${tables.researchers} (
-          name,
-          url,
-          location_id
-        )
-        VALUES ($1, $2, $3)
-        ON CONFLICT (name, location_id) 
-        DO UPDATE SET url = EXCLUDED.url
-        RETURNING id;
-      `, [
+        JSON.stringify(geometry),
+        JSON.stringify(properties),
         researcher,
-        url,
-        locationId
+        location
       ]);
 
-      const researcherId = researcherResult.rows[0].id;
-
-      // Insert works
-      for (const work of works) {
+      // If no row was updated, insert a new one
+      if (updateResult.rowCount === 0) {
         await client.query(`
-          INSERT INTO ${tables.works} (
-            title, 
-            researcher_id,
-            metadata
+          INSERT INTO research_locations (
+            geom,
+            properties
+          ) VALUES (
+            ST_SetSRID(ST_GeomFromGeoJSON($1), 4326),
+            $2::jsonb
           )
-          VALUES ($1, $2, $3)
-          ON CONFLICT (title, researcher_id) DO NOTHING;
         `, [
-          work, 
-          researcherId,
-          JSON.stringify({ original_work: work })
+          JSON.stringify(geometry),
+          JSON.stringify(properties)
         ]);
       }
     }
 
     await client.query('COMMIT');
-    console.log('✅ GeoJSON data loaded successfully');
+    console.log('✅ GeoJSON loaded successfully');
   } catch (error) {
     await client.query('ROLLBACK');
     console.error('❌ Error loading GeoJSON:', error);
@@ -89,14 +82,16 @@ async function loadGeoJson(geoJsonPath) {
   }
 }
 
-module.exports = loadGeoJson;
-
-// Run if called directly
+// If this file is run directly (not required as a module)
 if (require.main === module) {
-  const geoJsonPath = process.argv[2];
-  if (!geoJsonPath) {
-    console.error('Please provide path to GeoJSON file');
+  const filePath = process.argv[2];
+  if (!filePath) {
+    console.error('Please provide a GeoJSON file path');
     process.exit(1);
   }
-  loadGeoJson(geoJsonPath).then(() => process.exit(0));
-} 
+  loadGeoJson(filePath)
+    .then(() => process.exit(0))
+    .catch(() => process.exit(1));
+}
+
+module.exports = loadGeoJson; 

@@ -1,3 +1,19 @@
+/**
+ * geocodeLocation.js
+ * 
+ * Purpose:
+ * Geocodes location names to coordinates using OpenStreetMap Nominatim.
+ * Caches results to avoid repeated API calls and respect rate limits.
+ * 
+ * Usage:
+ * node src/geo/etl/geocodeLocation.js
+ * 
+ * Notes:
+ * - Respects Nominatim's rate limit (1 request per second)
+ * - Caches coordinates to avoid duplicate requests
+ * - Updates existing coordinates file if it exists
+ */
+
 const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
