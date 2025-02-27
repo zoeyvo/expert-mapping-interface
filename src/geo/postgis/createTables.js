@@ -12,43 +12,27 @@ async function createTables() {
       CREATE EXTENSION IF NOT EXISTS postgis;
     `);
 
-    // Create locations table
+    // Create a single table to store GeoJSON features
     await client.query(`
-      CREATE TABLE IF NOT EXISTS ${tables.locations} (
+      CREATE TABLE IF NOT EXISTS research_locations (
         id SERIAL PRIMARY KEY,
-        name VARCHAR(255) NOT NULL,
         geom GEOMETRY(Point, 4326),
-        original_coordinates JSONB,
-        UNIQUE(name)
+        properties JSONB,
+        created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
       );
-    `);
 
-    // Create researchers table
-    await client.query(`
-      CREATE TABLE IF NOT EXISTS ${tables.researchers} (
-        id SERIAL PRIMARY KEY,
-        name VARCHAR(255) NOT NULL,
-        url VARCHAR(512),
-        location_id INTEGER REFERENCES ${tables.locations}(id),
-        UNIQUE(name, location_id)
-      );
-    `);
+      -- Create unique constraint
+      CREATE UNIQUE INDEX IF NOT EXISTS unique_researcher_location 
+      ON research_locations ((properties->>'researcher'), (properties->>'location'));
 
-    // Create works table
-    await client.query(`
-      CREATE TABLE IF NOT EXISTS ${tables.works} (
-        id SERIAL PRIMARY KEY,
-        title TEXT NOT NULL,
-        researcher_id INTEGER REFERENCES ${tables.researchers}(id),
-        metadata JSONB,
-        UNIQUE(title, researcher_id)
-      );
-    `);
+      -- Create spatial index
+      CREATE INDEX IF NOT EXISTS research_locations_geom_idx 
+      ON research_locations USING GIST (geom);
 
-    // Create spatial indexes
-    await client.query(`
-      CREATE INDEX IF NOT EXISTS locations_geom_idx 
-      ON ${tables.locations} USING GIST (geom);
+      -- Create GIN index for JSON properties searching
+      CREATE INDEX IF NOT EXISTS research_locations_properties_idx 
+      ON research_locations USING GIN (properties);
     `);
 
     await client.query('COMMIT');

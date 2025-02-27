@@ -5,48 +5,79 @@ const { pool, tables } = require('./geo/postgis/config');
 const app = express();
 const PORT = 3001;
 
+// Test database connection on startup
+pool.query('SELECT NOW()', (err, res) => {
+  if (err) {
+    console.error('❌ Database connection error:', err);
+  } else {
+    console.log('✅ Database connected successfully');
+  }
+});
+
 app.use(cors());
 app.use(express.json());
 
 // GET endpoint to fetch all research locations
 app.get('/api/research-locations', async (req, res) => {
+  console.log('📍 Received request for research locations');
   const client = await pool.connect();
-
+  
   try {
+    console.log('🔍 Executing PostGIS query...');
     const result = await client.query(`
-      SELECT
-        json_build_object(
-          'type', 'FeatureCollection',
-          'features', json_agg(
+      SELECT json_build_object(
+        'type', 'FeatureCollection',
+        'features', COALESCE(
+          array_agg(
             json_build_object(
               'type', 'Feature',
-              'geometry', ST_AsGeoJSON(l.geom)::json,
+              'geometry', json_build_object(
+                'type', 'Point',
+                'coordinates', ARRAY[
+                  ST_X(geom),
+                  ST_Y(geom)
+                ]
+              ),
               'properties', json_build_object(
-                'researcher', r.name,
-                'location', l.name,
-                'works', array_agg(w.title),
-                'url', r.url
+                'researcher', properties->>'researcher',
+                'location', properties->>'location',
+                'works', properties->'works',
+                'url', properties->>'url'
               )
             )
-          )
-        ) as geojson
-      FROM ${tables.locations} l
-      JOIN ${tables.researchers} r ON r.location_id = l.id
-      LEFT JOIN ${tables.works} w ON w.researcher_id = r.id
-      GROUP BY l.id, l.geom, l.name, r.name, r.url;
+          ),
+          ARRAY[]::json[]
+        )
+      ) as geojson
+      FROM research_locations
+      WHERE geom IS NOT NULL;
     `);
 
-    res.json(result.rows[0].geojson);
+    const geojson = result.rows[0].geojson;
+    console.log(`✅ Query successful - Found ${geojson.features.length} features`);
+    
+    // Log a complete sample feature
+    if (geojson.features.length > 0) {
+      const sample = geojson.features[0];
+      console.log('📋 Sample feature:', JSON.stringify({
+        researcher: sample.properties.researcher,
+        location: sample.properties.location,
+        coordinates: sample.geometry.coordinates,
+        works: sample.properties.works
+      }, null, 2));
+    }
+
+    res.json(geojson);
   } catch (error) {
-    console.error('Error fetching locations:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    console.error('❌ Error fetching locations:', error);
+    res.status(500).json({ error: 'Internal server error', details: error.message });
   } finally {
     client.release();
   }
 });
 
 const server = app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
 
 // Add graceful shutdown handlers
