@@ -9,17 +9,9 @@ import "leaflet/dist/leaflet.css";
 import "leaflet.markercluster/dist/MarkerCluster.css";
 import "leaflet.markercluster/dist/MarkerCluster.Default.css";
 
-const customMarker = new L.Icon({
-  iconUrl: markerIcon,
-  shadowUrl: markerShadow,
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowSize: [41, 41],
-});
-
 const ResearchMap = () => {
   const [geoData, setGeoData] = useState(null);
+  const [selectedExperts, setSelectedExperts] = useState([]);
   const mapRef = useRef(null);
   const markerClusterGroupRef = useRef(null);
 
@@ -44,52 +36,87 @@ const ResearchMap = () => {
 
     if (geoData) {
       markerClusterGroupRef.current.clearLayers();
+      const locationMap = new Map();
 
-      geoData.features.forEach((feature, index) => {
+      geoData.features.forEach((feature) => {
         const [lng, lat] = feature.geometry.coordinates;
-        const marker = L.marker([lat, lng], { icon: customMarker });
+        const key = `${lat},${lng}`;
 
-        const popupContent = document.createElement("div");
-        popupContent.innerHTML = `
-          <div id="popup-${index}" class="custom-popup" style="padding: 10px; background: white; border-radius: 5px;">
-            <strong>${feature.properties.researcher}</strong><br />
-            <strong>Related Works:</strong><br />
-            ${feature.properties.works?.[0]}<br />
-            ${feature.properties.url ? `<a href="${feature.properties.url}" target="_blank" rel="noopener noreferrer">Profile</a>` : ''}
-          </div>
-        `;
+        if (!locationMap.has(key)) {
+          locationMap.set(key, []);
+        }
+        locationMap.get(key).push(feature.properties);
+      });
 
-        const popup = L.popup({ autoClose: false, closeOnClick: false }).setContent(popupContent);
-        marker.bindPopup(popup);
+      locationMap.forEach((experts, key) => {
+        const [lat, lng] = key.split(",").map(Number);
+        const count = experts.length;
 
-        // Ensure pop-up stays open when hovering
-        marker.on("mouseover", () => {
-          marker.openPopup();
+        const markerColor = "#13639e;";
+
+        const clusterIcon = L.divIcon({
+          html: `<div style='background: ${markerColor}; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-weight: bold;'>${count}</div>`,
+          className: "custom-cluster-icon",
+          iconSize: [30, 30],
         });
 
-        marker.on("mouseout", () => {
-          setTimeout(() => {
-            const popupDiv = document.getElementById(`popup-${index}`);
-            if (!popupDiv || !popupDiv.matches(":hover")) {
-              marker.closePopup();
-            }
-          }, 300);
-        });
-
-        setTimeout(() => {
-          const popupDiv = document.getElementById(`popup-${index}`);
-          if (popupDiv) {
-            popupDiv.addEventListener("mouseenter", () => marker.openPopup());
-            popupDiv.addEventListener("mouseleave", () => marker.closePopup());
-          }
-        }, 500);
-
+        const marker = L.marker([lat, lng], { icon: clusterIcon });
+        marker.on("click", () => setSelectedExperts(experts));
         markerClusterGroupRef.current.addLayer(marker);
       });
     }
   }, [geoData]);
 
-  return <div id="map" style={{ height: "100vh", width: "300vh", paddingBottom: "100px" }} />;
+  return (
+    <div style={{ display: "flex", height: "100vh", width: "100vw" }}>
+      <div id="map" style={{ flex: selectedExperts.length > 0 ? "1" : "100%", transition: "flex 0.3s ease" }} />
+      {selectedExperts.length > 0 && (
+        <div
+          style={{
+            width: "350px",
+            maxHeight: "100vh",
+            overflowY: "auto",
+            background: "white",
+            padding: "15px",
+            borderLeft: "2px solid #aaa",
+            boxShadow: "-2px 0 5px rgba(0,0,0,0.1)",
+            position: "relative",
+          }}
+        >
+          <button
+            onClick={() => {
+              setSelectedExperts([]);
+              document.getElementById("map").style.flex = "100%";
+            }}
+            style={{
+              position: "absolute",
+              top: "10px",
+              right: "10px",
+              background: "#ddd",
+              border: "none",
+              padding: "5px 10px",
+              cursor: "pointer",
+              borderRadius: "5px",
+            }}
+          >
+            ×
+          </button>
+          <h3>Experts at this location</h3>
+          {selectedExperts.map((expert, index) => (
+            <div key={index} style={{ marginBottom: "15px", padding: "10px", border: "1px solid #ccc", borderRadius: "5px" }}>
+              <strong>{expert.researcher}</strong>
+              <p>Related Works: {expert.works?.[0]}</p>
+              {expert.url && (
+                <a href={expert.url} target="_blank" rel="noopener noreferrer" style={{ color: "blue" }}>
+                  Profile
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default ResearchMap;
