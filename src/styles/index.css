@@ -1,12 +1,12 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; 
 
 .leaflet-container {
   width: 100%;
   height: 100vh;
-}
-html, body {
+} */
+/* html, body {
   transform: scale(0.9);
   transform-origin: top left;
   width: 111.1%; 
@@ -14,11 +14,53 @@ html, body {
   overflow-x: hidden;
   user-select: none;
   touch-action: manipulation;
-}
+} */
 
-.bg-cover {
+/* html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  user-select: none;
+  touch-action: manipulation;
+} */
+
+
+/* .bg-cover {
   background-size: 90%; 
   background-position: center; 
+} */
+
+/* .map-container {
+  flex: 1; /* Ensures it takes up available space */
+/* } */ */
+
+
+.leaflet-container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
 }
 
 
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#map {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  max-height: 80vh; /* Limits the height of the map */
+}
+
+.map-container {
+  display: flex;
+  flex-direction: row;
+  height: 80vh; /* Ensures the map stays within this height */
+  width: 100%;
+  overflow: hidden;
+}
