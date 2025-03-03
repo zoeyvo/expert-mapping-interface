@@ -16,10 +16,18 @@ const ResearchMap = () => {
   const markerClusterGroupRef = useRef(null);
 
   useEffect(() => {
-    fetch("/data/research_profiles.geojson")
-      .then((response) => response.json())
+    fetch("http://localhost:3001/api/redis/geodata")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
       .then((data) => setGeoData(data))
-      .catch((error) => console.error("Error loading GeoJSON:", error));
+      .catch((error) => {
+        console.error("Error loading GeoJSON:", error);
+        alert("Failed to load GeoJSON data. Please try again later.");
+      });
   }, []);
 
   useEffect(() => {
