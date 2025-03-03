@@ -13,9 +13,29 @@
  * - src/geo/data/json/formatted_response_latest.json
  */
 
+
 const fs = require('fs');
 const path = require('path');
 const http = require('http');
+const { createClient } = require('redis');
+
+// Create a Redis client
+const redisClient = createClient();
+
+// Redis connection end event
+redisClient.on('end', () => {
+  console.log('🔌 Redis connection closed');
+});
+
+// Connect to Redis
+redisClient.connect().then(() => {
+  // Test Redis connection on start up
+  redisClient.ping().then((res) => {
+    console.log('✅ Redis connected successfully');
+    }).catch((err) => {
+      console.error('❌ Redis connection error:', err);
+    });
+  });
 
 // Update path to src/geo/data/json
 const outputDir = path.join(__dirname, '../data/json');
