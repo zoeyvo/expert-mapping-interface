@@ -347,3 +347,6 @@ function gracefulShutdown() {
     process.exit(1);
   }, 10000);
 }
+}).catch((err) => {
+  console.error('❌ Redis connection error:', err);
+});
