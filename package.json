@@ -6,10 +6,6 @@
     "axios": "^1.8.1",
 =======
     "axios": "^1.7.9",
-<<<<<<< HEAD
->>>>>>> 7e3fe9c (Establishing Redis cache [WIP])
-=======
->>>>>>> dbe324e (Establishing Redis cache [WIP])
     "cors": "^2.8.5",
     "csv-parser": "^3.2.0",
     "leaflet": "^1.9.4",
@@ -21,15 +17,7 @@
     "react-leaflet": "^3.2.5",
     "react-leaflet-markercluster": "^4.2.1",
     "react-scripts": "5.0.1",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "turf": "^3.0.14"
-=======
     "redis": "^4.7.0"
->>>>>>> 7e3fe9c (Establishing Redis cache [WIP])
-=======
-    "redis": "^4.7.0"
->>>>>>> dbe324e (Establishing Redis cache [WIP])
   },
   "name": "geo-data-visualizer",
   "version": "1.0.0",
