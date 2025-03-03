@@ -8,13 +8,37 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fs = require('fs').promises;
 =======
+=======
+>>>>>>> dbe324e (Establishing Redis cache [WIP])
 
 const fs = require('fs');
 const path = require('path');
 const http = require('http');
 const { createClient } = require('redis');
+<<<<<<< HEAD
+=======
+
+// Create a Redis client
+const redisClient = createClient();
+
+// Redis connection end event
+redisClient.on('end', () => {
+  console.log('🔌 Redis connection closed');
+});
+
+// Connect to Redis
+redisClient.connect().then(() => {
+  // Test Redis connection on start up
+  redisClient.ping().then((res) => {
+    console.log('✅ Redis connected successfully');
+    }).catch((err) => {
+      console.error('❌ Redis connection error:', err);
+    });
+  });
+>>>>>>> dbe324e (Establishing Redis cache [WIP])
 
 // Create a Redis client
 const redisClient = createClient();
@@ -112,14 +136,20 @@ async function fetchResearcherDetails(name) {
       console.log(`   - First researcher: ${parsedData.features[0].properties.researcher}`);
       console.log(`   - Last researcher: ${parsedData.features[parsedData.features.length - 1].properties.researcher}`);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dbe324e (Establishing Redis cache [WIP])
       // Cache the formatted data in Redis for 24 hours (86400 seconds)
       const cacheKey = 'research-locations';
       redisClient.setEx(cacheKey, 86400, formattedJson); // Cache for 24 hours
       console.log('📦 Cached formatted data in Redis for 24 hours');
       redisClient.quit();
+<<<<<<< HEAD
 >>>>>>> 7e3fe9c (Establishing Redis cache [WIP])
 =======
 >>>>>>> e81fbce (created redis folder, created cacheJson.js)
+=======
+>>>>>>> dbe324e (Establishing Redis cache [WIP])
     } catch (error) {
         console.error('Error fetching researcher details:', error);
         throw error;
