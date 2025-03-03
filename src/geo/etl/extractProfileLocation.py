@@ -39,22 +39,22 @@ unique_locations = set()
 unique_researchers = set()
 
 
-def formatDeepSeekResult(text):
-  pattern = r'<think>.*?</think>'
-  clean = re.sub(pattern, '', text, flags=re.DOTALL)
-  clean_list = clean.strip().split("\n")
+# def formatDeepSeekResult(text):
+#   pattern = r'<think>.*?</think>'
+#   clean = re.sub(pattern, '', text, flags=re.DOTALL)
+#   clean_list = clean.strip().split("\n")
   
-  result = []
-  for item in clean_list:
-    result.append(item[item.find(".") + 1:].strip())
-  return result
-
-# def formatLlamaResult(text):
-#   clean_list = text.strip().split("\n")
 #   result = []
 #   for item in clean_list:
 #     result.append(item[item.find(".") + 1:].strip())
 #   return result
+
+def formatLlamaResult(text):
+  clean_list = text.strip().split("\n")
+  result = []
+  for item in clean_list:
+    result.append(item[item.find(".") + 1:].strip())
+  return result
 
 def normalizeLocationName(location):
   location = location.strip().lower()
@@ -137,14 +137,15 @@ for batch_start in range(0, total_rows, BATCH_SIZE):
       {"role": "system", "content": f'Extract geopolitical entites mentioned in the text. Do not infer. Do not provide explaination.'},
       {"role": "system", "content": f'The input will be a list of {len(batch_titles)} texts'},
       {"role": "system", "content": f'Output answers in the format of "City, Country" or "City, State" or "State, Country" or "Country" or "Institution Name". If no location was found for that text, return "N/A". There should be {len(batch_titles)} answers corresponding to {len(batch_titles)} texts in the given list.'},
+      {"role": "system", "content": f'Each answer should be indexed and be on its own line. Do not give any further explaination.'},
       {"role": "user", "content": f'Extract from this list: {batch_titles}'}
     ],
-    model="deepseek-r1-distill-llama-70b",
+    model="llama-3.3-70b-versatile",
     stream=False,
     temperature=0
   )
   
-  batch_locations = formatDeepSeekResult(chat_completion.choices[0].message.content)
+  batch_locations = formatLlamaResult(chat_completion.choices[0].message.content)
   
   if len(batch_locations) != BATCH_SIZE:
     batch_locations = ["N/A"] * 20
