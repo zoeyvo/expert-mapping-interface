@@ -1,11 +1,35 @@
 const express = require('express');
 const cors = require('cors');
-const { pool } = require('./geo/postgis/config');
+const { pool, tables } = require('./geo/postgis/config');
+const { createClient } = require('redis');
 
 const app = express();
 const PORT = 3001;
 
 let activeConnections = 0;
+
+// Create a Redis client
+const redisClient = createClient();
+
+redisClient.on('error', (err) => {
+  console.error('❌ Redis connection error:', err);
+});
+redisClient.on('ready', () => {
+  console.log('🔄 Redis client is ready');
+});
+
+redisClient.on('end', () => {
+  console.log('🔌 Redis connection closed');
+});
+
+// Connect to Redis
+redisClient.connect().then(() => {
+// Test Redis connection on start up
+  redisClient.ping().then((res) => {
+    console.log('🖲️ Redis connected successfully');
+  }).catch((err) => {
+    console.error('❌ Redis connection error:', err);
+  });
 
 // Test database connection on startup
 pool.query('SELECT NOW()', (err, res) => {
@@ -290,6 +314,23 @@ app.get('/api/researchers/:name', async (req, res) => {
   }
 });
 
+// New endpoint to fetch GeoJSON data from Redis
+app.get('/api/redis/geodata', (req, res) => {
+  console.log('🗺️ Received request for GeoJSON data');
+  const cacheKey = 'research-locations';
+  redisClient.get(cacheKey).then((cachedData) => {
+    if (cachedData) {
+      console.log('📦 Returning cached GeoJSON data');
+      return res.json(JSON.parse(cachedData));
+    } else {
+      return res.status(404).json({ error: 'GeoJSON data not found in cache' });
+    }
+  }).catch((err) => {
+    console.error('❌ Redis get error:', err);
+    return res.status(500).json({ error: 'Internal server error', details: err.message });
+  });
+});
+
 const server = app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
@@ -305,6 +346,7 @@ function gracefulShutdown() {
   server.close(async () => {
     try {
       await pool.end();
+      redisClient.quit();
       console.log('✅ Database pool has ended');
       console.log('✅ Closed out remaining connections');
       process.exit(0);
@@ -319,3 +361,6 @@ function gracefulShutdown() {
     process.exit(1);
   }, 10000);
 }
+}).catch((err) => {
+  console.error('❌ Redis connection error:', err);
+});
