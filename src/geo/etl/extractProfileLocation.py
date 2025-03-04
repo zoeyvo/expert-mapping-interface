@@ -7,8 +7,11 @@ import re
 from unidecode import unidecode
 
 from geopy.geocoders import Nominatim
+from groq import Groq
 
 # API
+groq_client = Groq(api_key = "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")
+
 geolocator = Nominatim(user_agent="lctnguyen@ucdavis.edu")
 manual_geo_name = {
   "CA" : "California",
@@ -41,6 +44,14 @@ standardGeoName = {}  # Location's id -> normalized name
 unique_titles = set()
 unique_locations = set()
 unique_researchers = set()
+
+def formatDeepSeekResult(text):
+  pattern = r'<think>.*?</think>'
+  clean = re.sub(pattern, '', text, flags=re.DOTALL)
+  clean = clean.strip().split("\n")
+  for i in range(len(clean)):
+    clean[i] = clean[i].strip()
+  return clean
 
 def normalizeLocationName(location):
   location = location.strip().lower()
@@ -122,24 +133,15 @@ locations = data["geo"].tolist()
 total_locations = 0
 fail_to_geocode = set()
 
-# Use batch for stats/visualization only
+# Geocoding all locations. Store in "geoData"
 for batch_start in range(0, total_rows, BATCH_SIZE):
   batch_end = min(batch_start + BATCH_SIZE, total_rows)
-  batch_names = names[batch_start:batch_end]
-  batch_titles = titles[batch_start:batch_end]
   batch_locations = locations[batch_start:batch_end]
   
   batch_start_time = time.time()
   batch_location_count = 0
   
-  for name, title, location in zip(batch_names, batch_titles, batch_locations):
-    unique_researchers.add(name)  # Track unique researchers
-    
-    # Add title to corresponding expert profile
-    if name not in profiles:
-      profiles[name] = Profile(name)
-    profiles[name].addTitle(title)
-    
+  for location in batch_locations:
     # Some manual name changes for api
     if location in manual_geo_name:
       location = manual_geo_name[location]
@@ -162,35 +164,10 @@ for batch_start in range(0, total_rows, BATCH_SIZE):
         except Exception:
           print("API error geocoding: ", location)
           
-    # Handle expert/title that has location
-    if location in geoData:
-      batch_location_count += 1
-
-      # Use standardize location's name
-      if geoData[location]["geo_id"] not in standardGeoName:
-        standardGeoName[geoData[location]["geo_id"]] = location
-      location_name = standardGeoName[geoData[location]["geo_id"]]
-      location_name = normalizeLocationName(location_name)
-      
-      # Store new coordinates
-      if location_name not in coordinates:
-        coordinates[location_name] = geoData[location]["coordinate"]
-      
-      # Add location to expert's profile
-      profiles[name].addLocation(location_name)
-      
-      # Update location-based profile mapping
-      if location_name not in location_based:
-        location_based[location_name] = {}
-      if name not in location_based[location_name]:
-        location_based[location_name][name] = GeoProfileMapping(name, location_name)
-
-      location_based[location_name][name].addRelatedWork(title)
-    else:
-      profiles[name].addLocation("None")
-      
+      if location in geoData:
+        batch_location_count += 1
+  
   batch_time = time.time() - batch_start_time
-  total_locations += batch_location_count
 
   logging.info(
     "Batch %d-%d processed in %.2f seconds | Locations found: %d | Total locations: %d",
@@ -200,6 +177,70 @@ for batch_start in range(0, total_rows, BATCH_SIZE):
     f"Processed batch {batch_start}-{batch_end} in {batch_time:.2f}s | "
     f"Locations found: {batch_location_count}"
   )
+  
+# Filter out false positives
+filter = []
+for geo in geoData:
+  filter.append(geo)
+  
+chat_completion = groq_client.chat.completions.create(
+  messages=[
+      {"role": "system", "content": f'Determine invalid locations in provided text. Do not infer.'},
+      {"role": "system", "content": f'Output each invalid location in seperate line. Do not provide explainations.'},
+      {"role": "user", "content": f'Extract from this list: {filter}'}
+  ],
+  model="deepseek-r1-distill-llama-70b",
+  stream=False,
+  temperature=0
+)
+
+filtered = formatDeepSeekResult(chat_completion.choices[0].message.content)
+print(f"\nNumber of false positives: {len(filtered)}")
+
+for geo in filtered:
+  if geo in geoData:
+    geoData.pop(geo)
+    # print(geo, "\n")
+
+# Processing profiles
+for name, title, location in zip(names, titles, locations):
+  unique_researchers.add(name)  # Track unique researchers
+  
+  # Add title to corresponding expert profile
+  if name not in profiles:
+    profiles[name] = Profile(name)
+  profiles[name].addTitle(title)
+  
+  # Some manual name changes for api
+  if location in manual_geo_name:
+    location = manual_geo_name[location]
+        
+  # Handle expert/title that has location
+  if location in geoData:
+    total_locations += 1
+
+    # Use standardize location's name
+    if geoData[location]["geo_id"] not in standardGeoName:
+      standardGeoName[geoData[location]["geo_id"]] = location
+    location_name = standardGeoName[geoData[location]["geo_id"]]
+    location_name = normalizeLocationName(location_name)
+    
+    # Store new coordinates
+    if location_name not in coordinates:
+      coordinates[location_name] = geoData[location]["coordinate"]
+    
+    # Add location to expert's profile
+    profiles[name].addLocation(location_name)
+    
+    # Update location-based profile mapping
+    if location_name not in location_based:
+      location_based[location_name] = {}
+    if name not in location_based[location_name]:
+      location_based[location_name][name] = GeoProfileMapping(name, location_name)
+
+    location_based[location_name][name].addRelatedWork(title)
+  else:
+    profiles[name].addLocation("None")
 
 
 logging.info("Completed in %.2f seconds", time.time() - start_time)

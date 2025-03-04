@@ -1173,7 +1173,7 @@
       "None",
       "None",
       "None",
-      "Boeing",
+      "None",
       "None",
       "None",
       "None"
@@ -1504,7 +1504,7 @@
       "None",
       "None",
       "None",
-      "Rural Communities"
+      "None"
     ]
   },
   "VALICENTI, Richard K": {
@@ -2062,7 +2062,7 @@
       "None",
       "None",
       "None",
-      "Rabbit",
+      "None",
       "None",
       "None",
       "None",
@@ -2774,7 +2774,7 @@
       "None",
       "None",
       "None",
-      "Vietnam, America",
+      "None",
       "None",
       "None"
     ]
@@ -2872,7 +2872,7 @@
     ],
     "locations": [
       "None",
-      "Tomato",
+      "None",
       "Amazon",
       "None",
       "None",
@@ -3248,7 +3248,7 @@
       "None",
       "None",
       "Us",
-      "Us, Global",
+      "None",
       "None",
       "None"
     ]
@@ -4885,7 +4885,7 @@
       "None",
       "None",
       "None",
-      "Lambert, Eaton",
+      "None",
       "None"
     ]
   },
@@ -5027,7 +5027,7 @@
       "Integrins of the starlet sea anemone Nematostella vectensis."
     ],
     "locations": [
-      "Mouse",
+      "None",
       "None"
     ]
   },
@@ -5668,7 +5668,7 @@
       "California",
       "None",
       "California",
-      "Gulf",
+      "None",
       "None",
       "South Korea",
       "None",
@@ -6086,7 +6086,7 @@
     ],
     "locations": [
       "None",
-      "Mimas"
+      "None"
     ]
   },
   "ALY, Sharif S": {
@@ -6226,7 +6226,7 @@
       "None",
       "None",
       "None",
-      "Milky Way",
+      "None",
       "None",
       "None",
       "None",
@@ -6769,7 +6769,7 @@
     ],
     "locations": [
       "None",
-      "Vietnam, America",
+      "None",
       "None",
       "None",
       "None"
@@ -7032,7 +7032,7 @@
       "Neuroradiology diagnostic errors at a tertiary academic centre: effect of participation in tumour boards and physician experience"
     ],
     "locations": [
-      "African America, Usa",
+      "None",
       "Shanghai, China",
       "None"
     ]
@@ -7551,6 +7551,14 @@
       "None"
     ]
   },
+  "TON, Hendry": {
+    "titles": [
+      "Discussing Depression with Vietnamese American Patients"
+    ],
+    "locations": [
+      "None"
+    ]
+  },
   "LIU, Jie": {
     "titles": [
       "Regulation of Homologous Recombination in Eukaryotes",
@@ -7754,7 +7762,7 @@
       "California",
       "None",
       "None",
-      "Mars",
+      "None",
       "North Korea",
       "None"
     ]
@@ -8712,7 +8720,7 @@
       "None",
       "California",
       "None",
-      "Parkland",
+      "None",
       "None",
       "California"
     ]
@@ -9684,7 +9692,7 @@
       "None",
       "None",
       "None",
-      "Ryugu"
+      "None"
     ]
   },
   "CHEN, Yi-Je": {
@@ -9763,7 +9771,7 @@
     ],
     "locations": [
       "None",
-      "Tropical Region",
+      "None",
       "None"
     ]
   },
@@ -10170,7 +10178,7 @@
     ],
     "locations": [
       "None",
-      "European Xfel"
+      "None"
     ]
   },
   "DE LOERA, Jesus": {
@@ -12166,7 +12174,7 @@
       "Botryosphaeriaceae associated with almond trunk cankers: A threat to the almond industry?"
     ],
     "locations": [
-      "Brazil, California",
+      "None",
       "Central Valley, California",
       "California",
       "Greece",
@@ -12297,7 +12305,7 @@
     ],
     "locations": [
       "None",
-      "Brain",
+      "None",
       "None"
     ]
   },
@@ -12792,7 +12800,7 @@
     ],
     "locations": [
       "None",
-      "Tundra"
+      "None"
     ]
   },
   "JI, Peng": {
@@ -13040,7 +13048,7 @@
     ],
     "locations": [
       "None",
-      "Multiple Mirror Telescope",
+      "None",
       "None",
       "None"
     ]
@@ -13930,7 +13938,7 @@
       "A Pan-Cancer Patient-Derived Xenograft Histology Image Repository with Genomic and Pathologic Annotations Enables Deep Learning Analysis"
     ],
     "locations": [
-      "Latino",
+      "None",
       "None",
       "None"
     ]
@@ -14286,7 +14294,7 @@
       "Extreme breeding: Leveraging genomics for crop improvement"
     ],
     "locations": [
-      "Arabidopsis",
+      "None",
       "None",
       "None"
     ]
@@ -14562,7 +14570,7 @@
     ],
     "locations": [
       "None",
-      "Mars"
+      "None"
     ]
   },
   "PARIKH, Mamta": {
@@ -15175,7 +15183,7 @@
       "A Delphi consensus statement for digital surgery"
     ],
     "locations": [
-      "Eastern Association",
+      "None",
       "None"
     ]
   },
@@ -15542,7 +15550,7 @@
     "locations": [
       "None",
       "None",
-      "Osu, N/A",
+      "None",
       "None",
       "None",
       "None",
@@ -17061,6 +17069,14 @@
       "None"
     ]
   },
+  "FOSTER, Michael D": {
+    "titles": [
+      "Pandemonium and Parade: Japanese Monsters and the Culture of Yokai"
+    ],
+    "locations": [
+      "None"
+    ]
+  },
   "HESS, Carol": {
     "titles": [
       "Sacred Passions"
@@ -17461,6 +17477,16 @@
     ],
     "locations": [
       "None"
+    ]
+  },
+  "HEARD, Jason": {
+    "titles": [
+      "Video-Enhanced Telemedicine Improves the Care of Acutely Injured Burn Patients in a Rural State",
+      "Burn Injuries in Eastern Zambia: Impact of Multidisciplinary Teaching Teams"
+    ],
+    "locations": [
+      "None",
+      "Zambia"
     ]
   },
   "HACEIN-BEY, Lotfi": {
