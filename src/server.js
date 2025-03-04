@@ -7,6 +7,7 @@ const { pool, tables } = require('./geo/postgis/config');
 const { createClient } = require('redis');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7e3fe9c (Establishing Redis cache [WIP])
 =======
 const { exec } = require('child_process');
@@ -19,6 +20,9 @@ const path = require('path');
 >>>>>>> 6be90f2 (parsedCache.js adds keys to redis database [NEEDS DEBUGGING])
 =======
 >>>>>>> dbe324e (Establishing Redis cache [WIP])
+=======
+const { exec } = require('child_process');
+>>>>>>> 962a3c0 (created redis folder, created cacheJson.js)
 
 const app = express();
 const PORT = 3001;
@@ -356,7 +360,7 @@ app.get('/api/researchers/:name', async (req, res) => {
 =======
 // New endpoint to fetch GeoJSON data from Redis
 app.get('/api/redis/geodata', (req, res) => {
-  console.log('🗺️ Received request for GeoJSON data');
+  console.log('🗺️ Map.js requesting for GeoJSON data');
   const cacheKey = 'research-locations';
   redisClient.get(cacheKey).then((cachedData) => {
     if (cachedData) {
@@ -371,11 +375,52 @@ app.get('/api/redis/geodata', (req, res) => {
   });
 });
 
+app.get('/api/redis/cache', (req, res) => {
+  console.log('📦 Caching GeoJSON data in Redis');
+  const cacheKey = 'research-locations';
+  redisClient.get(cacheKey).then((cachedData) => {
+    if (cachedData) {
+      console.log('📦 GeoJSON data already cached');
+      return res.json({ message: 'GeoJSON data already cached' });
+    } else {
+      // Run fetchProfiles.js to get the data
+      exec('node src/geo/postgis/fetchProfiles.js', (error, stdout, stderr) => {
+        if (error) {
+          console.error('❌ Error caching data:', error);
+          return res.status(500).json({ error: 'Internal server error', details: error.message });
+        }
+        console.log('🔄 Fetching data from API...');
+        // This stuff needs debugging badly
+        // Need to figure out a method to get data from this file without changing the stdout of this file
+      //   const geodata = require('./geo/data/json/formatted_response_latest.json');
+      //   console.log('🔄 Data fetched successfully');
+      //   redisClient.set(cacheKey, JSON.stringify(geodata), 'EX', 86400, (err, reply) => {
+      //     if (err) {
+      //       console.error('❌ Error caching data:', err);
+      //       return res.status(500).json({ error: 'Internal server error', details: err.message });
+      //     } else {
+      //       console.log('📦 GeoJSON data cached successfully');
+      //       return res.json({ message: 'GeoJSON data cached successfully' });
+      //     }
+      //   });
+      //   return res.json({ message: 'GeoJSON data cached successfully' });
+      // });
+    }
+        });
+      });
+    }
+  }).catch((err) => {
+    console.error('❌ Redis get error:', err);
+    return res.status(500).json({ error: 'Internal server error', details: err.message });
+  });
+  
+});
 const server = app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
 >>>>>>> dbe324e (Establishing Redis cache [WIP])
 });
 
+<<<<<<< HEAD
   // GET endpoint to fetch data from Redis cache for Map.js
   app.get('/api/redis/geodata', (req, res) => {
     console.log('🗺️ Map.js requesting for GeoJSON data');
@@ -401,6 +446,12 @@ const server = app.listen(PORT, () => {
       return res.status(500).json({ error: 'Internal server error', details: err.message });
     });
 });
+=======
+
+// Add graceful shutdown handlers
+process.on('SIGTERM', gracefulShutdown);
+process.on('SIGINT', gracefulShutdown);
+>>>>>>> 962a3c0 (created redis folder, created cacheJson.js)
 
   app.get('/api/redis/query', async (req, res) => {
     console.log('🔍 Querying Redis cache');
