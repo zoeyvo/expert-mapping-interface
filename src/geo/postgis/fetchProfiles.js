@@ -13,29 +13,9 @@
  * - src/geo/data/json/formatted_response_latest.json
  */
 
-
 const fs = require('fs');
 const path = require('path');
 const http = require('http');
-const { createClient } = require('redis');
-
-// Create a Redis client
-const redisClient = createClient();
-
-// Redis connection end event
-redisClient.on('end', () => {
-  console.log('🔌 Redis connection closed');
-});
-
-// Connect to Redis
-redisClient.connect().then(() => {
-  // Test Redis connection on start up
-  redisClient.ping().then((res) => {
-    console.log('✅ Redis connected successfully');
-    }).catch((err) => {
-      console.error('❌ Redis connection error:', err);
-    });
-  });
 
 // Update path to src/geo/data/json
 const outputDir = path.join(__dirname, '../data/json');
@@ -76,11 +56,6 @@ http.get('http://localhost:3001/api/research-locations', (res) => {
       console.log(`   - Total features: ${parsedData.features.length}`);
       console.log(`   - First researcher: ${parsedData.features[0].properties.researcher}`);
       console.log(`   - Last researcher: ${parsedData.features[parsedData.features.length - 1].properties.researcher}`);
-      // Cache the formatted data in Redis for 24 hours (86400 seconds)
-      const cacheKey = 'research-locations';
-      redisClient.setEx(cacheKey, 86400, formattedJson); // Cache for 24 hours
-      console.log('📦 Cached formatted data in Redis for 24 hours');
-      redisClient.quit();
     } catch (error) {
       console.error('❌ Error processing response:', error);
       process.exit(1);
