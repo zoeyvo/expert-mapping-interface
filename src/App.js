@@ -20,12 +20,12 @@ function App() {
       </nav>
 
       {/* Blue Section with Links */}
-      <div className="flex justify-between items-center bg-blue-900 px-14 py-6" style={{ backgroundColor: '#022851' }}>
+      <div className="flex justify-between items-center bg-blue-900 px-14 py-4" style={{ backgroundColor: '#022851' }}>
         <div className="flex space-x-12">
-          <a href="https://experts.ucdavis.edu/browse/expert/a" className="text-3xl font-semibold text-white">Experts</a>
-          <a href="https://experts.ucdavis.edu/browse/grant/1" className="text-3xl font-semibold text-white">Grants</a>
+          <a href="https://experts.ucdavis.edu/browse/expert/a" className="text-2xl font-semibold text-white">Experts</a>
+          <a href="https://experts.ucdavis.edu/browse/grant/1" className="text-2xl font-semibold text-white">Grants</a>
         </div>
-        <a href="https://www.ucdavis.edu/" className="text-3xl font-semibold text-white flex items-center">
+        <a href="https://www.ucdavis.edu/" className="text-2xl font-semibold text-white flex items-center">
           My Account
           <span className="ml-2 rounded-full p-2">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28">
