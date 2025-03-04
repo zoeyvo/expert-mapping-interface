@@ -7,6 +7,7 @@
  */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fs = require('fs').promises;
 =======
 
@@ -33,6 +34,11 @@ redisClient.connect().then(() => {
     });
   });
 >>>>>>> 7e3fe9c (Establishing Redis cache [WIP])
+=======
+const fs = require('fs');
+const path = require('path');
+const http = require('http');
+>>>>>>> e81fbce (created redis folder, created cacheJson.js)
 
 const API_BASE_URL = 'http://localhost:3001/api';
 
@@ -105,16 +111,20 @@ async function fetchResearcherDetails(name) {
       console.log(`   - Total features: ${parsedData.features.length}`);
       console.log(`   - First researcher: ${parsedData.features[0].properties.researcher}`);
       console.log(`   - Last researcher: ${parsedData.features[parsedData.features.length - 1].properties.researcher}`);
+<<<<<<< HEAD
       // Cache the formatted data in Redis for 24 hours (86400 seconds)
       const cacheKey = 'research-locations';
       redisClient.setEx(cacheKey, 86400, formattedJson); // Cache for 24 hours
       console.log('📦 Cached formatted data in Redis for 24 hours');
       redisClient.quit();
 >>>>>>> 7e3fe9c (Establishing Redis cache [WIP])
+=======
+>>>>>>> e81fbce (created redis folder, created cacheJson.js)
     } catch (error) {
         console.error('Error fetching researcher details:', error);
         throw error;
     }
+<<<<<<< HEAD
 }
 
 /**
@@ -318,3 +328,10 @@ module.exports = {
     convertToGeoJSON,
     saveGeoJSON
 };
+=======
+  });
+}).on('error', (error) => {
+  console.error('❌ Error fetching data:', error);
+  process.exit(1);
+});
+>>>>>>> e81fbce (created redis folder, created cacheJson.js)
