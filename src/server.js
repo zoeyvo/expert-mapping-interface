@@ -321,7 +321,7 @@ app.get('/api/researchers/:name', async (req, res) => {
 
 // New endpoint to fetch GeoJSON data from Redis
 app.get('/api/redis/geodata', (req, res) => {
-  console.log('🗺️ Received request for GeoJSON data');
+  console.log('🗺️ Map.js requesting for GeoJSON data');
   const cacheKey = 'research-locations';
   redisClient.get(cacheKey).then((cachedData) => {
     if (cachedData) {
