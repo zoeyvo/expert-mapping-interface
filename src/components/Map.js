@@ -76,12 +76,20 @@ const ResearchMap = () => {
         if (count === 1) {
           const popupContent = document.createElement("div");
           popupContent.innerHTML = `
-            <div style='position: relative; padding: 10px; font-size: 14px;'>
-              <strong>${experts[0].researcher}</strong><br/>
-              Related Works: ${experts[0].works?.[0] || "N/A"}<br/>
-              <a href='${experts[0].url}' target='_blank' style='color: blue;'>Profile</a>
-            </div>
-          `;
+          <div style='position: relative; padding: 15px; font-size: 14px; line-height: 1.5; width: 250px;'>
+                <div style="font-weight: bold; font-size: 16px; color: #13639e;">${experts[0].researcher}</div>
+                <div style="margin-top: 10px; font-size: 13px;">
+                  <strong>Location:</strong> ${experts[0].location || "Unknown"}
+                </div>
+                <div style="margin-top: 10px; font-size: 13px;">
+                  <strong>Related Works:</strong> ${experts[0].works?.[0] || "N/A"}
+                </div>
+                <a href='${experts[0].url}' target='_blank' 
+                  style="display: block; margin-top: 12px; padding: 8px 10px; background: #13639e; color: white; text-align: center; border-radius: 5px; text-decoration: none; font-weight: bold;">
+                  View Profile
+                </a>
+              </div>
+            `;
 
           const popup = L.popup({ closeButton: false, autoClose: false }).setContent(popupContent);
           marker.bindPopup(popup);
@@ -107,11 +115,17 @@ const ResearchMap = () => {
         } else {
           const popupContent = document.createElement("div");
           popupContent.innerHTML = `
-            <div style='padding: 10px; font-size: 14px;'>
-              <strong>${count} experts at this location</strong><br/>
-              <a href='#' style='color: blue;'>Click here to see list</a>
-            </div>
-          `;
+            <div style='position: relative; padding: 15px; font-size: 14px; line-height: 1.5; width: 250px;'>
+                <div style="font-weight: bold; font-size: 16px; color: #13639e;">${count} Experts at this Location</div>
+                <div style="margin-top: 10px; font-size: 13px;">
+                  <strong>Click below to view details</strong>
+                </div>
+                <a href='#' 
+                  style="display: block; margin-top: 12px; padding: 8px 10px; background: #13639e; color: white; text-align: center; border-radius: 5px; text-decoration: none; font-weight: bold;">
+                  View Experts
+                </a>
+              </div>
+            `;
 
           const popup = L.popup({ closeButton: false, autoClose: false }).setContent(popupContent);
           marker.bindPopup(popup);
@@ -152,28 +166,80 @@ return (
   <div style={{ display: "flex", height: "100vh", width: "100vw" }}>
     <div id="map" style={{ flex: panelOpen ? "1" : "100%", transition: "flex 0.3s ease" }} />
     {panelOpen && selectedExperts.length > 0 && (
-      <div style={{ 
-        width: "350px", 
-        background: "white", 
-        padding: "15px", 
-        borderLeft: "2px solid #aaa", 
+  <div style={{ 
+    width: "350px", 
+    background: "white", 
+    padding: "15px", 
+    borderLeft: "2px solid #aaa", 
+    position: "relative", 
+    height: "100vh", 
+    overflowY: "auto" 
+  }}>
+    <button 
+      onClick={() => setPanelOpen(false)} 
+      style={{ 
+        position: "absolute", 
+        top: "10px", 
+        right: "10px", 
+        background: "#ddd", 
+        border: "none", 
+        padding: "5px", 
+        cursor: "pointer", 
+        fontSize: "16px"
+      }}
+    >×</button>
+
+<div style={{ marginTop: "10px", fontSize: "13px" }}>
+  <strong>Location:</strong> {selectedExperts[0]?.location || "Unknown"}
+</div>
+
+    {selectedExperts.map((expert, index) => (
+      <div key={index} style={{ 
         position: "relative", 
-        height: "100vh", 
-        overflowY: "auto" 
+        padding: "15px", 
+        fontSize: "14px", 
+        lineHeight: "1.5", 
+        width: "100%", 
+        border: "1px solid #ccc", 
+        borderRadius: "5px", 
+        marginBottom: "15px",
+        background: "#f9f9f9"
       }}>
-        <button onClick={() => setPanelOpen(false)} style={{ position: "absolute", top: "10px", right: "10px", background: "#ddd", border: "none", padding: "5px", cursor: "pointer" }}>×</button>
-        <h3>Experts at this location</h3>
-        {selectedExperts.map((expert, index) => (
-          <div key={index} style={{ marginBottom: "15px", padding: "10px", border: "1px solid #ccc", borderRadius: "5px" }}>
-            <strong>{expert.researcher}</strong>
-            <p>Related Works: {expert.works?.[0]}</p>
-            {expert.url && <a href={expert.url} target="_blank" rel="noopener noreferrer" style={{ color: "blue" }}>Profile</a>}
-          </div>
-        ))}
+        <div style={{ fontWeight: "bold", fontSize: "16px", color: "#13639e" }}>
+          {expert.researcher}
+        </div>
+        <div style={{ marginTop: "10px", fontSize: "13px" }}>
+          <strong>Related Works:</strong> {expert.works?.[0] || "N/A"}
+        </div>
+        <a 
+          href={expert.url || "#"} 
+          target={expert.url ? "_blank" : "_self"} 
+          rel="noopener noreferrer" 
+          style={{ 
+            display: "block", 
+            marginTop: "12px", 
+            padding: "8px 10px", 
+            background: "#13639e", 
+            color: "white", 
+            textAlign: "center", 
+            borderRadius: "5px", 
+            textDecoration: "none", 
+            fontWeight: "bold", 
+            opacity: expert.url ? "1" : "0.6", 
+            cursor: expert.url ? "pointer" : "default"
+          }}
+        >
+          {expert.url ? "View Profile" : "No Profile Found"}
+        </a>
       </div>
-    )}
+    ))}
+  </div>
+)}
+
   </div>
 );
 };
 
 export default ResearchMap;
+
+
