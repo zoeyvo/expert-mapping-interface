@@ -2,8 +2,24 @@ import os
 import time
 import logging
 import pandas as pd
-import spacy
 import json
+import re
+from unidecode import unidecode
+
+from geopy.geocoders import Nominatim
+
+# API
+geolocator = Nominatim(user_agent="lctnguyen@ucdavis.edu")
+manual_geo_name = {
+  "CA" : "California",
+  "California, U.S.A." : "California",
+  "the United States" : "USA",
+  "U.S." : "USA",
+  "Greenland" : "Greenland, Denmark",
+  "East Greenland" : "Greenland, Denmark"
+}
+
+BATCH_SIZE = 100
 
 # Clear the log file on each run
 log_file = "processing.log"
@@ -13,16 +29,25 @@ if os.path.exists(log_file):
 # Setup logging
 logging.basicConfig(filename=log_file, level=logging.INFO, format="%(asctime)s - %(message)s")
 
-# Define batch size for NLP processing
-BATCH_SIZE = 10  # ~ 1.8 min to process sample data
+# Temporary storage. Will parse into Json file
+profiles = {}           # Expert's name -> Profile object
+location_based = {}     # Location -> {Expert's name -> GeoProfileMapping object}
+coordinates = {}        # Location -> Coordinates
 
-# Temporary storage
-profiles = {}  # Expert's name -> Profile object
-locations = {}  # Location -> {Expert's name -> GeoProfileMapping object}
+# Use in this script only. Store geocoded locations
+geoData = {}          # Location's name -> its info (id, coordinate, level)
+standardGeoName = {}  # Location's id -> normalized name
 
 unique_titles = set()
 unique_locations = set()
 unique_researchers = set()
+
+def normalizeLocationName(location):
+  location = location.strip().lower()
+  location = re.sub(r'\s+', ' ', location)
+  location = re.sub(r'^the\s+', '', location, flags=re.IGNORECASE)
+  location = re.sub(r'\b\w', lambda c: c.group(0).upper(), location)
+  return location
 
 class Profile:
   def __init__(self, name):
@@ -55,72 +80,115 @@ class GeoProfileMapping:
 def geoProfileMappingToJson(mapping: GeoProfileMapping):
   return {"matches": mapping.matchesCount, "works": mapping.relatedWork}
 
-# Load NLP model
-start_time = time.time()
-nlp = spacy.load("en_core_web_trf")
-logging.info("Loaded spaCy model in %.2f seconds", time.time() - start_time)
 
-# Locate the CSV file
+# -----Main-----
+start_time = time.time()
+
+# Locate files
 script_dir = os.path.dirname(os.path.abspath(__file__))
 csv_file_path = os.path.join(script_dir, "..", "data", "csv", "expert_profiles.csv")
 csv_file_path = os.path.abspath(csv_file_path)
+geo_file_path = os.path.join(script_dir, "..", "data", "json", "llama_geo_results.jsonl")
+geo_file_path = os.path.abspath(geo_file_path)
 
 if not os.path.exists(csv_file_path):
   raise FileNotFoundError(f"CSV file not found at: {csv_file_path}")
+if not os.path.exists(geo_file_path):
+  raise FileNotFoundError(f"Llama's result file not found at: {geo_file_path}")
 
 logging.info("Processing file: %s", csv_file_path)
+logging.info("Processing file: %s", geo_file_path)
 
-# Read data
+# Read data from expert_profiles.csv
 data = pd.read_csv(csv_file_path)
 total_rows = len(data)
+
+# Read locations from llama_geo_results.jsonl
+with open(geo_file_path, "r") as file:
+  llama_results = list(file)
+
+# Match locations to data
+geo = ["N/A"] * total_rows
+for ret in llama_results:
+  ret = json.loads(ret)
+  id = int(ret["custom_id"])
+  geo[id] = ret["response"]["body"]["choices"][0]["message"]["content"]
+data["geo"] = geo
+
 titles = data["title"].tolist()
 names = data["Name"].tolist()
+locations = data["geo"].tolist()
 
-# Process in batches
-start_nlp_time = time.time()
 total_locations = 0
+fail_to_geocode = set()
 
+# Use batch for stats/visualization only
 for batch_start in range(0, total_rows, BATCH_SIZE):
   batch_end = min(batch_start + BATCH_SIZE, total_rows)
-  batch_titles = titles[batch_start:batch_end]
   batch_names = names[batch_start:batch_end]
-
+  batch_titles = titles[batch_start:batch_end]
+  batch_locations = locations[batch_start:batch_end]
+  
   batch_start_time = time.time()
-  batch_docs = list(nlp.pipe(batch_titles, batch_size=BATCH_SIZE))
-
   batch_location_count = 0
-
-  for name, title, doc in zip(batch_names, batch_titles, batch_docs):
+  
+  for name, title, location in zip(batch_names, batch_titles, batch_locations):
     unique_researchers.add(name)  # Track unique researchers
-
+    
     # Add title to corresponding expert profile
     if name not in profiles:
       profiles[name] = Profile(name)
     profiles[name].addTitle(title)
+    
+    # Some manual name changes for api
+    if location in manual_geo_name:
+      location = manual_geo_name[location]
+    
+    # Geocode and store to 'geoData' if it's a new location
+    if location != "N/A":
+      if location not in geoData:
+        time.sleep(0.6)
+        try:
+          geo = geolocator.geocode(location)
+          if geo:
+            full_info = geo.raw
+            geoData[location] = {
+              "geo_id" : full_info["osm_id"],
+              "coordinate" : [geo.latitude, geo.longitude],
+              "level" : full_info["place_rank"]
+            }
+          else:
+            fail_to_geocode.add(location)
+        except Exception:
+          print("API error geocoding: ", location)
+          
+    # Handle expert/title that has location
+    if location in geoData:
+      batch_location_count += 1
 
-    # Extract locations
-    found_location = False  # Track if any location was found
-    for ent in doc.ents:
-      if ent.label_ == "GPE":
-        geo = ent.text
-        found_location = True
-        batch_location_count += 1
+      # Use standardize location's name
+      if geoData[location]["geo_id"] not in standardGeoName:
+        standardGeoName[geoData[location]["geo_id"]] = location
+      location_name = standardGeoName[geoData[location]["geo_id"]]
+      location_name = normalizeLocationName(location_name)
+      
+      # Store new coordinates
+      if location_name not in coordinates:
+        coordinates[location_name] = geoData[location]["coordinate"]
+      
+      # Add location to expert's profile
+      profiles[name].addLocation(location_name)
+      
+      # Update location-based profile mapping
+      if location_name not in location_based:
+        location_based[location_name] = {}
+      if name not in location_based[location_name]:
+        location_based[location_name][name] = GeoProfileMapping(name, location_name)
 
-        # Add location to expert's profile
-        profiles[name].addLocation(geo)
-
-        # Update location-based profile mapping
-        if geo not in locations:
-          locations[geo] = {}
-        if name not in locations[geo]:
-          locations[geo][name] = GeoProfileMapping(name, geo)
-
-        locations[geo][name].addRelatedWork(title)
-
-    if not found_location:
-      # If no location found, we can consider this as a non-geo profile
-      profiles[name].addLocation("None")  # Or any other way to represent no location
-
+      location_based[location_name][name].addRelatedWork(title)
+    else:
+      profiles[name].addLocation("None")
+      
   batch_time = time.time() - batch_start_time
   total_locations += batch_location_count
 
@@ -133,7 +201,8 @@ for batch_start in range(0, total_rows, BATCH_SIZE):
     f"Locations found: {batch_location_count}"
   )
 
-logging.info("Completed NLP processing in %.2f seconds", time.time() - start_nlp_time)
+
+logging.info("Completed in %.2f seconds", time.time() - start_time)
 
 # Save JSON files, creating them if they don't exist
 start_save = time.time()
@@ -150,7 +219,12 @@ with open(expert_profiles_path, "w") as file_profiles:
 # Save location-based profiles
 location_based_profiles_path = os.path.join(json_dir, "location_based_profiles.json")
 with open(location_based_profiles_path, "w") as file_locations:
-  json.dump(locations, file_locations, default=geoProfileMappingToJson, indent=2)
+  json.dump(location_based, file_locations, default=geoProfileMappingToJson, indent=2)
+  
+# Save coordinate
+coordinates_path = os.path.join(json_dir, "location_coordinates.json")
+with open(coordinates_path, "w") as file_profiles:
+  json.dump(coordinates, file_profiles, indent=2)
 
 # Save non-geo profiles
 non_geo_profiles = {name: profile for name, profile in profiles.items() if "None" in profile.locations}
@@ -167,6 +241,11 @@ logging.info("Total unique researchers: %d", len(unique_researchers))
 logging.info("Total unique works (titles) parsed: %d", len(unique_titles))
 logging.info("Total unique locations extracted: %d", len(unique_locations))
 logging.info("Total execution time: %.2f minutes", total_time / 60)
+
+# print("\nLocations that can't be geocoded:")
+# for loc in fail_to_geocode:
+#   print(loc, "\n")
+print(f"Fail to geocode: {len(fail_to_geocode)}")
 
 print("\nFinal Statistics:")
 print(f"Total unique researchers: {len(unique_researchers)}")
