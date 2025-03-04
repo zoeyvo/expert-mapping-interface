@@ -9,6 +9,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fs = require('fs').promises;
 =======
 =======
@@ -39,6 +40,11 @@ redisClient.connect().then(() => {
     });
   });
 >>>>>>> dbe324e (Establishing Redis cache [WIP])
+=======
+const fs = require('fs');
+const path = require('path');
+const http = require('http');
+>>>>>>> 962a3c0 (created redis folder, created cacheJson.js)
 
 // Create a Redis client
 const redisClient = createClient();
@@ -137,6 +143,7 @@ async function fetchResearcherDetails(name) {
       console.log(`   - Last researcher: ${parsedData.features[parsedData.features.length - 1].properties.researcher}`);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> dbe324e (Establishing Redis cache [WIP])
       // Cache the formatted data in Redis for 24 hours (86400 seconds)
@@ -150,6 +157,8 @@ async function fetchResearcherDetails(name) {
 >>>>>>> e81fbce (created redis folder, created cacheJson.js)
 =======
 >>>>>>> dbe324e (Establishing Redis cache [WIP])
+=======
+>>>>>>> 962a3c0 (created redis folder, created cacheJson.js)
     } catch (error) {
         console.error('Error fetching researcher details:', error);
         throw error;
@@ -364,4 +373,7 @@ module.exports = {
   console.error('❌ Error fetching data:', error);
   process.exit(1);
 });
+<<<<<<< HEAD
 >>>>>>> e81fbce (created redis folder, created cacheJson.js)
+=======
+>>>>>>> 962a3c0 (created redis folder, created cacheJson.js)
