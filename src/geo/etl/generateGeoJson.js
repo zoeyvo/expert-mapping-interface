@@ -60,51 +60,65 @@ function generateGeoJSON() {
   const locationProfiles = JSON.parse(fs.readFileSync(profilesPath, "utf-8"));
   const locationGeoData = JSON.parse(fs.readFileSync(coordsPath, "utf-8"));
   
-  const seenErrorMessages = new Set();
+  // Create a map of locations to researcher data
+  const locationResearchers = new Map();
   
-  const geoJson = {
-    type: "FeatureCollection",
-    features: []
-  };
-
+  // First pass - collect all researcher information by location
   for (const [location, researchers] of Object.entries(locationProfiles)) {
     const normalizedLocation = normalizeLocationName(location);
-    const locationFeature = locationGeoData.features.find(
-      f => f.properties.name === normalizedLocation
-    );
+    const researcherData = [];
     
-    if (!locationFeature) {
-      const errorMsg = `No geodata found for: ${normalizedLocation}`;
-      if (!seenErrorMessages.has(errorMsg)) {
-        console.warn(`⚠️ ${errorMsg}`);
-        seenErrorMessages.add(errorMsg);
-      }
-      continue;
-    }
-    locationCount++;
-
     for (const [researcherName, data] of Object.entries(researchers)) {
       const normalizedResearcher = normalizeResearcherName(researcherName);
       const lastName = normalizedResearcher.split(',')[0].toLowerCase();
-      const url = researcherUrls[lastName] || null;
-
-      geoJson.features.push({
-        type: "Feature",
-        geometry: locationFeature.geometry,
-        properties: {
-          researcher: normalizedResearcher,
-          location: normalizedLocation,
-          works: data.works,
+      const url = researcherUrls[lastName];
+      
+      if (url) {
+        researcherData.push({
+          name: normalizedResearcher,
           url: url,
-          locationType: locationFeature.properties.locationType,
-          centroid: locationFeature.properties.centroid,
-          hasPolygon: locationFeature.properties.hasPolygon
-        }
-      });
-      researcherCount++;
-      workCount += data.works.length;
+          works: data.works
+        });
+      }
+    }
+    
+    if (researcherData.length > 0) {
+      locationResearchers.set(normalizedLocation, researcherData);
     }
   }
 
-  return geoJson;
+  // Update location coordinates with researcher information
+  locationGeoData.features = locationGeoData.features.map(feature => {
+    const locationName = feature.properties.name;
+    const researchers = locationResearchers.get(locationName);
+    
+    if (researchers) {
+      return {
+        ...feature,
+        properties: {
+          ...feature.properties,
+          researchers: researchers
+        }
+      };
+    }
+    return feature;
+  });
+
+  // Write to both locations
+  const publicOutputPath = path.join(process.cwd(), 'public', 'data', 'research_profiles.geojson');
+  const srcOutputPath = path.join(__dirname, '../data', 'json', 'research_profiles.geojson');
+
+  // Ensure directories exist
+  fs.mkdirSync(path.dirname(publicOutputPath), { recursive: true });
+  fs.mkdirSync(path.dirname(srcOutputPath), { recursive: true });
+
+  // Write files
+  fs.writeFileSync(publicOutputPath, JSON.stringify(locationGeoData, null, 2));
+  fs.writeFileSync(srcOutputPath, JSON.stringify(locationGeoData, null, 2));
+  
+  console.log(`✅ Updated ${locationResearchers.size} locations with researcher data`);
+  console.log(`✅ Written to ${publicOutputPath}`);
+  console.log(`✅ Written to ${srcOutputPath}`);
+  
+  return locationGeoData;
 }

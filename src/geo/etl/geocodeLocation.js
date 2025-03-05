@@ -59,7 +59,8 @@ async function geocodeLocation(location) {
                 format: 'json',
                 polygon_geojson: 1,
                 addressdetails: 1,
-                limit: 1
+                limit: 10,
+                featuretype: 'city,state,country,town' // Restrict to these types
             },
             headers: {
                 'User-Agent': 'Research_Profile_Generator'
@@ -71,21 +72,59 @@ async function geocodeLocation(location) {
             return null;
         }
 
-        const result = response.data[0];
+        // Find the best matching feature by type
+        const result = response.data.find(r => 
+            (r.type === 'administrative' || 
+             r.type === 'city' ||
+             r.type === 'town' ||
+             r.type === 'state' ||
+             r.type === 'country') &&
+            r.display_name.toLowerCase().includes(location.toLowerCase())
+        ) || response.data[0];
+
         let geometry;
 
         // Check if we have valid polygon data
-        if (result.geojson && 
-            (result.geojson.type === 'Polygon' || result.geojson.type === 'MultiPolygon') &&
-            result.geojson.coordinates?.length > 0) {
+        if (result.geojson && result.geojson.coordinates?.length > 0) {
+            let coordinates;
             
+            if (result.geojson.type === 'MultiPolygon') {
+                // Get the largest polygon from the MultiPolygon
+                const areas = result.geojson.coordinates.map(poly => {
+                    let area = 0;
+                    const ring = poly[0];
+                    for (let i = 0; i < ring.length - 1; i++) {
+                        area += ring[i][0] * ring[i + 1][1] - ring[i + 1][0] * ring[i][1];
+                    }
+                    return Math.abs(area / 2);
+                });
+                const largestIndex = areas.indexOf(Math.max(...areas));
+                coordinates = result.geojson.coordinates[largestIndex];
+                console.log(`ℹ️ Converting MultiPolygon to largest Polygon for ${location}`);
+            } else if (result.geojson.type === 'Polygon') {
+                coordinates = result.geojson.coordinates;
+            } else {
+                geometry = {
+                    type: "Point",
+                    coordinates: [parseFloat(result.lon), parseFloat(result.lat)]
+                };
+                console.log(`ℹ️ Using point geometry for ${location}`);
+                return createFeature(geometry, location, result);
+            }
+
+            if (coordinates[0].length > MAX_POINTS) {
+                const step = Math.ceil(coordinates[0].length / MAX_POINTS);
+                coordinates = coordinates.map(ring => 
+                    ring.filter((_, index) => index % step === 0 || index === ring.length - 1)
+                );
+            }
+
             geometry = {
-                type: result.geojson.type,
-                coordinates: simplifyPolygon(result.geojson.coordinates, MAX_POINTS)
+                type: "Polygon",
+                coordinates: coordinates
             };
-            console.log(`ℹ️ Using simplified polygon for ${location}`);
+            console.log(`ℹ️ Using ${coordinates[0].length}-point polygon for ${location} (${result.type})`);
         } else {
-            // Fallback to point geometry
             geometry = {
                 type: "Point",
                 coordinates: [parseFloat(result.lon), parseFloat(result.lat)]
@@ -98,7 +137,9 @@ async function geocodeLocation(location) {
             properties: {
                 name: location,
                 display_name: result.display_name,
-                type: result.type
+                type: result.type,
+                osm_type: result.osm_type,
+                class: result.class
             },
             geometry: geometry
         };
@@ -107,6 +148,18 @@ async function geocodeLocation(location) {
         console.error(`Error geocoding ${location}:`, error.message);
         return null;
     }
+}
+
+function createFeature(geometry, location, result) {
+    return {
+        type: "Feature",
+        properties: {
+            name: location,
+            display_name: result.display_name,
+            type: result.type
+        },
+        geometry: geometry
+    };
 }
 
 async function createLocationCoordinates() {

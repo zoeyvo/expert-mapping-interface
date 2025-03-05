@@ -8,23 +8,7 @@
         "display_name": "Asia, Bay Lake, Orange County, Florida, United States",
         "type": "locality",
         "osm_type": "way",
-        "class": "place",
-        "researchers": [
-          {
-            "name": "Stewart, Susan L",
-            "url": "https://experts.ucdavis.edu/expert/ntI46wQe",
-            "works": [
-              "Hepatocellular screening in hepatitisâ€B infected Asian Americans"
-            ]
-          },
-          {
-            "name": "Keegan, Theresa H",
-            "url": "https://experts.ucdavis.edu/expert/U4H5hQ23",
-            "works": [
-              "Papillary thyroid cancer incidence rates vary significantly by birthplace in Asian American women"
-            ]
-          }
-        ]
+        "class": "place"
       },
       "geometry": {
         "type": "Polygon",
@@ -421,31 +405,7 @@
         "display_name": "Fermilab, Batavia Township, Kane County, Illinois, United States",
         "type": "industrial",
         "osm_type": "way",
-        "class": "landuse",
-        "researchers": [
-          {
-            "name": "Chertok, Maxwell B",
-            "url": "https://experts.ucdavis.edu/expert/48xkGvFK",
-            "works": [
-              "Measurement of B(tâ†’Wb)/B(tâ†’Wq) at the Collider Detector at Fermilab",
-              "Diffractive dijet production at âˆšs = 630 and 1800 GeV at the Fermilab Tevatron"
-            ]
-          },
-          {
-            "name": "Conway, John S",
-            "url": "https://experts.ucdavis.edu/expert/6Rwi7jxB",
-            "works": [
-              "Measurement of the Top Quark Mass and ttÂ¯ Production Cross Section from Dilepton Events at the Collider Detector at Fermilab"
-            ]
-          },
-          {
-            "name": "Erbacher, Robin D",
-            "url": "https://experts.ucdavis.edu/expert/QrOZZV4C",
-            "works": [
-              "Search for the Exotic Meson X(5568) with the Collider Detector at Fermilab"
-            ]
-          }
-        ]
+        "class": "landuse"
       },
       "geometry": {
         "type": "Polygon",
@@ -778,30 +738,7 @@
         "display_name": "Cambridge Rindge & Latin School, 459, Broadway, Mid-Cambridge, Cambridge, Middlesex County, Massachusetts, 02138, United States",
         "type": "school",
         "osm_type": "way",
-        "class": "amenity",
-        "researchers": [
-          {
-            "name": "Stewart, Susan L",
-            "url": "https://experts.ucdavis.edu/expert/ntI46wQe",
-            "works": [
-              "Smoking acquisition among adolescents and young Latinas The role of socioenvironmental and personal factors"
-            ]
-          },
-          {
-            "name": "Hilbert, Martin R",
-            "url": "https://experts.ucdavis.edu/expert/4AUIEJ5Q",
-            "works": [
-              "In the Midst of the Transition: Challenges and Changes for Latin American Economies"
-            ]
-          },
-          {
-            "name": "Fejerman, Laura",
-            "url": "https://experts.ucdavis.edu/expert/4XQ7q0Aj",
-            "works": [
-              "Abstract 2419: A polygenic risk score predicts breast cancer risk in Latinas"
-            ]
-          }
-        ]
+        "class": "amenity"
       },
       "geometry": {
         "type": "Polygon",
@@ -964,16 +901,7 @@
       "properties": {
         "name": "Banambani Village, Mali",
         "display_name": "Banambani, Cercle de Kati, Koulikoro, Mali",
-        "type": "village",
-        "researchers": [
-          {
-            "name": "Lanzaro, Gregory",
-            "url": "https://experts.ucdavis.edu/expert/QSj1WEWy",
-            "works": [
-              "Spatial and Habitat Distribution of Anopheles gambiae and Anopheles arabiensis (Diptera: Culicidae) in Banambani Village, Mali"
-            ]
-          }
-        ]
+        "type": "village"
       },
       "geometry": {
         "type": "Point",
@@ -990,23 +918,7 @@
         "display_name": "Alaska, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Dickinson, Peter J",
-            "url": "https://experts.ucdavis.edu/expert/PrdtaxOM",
-            "works": [
-              "Genome-wide association analysis identifies a mutation in the thiamine transporter 2 (SLC19A3) gene associated with Alaskan Husky encephalopathy."
-            ]
-          },
-          {
-            "name": "Sanchirico, James N",
-            "url": "https://experts.ucdavis.edu/expert/qmGwX1V8",
-            "works": [
-              "Recreational Leasing of Alaska Commercial Halibut Quota: The First Two Years of the Guided Angler Fish Provision"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -1465,16 +1377,7 @@
         "display_name": "Baltimore, Maryland, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Cadenasso, Mary L",
-            "url": "https://experts.ucdavis.edu/expert/6fWvIVWU",
-            "works": [
-              "Evaluation of the National Land Cover Database for Hydrologic Applications in Urban and Suburban Baltimore, Maryland1"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -1715,497 +1618,7 @@
         "display_name": "California, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Marcin, James P",
-            "url": "https://experts.ucdavis.edu/expert/wQdfDSG8",
-            "works": [
-              "Impact of Public Reporting on Access to Coronary Artery Bypass Surgery: The California Outcomes Reporting Program",
-              "Impact of between-hospital volume and within-hospital volume on mortality and readmission rates for trauma patients in California*"
-            ]
-          },
-          {
-            "name": "Fassnacht, Christopher D",
-            "url": "https://experts.ucdavis.edu/expert/tixbfXvP",
-            "works": [
-              "The Hubble Constant from the Gravitational Lens B1608+656**Based on observations collected at W. M. Keck Observatory, which is operated jointly by the California Institute of Technology and the University of California, and with the NASA/ESA Hubble Space Telescope, obtained at STScI, which is operated by AURA, under NASA contract NAS5-26555."
-            ]
-          },
-          {
-            "name": "Foley, Janet E",
-            "url": "https://experts.ucdavis.edu/expert/tmv41lkG",
-            "works": [
-              "Severe Ulceronecrotic Dermatitis Associated with Mite Infestation in the Critically Endangered Amargosa Vole (Microtus californicus scirpensis)",
-              "SEROLOGIC AND MOLECULAR EVIDENCE OF EHRLICHIA SPP. IN COYOTES IN CALIFORNIA",
-              "Patterns of Natural and Human-Caused Mortality Factors of a Rare Forest Carnivore, the Fisher (Pekania pennanti) in California",
-              "Endemic Skunk amdoparvovirus in freeâ€ranging striped skunks (Mephitis mephitis) in California"
-            ]
-          },
-          {
-            "name": "Hanson, Bradley",
-            "url": "https://experts.ucdavis.edu/expert/NWZSmJzO",
-            "works": [
-              "Assessing Simazine Degradation Patterns in California Citrus Orchards with Different Simazine Use Histories",
-              "Evolution and spread of glyphosate resistance in Conyza bonariensis in California and a comparison with closely related Conyza canadensis"
-            ]
-          },
-          {
-            "name": "Uzal, Francisco A",
-            "url": "https://experts.ucdavis.edu/expert/PFfnJVxC",
-            "works": [
-              "Study of laryngopharyngeal pathology in Thoroughbred horses in southern California",
-              "Retrospective study of pneumonia in non-racing horses in California"
-            ]
-          },
-          {
-            "name": "Aminololama-Shakeri, Shadi",
-            "url": "https://experts.ucdavis.edu/expert/wm8lEmby",
-            "works": [
-              "Impact of the California Breast Density Law on Primary Care Physicians"
-            ]
-          },
-          {
-            "name": "Hertz-Picciotto, Irva",
-            "url": "https://experts.ucdavis.edu/expert/v97WHfws",
-            "works": [
-              "Polybrominated diphenyl ether (PBDE) concentrations and resulting exposure in homes in California: relationships among passive air, surface wipe and dust concentrations, and temporal variability."
-            ]
-          },
-          {
-            "name": "Peri, Giovanni",
-            "url": "https://experts.ucdavis.edu/expert/qdcOEWMV",
-            "works": [
-              "Rethinking the Area Approach: Immigrants and the Labor Market in California, 1960-2005."
-            ]
-          },
-          {
-            "name": "Novan, Kevin",
-            "url": "https://experts.ucdavis.edu/expert/9XXVXSMB",
-            "works": [
-              "Gasoline taxes and revenue volatility: An application to California"
-            ]
-          },
-          {
-            "name": "Spriet, Mathieu",
-            "url": "https://experts.ucdavis.edu/expert/tCAynwqv",
-            "works": [
-              "Caudal lumbar vertebral fractures in California Quarter Horse and Thoroughbred racehorses"
-            ]
-          },
-          {
-            "name": "Rizzo, David M",
-            "url": "https://experts.ucdavis.edu/expert/BcSP7ucB",
-            "works": [
-              "Community and Individual Effects on SOD Intensification in California Redwood Forests: Implications for Tanoak Persistence"
-            ]
-          },
-          {
-            "name": "Sumner, Daniel A",
-            "url": "https://experts.ucdavis.edu/expert/Qyrz8jnD",
-            "works": [
-              "The Payoff to Public Investments in Pestâ€Management R&D: General Issues and a Case Study Emphasizing Integrated Pest Management in California",
-              "Case study on potential agricultural responses to climate change in a California landscape"
-            ]
-          },
-          {
-            "name": "Atwill, Edward R",
-            "url": "https://experts.ucdavis.edu/expert/nUkAlxJ6",
-            "works": [
-              "Management of Microbial Contamination in Storm Runoff from California Coastal Dairy Pastures"
-            ]
-          },
-          {
-            "name": "Romano, Patrick",
-            "url": "https://experts.ucdavis.edu/expert/ieIsrU91",
-            "works": [
-              "The epidemiology of venous thromboembolism in California in 1996"
-            ]
-          },
-          {
-            "name": "Holyoak, Marcel",
-            "url": "https://experts.ucdavis.edu/expert/Xvh18729",
-            "works": [
-              "Riparian habitat fragmentation and population persistence of the threatened valley elderberry longhorn beetle in central California"
-            ]
-          },
-          {
-            "name": "Dewey, Kathryn G",
-            "url": "https://experts.ucdavis.edu/expert/KtluYFPs",
-            "works": [
-              "Risk factors for delayed onset of lactogenesis among northern California primiparous women"
-            ]
-          },
-          {
-            "name": "Hill, Tessa",
-            "url": "https://experts.ucdavis.edu/expert/fC33uEO4",
-            "works": [
-              "Evidence for benthicâ€“pelagic food web coupling and carbon export from California margin bamboo coral archives",
-              "Ecological and Environmental Stability in Offshore Southern California Marine Basins Through the Holocene"
-            ]
-          },
-          {
-            "name": "Thorne, James H",
-            "url": "https://experts.ucdavis.edu/expert/2RUg4Cii",
-            "works": [
-              "Integration of landscape fragmentation analysis into regional planning: A statewide multi-scale case study from California, USA",
-              "A Reference Manual for Caltrans Staff on Regional Advance Mitigation Impact Assessment Methods"
-            ]
-          },
-          {
-            "name": "Kelt, Douglas A",
-            "url": "https://experts.ucdavis.edu/expert/gBS93Heh",
-            "works": [
-              "Spatial organization and habitat use of feral cats (Felis catus L.) in Mediterranean California"
-            ]
-          },
-          {
-            "name": "Chen, Moon S",
-            "url": "https://experts.ucdavis.edu/expert/TA2gvwdi",
-            "works": [
-              "English language proficiency and smoking prevalence among California's Asian Americans"
-            ]
-          },
-          {
-            "name": "Cornel, Anthony",
-            "url": "https://experts.ucdavis.edu/expert/xly1SnpF",
-            "works": [
-              "High Degree of Single Nucleotide Polymorphisms in California Culex pipiens (Diptera: Culicidae) sensu lato"
-            ]
-          },
-          {
-            "name": "Mitloehner, Frank M",
-            "url": "https://experts.ucdavis.edu/expert/HryJAduk",
-            "works": [
-              "A Survey of Particulate Matter on California Dairy Farms"
-            ]
-          },
-          {
-            "name": "Kleeman, Michael J",
-            "url": "https://experts.ucdavis.edu/expert/AOgLSwWL",
-            "works": [
-              "Associations of Mortality with Long-Term Exposures to Fine and Ultrafine Particles, Species and Sources: Results from the California Teachers Study Cohort",
-              "Source apportionment of wintertime secondary organic aerosol during the California regional PM10/PM2.5 air quality study"
-            ]
-          },
-          {
-            "name": "Sih, Andrew",
-            "url": "https://experts.ucdavis.edu/expert/1Y8s3IUC",
-            "works": [
-              "Euhaplorchis californiensis, a brain-infecting trematode parasite, is associated with changes in physiology and behavior in its killifish second intermediate host"
-            ]
-          },
-          {
-            "name": "Li, Tianhong",
-            "url": "https://experts.ucdavis.edu/expert/FxrM2v2t",
-            "works": [
-              "Biomarker analysis of a phase II trial of cabozantinib and erlotinib in patients (pts) with EGFR-mutant NSCLC with epidermal growth factor receptor (EGFR) tyrosine kinase inhibitor (TKI) resistance: A California Cancer Consortium Phase II Trial (NCI 9303)."
-            ]
-          },
-          {
-            "name": "Kurlaender, Michal",
-            "url": "https://experts.ucdavis.edu/expert/OAMtC0hc",
-            "works": [
-              "Kâ€“12 and Postsecondary Alignment: Racial/Ethnic Differences in Freshmen Course-taking and Performance at Californiaâ€™s Community Colleges"
-            ]
-          },
-          {
-            "name": "Wexler, Anthony",
-            "url": "https://experts.ucdavis.edu/expert/ZTMHPTKH",
-            "works": [
-              "Lower tropospheric ozone and aerosol measurements at a coastal mountain site in Northern California"
-            ]
-          },
-          {
-            "name": "Keegan, Theresa H",
-            "url": "https://experts.ucdavis.edu/expert/U4H5hQ23",
-            "works": [
-              "Predictors of early death and survival among children, adolescents and young adults with acute myeloid leukaemia in California, 1988-2011: a population-based study.",
-              "The influence of nativity and neighborhoods on breast cancer stage at diagnosis and survival among California Hispanic women",
-              "Inpatients Costs of Cancer Treatment Among Children and Young Adults with Acute Lymphoblastic Leukemia (ALL) Treated at Specialized Cancer Centers in California",
-              "Impact of marital status on the survival of patients with hematologic malignancies reported to the California Cancer Registry."
-            ]
-          },
-          {
-            "name": "Yang, Christopher",
-            "url": "https://experts.ucdavis.edu/expert/ufi1NqKQ",
-            "works": [
-              "Determining Marginal Electricity for Near-term Plug-in and Fuel Cell Vehicle Demands in California: Impacts on Vehicle Greenhouse Gas Emissions"
-            ]
-          },
-          {
-            "name": "Oskin, Michael E",
-            "url": "https://experts.ucdavis.edu/expert/hKBTRyso",
-            "works": [
-              "Elevated shear zone loading rate during an earthquake cluster in eastern California"
-            ]
-          },
-          {
-            "name": "Harter, Thomas",
-            "url": "https://experts.ucdavis.edu/expert/hJoNiNHg",
-            "works": [
-              "Effect of sulfonamide antibiotics on microbial diversity and activity in a Californian Mollic Haploxeralf"
-            ]
-          },
-          {
-            "name": "Meier, Alan K",
-            "url": "https://experts.ucdavis.edu/expert/TCzoIoIO",
-            "works": [
-              "Standby Energy Use in California Homes"
-            ]
-          },
-          {
-            "name": "Eviner, Valerie",
-            "url": "https://experts.ucdavis.edu/expert/HDaN2trW",
-            "works": [
-              "Review of research to inform California's climate scoping plan: Agriculture and working lands"
-            ]
-          },
-          {
-            "name": "Roche, Leslie M",
-            "url": "https://experts.ucdavis.edu/expert/CqUgvBrA",
-            "works": [
-              "Structural equation modeling reveals iron (hydr)oxides as a strong mediator of N mineralization in California agricultural soils"
-            ]
-          },
-          {
-            "name": "Trainor, Brian C",
-            "url": "https://experts.ucdavis.edu/expert/64zlgq23",
-            "works": [
-              "Effects of social defeat on paternal behavior and pair bonding behavior in male California mice (Peromyscus californicus)"
-            ]
-          },
-          {
-            "name": "Kendall, Alissa",
-            "url": "https://experts.ucdavis.edu/expert/c2WpvMGE",
-            "works": [
-              "Closing loops in California processing and fresh tomato agricultural and production practices"
-            ]
-          },
-          {
-            "name": "Eisen, Jonathan A",
-            "url": "https://experts.ucdavis.edu/expert/NrBUaBaa",
-            "works": [
-              "Erratum: California voters and CIRMâ€”will lightning strike twice?"
-            ]
-          },
-          {
-            "name": "Stewart, Susan L",
-            "url": "https://experts.ucdavis.edu/expert/ntI46wQe",
-            "works": [
-              "The Medi-Cal Incentives to Quit Smoking Project: Impact of Statewide Outreach Through Health Channels."
-            ]
-          },
-          {
-            "name": "Kagawa, Rose",
-            "url": "https://experts.ucdavis.edu/expert/U1GgZxoR",
-            "works": [
-              "Firearm mortality in California, 2000e2015: the epidemiologicimportance of within-state variation",
-              "Alcohol-Related Crimes And Risk Of Arrest For Intimate Partner Violence Among California Handgun Purchasers"
-            ]
-          },
-          {
-            "name": "Subbarao, Krishna V",
-            "url": "https://experts.ucdavis.edu/expert/kh08y8pa",
-            "works": [
-              "Leaf Lettuce Production in California"
-            ]
-          },
-          {
-            "name": "Young, Thomas M",
-            "url": "https://experts.ucdavis.edu/expert/nuzTTJKR",
-            "works": [
-              "Composition and Toxicity of Biogas Produced from Different Feedstocks in California"
-            ]
-          },
-          {
-            "name": "Michailides, Themis J",
-            "url": "https://experts.ucdavis.edu/expert/Ewg9Kcro",
-            "works": [
-              "Inoculum dynamics, fruit infection, and development of brown rot in prune orchards in california."
-            ]
-          },
-          {
-            "name": "Barker, Christopher M",
-            "url": "https://experts.ucdavis.edu/expert/0PZhvmVA",
-            "works": [
-              "Quantifying sociodemographic heterogeneities in the distribution of Aedes aegypti among California households"
-            ]
-          },
-          {
-            "name": "Henry, Stephen G",
-            "url": "https://experts.ucdavis.edu/expert/kGPkHyjy",
-            "works": [
-              "Changes in opioid prescribing after implementation of mandatory registration and proactive reports within Californiaâ€™s prescription drug monitoring program",
-              "Corrigendum to â€œChanges in opioid prescribing after implementation of mandatory registration and proactive reports within Californiaâ€™s prescription drug monitoring programâ€ [Drug Alcohol Depend. 218 (2021) 108405]"
-            ]
-          },
-          {
-            "name": "Wintemute, Garen J",
-            "url": "https://experts.ucdavis.edu/expert/cjZxkMOH",
-            "works": [
-              "Public Concern About Violence, Firearms, and the COVID-19 Pandemic in California",
-              "Public Awareness of and Personal Willingness to Use California's Extreme Risk Protection Order Law to Prevent Firearm-Related Harm"
-            ]
-          },
-          {
-            "name": "Lea, Jeremy",
-            "url": "https://experts.ucdavis.edu/expert/qcw1fo9j",
-            "works": [
-              "Improving spatial surrogates for area source emissions inventories in California"
-            ]
-          },
-          {
-            "name": "Bang, Heejung",
-            "url": "https://experts.ucdavis.edu/expert/SM2DNxqR",
-            "works": [
-              "Predicting COVID-19 at skilled nursing facilities in California: do the stars align?"
-            ]
-          },
-          {
-            "name": "Shankar, Suma",
-            "url": "https://experts.ucdavis.edu/expert/l0cLIMsq",
-            "works": [
-              "Project Baby Bear: Rapid precision care incorporating rWGS in 5 California childrenâ€™s hospitals demonstrates improved clinical outcomes and reduced costs of care"
-            ]
-          },
-          {
-            "name": "Chambers Butcher, Brittany D",
-            "url": "https://experts.ucdavis.edu/expert/JMyrbIFS",
-            "works": [
-              "Maternal nativity and risk of adverse perinatal outcomes among Black women residing in California, 2011-2017."
-            ]
-          },
-          {
-            "name": "Gallardo, Rodrigo A",
-            "url": "https://experts.ucdavis.edu/expert/sOOiOizO",
-            "works": [
-              "Infectious Bronchitis Virus Prevalence, Characterization, and Strain Identification in California Backyard Chickens.",
-              "Whole-genome sequence of a genotype VIII infectious bronchitis virus isolated from California layer chickens in 2021."
-            ]
-          },
-          {
-            "name": "Pear, Veronica A",
-            "url": "https://experts.ucdavis.edu/expert/hGTLesMX",
-            "works": [
-              "Understanding the circumstances and stakeholder perceptions of gun violence restraining order use in California: A qualitative study"
-            ]
-          },
-          {
-            "name": "Grettenberger, Ian M",
-            "url": "https://experts.ucdavis.edu/expert/wsfCN3m6",
-            "works": [
-              "Balancing Bees and Pest Management: Projected Costs of Proposed Bee-Protective Neonicotinoid Regulation in California"
-            ]
-          },
-          {
-            "name": "Todgham, Anne E",
-            "url": "https://experts.ucdavis.edu/expert/MP6B81wh",
-            "works": [
-              "The influence of stochastic temperature fluctuations in shaping the physiological performance of the California mussel, Mytilus californianus"
-            ]
-          },
-          {
-            "name": "Kiuru, Maija H",
-            "url": "https://experts.ucdavis.edu/expert/v1SkgGAf",
-            "works": [
-              "Melanoma in women of childbearing age and in pregnancy in California, 1994â€“2015: a populationâ€based cohort study"
-            ]
-          },
-          {
-            "name": "Rundle, John B",
-            "url": "https://experts.ucdavis.edu/expert/WEngZ7d6",
-            "works": [
-              "Does the Catalog of California Earthquakes, with Aftershocks Included, Contain Information about Future Large Earthquakes?"
-            ]
-          },
-          {
-            "name": "Baldwin, Roger A",
-            "url": "https://experts.ucdavis.edu/expert/fGozsANo",
-            "works": [
-              "Guiding the management of an agricultural pest: Indexing abundance of California meadow voles in artichoke fields"
-            ]
-          },
-          {
-            "name": "Trouillas, Florent P",
-            "url": "https://experts.ucdavis.edu/expert/vFcQ9RGM",
-            "works": [
-              "Comparative Profiling of Wood Canker Pathogens from Spore Traps and Symptomatic Plant Samples Within California Almond and Walnut Orchards.",
-              "Identification and Characterization of Neofabraea kienholzii and Phlyctema vagabunda Causing Leaf and Shoot Lesions of Olive in California.",
-              "Almond ( Prunus dulcis ) is susceptible to Fusarium euwallaceae , a fungal pathogen vectored by the Polyphagous Shot Hole Borer in California"
-            ]
-          },
-          {
-            "name": "Shackel, Kenneth A",
-            "url": "https://experts.ucdavis.edu/expert/56vpfkdz",
-            "works": [
-              "Drought management for California almonds"
-            ]
-          },
-          {
-            "name": "Esteghamat, Naseem S",
-            "url": "https://experts.ucdavis.edu/expert/dREljykL",
-            "works": [
-              "Utilization of Autologous HCT in Multiple Myeloma: A Novel Linkage of CIBMTR, Cancer Registry and Hospitalization Data in California"
-            ]
-          },
-          {
-            "name": "Funk, Jennifer L",
-            "url": "https://experts.ucdavis.edu/expert/hJXPrBsx",
-            "works": [
-              "Physiological and transcriptomic responses of two Artemisia californica populations to drought: implications for restoring drought-resilient native communities"
-            ]
-          },
-          {
-            "name": "Mungas, Dan M",
-            "url": "https://experts.ucdavis.edu/expert/JMvvsIGI",
-            "works": [
-              "Caregiver and Clinician Assessment of Behavioral Disturbances: The California Dementia Behavior Questionnaire"
-            ]
-          },
-          {
-            "name": "Fejerman, Laura",
-            "url": "https://experts.ucdavis.edu/expert/4XQ7q0Aj",
-            "works": [
-              "A Bayesian multilevel analysis exploring population-level effects mediating the relationship between area-level poverty and community-acquired Methicillin-resistant Staphylococcus aureus (CA-MRSA) infection across California communities"
-            ]
-          },
-          {
-            "name": "Sauder, Candice A",
-            "url": "https://experts.ucdavis.edu/expert/ryakUkMO",
-            "works": [
-              "Survival After Contralateral Secondary Breast Cancer by Age Group in California"
-            ]
-          },
-          {
-            "name": "Sexton, Richard J",
-            "url": "https://experts.ucdavis.edu/expert/54KxKwol",
-            "works": [
-              "National and subnational regulation of farm practices for consumer products sold within a jurisdiction: California's Proposition 12"
-            ]
-          },
-          {
-            "name": "Finger, Amanda",
-            "url": "https://experts.ucdavis.edu/expert/sDZQajrC",
-            "works": [
-              "Lampreys in California (Lampetra spp. and Entosphenus spp.): Mitochondrial phylogenetic analysis reveals previously unrecognized lamprey diversity"
-            ]
-          },
-          {
-            "name": "Dove, Melanie",
-            "url": "https://experts.ucdavis.edu/expert/jqgBaroI",
-            "works": [
-              "Co-Use of Tobacco Products and Cannabis Is Associated with Absenteeism and Lower Grades in California High School Students"
-            ]
-          },
-          {
-            "name": "Harvey, Danielle J",
-            "url": "https://experts.ucdavis.edu/expert/LIx7u6CR",
-            "works": [
-              "Factors associated with perceived Anaplasma marginale infection and clinical anaplasmosis cases on beef operations in California"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -2624,16 +2037,7 @@
       "properties": {
         "name": "Southern California, California",
         "display_name": "Southern @ California, Southern Avenue, South Gate, Los Angeles County, California, 90280, United States",
-        "type": "bus_stop",
-        "researchers": [
-          {
-            "name": "Jin, Yufang",
-            "url": "https://experts.ucdavis.edu/expert/Y6g2KpDY",
-            "works": [
-              "Contrasting controls on wildland fires in Southern California during periods with and without Santa Ana winds"
-            ]
-          }
-        ]
+        "type": "bus_stop"
       },
       "geometry": {
         "type": "Point",
@@ -2650,44 +2054,7 @@
         "display_name": "Sacramento, Sacramento County, California, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Mungas, Dan M",
-            "url": "https://experts.ucdavis.edu/expert/JMvvsIGI",
-            "works": [
-              "Homocysteine and cognitive function in the Sacramento area Latino study on aging (SALSA): Correlations with specific cognitive domains"
-            ]
-          },
-          {
-            "name": "Styne, Dennis M",
-            "url": "https://experts.ucdavis.edu/expert/Sgy4eqDk",
-            "works": [
-              "Prevalence and risk factors for vitamin D deficiency among healthy infants and young children in Sacramento, California"
-            ]
-          },
-          {
-            "name": "Stephensen, Charles B",
-            "url": "https://experts.ucdavis.edu/expert/rKtOtzu4",
-            "works": [
-              "Reply to correspondence letter by S. Ã–zsoylu regarding our manuscript \"Prevalence and risk factors for vitamin d deficiency among healthy infants and young children in Sacramento, California"
-            ]
-          },
-          {
-            "name": "Faloona, Ian",
-            "url": "https://experts.ucdavis.edu/expert/HjZOoRvf",
-            "works": [
-              "Measurement of fossil fuel derived carbon dioxide and other anthropogenic trace gases above Sacramento, California in Spring 2009"
-            ]
-          },
-          {
-            "name": "Teh, Swee J",
-            "url": "https://experts.ucdavis.edu/expert/n8O1fn25",
-            "works": [
-              "Effect of dietary methylmercury and seleno-methionine on Sacramento splittail larvae"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -3090,16 +2457,7 @@
       "properties": {
         "name": "Meiji, Japan",
         "display_name": "MEIJI, ゴールドストリート, 阿佐谷南二丁目, 阿佐谷南, 高円寺, 杉並区, 東京都, 166-8578, 日本",
-        "type": "dairy",
-        "researchers": [
-          {
-            "name": "Kim, Kyu H",
-            "url": "https://experts.ucdavis.edu/expert/akviOtGG",
-            "works": [
-              "The Political Thought of Mori Arinori: A Study in Meiji Conservatism"
-            ]
-          }
-        ]
+        "type": "dairy"
       },
       "geometry": {
         "type": "Point",
@@ -3116,24 +2474,7 @@
         "display_name": "La Hispaniola, República Dominicana",
         "type": "island",
         "osm_type": "relation",
-        "class": "place",
-        "researchers": [
-          {
-            "name": "Sanchez-Migallon Guzman, David",
-            "url": "https://experts.ucdavis.edu/expert/vYqGp11C",
-            "works": [
-              "Antinociceptive effects of long-acting nalbuphine decanoate after intramuscular administration to Hispaniolan Amazon parrots (Amazona ventralis).",
-              "Pharmacokinetics after oral and intravenous administration of a single dose of tramadol hydrochloride to Hispaniolan Amazon parrots (Amazona ventralis)."
-            ]
-          },
-          {
-            "name": "Kass, Philip H",
-            "url": "https://experts.ucdavis.edu/expert/oTf5l6Tt",
-            "works": [
-              "Renal, gastrointestinal, and hemostatic effects of oral administration of meloxicam to Hispaniolan Amazon parrots (Amazona ventralis)."
-            ]
-          }
-        ]
+        "class": "place"
       },
       "geometry": {
         "type": "Polygon",
@@ -3554,23 +2895,7 @@
         "display_name": "Africa, Bowling Green, Whitehall, Manhattan, New York County, City of New York, New York, 10275, United States",
         "type": "artwork",
         "osm_type": "way",
-        "class": "tourism",
-        "researchers": [
-          {
-            "name": "Hussain, Shehnaz K",
-            "url": "https://experts.ucdavis.edu/expert/UBGVDb01",
-            "works": [
-              "Host Determinants of HIV-1 Control in African Americans"
-            ]
-          },
-          {
-            "name": "Mustafaa, Faheemah N",
-            "url": "https://experts.ucdavis.edu/expert/MXRxxyaX",
-            "works": [
-              "Associations of Racial Discrimination and Parental Discrimination Coping Messages with African American Adolescent Racial Identity"
-            ]
-          }
-        ]
+        "class": "tourism"
       },
       "geometry": {
         "type": "Polygon",
@@ -4072,24 +3397,7 @@
         "display_name": "Ghana",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Dewey, Kathryn G",
-            "url": "https://experts.ucdavis.edu/expert/KtluYFPs",
-            "works": [
-              "Home fortification of complementary foods with micronutrient supplements is well accepted and has positive effects on infant iron status in Ghana",
-              "Maternal supplementation with small-quantity lipid-based nutrient supplements during pregnancy and lactation does not reduce depressive symptoms at 6 months postpartum in Ghanaian women: a randomized controlled trial"
-            ]
-          },
-          {
-            "name": "Zhou, Huaijun",
-            "url": "https://experts.ucdavis.edu/expert/g9XxoCvk",
-            "works": [
-              "Genotypic and phenotypic characterisation of three local chicken ecotypes of Ghana based on principal component analysis and body measurements."
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -4508,23 +3816,7 @@
       "properties": {
         "name": "South America",
         "display_name": "South America",
-        "type": "continent",
-        "researchers": [
-          {
-            "name": "Morrison, Amy C",
-            "url": "https://experts.ucdavis.edu/expert/Hb0RLbZ2",
-            "works": [
-              "Arboviral Etiologies of Acute Febrile Illnesses in Western South America, 2000â€“2007"
-            ]
-          },
-          {
-            "name": "Sykes, Jane E",
-            "url": "https://experts.ucdavis.edu/expert/pOwQFwj2",
-            "works": [
-              "Microscopic and molecular identification of hemotropic mycoplasmas in South American coatis (Nasua nasua)"
-            ]
-          }
-        ]
+        "type": "continent"
       },
       "geometry": {
         "type": "Point",
@@ -4541,16 +3833,7 @@
         "display_name": "Nairobi, Kenya",
         "type": "city",
         "osm_type": "relation",
-        "class": "place",
-        "researchers": [
-          {
-            "name": "Meier, Alan K",
-            "url": "https://experts.ucdavis.edu/expert/TCzoIoIO",
-            "works": [
-              "Chronic diarrhoea in HIV-1-infected adults in Nairobi, Kenya"
-            ]
-          }
-        ]
+        "class": "place"
       },
       "geometry": {
         "type": "Polygon",
@@ -4963,16 +4246,7 @@
         "display_name": "西安市, 陕西省, 中国",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Kleeman, Michael J",
-            "url": "https://experts.ucdavis.edu/expert/AOgLSwWL",
-            "works": [
-              "Source contributions to primary and secondary inorganic particulate matter during a severe wintertime PM2.5 pollution episode in Xi'an, China"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -5391,16 +4665,7 @@
       "properties": {
         "name": "Amazon",
         "display_name": "Amazon, Amapá, Região Norte, Brasil",
-        "type": "river",
-        "researchers": [
-          {
-            "name": "Bennett, Alan B",
-            "url": "https://experts.ucdavis.edu/expert/BKRh7OMz",
-            "works": [
-              "Out of the Amazon: Theobroma cacao enters the genomic era"
-            ]
-          }
-        ]
+        "type": "river"
       },
       "geometry": {
         "type": "Point",
@@ -5417,341 +4682,7 @@
         "display_name": "United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Springborn, Michael R",
-            "url": "https://experts.ucdavis.edu/expert/IDsLD4jv",
-            "works": [
-              "Pathwayâ€level risk analysis: the net present value of an invasive species policy in the US"
-            ]
-          },
-          {
-            "name": "Brooks, Rebecca A",
-            "url": "https://experts.ucdavis.edu/expert/G5n4ZW1b",
-            "works": [
-              "Survival differences of Asian and Caucasian epithelial ovarian cancer patients in the United States"
-            ]
-          },
-          {
-            "name": "Romano, Patrick",
-            "url": "https://experts.ucdavis.edu/expert/ieIsrU91",
-            "works": [
-              "Effects of Resident Duty Hour Reform on Surgical and Procedural Patient Safety Indicators Among Hospitalized Veterans Health Administration and Medicare Patients",
-              "Reduced Costs of Congenital Anomalies from Fetal Ultrasound: Are They Sufficient to Justify Routine Screening in the United States?"
-            ]
-          },
-          {
-            "name": "Richards, John R",
-            "url": "https://experts.ucdavis.edu/expert/JrqVD14L",
-            "works": [
-              "Comparison of US Utilization and Technical Costs before and after Establishment of 24-hour In-house Coverage for US Examinations"
-            ]
-          },
-          {
-            "name": "Sperling, Daniel",
-            "url": "https://experts.ucdavis.edu/expert/qBgXnsS7",
-            "works": [
-              "Public-Private Technology R&amp;D Partnerships: Lessons from US Partnership for a New Generation of Vehicles"
-            ]
-          },
-          {
-            "name": "Ruiz, Jeanette B",
-            "url": "https://experts.ucdavis.edu/expert/JlS3humj",
-            "works": [
-              "Empowerment and Aggression: Understanding Violence in America's Girls"
-            ]
-          },
-          {
-            "name": "Resendez, Andres",
-            "url": "https://experts.ucdavis.edu/expert/zOqBO5Vg",
-            "works": [
-              "A desperate trek across America -: Cabeza!de Vaca (Alvar Nunez Cabeza!de Vaca)"
-            ]
-          },
-          {
-            "name": "Bissell, Michael",
-            "url": "https://experts.ucdavis.edu/expert/oRQvtQP9",
-            "works": [
-              "Family History of Breast Cancer, Breast Density, and Breast Cancer Risk in a U.S. Breast Cancer Screening Population"
-            ]
-          },
-          {
-            "name": "Joh, Elizabeth E",
-            "url": "https://experts.ucdavis.edu/expert/E9F1Mkjg",
-            "works": [
-              "\"If it suffices to accuse\":: <i>United States v. Watts</i> and the reassessment of acquittals"
-            ]
-          },
-          {
-            "name": "Shaikh, Ulfat",
-            "url": "https://experts.ucdavis.edu/expert/HNJXT3wK",
-            "works": [
-              "TRANSITION OF HEALTH CARE FOR YOUTH WITH SPECIAL HEALTH CARE NEEDS (YSHCN)-USING EMR FOR TRAINING PEDIATRIC RESIDENTS"
-            ]
-          },
-          {
-            "name": "Hill, Ashley E",
-            "url": "https://experts.ucdavis.edu/expert/fC33uEO4",
-            "works": [
-              "A needs-assessment and demographic survey of infection-control and disease awareness in western US animal shelters"
-            ]
-          },
-          {
-            "name": "Ronald, Pamela C",
-            "url": "https://experts.ucdavis.edu/expert/yB67kbL2",
-            "works": [
-              "KBase: The United States Department of Energy Systems Biology Knowledgebase"
-            ]
-          },
-          {
-            "name": "Malogolowkin, Marcio",
-            "url": "https://experts.ucdavis.edu/expert/dyITrmLJ",
-            "works": [
-              "Increased clinical trial enrollment among adolescent and young adult cancer patients between 2006 and 2012-2013 in the United States."
-            ]
-          },
-          {
-            "name": "Monier, Erwan",
-            "url": "https://experts.ucdavis.edu/expert/gH0g22t0",
-            "works": [
-              "U.S. Air Quality and Health Benefits from Avoided Climate Change under Greenhouse Gas Mitigation",
-              "Premature mortality related to United States cross-state air pollution"
-            ]
-          },
-          {
-            "name": "Farmer, Diana L",
-            "url": "https://experts.ucdavis.edu/expert/YA3MSdzk",
-            "works": [
-              "Value of Global Surgical Activities for US Academic Health Centers: A Position Paper by the Association for Academic Surgery Global Affairs Committee, Society of University Surgeons Committee on Global Academic Surgery, and American College of Surgeons' Operation Giving Back"
-            ]
-          },
-          {
-            "name": "Yang, Christopher",
-            "url": "https://experts.ucdavis.edu/expert/ufi1NqKQ",
-            "works": [
-              "Development of Integrated Vehicle and Fuel Scenarios in a National Energy System Model for Low Carbon U.S. Transportation Futures"
-            ]
-          },
-          {
-            "name": "Bennett, Deborah",
-            "url": "https://experts.ucdavis.edu/expert/BKRh7OMz",
-            "works": [
-              "Consensus Modeling of Median Chemical Intake for the U.S. Population Based on Predictions of Exposure Pathways"
-            ]
-          },
-          {
-            "name": "Lim, Michele C",
-            "url": "https://experts.ucdavis.edu/expert/ND7sn41k",
-            "works": [
-              "Medicare Incentive Payments to United States Ophthalmologists for Use of Electronic Health Records 2011â€“2016"
-            ]
-          },
-          {
-            "name": "Stephensen, Charles B",
-            "url": "https://experts.ucdavis.edu/expert/rKtOtzu4",
-            "works": [
-              "Association of Lactase Persistence Genotypes (rs4988235) and Ethnicity with Dairy Intake in a Healthy U.S. Population."
-            ]
-          },
-          {
-            "name": "Bitler, Marianne P",
-            "url": "https://experts.ucdavis.edu/expert/Am7dqCz9",
-            "works": [
-              "Health Impacts of Food Assistance: Evidence from the United States"
-            ]
-          },
-          {
-            "name": "Isseroff, Roslyn R",
-            "url": "https://experts.ucdavis.edu/expert/TVbemHMx",
-            "works": [
-              "Access to Mohs micrographic surgery through the Veterans Choice Program of the United States Department of Veterans Affairs"
-            ]
-          },
-          {
-            "name": "Kravitz-Wirtz, Nicole D",
-            "url": "https://experts.ucdavis.edu/expert/18lcpdWN",
-            "works": [
-              "Association of Medicaid Expansion With Opioid Overdose Mortality in the United States"
-            ]
-          },
-          {
-            "name": "Hsu, Greta",
-            "url": "https://experts.ucdavis.edu/expert/CZLErRjJ",
-            "works": [
-              "EVALUATIVE SCHEMAS AND THE ATTENTION OF CRITICS IN THE U.S. FILM INDUSTRY.",
-              "Collaborative Dynamics Among Market Incumbents in the US Airline Industry, 1989â€“2010"
-            ]
-          },
-          {
-            "name": "Feng, Bo",
-            "url": "https://experts.ucdavis.edu/expert/847FAevx",
-            "works": [
-              "Internet Use, Risk Awareness, and Demographic Characteristics Associated With Engagement in Preventive Behaviors and Testing: Cross-Sectional Survey on COVID-19 in the United States (Preprint)"
-            ]
-          },
-          {
-            "name": "Bakerjian, Deb",
-            "url": "https://experts.ucdavis.edu/expert/GYioi4JX",
-            "works": [
-              "Appropriate Nurse Staffing Levels for U.S. Nursing Homes."
-            ]
-          },
-          {
-            "name": "Lane, Nancy E",
-            "url": "https://experts.ucdavis.edu/expert/oOLuaS3z",
-            "works": [
-              "Characterization of individuals with osteoarthritis in the United States and their use of prescription and over-the-counter supplements"
-            ]
-          },
-          {
-            "name": "Campbell, Michael J",
-            "url": "https://experts.ucdavis.edu/expert/6brL80J9",
-            "works": [
-              "Can the American Thyroid Association, K-Tirads, and Acr-Tirads Ultrasound Classification Systems Be Used to Predict Malignancy in Bethesda Category IV Nodules?"
-            ]
-          },
-          {
-            "name": "Pusterla, Nicola",
-            "url": "https://experts.ucdavis.edu/expert/KKCiEGxn",
-            "works": [
-              "Investigation of an EHV-1 Outbreak in the United States Caused by a New H752 Genotype"
-            ]
-          },
-          {
-            "name": "Magney, Troy",
-            "url": "https://experts.ucdavis.edu/expert/BaMAjzJs",
-            "works": [
-              "Extreme events driving year-to-year differences in gross primary productivity across the US"
-            ]
-          },
-          {
-            "name": "Hsu, Hsuan L",
-            "url": "https://experts.ucdavis.edu/expert/CZLErRjJ",
-            "works": [
-              "Race, Representation, and American Environmentalism"
-            ]
-          },
-          {
-            "name": "Brinkley, Catherine",
-            "url": "https://experts.ucdavis.edu/expert/mkL4ET2y",
-            "works": [
-              "Urban land teleconnections in the United States: A graphical network approach"
-            ]
-          },
-          {
-            "name": "Magdesian, K G",
-            "url": "https://experts.ucdavis.edu/expert/VmOM8ENT",
-            "works": [
-              "Prevalence of the RAPGEF5 c.2624C>A and PLOD1 c.2032G>A variants associated with equine familial isolated hypoparathyroidism and fragile foal syndrome in the US Thoroughbred population (1988â€“2019)"
-            ]
-          },
-          {
-            "name": "Bannasch, Danika",
-            "url": "https://experts.ucdavis.edu/expert/LRKh7uwe",
-            "works": [
-              "Ocular morphologic traits in the American Cocker Spaniel may confer primary angle closure glaucoma susceptibility"
-            ]
-          },
-          {
-            "name": "Yang, Keer",
-            "url": "https://experts.ucdavis.edu/expert/ufi1NqKQ",
-            "works": [
-              "The Ex Ante Effect of Bankruptcy Law: Evidence from Chapter 12"
-            ]
-          },
-          {
-            "name": "Linquist, Bruce A",
-            "url": "https://experts.ucdavis.edu/expert/mqgrwoc3",
-            "works": [
-              "Greenhouse Gas Emissions and Management Practices that Affect Emissions in US Rice Systems"
-            ]
-          },
-          {
-            "name": "Brummer, Charlie",
-            "url": "https://experts.ucdavis.edu/expert/zfUYmQ4K",
-            "works": [
-              "Diversity, Stability, and Sustainable American Agriculture"
-            ]
-          },
-          {
-            "name": "Ko, Michelle J",
-            "url": "https://experts.ucdavis.edu/expert/020bGFP0",
-            "works": [
-              "US Medical School Admissions Leadersâ€™ Experiences With Barriers to and Advancements in Diversity, Equity, and Inclusion"
-            ]
-          },
-          {
-            "name": "Bang, Heejung",
-            "url": "https://experts.ucdavis.edu/expert/SM2DNxqR",
-            "works": [
-              "Implications of a New Definition of Vitamin D Deficiency in a Multiracial US Adolescent Population: The National Health and Nutrition Examination Survey III"
-            ]
-          },
-          {
-            "name": "Keegan, Theresa H",
-            "url": "https://experts.ucdavis.edu/expert/U4H5hQ23",
-            "works": [
-              "Factors Associated With Online Patient-Provider Communications Among Cancer Survivors in the United States During COVID-19: Cross-sectional Study (Preprint)"
-            ]
-          },
-          {
-            "name": "Midboe, Amanda M",
-            "url": "https://experts.ucdavis.edu/expert/taSpTtgz",
-            "works": [
-              "Comparison of rapid vs in-depth qualitative analytic methods from a process evaluation of academic detailing in the Veterans Health Administration"
-            ]
-          },
-          {
-            "name": "Cord, Branden J",
-            "url": "https://experts.ucdavis.edu/expert/DkxLwA5v",
-            "works": [
-              "Predictors of Extended Length of Stay Following Treatment of Unruptured Adult Cerebral Aneurysms: A Study of The National Inpatient Sample"
-            ]
-          },
-          {
-            "name": "Decarli, Charles",
-            "url": "https://experts.ucdavis.edu/expert/pmbsK81V",
-            "works": [
-              "Cardiovascular health and cognitive outcomes: Findings from a biracial populationâ€based study in the United States"
-            ]
-          },
-          {
-            "name": "Herman, Daniel C",
-            "url": "https://experts.ucdavis.edu/expert/uAHnwpd7",
-            "works": [
-              "American Medical Society for Sports Medicine Position Statement: Principles for the Responsible Use of Regenerative Medicine in Sports Medicine"
-            ]
-          },
-          {
-            "name": "Bourgeois, James A",
-            "url": "https://experts.ucdavis.edu/expert/uiP2J96c",
-            "works": [
-              "The Management of Fitness for Duty in the United States Military"
-            ]
-          },
-          {
-            "name": "Fauer, Alex J",
-            "url": "https://experts.ucdavis.edu/expert/lYmEzEqq",
-            "works": [
-              "Use of gabapentinoid medications among US adults with cancer, 2005-2015."
-            ]
-          },
-          {
-            "name": "Tong, Elisa K",
-            "url": "https://experts.ucdavis.edu/expert/Xho5YrTe",
-            "works": [
-              "Serious psychological distress and higher associations with tobacco and cannabis use among college students in the United States"
-            ]
-          },
-          {
-            "name": "Taylor, Keith",
-            "url": "https://experts.ucdavis.edu/expert/92HA6JpM",
-            "works": [
-              "The Role of Rural Electric Cooperatives in Achieving Universal Broadband Access: Evidence from the United States"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -6172,23 +5103,7 @@
         "display_name": "日本",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Kim, Kyu H",
-            "url": "https://experts.ucdavis.edu/expert/akviOtGG",
-            "works": [
-              "Darryl E. Flaherty. Public Law, Private Practice: Politics, Profit, and the Legal Profession in Nineteenth-Century Japan."
-            ]
-          },
-          {
-            "name": "Hawkins, Michelle",
-            "url": "https://experts.ucdavis.edu/expert/n5EJUXM2",
-            "works": [
-              "COMPARISON OF TWO 4.7-MILLIGRAM TO ONE 9.4-MILLIGRAM DESLORELIN ACETATE IMPLANTS ON EGG PRODUCTION AND PLASMA PROGESTERONE CONCENTRATIONS IN JAPANESE QUAIL (COTURNIX COTURNIX JAPONICA)"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -6597,16 +5512,7 @@
         "display_name": "Bethesda, Montgomery County, Maryland, United States",
         "type": "statistical",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Dewey, Kathryn G",
-            "url": "https://experts.ucdavis.edu/expert/KtluYFPs",
-            "works": [
-              "Human microbiome science: vision for the future, Bethesda, MD, July 24 to 26, 2013"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -7001,23 +5907,7 @@
         "display_name": "San Francisco Bay, San Mateo County, California, United States",
         "type": "bay",
         "osm_type": "relation",
-        "class": "natural",
-        "researchers": [
-          {
-            "name": "Largier, John L",
-            "url": "https://experts.ucdavis.edu/expert/FrbJkzci",
-            "works": [
-              "Biological communities in San Francisco Bay track largeâ€scale climate forcing over the North Pacific"
-            ]
-          },
-          {
-            "name": "Young, Thomas M",
-            "url": "https://experts.ucdavis.edu/expert/nuzTTJKR",
-            "works": [
-              "Geochemistry and bioavailability of metals in sediments from northern San Francisco Bay"
-            ]
-          }
-        ]
+        "class": "natural"
       },
       "geometry": {
         "type": "Polygon",
@@ -7660,16 +6550,7 @@
         "display_name": "四川省, 中国",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Tong, Elisa K",
-            "url": "https://experts.ucdavis.edu/expert/Xho5YrTe",
-            "works": [
-              "A Clustered Randomized Controlled Trial to Reduce Secondhand Smoke Exposure Among Nonsmoking Pregnant Women in Sichuan Province, China"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -8120,37 +7001,7 @@
         "display_name": "Pacific County, Washington, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Strong, Donald",
-            "url": "https://experts.ucdavis.edu/expert/y9PcNGXa",
-            "works": [
-              "An Allee effect at the front of a plant invasion: Spartina in a Pacific estuary"
-            ]
-          },
-          {
-            "name": "Hormozdiari, Fereydoun",
-            "url": "https://experts.ucdavis.edu/expert/U6EjTeRx",
-            "works": [
-              "Pacific symposium on biocomputing 2011"
-            ]
-          },
-          {
-            "name": "Lusardi, Robert A",
-            "url": "https://experts.ucdavis.edu/expert/Bznupcz7",
-            "works": [
-              "One size does not fit all: variation in thermal eco-physiology among Pacific salmonids"
-            ]
-          },
-          {
-            "name": "Watters, Jason V",
-            "url": "https://experts.ucdavis.edu/expert/gPcsnYuk",
-            "works": [
-              "Behavioral changes in senescent giant Pacific octopus (Enteroctopus dofleini) are associated with peripheral neural degeneration and loss of epithelial tissue"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -8401,37 +7252,7 @@
       "properties": {
         "name": "Sierra Nevada, California",
         "display_name": "Sierra Nevada, Tulare County, California, United States",
-        "type": "mountain_range",
-        "researchers": [
-          {
-            "name": "Bennett, Deborah",
-            "url": "https://experts.ucdavis.edu/expert/BKRh7OMz",
-            "works": [
-              "Ozone, nitric acid, and ammonia air pollution is unhealthy for people and ecosystems in southern Sierra Nevada, California"
-            ]
-          },
-          {
-            "name": "O'Geen, Anthony T",
-            "url": "https://experts.ucdavis.edu/expert/S3UjWie1",
-            "works": [
-              "Soil Moisture Response to Snowmelt and Rainfall in a Sierra Nevada Mixedâ€Conifer Forest"
-            ]
-          },
-          {
-            "name": "Mazet, Jonna A",
-            "url": "https://experts.ucdavis.edu/expert/F1LUrhJB",
-            "works": [
-              "Assessing disease risk at the wildlifeâ€“livestock interface: A study of Sierra Nevada bighorn sheep"
-            ]
-          },
-          {
-            "name": "Kelt, Douglas A",
-            "url": "https://experts.ucdavis.edu/expert/gBS93Heh",
-            "works": [
-              "Reproductive parameters of the fisher (Pekania pennanti) in the southern Sierra Nevada, California"
-            ]
-          }
-        ]
+        "type": "mountain_range"
       },
       "geometry": {
         "type": "Point",
@@ -8448,58 +7269,7 @@
         "display_name": "Mexico, Audrain County, Missouri, 65265, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Hijmans, Robert J",
-            "url": "https://experts.ucdavis.edu/expert/Uzws3em4",
-            "works": [
-              "Multiple lines of evidence for the origin of domesticated chili pepper, Capsicum annuum, in Mexico"
-            ]
-          },
-          {
-            "name": "Dewey, Kathryn G",
-            "url": "https://experts.ucdavis.edu/expert/KtluYFPs",
-            "works": [
-              "Determinants of lactation performance across time in an urban population from Mexico"
-            ]
-          },
-          {
-            "name": "Robins, Richard W",
-            "url": "https://experts.ucdavis.edu/expert/CtdULAUr",
-            "works": [
-              "Predicting Change in Substance Use and Substance Use Cognitions of Mexican Origin Youth during the Transition from Childhood to Early Adolescence"
-            ]
-          },
-          {
-            "name": "Shaikh, Ulfat",
-            "url": "https://experts.ucdavis.edu/expert/HNJXT3wK",
-            "works": [
-              "A three-year multifaceted intervention to prevent obesity in children of Mexican-heritage"
-            ]
-          },
-          {
-            "name": "Jaller Martelo, Miguel A",
-            "url": "https://experts.ucdavis.edu/expert/WQ0S33Cc",
-            "works": [
-              "Quantifying the Impacts of Sustainable City Logistics Measures in the Mexico City Metropolitan Area"
-            ]
-          },
-          {
-            "name": "Ross Ibarra, Jeffrey S",
-            "url": "https://experts.ucdavis.edu/expert/SJkXeZAh",
-            "works": [
-              "Allele specific expression analysis identifies regulatory variation associated with stress-related genes in the Mexican highland maize landrace Palomero ToluqueÃ±o"
-            ]
-          },
-          {
-            "name": "Gilbertson, Robert",
-            "url": "https://experts.ucdavis.edu/expert/f9geqbAx",
-            "works": [
-              "A New Haplotype of Trialeurodes vaporariorum (Hemiptera: Aleyrodidae) in Northeastern Mexico"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -9032,16 +7802,7 @@
         "display_name": "ປະເທດລາວ",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Wulff, Heike",
-            "url": "https://experts.ucdavis.edu/expert/26CPn2yP",
-            "works": [
-              "Purification, molecular cloning and functional characterization of HelaTx1 (Heterometrus laoticus): The first member of a new Îº-KTX subfamily"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -9460,23 +8221,7 @@
       "properties": {
         "name": "Mediterranean",
         "display_name": "Mediterranean Sea",
-        "type": "sea",
-        "researchers": [
-          {
-            "name": "Wang, Jane-Ling",
-            "url": "https://experts.ucdavis.edu/expert/DCxDmR0z",
-            "works": [
-              "Relationship of Age Patterns of Fecundity to Mortality, Longevity, and Lifetime Reproduction in a Large Cohort of Mediterranean Fruit Fly Females"
-            ]
-          },
-          {
-            "name": "Zaccaria, Daniele",
-            "url": "https://experts.ucdavis.edu/expert/lCDFrqtx",
-            "works": [
-              "Spatial and temporal classification of coastal regions using bioclimatic indices in a Mediterranean environment"
-            ]
-          }
-        ]
+        "type": "sea"
       },
       "geometry": {
         "type": "Point",
@@ -10034,16 +8779,7 @@
         "display_name": "חיפה, נפת חיפה, מחוז חיפה, ישראל",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Farrens, Matthew K",
-            "url": "https://experts.ucdavis.edu/expert/BbTWCJuK",
-            "works": [
-              "Proceedings of the 32nd Annual IEEE/ACM International Symposium on Microarchitecture, MICRO 32, Haifa, Israel, November 16-18, 1999"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -10416,16 +9152,7 @@
         "display_name": "North Carolina, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Hertz-Picciotto, Irva",
-            "url": "https://experts.ucdavis.edu/expert/v97WHfws",
-            "works": [
-              "A spatial analysis of county-level variation in hospitalization rates for low back problems in North Carolina"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -10846,44 +9573,7 @@
         "display_name": "China, Jefferson County, Texas, 77613, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Hertz-Picciotto, Irva",
-            "url": "https://experts.ucdavis.edu/expert/v97WHfws",
-            "works": [
-              "Prenatal and Perinatal Risk Factors for Autism in China"
-            ]
-          },
-          {
-            "name": "Wilkes, Michael S",
-            "url": "https://experts.ucdavis.edu/expert/cedbrEnB",
-            "works": [
-              "Teaching communication skills to undergraduate medical students in China"
-            ]
-          },
-          {
-            "name": "Wan, Yu-Jui Yvonne",
-            "url": "https://experts.ucdavis.edu/expert/DRFUFOhr",
-            "works": [
-              "Association of Fusobacterium nucleatum infection with colorectal cancer in Chinese patients"
-            ]
-          },
-          {
-            "name": "Tassone, Flora",
-            "url": "https://experts.ucdavis.edu/expert/R0nV87mi",
-            "works": [
-              "Molecular and Cytogenetic Characterization of a Chinese Hamster/Human Hybrid Cell Line Containing a der (21)t(Ypterâ†’cenY::cen21 â†’ 21qter) Chromosome"
-            ]
-          },
-          {
-            "name": "Shah, Priya S",
-            "url": "https://experts.ucdavis.edu/expert/tBnQB8l7",
-            "works": [
-              "Transient light-activated gene expression in Chinese hamster ovary cells"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -11190,23 +9880,7 @@
       "properties": {
         "name": "Europe",
         "display_name": "Europe",
-        "type": "continent",
-        "researchers": [
-          {
-            "name": "Peri, Giovanni",
-            "url": "https://experts.ucdavis.edu/expert/qdcOEWMV",
-            "works": [
-              "Immigration and Occupations in Europe"
-            ]
-          },
-          {
-            "name": "Zhao, Yongjing",
-            "url": "https://experts.ucdavis.edu/expert/eDZEeX2r",
-            "works": [
-              "Source apportionment of aerosol particles at a European air pollution hot spot using particle number size distributions and chemical composition"
-            ]
-          }
-        ]
+        "type": "continent"
       },
       "geometry": {
         "type": "Point",
@@ -11223,16 +9897,7 @@
         "display_name": "Los Angeles, Los Angeles County, California, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Garcia, Lorena",
-            "url": "https://experts.ucdavis.edu/expert/s3O9QUmr",
-            "works": [
-              "Unintended Pregnancy and Intimate Partner Violence Before and During Pregnancy Among Latina Women in Los Angeles, California"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -11983,16 +10648,7 @@
         "display_name": "Viti",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Stergiopoulos, Ioannis",
-            "url": "https://experts.ucdavis.edu/expert/2LlnhA6v",
-            "works": [
-              "Evolution of Mycosphaerella fijiensis effectors"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -12241,16 +10897,7 @@
         "display_name": "Town of Sardinia, Erie County, New York, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Martinez Lopez, Beatriz",
-            "url": "https://experts.ucdavis.edu/expert/Ey6AJzVa",
-            "works": [
-              "Thirtyâ€Fiveâ€Year Presence of African Swine Fever in Sardinia: History, Evolution and Risk Factors for Disease Maintenance"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -12625,16 +11272,7 @@
       "properties": {
         "name": "Summit, Greenland",
         "display_name": "Summit, Sermersooq, Kalaallit Nunaat",
-        "type": "peak",
-        "researchers": [
-          {
-            "name": "Anastasio, Cort",
-            "url": "https://experts.ucdavis.edu/expert/hOPw0Jcg",
-            "works": [
-              "Light penetration in the snowpack at Summit, Greenland: Part 2 Nitrate photolysis"
-            ]
-          }
-        ]
+        "type": "peak"
       },
       "geometry": {
         "type": "Point",
@@ -12649,16 +11287,7 @@
       "properties": {
         "name": "Pacific Ocean",
         "display_name": "المحيط الهادئ",
-        "type": "ocean",
-        "researchers": [
-          {
-            "name": "Anastasio, Cort",
-            "url": "https://experts.ucdavis.edu/expert/hOPw0Jcg",
-            "works": [
-              "Chloride and bromide depletions in seaâ€salt particles over the northeastern Pacific Ocean"
-            ]
-          }
-        ]
+        "type": "ocean"
       },
       "geometry": {
         "type": "Point",
@@ -12673,16 +11302,7 @@
       "properties": {
         "name": "Appalachians",
         "display_name": "Appalachian Mountains, Yancey County, North Carolina, United States",
-        "type": "mountain_range",
-        "researchers": [
-          {
-            "name": "Montanez, Isabel P",
-            "url": "https://experts.ucdavis.edu/expert/vWxuPQxs",
-            "works": [
-              "Eustatic control on early dolomitization of cyclic peritidal carbonates: Evidence from the Early Ordovician Upper Knox Group, Appalachians"
-            ]
-          }
-        ]
+        "type": "mountain_range"
       },
       "geometry": {
         "type": "Point",
@@ -12699,23 +11319,7 @@
         "display_name": "বাংলাদেশ",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Dewey, Kathryn G",
-            "url": "https://experts.ucdavis.edu/expert/KtluYFPs",
-            "works": [
-              "Effects of energy density of complementary foods on total energy intakes by healthy, breastfed children in Bangladesh: a preliminary study"
-            ]
-          },
-          {
-            "name": "Ralston, Katherine S",
-            "url": "https://experts.ucdavis.edu/expert/PHG0zOFl",
-            "works": [
-              "Breast Milk Parasite-Specific Antibodies and Protection From Amebiasis and Cryptosporidiosis in Bangladeshi Infants: A Prospective Cohort Study"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -13134,16 +11738,7 @@
       "properties": {
         "name": "North Pacific Ocean",
         "display_name": "North Pacific Ocean",
-        "type": "sea",
-        "researchers": [
-          {
-            "name": "Hernes, Peter J",
-            "url": "https://experts.ucdavis.edu/expert/leAgBBYb",
-            "works": [
-              "Transport and diagenesis of dissolved and particulate terrigenous organic matter in the North Pacific Ocean"
-            ]
-          }
-        ]
+        "type": "sea"
       },
       "geometry": {
         "type": "Point",
@@ -13158,16 +11753,7 @@
       "properties": {
         "name": "Tropical Forest",
         "display_name": "Tropical Forest, Roxbury, Boston, Suffolk County, Massachusetts, 02121, United States",
-        "type": "footway",
-        "researchers": [
-          {
-            "name": "Hernes, Peter J",
-            "url": "https://experts.ucdavis.edu/expert/leAgBBYb",
-            "works": [
-              "Mobilization of optically invisible dissolved organic matter in response to rainstorm events in a tropical forest headwater river"
-            ]
-          }
-        ]
+        "type": "footway"
       },
       "geometry": {
         "type": "Point",
@@ -13184,31 +11770,7 @@
         "display_name": "Malawi",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Dewey, Kathryn G",
-            "url": "https://experts.ucdavis.edu/expert/KtluYFPs",
-            "works": [
-              "Association between maternal dental periapical infections and pregnancy outcomes: results from a crossâ€sectional study in Malawi",
-              "Association between asymptomatic infections and linear growth in 18â€“24â€monthâ€old Malawian children"
-            ]
-          },
-          {
-            "name": "Stewart, Christine P",
-            "url": "https://experts.ucdavis.edu/expert/ntI46wQe",
-            "works": [
-              "The association between plasma choline, growth&nbsp;and neurodevelopment among Malawian children aged 6-15 months enroled in an egg intervention trial."
-            ]
-          },
-          {
-            "name": "Hampel, Daniela",
-            "url": "https://experts.ucdavis.edu/expert/b7TxuJHP",
-            "works": [
-              "Plasma Micronutrient Concentrations Are Altered by Antiretroviral Therapy and Lipid-Based Nutrient Supplements in Lactating HIV-Infected Malawian Women 1â€“3"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -13629,25 +12191,7 @@
         "display_name": "Iquitos, Maynas, Loreto, Perú",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Morrison, Amy C",
-            "url": "https://experts.ucdavis.edu/expert/Hb0RLbZ2",
-            "works": [
-              "Strengths and Weaknesses of Global Positioning System (GPS) Data-Loggers and Semi-structured Interviews for Capturing Fine-scale Human Mobility: Findings from Iquitos, Peru",
-              "Measuring health related quality of life for dengue patients in Iquitos, Peru",
-              "EVALUATION OF <i>AEDES AEGYPTI</i> RESTING PREFERENCES IN EXPERIMENTAL HUTS IN IQUITOS, PERU"
-            ]
-          },
-          {
-            "name": "Barker, Christopher M",
-            "url": "https://experts.ucdavis.edu/expert/0PZhvmVA",
-            "works": [
-              "Correction: Dengue illness impacts daily human mobility patterns in Iquitos, Peru"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -14048,17 +12592,7 @@
         "display_name": "臺灣",
         "type": "island",
         "osm_type": "relation",
-        "class": "place",
-        "researchers": [
-          {
-            "name": "Kass, Philip H",
-            "url": "https://experts.ucdavis.edu/expert/oTf5l6Tt",
-            "works": [
-              "Bartonella Species in Small Mammals and Their Ectoparasites in Taiwan",
-              "Educational intervention on dog sterilization and retention in Taiwan"
-            ]
-          }
-        ]
+        "class": "place"
       },
       "geometry": {
         "type": "Polygon",
@@ -14479,30 +13013,7 @@
         "display_name": "ประเทศไทย",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Atwill, Edward R",
-            "url": "https://experts.ucdavis.edu/expert/nUkAlxJ6",
-            "works": [
-              "Prevalence of Enterobacteriaceae in Wild Long-Tailed Macaques (Macaca fascicularis) in Thailand"
-            ]
-          },
-          {
-            "name": "Mccowan, Brenda",
-            "url": "https://experts.ucdavis.edu/expert/yb4HKfYh",
-            "works": [
-              "Correction to: Prevalence of Enterobacteriaceae in Wild Long-Tailed Macaques (Macaca fascicularis) in Thailand"
-            ]
-          },
-          {
-            "name": "Rannala, Bruce H",
-            "url": "https://experts.ucdavis.edu/expert/9I1P1xJr",
-            "works": [
-              "Effect of SNPs in genes regulating cell cycle control, apoptosis and inflammation on lung cancer susceptibility of northern Thai population"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -14923,30 +13434,7 @@
         "display_name": "Guatemala",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Gilbertson, Robert",
-            "url": "https://experts.ucdavis.edu/expert/f9geqbAx",
-            "works": [
-              "Tomato chocolate spot virus, a member of a new torradovirus species that causes a necrosis-associated disease of tomato in Guatemala"
-            ]
-          },
-          {
-            "name": "Hampel, Daniela",
-            "url": "https://experts.ucdavis.edu/expert/b7TxuJHP",
-            "works": [
-              "Micronutrient supplementation of lactating Guatemalan women acutely increases infantsâ€™ intake of riboflavin, thiamin, pyridoxal, and cobalamin, but not niacin, in a randomized crossover trial"
-            ]
-          },
-          {
-            "name": "Grandia, Liza",
-            "url": "https://experts.ucdavis.edu/expert/5G1qITTO",
-            "works": [
-              "Poisonous Exports: Pesticides, Peasants, and Conservation Paradigms in Guatemala"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -15365,16 +13853,7 @@
       "properties": {
         "name": "Yuba River, California",
         "display_name": "Yuba River, Marysville, Yuba County, California, United States",
-        "type": "river",
-        "researchers": [
-          {
-            "name": "Pasternack, Gregory",
-            "url": "https://experts.ucdavis.edu/expert/18mjcEd1",
-            "works": [
-              "Relationships between mesoscale morphological units, stream hydraulics and Chinook salmon (Oncorhynchus tshawytscha) spawning habitat on the Lower Yuba River, California"
-            ]
-          }
-        ]
+        "type": "river"
       },
       "geometry": {
         "type": "Point",
@@ -15391,16 +13870,7 @@
         "display_name": "Guinée",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Isseroff, Roslyn R",
-            "url": "https://experts.ucdavis.edu/expert/TVbemHMx",
-            "works": [
-              "EVIDENCE OF INOSITOL PHOSPHOLIPID TURNOVER IN GUINEA-PIG EPIDERMIS - SUPPRESSION OF INOSITOL TRIPHOSPHATE GENERATION IN ANIMALS SUPPLEMENTED WITH FISH OIL DIET"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -15821,16 +14291,7 @@
         "display_name": "Geneva County, Alabama, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Guynn, Noah D",
-            "url": "https://experts.ucdavis.edu/expert/rgR6nYX8",
-            "works": [
-              "Bernd Renner, ed. La satire dans tous ses Ã©tats: Le meslange satyricque Ã  la Renaissance franÃ§aise. Cahiers d'Humanisme et Renaissance 92. Geneva: Librairie Droz S.A., 2009. 390 pp. index. illus. map. bibl. è¤77.42. ISBN: 978â€“2â€“600â€“01290â€“4."
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -16059,16 +14520,7 @@
         "display_name": "San Miguel Island, Santa Barbara County, California, United States",
         "type": "island",
         "osm_type": "relation",
-        "class": "place",
-        "researchers": [
-          {
-            "name": "Nadler, Steven A",
-            "url": "https://experts.ucdavis.edu/expert/UZ63Q4yH",
-            "works": [
-              "Investigations of peritoneal and intestinal infections of adult hookworms (Uncinaria spp.) in northern fur seal (Callorhinus ursinus) and California sea lion (Zalophus californianus) pups on San Miguel Island, California (2003)"
-            ]
-          }
-        ]
+        "class": "place"
       },
       "geometry": {
         "type": "Polygon",
@@ -16473,16 +14925,7 @@
         "display_name": "Northern California, United States",
         "type": "region",
         "osm_type": "relation",
-        "class": "place",
-        "researchers": [
-          {
-            "name": "Marcin, James P",
-            "url": "https://experts.ucdavis.edu/expert/wQdfDSG8",
-            "works": [
-              "Use of telemedicine to provide pediatric critical care inpatient consultations to underserved rural Northern California"
-            ]
-          }
-        ]
+        "class": "place"
       },
       "geometry": {
         "type": "Polygon",
@@ -16903,16 +15346,7 @@
         "display_name": "Éire / Ireland",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Bannasch, Danika",
-            "url": "https://experts.ucdavis.edu/expert/LRKh7uwe",
-            "works": [
-              "SERPINB11 Frameshift Variant Associated with Novel Hoof Specific Phenotype in Connemara Ponies"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -17331,16 +15765,7 @@
       "properties": {
         "name": "Northern Mexico",
         "display_name": "Northern, Bernalillo County, New Mexico, 87120, United States",
-        "type": "track",
-        "researchers": [
-          {
-            "name": "Osleger, David A",
-            "url": "https://experts.ucdavis.edu/expert/Rc6i9sOG",
-            "works": [
-              "A laterally accreting grainstone margin from the albian of Northern Mexico: Outcrop model for cretaceous carbonate reservoirs"
-            ]
-          }
-        ]
+        "type": "track"
       },
       "geometry": {
         "type": "Point",
@@ -17357,16 +15782,7 @@
         "display_name": "Yosemite National Park, California, United States",
         "type": "national_park",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Kelt, Douglas A",
-            "url": "https://experts.ucdavis.edu/expert/gBS93Heh",
-            "works": [
-              "NEST TREES OF NORTHERN FLYING SQUIRRELS IN YOSEMITE NATIONAL PARK, CALIFORNIA"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -17785,30 +16201,7 @@
       "properties": {
         "name": "North America",
         "display_name": "North America",
-        "type": "continent",
-        "researchers": [
-          {
-            "name": "Sykes, Jane E",
-            "url": "https://experts.ucdavis.edu/expert/pOwQFwj2",
-            "works": [
-              "Antifungal Drug Susceptibility and Phylogenetic Diversity among Cryptococcus Isolates from Dogs and Cats in North America"
-            ]
-          },
-          {
-            "name": "Bowlus, Christopher",
-            "url": "https://experts.ucdavis.edu/expert/CfAjK1Xn",
-            "works": [
-              "CHARACTERISTICS OF NORTH AMERICAN PATIENTS WITH PRIMARY SCLEROSING CHOLANGITIS: RESULTS FROM THE CONSORTIUM FOR AUTOIMMUNE LIVER DISEASES (CALID)"
-            ]
-          },
-          {
-            "name": "Cannon, Clare",
-            "url": "https://experts.ucdavis.edu/expert/76M7n7Tv",
-            "works": [
-              "Back to the future: Indigenous relationality, kincentricity and the North American Model of wildlife management"
-            ]
-          }
-        ]
+        "type": "continent"
       },
       "geometry": {
         "type": "Point",
@@ -17823,16 +16216,7 @@
       "properties": {
         "name": "California Southern California",
         "display_name": "California & Southern, California Avenue, South Gate, Los Angeles County, California, 90262, United States",
-        "type": "bus_stop",
-        "researchers": [
-          {
-            "name": "Uzal, Francisco A",
-            "url": "https://experts.ucdavis.edu/expert/PFfnJVxC",
-            "works": [
-              "Anticoagulant Exposure and Notoedric Mange in Bobcats and Mountain Lions in Urban Southern California"
-            ]
-          }
-        ]
+        "type": "bus_stop"
       },
       "geometry": {
         "type": "Point",
@@ -18303,19 +16687,7 @@
         "display_name": "Framingham, Middlesex County, Massachusetts, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Decarli, Charles",
-            "url": "https://experts.ucdavis.edu/expert/pmbsK81V",
-            "works": [
-              "Cerebral Microbleeds: Prevalence and Risk Factors in the Framingham Study",
-              "Association Between Neuropathology and Brain Volume in The Framingham Heart Study",
-              "Non-Alcoholic Fatty Liver Disease, Liver Fibrosis, and Regional Amyloid-Î² and Tau Pathology in Middle-Aged Adults: The Framingham Study.",
-              "Cerebral small vessel disease burden is associated with decreased abundance of gut Barnesiella intestinihominis bacterium in the Framingham Heart Study"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -18682,16 +17054,7 @@
       "properties": {
         "name": "Texas, New Mexico",
         "display_name": "New Mexico, West Sharyland, Hidalgo County, Texas, 78573, United States",
-        "type": "residential",
-        "researchers": [
-          {
-            "name": "Resendez, Andres",
-            "url": "https://experts.ucdavis.edu/expert/zOqBO5Vg",
-            "works": [
-              "National Identity on a Shifting Border: Texas and New Mexico in the Age of Transition, 1821â€“1848"
-            ]
-          }
-        ]
+        "type": "residential"
       },
       "geometry": {
         "type": "Point",
@@ -18708,16 +17071,7 @@
         "display_name": "Borinquen, Caguas, Puerto Rico, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Eisen, Jonathan A",
-            "url": "https://experts.ucdavis.edu/expert/NrBUaBaa",
-            "works": [
-              "Complete genome sequence of Halogeometricum borinquense type strain (PR3T)"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -19126,16 +17480,7 @@
         "display_name": "Indochina, Đường Phan Đình Phùng, Phường Hải Châu, Quận Hải Châu, Thành phố Đà Nẵng, 50207, Việt Nam",
         "type": "mall",
         "osm_type": "way",
-        "class": "shop",
-        "researchers": [
-          {
-            "name": "James, Michelle",
-            "url": "https://experts.ucdavis.edu/expert/dWxIQ7xg",
-            "works": [
-              "Psychosocial issues in adolescent pregnancy among indochinese refugees"
-            ]
-          }
-        ]
+        "class": "shop"
       },
       "geometry": {
         "type": "Polygon",
@@ -19172,16 +17517,7 @@
         "display_name": "Armenia, Capital, Quindío, RAP Eje Cafetero, Colombia",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Watenpaugh, Keith D",
-            "url": "https://experts.ucdavis.edu/expert/8PkUrbq0",
-            "works": [
-              "The League of Nations' Rescue of Armenian Genocide Survivors and the Making of Modern Humanitarianism, 1920â€“1927"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -19598,16 +17934,7 @@
         "display_name": "Lawrence Berkeley National Laboratory, Gauss Way, Oakland, Alameda County, California, 94720, United States",
         "type": "research_institute",
         "osm_type": "way",
-        "class": "amenity",
-        "researchers": [
-          {
-            "name": "Qi, Jinyi",
-            "url": "https://experts.ucdavis.edu/expert/diXMWUQy",
-            "works": [
-              "Development of the LBNL positron emission mammography camera"
-            ]
-          }
-        ]
+        "class": "amenity"
       },
       "geometry": {
         "type": "Polygon",
@@ -19896,23 +18223,7 @@
         "display_name": "France",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Chaganti, Seeta",
-            "url": "https://experts.ucdavis.edu/expert/sB2hzSjF",
-            "works": [
-              "The Space of Epistemology in Marie de France's 'Yonec'"
-            ]
-          },
-          {
-            "name": "Goodhue, Rachael E",
-            "url": "https://experts.ucdavis.edu/expert/WxgQ3TGh",
-            "works": [
-              "Structure and Power in Multilateral Negotiations: An Application to French Water Policy"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -20343,16 +18654,7 @@
         "display_name": "Africa/Asia/South America, Giraffe Experience, Milwaukee, Milwaukee County, Wisconsin, 53226, United States",
         "type": "attraction",
         "osm_type": "way",
-        "class": "tourism",
-        "researchers": [
-          {
-            "name": "Maira, Sunaina",
-            "url": "https://experts.ucdavis.edu/expert/IYeYE4Xq",
-            "works": [
-              "Flexible Citizenship/Flexible Empire: South Asian Muslim Youth in Post-9/11 America"
-            ]
-          }
-        ]
+        "class": "tourism"
       },
       "geometry": {
         "type": "Polygon",
@@ -20529,16 +18831,7 @@
         "display_name": "Egypt, Craighead County, Arkansas, 72427, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Lein, Pamela J",
-            "url": "https://experts.ucdavis.edu/expert/ieNN6iGu",
-            "works": [
-              "Longitudinal assessment of occupational exposures to the organophosphorous insecticides chlorpyrifos and profenofos in Egyptian cotton field workers"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -20649,16 +18942,7 @@
       "properties": {
         "name": "Sutter'S Mill",
         "display_name": "Sutter's Mill, 3885, Cochran Street, Simi Valley, Ventura County, California, 93063, United States",
-        "type": "restaurant",
-        "researchers": [
-          {
-            "name": "Yin, Qing-Zhu",
-            "url": "https://experts.ucdavis.edu/expert/92PcGTrf",
-            "works": [
-              "SUTTER'S MILL CM CHONDRITE: MINERALOGY, PETROGRAPHY, BULK CHEMISTRY, ISOTOPES AND MAGNETIC SUSCEPTIBILITY."
-            ]
-          }
-        ]
+        "type": "restaurant"
       },
       "geometry": {
         "type": "Point",
@@ -20675,16 +18959,7 @@
         "display_name": "American, Avenida Governador Carlos Gomes Bezerra, Vila Lima, Nova Olímpia, Região Geográfica Imediata de Tangará da Serra, Região Geográfica Intermediária de Cuiabá, Mato Grosso, Região Centro-Oeste, 78370-000, Brasil",
         "type": "hotel",
         "osm_type": "way",
-        "class": "tourism",
-        "researchers": [
-          {
-            "name": "Sze, Julie",
-            "url": "https://experts.ucdavis.edu/expert/6WVlvKpJ",
-            "works": [
-              "Haunted by Waters: A Journey through Race and Place in the American West"
-            ]
-          }
-        ]
+        "class": "tourism"
       },
       "geometry": {
         "type": "Polygon",
@@ -20745,16 +19020,7 @@
         "display_name": "Baker Woodlot and Rachana Rajendra Neotropical Migrant Bird Sanctuary, East Lansing, Ingham County, Michigan, United States",
         "type": "wood",
         "osm_type": "way",
-        "class": "natural",
-        "researchers": [
-          {
-            "name": "Lanzaro, Gregory",
-            "url": "https://experts.ucdavis.edu/expert/QSj1WEWy",
-            "works": [
-              "Characterization of Anopheles pseudopunctipennis sensu lato from three countries of neotropical America from variation in allozymes and ribosomal DNA."
-            ]
-          }
-        ]
+        "class": "natural"
       },
       "geometry": {
         "type": "Polygon",
@@ -20825,16 +19091,7 @@
       "properties": {
         "name": "Vietnam Korea United States",
         "display_name": "Korea-Vietnam Veteran's Monument, East Onondaga Street, Downtown, City of Syracuse, Onondaga County, New York, 13202, United States",
-        "type": "memorial",
-        "researchers": [
-          {
-            "name": "Utter, Garth H",
-            "url": "https://experts.ucdavis.edu/expert/JsEHn4gP",
-            "works": [
-              "Microchimerism decades after transfusion among combatâ€injured US veterans from the Vietnam, Korean, and World War II conflicts"
-            ]
-          }
-        ]
+        "type": "memorial"
       },
       "geometry": {
         "type": "Point",
@@ -20849,16 +19106,7 @@
       "properties": {
         "name": "Americas",
         "display_name": "Centro de Información INEGI Culiacán, 1221, Pasaje Comercial González Ortega, Centro Sinaloa, Culiacán, Culiacán Rosales, Culiacán, Sinaloa, 80129, México",
-        "type": "house",
-        "researchers": [
-          {
-            "name": "Hsu, Hsuan L",
-            "url": "https://experts.ucdavis.edu/expert/CZLErRjJ",
-            "works": [
-              "Virtual Americas: Transnational Fictions and the Transatlantic Imaginary (review)"
-            ]
-          }
-        ]
+        "type": "house"
       },
       "geometry": {
         "type": "Point",
@@ -20875,16 +19123,7 @@
         "display_name": "Italia",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Peri, Giovanni",
-            "url": "https://experts.ucdavis.edu/expert/qdcOEWMV",
-            "works": [
-              "Gender Gap in Italy: The Role of College Majors"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -21329,16 +19568,7 @@
         "display_name": "Owens Valley, Inyo County, California, United States",
         "type": "desert",
         "osm_type": "way",
-        "class": "natural",
-        "researchers": [
-          {
-            "name": "Pinter, Nicholas",
-            "url": "https://experts.ucdavis.edu/expert/aZ4WJBbw",
-            "works": [
-              "Faulting on the Volcanic Tableland, Owens Valley, California"
-            ]
-          }
-        ]
+        "class": "natural"
       },
       "geometry": {
         "type": "Polygon",
@@ -21595,16 +19825,7 @@
         "display_name": "България",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Martinez Lopez, Beatriz",
-            "url": "https://experts.ucdavis.edu/expert/Ey6AJzVa",
-            "works": [
-              "Evaluation of the spatial patterns and risk factors, including backyard pigs, for classical swine fever occurrence in Bulgaria using a Bayesian model"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -22025,23 +20246,7 @@
         "display_name": "上海市, 中国",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Qi, Lihong",
-            "url": "https://experts.ucdavis.edu/expert/diXMWUQy",
-            "works": [
-              "Which Urban Migrants Default from Tuberculosis Treatment in Shanghai, China?"
-            ]
-          },
-          {
-            "name": "Zhang, Qi",
-            "url": "https://experts.ucdavis.edu/expert/bnEl1scO",
-            "works": [
-              "Insights into the formation of secondary organic carbon in the summertime in urban Shanghai"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -22460,16 +20665,7 @@
       "properties": {
         "name": "Aleppo, Ottoman",
         "display_name": "Bağdat Demiryolu / Rêya hesinî li Bexda / سكة حديد بغداد, ناحية مركز عين العرب, منطقة عين العرب, محافظة حلب, سوريا",
-        "type": "disused",
-        "researchers": [
-          {
-            "name": "Watenpaugh, Heghnar",
-            "url": "https://experts.ucdavis.edu/expert/8PkUrbq0",
-            "works": [
-              "DEVIANT DERVISHES: SPACE, GENDER, AND THE CONSTRUCTION OF ANTINOMIAN PIETY IN OTTOMAN ALEPPO"
-            ]
-          }
-        ]
+        "type": "disused"
       },
       "geometry": {
         "type": "Point",
@@ -22486,16 +20682,7 @@
         "display_name": "Suisun Bay, Benicia, Solano County, California, United States",
         "type": "bay",
         "osm_type": "relation",
-        "class": "natural",
-        "researchers": [
-          {
-            "name": "Younis, Bassam",
-            "url": "https://experts.ucdavis.edu/expert/7kcuuz9U",
-            "works": [
-              "Estuarine landscape modeling of suisun bay"
-            ]
-          }
-        ]
+        "class": "natural"
       },
       "geometry": {
         "type": "Polygon",
@@ -26744,16 +24931,7 @@
       "properties": {
         "name": "Loma Prieta",
         "display_name": "Loma Prieta, Santa Clara County, California, United States",
-        "type": "peak",
-        "researchers": [
-          {
-            "name": "Kunnath, Sashi K",
-            "url": "https://experts.ucdavis.edu/expert/Khcww3rL",
-            "works": [
-              "Inelastic response of the cypress viaduct to the Loma Prieta earthquake"
-            ]
-          }
-        ]
+        "type": "peak"
       },
       "geometry": {
         "type": "Point",
@@ -26770,16 +24948,7 @@
         "display_name": "Earth, Lamb County, Texas, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Yin, Qing-Zhu",
-            "url": "https://experts.ucdavis.edu/expert/92PcGTrf",
-            "works": [
-              "Isotopic Evidence of Cr Partitioning into Earthâ€™s Core"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -27076,17 +25245,7 @@
         "display_name": "البحر الميت ים המלח, שטח C, יהודה ושומרון, Palestinian Territory",
         "type": "lake",
         "osm_type": "relation",
-        "class": "water",
-        "researchers": [
-          {
-            "name": "Facciotti, Marc T",
-            "url": "https://experts.ucdavis.edu/expert/MsRWYzCA",
-            "works": [
-              "Genome sequence of Haloarcula marismortui: A halophilic archaeon from the Dead Sea",
-              "Genome sequence of <i>Haloarcula marismortui</i>:: A halophilic archaeon from the Dead Sea (vol 14, pg 2221, 2004)"
-            ]
-          }
-        ]
+        "class": "water"
       },
       "geometry": {
         "type": "Polygon",
@@ -27515,16 +25674,7 @@
       "properties": {
         "name": "Santa Monica Mountains, California",
         "display_name": "Santa Monica Mountains, Los Angeles County, California, United States",
-        "type": "mountain_range",
-        "researchers": [
-          {
-            "name": "Oskin, Michael E",
-            "url": "https://experts.ucdavis.edu/expert/hKBTRyso",
-            "works": [
-              "Convergence, block rotation, and structural interference across the Peninsular-Transverse Ranges boundary, eastern Santa Monica Mountains, California"
-            ]
-          }
-        ]
+        "type": "mountain_range"
       },
       "geometry": {
         "type": "Point",
@@ -27541,16 +25691,7 @@
         "display_name": "Ontario, Canada",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Dewa, Carolyn S",
-            "url": "https://experts.ucdavis.edu/expert/wJIaemB0",
-            "works": [
-              "Exposure to client aggression and burnout among community staff who support adults with intellectual disabilities in Ontario, Canada"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -27971,16 +26112,7 @@
         "display_name": "Davis County, Iowa, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Tal, Gil",
-            "url": "https://experts.ucdavis.edu/expert/R4abfXqs",
-            "works": [
-              "Childrenâ€™s Bicycling to After-School Activities: The Case of the Davis AYSO Bike-to-Soccer Program"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -28135,30 +26267,7 @@
       "properties": {
         "name": "Africa",
         "display_name": "Africa",
-        "type": "continent",
-        "researchers": [
-          {
-            "name": "Adejunmobi, Moradewun",
-            "url": "https://experts.ucdavis.edu/expert/7YwK5nUb",
-            "works": [
-              "Provocations: African societies and theories of creativity"
-            ]
-          },
-          {
-            "name": "Mazet, Jonna A",
-            "url": "https://experts.ucdavis.edu/expert/F1LUrhJB",
-            "works": [
-              "Seasonal shedding of coronavirus by straw-colored fruit bats at urban roosts in Africa"
-            ]
-          },
-          {
-            "name": "Tartar, Danielle M",
-            "url": "https://experts.ucdavis.edu/expert/t8uiIYt7",
-            "works": [
-              "When a travel bug gets you down[SS1]: severe, hypotensive African tick bite fever and response to therapy"
-            ]
-          }
-        ]
+        "type": "continent"
       },
       "geometry": {
         "type": "Point",
@@ -28188,23 +26297,7 @@
       "properties": {
         "name": "Tibetan Plateau",
         "display_name": "Tibetan Plateau, 尼玛镇, 尼玛县 ཉི་མ་རྫོང།, 那曲市 ནག་ཆུ་ས་ཁུལ།, 西藏自治区 བོད་རང་སྐྱོང་ལྗོངས།, 中国",
-        "type": "mountain_range",
-        "researchers": [
-          {
-            "name": "Oskin, Michael E",
-            "url": "https://experts.ucdavis.edu/expert/hKBTRyso",
-            "works": [
-              "Focused modern denudation of the Longmen Shan margin, eastern Tibetan Plateau"
-            ]
-          },
-          {
-            "name": "Cowgill, Eric S",
-            "url": "https://experts.ucdavis.edu/expert/Q4GclXTL",
-            "works": [
-              "Middle Miocene reorganization of the Altyn Tagh fault system, northern Tibetan Plateau"
-            ]
-          }
-        ]
+        "type": "mountain_range"
       },
       "geometry": {
         "type": "Point",
@@ -28221,16 +26314,7 @@
         "display_name": "San Jacinto, Riverside County, California, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Oskin, Michael E",
-            "url": "https://experts.ucdavis.edu/expert/hKBTRyso",
-            "works": [
-              "Late Quaternary slip rate gradient defined using highâ€resolution topography and 10Be dating of offset landforms on the southern San Jacinto Fault zone, California"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -29032,16 +27116,7 @@
         "display_name": "Brasil",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Sih, Andrew",
-            "url": "https://experts.ucdavis.edu/expert/1Y8s3IUC",
-            "works": [
-              "Novel Species Interactions in a Highly Modified Estuary: Association of Largemouth Bass with Brazilian Waterweed Egeria densa"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -29462,16 +27537,7 @@
         "display_name": "Denver, Colorado, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Jurkovich, Gregory J",
-            "url": "https://experts.ucdavis.edu/expert/ehposZZ1",
-            "works": [
-              "An analysis of advanced prehospital airway management1 1Selected Topicsâ€”Prehospital Care is coordinated by Peter Pons, MD, of Denver Health Medical Center, Denver, Colorado"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -29966,16 +28032,7 @@
         "display_name": "Auckland, New Zealand / Aotearoa",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Brown, Patrick H",
-            "url": "https://experts.ucdavis.edu/expert/r9sZeFWg",
-            "works": [
-              "30-Year Trends in Stroke Rates and Outcome in Auckland, New Zealand (1981-2012): A Multi-Ethnic Population-Based Series of Studies."
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -30396,16 +28453,7 @@
         "display_name": "Singapore",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Newman, John",
-            "url": "https://experts.ucdavis.edu/expert/ycY1mZ7o",
-            "works": [
-              "Plasma fatty acids, oxylipins, and risk of myocardial infarction: the Singapore Chinese Health Study[S]"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -30654,23 +28702,7 @@
         "display_name": "City of New York, New York, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Elko, Heather L",
-            "url": "https://experts.ucdavis.edu/expert/6B57rGLg",
-            "works": [
-              "Dangerous Trade: Arms Exports, Human Rights, and International Reputation. By Jennifer L. Erickson. New York: Columbia University Press, 2015. 288p. $50.00."
-            ]
-          },
-          {
-            "name": "Jaller Martelo, Miguel A",
-            "url": "https://experts.ucdavis.edu/expert/WQ0S33Cc",
-            "works": [
-              "The New York City Off-Hour Delivery Program: A Business and Community-Friendly Sustainability Program"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -31045,23 +29077,7 @@
       "properties": {
         "name": "Central Valley, California",
         "display_name": "Central Valley, San Joaquin County, California, 95201, United States",
-        "type": "valley",
-        "researchers": [
-          {
-            "name": "Kleeman, Michael J",
-            "url": "https://experts.ucdavis.edu/expert/AOgLSwWL",
-            "works": [
-              "Implementation of warm-cloud processes in a source-oriented WRF/Chem model to study the effect of aerosol mixing state on fog formation in the Central Valley of California"
-            ]
-          },
-          {
-            "name": "Michailides, Themis J",
-            "url": "https://experts.ucdavis.edu/expert/Ewg9Kcro",
-            "works": [
-              "Aflatoxin producing potential and community structure of <i>Aspergillus</i> section <i>Flavi</i> in almond orchards of the Central Valley of California"
-            ]
-          }
-        ]
+        "type": "valley"
       },
       "geometry": {
         "type": "Point",
@@ -31078,23 +29094,7 @@
         "display_name": "Kingdom of Denmark, Kalaallit Nunaat",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Catz, Sheryl L",
-            "url": "https://experts.ucdavis.edu/expert/AyTHnXuB",
-            "works": [
-              "Telemedicine in Greenland: Citizens' Perspectives."
-            ]
-          },
-          {
-            "name": "Thy, Peter",
-            "url": "https://experts.ucdavis.edu/expert/Gft3pPNz",
-            "works": [
-              "A whole-rock data set for the Skaergaard intrusion, East Greenland"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -31507,16 +29507,7 @@
         "display_name": "San Joaquin Valley National Cemetery, 32053, Merced County, California, 95322, United States",
         "type": "cemetery",
         "osm_type": "way",
-        "class": "landuse",
-        "researchers": [
-          {
-            "name": "Fidelibus, Matthew",
-            "url": "https://experts.ucdavis.edu/expert/flgW5hK1",
-            "works": [
-              "Measured and estimated water use and crop coefficients of grapevines trained to overhead trellis systems in Californiaâ€™s San Joaquin Valley"
-            ]
-          }
-        ]
+        "class": "landuse"
       },
       "geometry": {
         "type": "Polygon",
@@ -31581,16 +29572,7 @@
         "display_name": "Gambia",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Lebrilla, Carlito B",
-            "url": "https://experts.ucdavis.edu/expert/yKQnYaPo",
-            "works": [
-              "Growth and Morbidity of Gambian Infants are Influenced by Maternal Milk Oligosaccharides and Infant Gut Microbiota"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -31999,16 +29981,7 @@
         "display_name": "조선민주주의인민공화국",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Sumner, Daniel A",
-            "url": "https://experts.ucdavis.edu/expert/Qyrz8jnD",
-            "works": [
-              "Assessing the Food Situation in North Korea"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -32429,31 +30402,7 @@
         "display_name": "Mexico, Audrain County, Missouri, 65265, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Johnson, Kevin R",
-            "url": "https://experts.ucdavis.edu/expert/IgQ7KXIZ",
-            "works": [
-              "An Essay on Immigration, Citizenship, and U.S./Mexico Relations: The Tale of Two Treaties"
-            ]
-          },
-          {
-            "name": "Wan, Yu-Jui Yvonne",
-            "url": "https://experts.ucdavis.edu/expert/DRFUFOhr",
-            "works": [
-              "Characteristics and Drinking Patterns in Alcohol Abusing Mexican American Men",
-              "Polymorphisms of the dopamine D2 receptor, serotonin transporter, and GABAA receptor Î²3 subunit genes and alcoholism in Mexican-Americans"
-            ]
-          },
-          {
-            "name": "Robins, Richard W",
-            "url": "https://experts.ucdavis.edu/expert/CtdULAUr",
-            "works": [
-              "Prospective Relationships Between Ethnic Discrimination and Substance Use by Mexicanâ€American Adolescents"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -32986,16 +30935,7 @@
         "display_name": "Switzerland County, Indiana, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Peri, Giovanni",
-            "url": "https://experts.ucdavis.edu/expert/qdcOEWMV",
-            "works": [
-              "The Labor Market Effects of Opening the Border: Evidence from Switzerland"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -33404,16 +31344,7 @@
         "display_name": "Indian Country, Northwest Avenue C, Original Town, Seminole, Gaines County, Texas, 79360, United States",
         "type": "car",
         "osm_type": "way",
-        "class": "shop",
-        "researchers": [
-          {
-            "name": "Florey, Katherine J",
-            "url": "https://experts.ucdavis.edu/expert/6arIMdOZ",
-            "works": [
-              "Indian Country's Borders: Territoriality, Immunity, and the Construction of Tribal Sovereignty"
-            ]
-          }
-        ]
+        "class": "shop"
       },
       "geometry": {
         "type": "Polygon",
@@ -33450,16 +31381,7 @@
         "display_name": "Nederland",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Cingel, Drew P",
-            "url": "https://experts.ucdavis.edu/expert/z2DfpTqP",
-            "works": [
-              "Development as an Explanation for and Predictor of Online Self-Disclosure Among Dutch Adolescents"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -34104,16 +32026,7 @@
         "display_name": "서울특별시, 대한민국",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Zhang, Qi",
-            "url": "https://experts.ucdavis.edu/expert/bnEl1scO",
-            "works": [
-              "Sources and atmospheric processing of winter aerosols in Seoul, Korea: insights from real-time measurements using a high-resolution aerosol mass spectrometer"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -34526,16 +32439,7 @@
         "display_name": "Canadian High Arctic Research Station, Uvajuq Road, Iqaluktuuttiaq (Cambridge Bay), ᕿᑎᕐᒥᐅᑦ Kitikmeot Region, ᓄᓇᕗᑦ Nunavut, X0B 0C0, Canada",
         "type": "research_institute",
         "osm_type": "way",
-        "class": "amenity",
-        "researchers": [
-          {
-            "name": "Forrest, Alexander L",
-            "url": "https://experts.ucdavis.edu/expert/2isO3b33",
-            "works": [
-              "Digital Terrain Mapping of Petermann Ice Island Fragments in the Canadian High Arctic"
-            ]
-          }
-        ]
+        "class": "amenity"
       },
       "geometry": {
         "type": "Polygon",
@@ -34572,23 +32476,7 @@
         "display_name": "Georgia, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Martinez Lopez, Beatriz",
-            "url": "https://experts.ucdavis.edu/expert/Ey6AJzVa",
-            "works": [
-              "Modeling the live-pig trade network in Georgia: Implications for disease prevention and control"
-            ]
-          },
-          {
-            "name": "Poppenga, Robert H",
-            "url": "https://experts.ucdavis.edu/expert/3zZRk6Wh",
-            "works": [
-              "HEALTH AND NUTRITIONAL ASSESSMENT OF FREE-RANGING EASTERN INDIGO SNAKES (DRYMARCHON COUPERI) IN GEORGIA, UNITED STATES"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -35009,16 +32897,7 @@
         "display_name": "San Francisco Bay Estuary Field Station, I Street, Vallejo, Solano County, California, 94592, United States",
         "type": "naval",
         "osm_type": "way",
-        "class": "historic",
-        "researchers": [
-          {
-            "name": "Todgham, Anne E",
-            "url": "https://experts.ucdavis.edu/expert/MP6B81wh",
-            "works": [
-              "Effect of food availability on thermal tolerance of juvenile Dungeness crabs in the San Francisco Estuary"
-            ]
-          }
-        ]
+        "class": "historic"
       },
       "geometry": {
         "type": "Polygon",
@@ -35087,16 +32966,7 @@
         "display_name": "Moçambique",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Carter, Michael R",
-            "url": "https://experts.ucdavis.edu/expert/AUnUZFRr",
-            "works": [
-              "The Impact of Voucher Coupons on the Uptake of Fertilizer and Improved Seeds: Evidence from a Randomized Trial in Mozambique"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -35537,16 +33407,7 @@
         "display_name": "Jamaica",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Gilbertson, Robert",
-            "url": "https://experts.ucdavis.edu/expert/f9geqbAx",
-            "works": [
-              "Mixed infection of Sidajamaicensis in Jamaica reveals the presence of three recombinant begomovirus DNA A components"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -35787,16 +33648,7 @@
         "display_name": "University of Wisconsin-Madison, West Johnson Street, Mifflin West, Madison, Dane County, Wisconsin, 53715, United States",
         "type": "university",
         "osm_type": "relation",
-        "class": "amenity",
-        "researchers": [
-          {
-            "name": "Sageshima, Junichiro",
-            "url": "https://experts.ucdavis.edu/expert/DHafVYA3",
-            "works": [
-              "CLINICAL APPLICATION OF THE TWO-LAYER (UNIVERSITY OF WISCONSIN SOLUTION/PERFLUOROCHEMICAL PLUS O 2) METHOD OF PANCREAS PRESERVATION BEFORE TRANSPLANTATION"
-            ]
-          }
-        ]
+        "class": "amenity"
       },
       "geometry": {
         "type": "Polygon",
@@ -36193,16 +34045,7 @@
         "display_name": "Cameroun",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Engle-Stone, Reina",
-            "url": "https://experts.ucdavis.edu/expert/UHcF3Xyj",
-            "works": [
-              "Increases in Indicators of Iron, Zinc, Folate and Vitamin B12 Status in Urban Cameroon Following Wheat Flour Fortification"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -36623,16 +34466,7 @@
         "display_name": "Ecuador",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Stewart, Christine P",
-            "url": "https://experts.ucdavis.edu/expert/ntI46wQe",
-            "works": [
-              "Eggs early in complementary feeding increase choline pathway biomarkers and DHA: a randomized controlled trial in Ecuador"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -37053,16 +34887,7 @@
         "display_name": "Bahia, Região Nordeste, Brasil",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Diaz, Juan Diego D",
-            "url": "https://experts.ucdavis.edu/expert/DwK4H9V8",
-            "works": [
-              "Orkestra Rumpilezz: reinventing the Bahian percussion universe"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -37481,16 +35306,7 @@
       "properties": {
         "name": "Long Valley, California",
         "display_name": "Long Valley, Mono County, California, United States",
-        "type": "hamlet",
-        "researchers": [
-          {
-            "name": "Rundle, John B",
-            "url": "https://experts.ucdavis.edu/expert/WEngZ7d6",
-            "works": [
-              "Vertical distortion in Long Valley, California, associated with the January 1983 earthquake swarm"
-            ]
-          }
-        ]
+        "type": "hamlet"
       },
       "geometry": {
         "type": "Point",
@@ -37507,16 +35323,7 @@
         "display_name": "ایران",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Mesgaran, Mohsen B",
-            "url": "https://experts.ucdavis.edu/expert/erHFdqId",
-            "works": [
-              "Weed control and wheat cultivars (Triticum aestivum L.) responses to metribuzin application rate and timing in Iran"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -37937,44 +35744,7 @@
         "display_name": "Australia",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Mesgaran, Mohsen B",
-            "url": "https://experts.ucdavis.edu/expert/erHFdqId",
-            "works": [
-              "Reassessment of the invasion history of two species of Cakile (Brassicaceae) in Australia."
-            ]
-          },
-          {
-            "name": "Sih, Andrew",
-            "url": "https://experts.ucdavis.edu/expert/1Y8s3IUC",
-            "works": [
-              "Occurrence of the introduced snake mite, Ophionyssus natricis (Gervais, 1844), in the wild in Australia"
-            ]
-          },
-          {
-            "name": "Hoch, Jeffrey S",
-            "url": "https://experts.ucdavis.edu/expert/YPsanxOu",
-            "works": [
-              "Trends of paediatric head injury and acute care costs in Australia"
-            ]
-          },
-          {
-            "name": "Fox, Glen P",
-            "url": "https://experts.ucdavis.edu/expert/vppzuJxC",
-            "works": [
-              "Grain physical characteristic of the Australian wild rices"
-            ]
-          },
-          {
-            "name": "Ossola, Alessandro",
-            "url": "https://experts.ucdavis.edu/expert/YKthlWhO",
-            "works": [
-              "Habitat in flames: How climate change will affect fire risk across koala forests"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -38395,16 +36165,7 @@
         "display_name": "Treasure Island, California, United States",
         "type": "administrative",
         "osm_type": "way",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Kendall, Alissa",
-            "url": "https://experts.ucdavis.edu/expert/c2WpvMGE",
-            "works": [
-              "Life-Cycle Assessment of Ground Improvement Alternatives for the Treasure Island, California, Redevelopment"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -38481,16 +36242,7 @@
         "display_name": "South Dakota, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Shanske, Darien",
-            "url": "https://experts.ucdavis.edu/expert/aFzKqPem",
-            "works": [
-              "Brief of Six Members of Congress in Support of the Petitioner in South Dakota v. Wayfair (Certiorari)"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -38907,23 +36659,7 @@
         "display_name": "Great Plains, Calgary, Alberta, Canada",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Roche, Leslie M",
-            "url": "https://experts.ucdavis.edu/expert/CqUgvBrA",
-            "works": [
-              "Diverse Management Strategies Produce Similar Ecological Outcomes on Ranches in Western Great Plains: Social-Ecological Assessment"
-            ]
-          },
-          {
-            "name": "Tate, Kenneth W",
-            "url": "https://experts.ucdavis.edu/expert/gxECnxun",
-            "works": [
-              "Diverse Management Strategies Produce Similar Ecological Outcomes on Ranches in Western Great Plains: Social-Ecological Assessment"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -39020,16 +36756,7 @@
         "display_name": "Southern California, United States",
         "type": "region",
         "osm_type": "relation",
-        "class": "place",
-        "researchers": [
-          {
-            "name": "Pruitt, Lisa R",
-            "url": "https://experts.ucdavis.edu/expert/cmHKCIvv",
-            "works": [
-              "Improving Access to Justice in the Rural Reaches of Southern California"
-            ]
-          }
-        ]
+        "class": "place"
       },
       "geometry": {
         "type": "Polygon",
@@ -39444,17 +37171,7 @@
       "properties": {
         "name": "Japan, America",
         "display_name": "Japan, Hazle Township, Luzerne County, Pennsylvania, 18221, United States",
-        "type": "hamlet",
-        "researchers": [
-          {
-            "name": "Young, Heather M",
-            "url": "https://experts.ucdavis.edu/expert/nuzTTJKR",
-            "works": [
-              "Attitudes Toward Community-Based Services Among Japanese American Families",
-              "Decision Making at End of Life Among Japanese American Families"
-            ]
-          }
-        ]
+        "type": "hamlet"
       },
       "geometry": {
         "type": "Point",
@@ -39471,16 +37188,7 @@
         "display_name": "Sverige",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Brinkley, Catherine",
-            "url": "https://experts.ucdavis.edu/expert/mkL4ET2y",
-            "works": [
-              "The conundrum of combustible clean energy: Sweden's history of siting district heating smokestacks in residential areas"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -39901,16 +37609,7 @@
         "display_name": "STG Chile, 991, Avenida Américo Vespucio Sur, Vaticano, Las Condes, Provincia de Santiago, Región Metropolitana de Santiago, 7580386, Chile",
         "type": "office",
         "osm_type": "way",
-        "class": "building",
-        "researchers": [
-          {
-            "name": "Uzal, Francisco A",
-            "url": "https://experts.ucdavis.edu/expert/PFfnJVxC",
-            "works": [
-              "Identification of Neospora caninum in aborted bovine fetuses of Southern Chile"
-            ]
-          }
-        ]
+        "class": "building"
       },
       "geometry": {
         "type": "Polygon",
@@ -40009,16 +37708,7 @@
       "properties": {
         "name": "San Francisco Bay Area",
         "display_name": "San Francisco Bay Area, San Francisco, California, 94110, United States",
-        "type": "region",
-        "researchers": [
-          {
-            "name": "Jaller Martelo, Miguel A",
-            "url": "https://experts.ucdavis.edu/expert/WQ0S33Cc",
-            "works": [
-              "Automated Vehicle Scenarios: Simulation of System-Level Travel Effects Using Agent-Based Demand and Supply Models in the San Francisco Bay Area"
-            ]
-          }
-        ]
+        "type": "region"
       },
       "geometry": {
         "type": "Point",
@@ -40035,16 +37725,7 @@
         "display_name": "Ricaurte, Alto Magdalena, RAP (Especial) Central, Colombia",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Hagerman, Randi J",
-            "url": "https://experts.ucdavis.edu/expert/U8wW2G0y",
-            "works": [
-              "Increased severity of fragile X spectrum disorders in the agricultural community of Ricaurte, Colombia"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -40455,16 +38136,7 @@
       "properties": {
         "name": "Mesoamerica",
         "display_name": "Calle Mesoamérica, Fraccionamiento Ciudad Olmeca, Coatzacoalcos, Veracruz, México",
-        "type": "residential",
-        "researchers": [
-          {
-            "name": "Gilbert, Matthew E",
-            "url": "https://experts.ucdavis.edu/expert/CmfLCowM",
-            "works": [
-              "Root and shoot variation in relation to potential intermittent drought adaptation of Mesoamerican wild common bean (Phaseolus vulgaris L.)"
-            ]
-          }
-        ]
+        "type": "residential"
       },
       "geometry": {
         "type": "Point",
@@ -40481,16 +38153,7 @@
         "display_name": "بيروت, البسطة التحتا, باشورة, محافظة بيروت, لبنان",
         "type": "harbour",
         "osm_type": "relation",
-        "class": "landuse",
-        "researchers": [
-          {
-            "name": "Tantillo, Dean J",
-            "url": "https://experts.ucdavis.edu/expert/a5A4o7mB",
-            "works": [
-              "Accessing Multiple Classes of 2Hâ€‘Indazoles: Mechanistic Implications for the Cadogan and Davisâ€“Beirut Reactions"
-            ]
-          }
-        ]
+        "class": "landuse"
       },
       "geometry": {
         "type": "Polygon",
@@ -40883,16 +38546,7 @@
         "display_name": "تونس, ولاية تونس, تونس",
         "type": "city",
         "osm_type": "relation",
-        "class": "place",
-        "researchers": [
-          {
-            "name": "Holyoak, Marcel",
-            "url": "https://experts.ucdavis.edu/expert/Xvh18729",
-            "works": [
-              "PUPOIDES-COENOPICTUS (HUTTON, 1834) NEW TO TUNISIA"
-            ]
-          }
-        ]
+        "class": "place"
       },
       "geometry": {
         "type": "Polygon",
@@ -41311,16 +38965,7 @@
       "properties": {
         "name": "Eurasia",
         "display_name": "Eurasia, 73, Rollbergstraße, Flughafenkiez, Neukölln, Berlin, 12053, Deutschland",
-        "type": "sport",
-        "researchers": [
-          {
-            "name": "Monier, Erwan",
-            "url": "https://experts.ucdavis.edu/expert/gH0g22t0",
-            "works": [
-              "Future nitrogen availability and its effect on carbon sequestration in Northern Eurasia"
-            ]
-          }
-        ]
+        "type": "sport"
       },
       "geometry": {
         "type": "Point",
@@ -41337,16 +38982,7 @@
         "display_name": "Iqaluit ᐃᖃᓗᐃᑦ, ᐃᖃᓗᐃᑦ, ᕿᑭᖅᑖᓗᒃ Qikiqtaaluk Region, ᓄᓇᕗᑦ Nunavut, Canada",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Shapiro, Karen",
-            "url": "https://experts.ucdavis.edu/expert/Rpnu9yrG",
-            "works": [
-              "Prevalence and genetic characterization of Giardia spp. and Cryptosporidium spp. in dogs in Iqaluit, Nunavut, Canada"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -41399,30 +39035,7 @@
         "display_name": "Midwest, Natrona County, Wyoming, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Pittelkow, Cameron M",
-            "url": "https://experts.ucdavis.edu/expert/s8sPAQBh",
-            "works": [
-              "Simulating nitrogen management impacts on maize production in the U.S. Midwest"
-            ]
-          },
-          {
-            "name": "Haddad, Maha",
-            "url": "https://experts.ucdavis.edu/expert/ozo7drir",
-            "works": [
-              "Predictors of time to first cannulation for arteriovenous fistula in pediatric hemodialysis patients: Midwest Pediatric Nephrology Consortium study"
-            ]
-          },
-          {
-            "name": "Nadler, Steven A",
-            "url": "https://experts.ucdavis.edu/expert/UZ63Q4yH",
-            "works": [
-              "Genetic structure of midwestern Ascaris suum populations: a comparison of isoenzyme and RAPD markers."
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -41779,16 +39392,7 @@
         "display_name": "Taranto, Puglia, Italia",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Foglia, Laura",
-            "url": "https://experts.ucdavis.edu/expert/c9hlGq9U",
-            "works": [
-              "Seawater intrusion in karstic, coastal aquifers: Current challenges and future scenarios in the Taranto area (southern Italy)"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -42227,16 +39831,7 @@
       "properties": {
         "name": "Peninsular Malaysia",
         "display_name": "Peninsular (Yaohan) Sofa & Interior Decoration Centre, Jalan Raja Uda, Taman Anggerik, Bagan Jermal, Bandar Butterworth, Seberang Perai Utara, Seberang Perai, Pulau Pinang, 12300, Malaysia",
-        "type": "furniture",
-        "researchers": [
-          {
-            "name": "Kavvas, M L",
-            "url": "https://experts.ucdavis.edu/expert/7AVr8Vxy",
-            "works": [
-              "Impacts of Climate Change on the Hydro-Climate of Peninsular Malaysia"
-            ]
-          }
-        ]
+        "type": "furniture"
       },
       "geometry": {
         "type": "Point",
@@ -42253,23 +39848,7 @@
         "display_name": "Mojave Desert, San Bernardino County, California, United States",
         "type": "sand",
         "osm_type": "relation",
-        "class": "natural",
-        "researchers": [
-          {
-            "name": "Todd, Brian D",
-            "url": "https://experts.ucdavis.edu/expert/uJzyLckx",
-            "works": [
-              "Survival and movements of headâ€started Mojave desert tortoises"
-            ]
-          },
-          {
-            "name": "Hernandez, Rebecca R",
-            "url": "https://experts.ucdavis.edu/expert/c5JJczsF",
-            "works": [
-              "Solar energy development impacts flower-visiting beetles and flies in the Mojave Desert"
-            ]
-          }
-        ]
+        "class": "natural"
       },
       "geometry": {
         "type": "Polygon",
@@ -42632,18 +40211,7 @@
         "display_name": "Peru, LaSalle County, Illinois, 61354, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Fejerman, Laura",
-            "url": "https://experts.ucdavis.edu/expert/4XQ7q0Aj",
-            "works": [
-              "Abstract 4184: Tumor and risk factor characteristics among breast cancer patients from different geographic regions in Peru",
-              "Depression in women with a diagnosis of breast cancer. Prevalence of symptoms of depression in Peruvian women with early breast cancer and related sociodemographic factors",
-              "Abstract 5235: Transcriptome-wide study of tumor samples from Peruvian women identifies dysregulated pathways in luminal tumors typically associated with more aggressive disease"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -43170,16 +40738,7 @@
         "display_name": "Монгол улс ᠮᠤᠩᠭᠤᠯ ᠤᠯᠤᠰ",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Rumbeiha, Wilson K",
-            "url": "https://experts.ucdavis.edu/expert/84fAztaZ",
-            "works": [
-              "Residues in Brandtâ€™s voles (Microtus brandti) exposed to bromadiolone-impregnated baits in Mongolia"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -43598,16 +41157,7 @@
       "properties": {
         "name": "South Pole",
         "display_name": "South Pole",
-        "type": "locality",
-        "researchers": [
-          {
-            "name": "Rose, John S",
-            "url": "https://experts.ucdavis.edu/expert/9FyrKAob",
-            "works": [
-              "Serious Altitude Illness at the South Pole."
-            ]
-          }
-        ]
+        "type": "locality"
       },
       "geometry": {
         "type": "Point",
@@ -43624,16 +41174,7 @@
         "display_name": "Deutschland",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Yoo, Sung-Joo B",
-            "url": "https://experts.ucdavis.edu/expert/83x5AQ8a",
-            "works": [
-              "Solid-State MWIR Beam Steering Using Optical Phased Array on Germanium-Silicon Photonic Platform"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -44064,30 +41605,7 @@
         "display_name": "India",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Mazet, Jonna A",
-            "url": "https://experts.ucdavis.edu/expert/F1LUrhJB",
-            "works": [
-              "CARNIVORE PROTOPARVOVIRUS 1 (PARVOVIRUSES) AT THE DOMESTICWILD CARNIVORE INTERFACE IN INDIA"
-            ]
-          },
-          {
-            "name": "Chaudhari, Abhijit",
-            "url": "https://experts.ucdavis.edu/expert/boe8mSbH",
-            "works": [
-              "Treatment and follow-up of the first case of human trypanosomiasis caused by Trypanosoma evansi in India"
-            ]
-          },
-          {
-            "name": "Potter, Daniel",
-            "url": "https://experts.ucdavis.edu/expert/pwbVJo38",
-            "works": [
-              "Genetic diversity of Huaya India (Melicoccus oliviformis Kunth), a neglected Neotropical fruit crop"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -44528,16 +42046,7 @@
         "display_name": "Town of Greece, Monroe County, New York, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Michailides, Themis J",
-            "url": "https://experts.ucdavis.edu/expert/Ewg9Kcro",
-            "works": [
-              "Neofusicoccum parvum associated with fruit rot and shoot blight of peaches in Greece"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -44890,16 +42399,7 @@
         "display_name": "東北地方, 日本",
         "type": "region",
         "osm_type": "relation",
-        "class": "place",
-        "researchers": [
-          {
-            "name": "Rundle, John B",
-            "url": "https://experts.ucdavis.edu/expert/WEngZ7d6",
-            "works": [
-              "Tsunami Squares simulation of megathrust-generated waves: Application to the 2011 Tohoku Tsunami"
-            ]
-          }
-        ]
+        "class": "place"
       },
       "geometry": {
         "type": "Polygon",
@@ -45320,30 +42820,7 @@
         "display_name": "Canada",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Hoch, Jeffrey S",
-            "url": "https://experts.ucdavis.edu/expert/YPsanxOu",
-            "works": [
-              "PCN158 Adherence to Human Epidermal Growth Factor Receptor-2 (HER2) Testing & Adjuvant Trastuzumab Treatment Guidelines in a Canadian Province"
-            ]
-          },
-          {
-            "name": "Peri, Giovanni",
-            "url": "https://experts.ucdavis.edu/expert/qdcOEWMV",
-            "works": [
-              "Chapter 14: Foreign scientists and engineers and economic growth in Canadian labor markets"
-            ]
-          },
-          {
-            "name": "Beatty, Timothy K",
-            "url": "https://experts.ucdavis.edu/expert/ALVJXxaw",
-            "works": [
-              "Expenditure dispersion and dietary quality: evidence from Canada"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -45764,31 +43241,7 @@
         "display_name": "Northwest Arctic Borough, Alaska, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Magney, Troy",
-            "url": "https://experts.ucdavis.edu/expert/BaMAjzJs",
-            "works": [
-              "A mechanism of expansion: Arctic deciduous shrubs capitalize on warming-induced nutrient availability"
-            ]
-          },
-          {
-            "name": "Igel, Adele M",
-            "url": "https://experts.ucdavis.edu/expert/x3Eh4YqC",
-            "works": [
-              "Arctic mixed-phase clouds sometimes dissipate due to insufficient aerosol: evidence from observations and idealized simulations",
-              "Above-cloud concentrations of cloud condensation nuclei help to sustain some Arctic low-level clouds"
-            ]
-          },
-          {
-            "name": "Sanchirico, James N",
-            "url": "https://experts.ucdavis.edu/expert/qmGwX1V8",
-            "works": [
-              "Spatial issues in Arctic marine resource governance workshop summary and comment"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -46201,16 +43654,7 @@
         "display_name": "University of California, Davis, 1, I 80, Davis, Solano County, California, 95616, United States",
         "type": "university",
         "osm_type": "relation",
-        "class": "amenity",
-        "researchers": [
-          {
-            "name": "Havel, Peter J",
-            "url": "https://experts.ucdavis.edu/expert/IzLYrrYI",
-            "works": [
-              "Role of EDHF in Potentiation of AChâ€induced Relaxation of Aorta in Male UC Davis Type 2 Diabetes Mellitus (UCDâ€T2DM) Rat: Sex Specific Responses"
-            ]
-          }
-        ]
+        "class": "amenity"
       },
       "geometry": {
         "type": "Polygon",
@@ -46451,16 +43895,7 @@
         "display_name": "گلگت بلتستان, پاکستان",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Potter, Daniel",
-            "url": "https://experts.ucdavis.edu/expert/pwbVJo38",
-            "works": [
-              "POLLEN MORPHOLOGY AND ITS SYSTEMATIC IMPLICATION ON SOME SPECIES OF <i>ARTEMISIA</i> L. FROM GILGIT-BALTISTAN PAKISTAN"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -46879,16 +44314,7 @@
       "properties": {
         "name": "Mainland China",
         "display_name": "Mainland China, Shalimar Morya Park, Off New Link Road, Shastri Nagar, K/W Ward, Zone 3, Mumbai Suburban, Maharashtra, 400053, India",
-        "type": "restaurant",
-        "researchers": [
-          {
-            "name": "Shen, Cuihua",
-            "url": "https://experts.ucdavis.edu/expert/tw8rAP0n",
-            "works": [
-              "Using Reports of Symptoms and Diagnoses on Social Media to Predict COVID-19 Case Counts in Mainland China: Observational Infoveillance Study"
-            ]
-          }
-        ]
+        "type": "restaurant"
       },
       "geometry": {
         "type": "Point",
@@ -46903,16 +44329,7 @@
       "properties": {
         "name": "Mexicali, Mexico",
         "display_name": "Mexicali, Municipio de Mexicali, Baja California, 21000, México",
-        "type": "city",
-        "researchers": [
-          {
-            "name": "Foley, Janet E",
-            "url": "https://experts.ucdavis.edu/expert/tmv41lkG",
-            "works": [
-              "An exploratory analysis of demography and movement patterns of dogs: New insights in the ecology of endemic Rocky Mountain-Spotted Fever in Mexicali, Mexico"
-            ]
-          }
-        ]
+        "type": "city"
       },
       "geometry": {
         "type": "Point",
@@ -46929,23 +44346,7 @@
         "display_name": "Pilipinas",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Sanchirico, James N",
-            "url": "https://experts.ucdavis.edu/expert/qmGwX1V8",
-            "works": [
-              "Market-driven bioeconomic general equilibrium impacts of tourism on resource-dependent local economies: A case from the western Philippines"
-            ]
-          },
-          {
-            "name": "Kim, Tae Youn Y",
-            "url": "https://experts.ucdavis.edu/expert/akviOtGG",
-            "works": [
-              "A community-based survey to assess risk for one health challenges in rural Philippines using a mobile application"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -47330,16 +44731,7 @@
         "display_name": "Northwestern University, 633, Clark Street, Downtown, Evanston, Evanston Township, Cook County, Illinois, 60208, United States",
         "type": "university",
         "osm_type": "relation",
-        "class": "amenity",
-        "researchers": [
-          {
-            "name": "Parker, Lauren E",
-            "url": "https://experts.ucdavis.edu/expert/PCyHpsMf",
-            "works": [
-              "Spatial coherence of extreme precipitation events in the Northwestern United States"
-            ]
-          }
-        ]
+        "class": "amenity"
       },
       "geometry": {
         "type": "Polygon",
@@ -47728,16 +45120,7 @@
         "display_name": "Tanzania",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Lanzaro, Gregory",
-            "url": "https://experts.ucdavis.edu/expert/QSj1WEWy",
-            "works": [
-              "Emergence of behavioural avoidance strategies of malaria vectors in areas of high LLIN coverage in Tanzania"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -48158,16 +45541,7 @@
         "display_name": "España",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Drake, Christiana M",
-            "url": "https://experts.ucdavis.edu/expert/KOHZSK3u",
-            "works": [
-              "Obesity Risk Assessment Tool for Low-Income Spanish Speaking Immigrant Parents with Young Children: Validity with BMI and Biomarkers of Obesity."
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -48598,16 +45972,7 @@
         "display_name": "Sumatra, Sumatera, Indonesia",
         "type": "island",
         "osm_type": "relation",
-        "class": "place",
-        "researchers": [
-          {
-            "name": "Zwingenberger, Allison L",
-            "url": "https://experts.ucdavis.edu/expert/XJKdDgl6",
-            "works": [
-              "Unusual splenic B-cell lymphoma in two related Sumatran tigers (Panthera tigris sumatrae)."
-            ]
-          }
-        ]
+        "class": "place"
       },
       "geometry": {
         "type": "Polygon",
@@ -49028,16 +46393,7 @@
         "display_name": "ኢትዮጵያ",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Potter, Daniel",
-            "url": "https://experts.ucdavis.edu/expert/pwbVJo38",
-            "works": [
-              "Genetic diversity of Ethiopian cocoyam (Xanthosoma sagittifolium (L.) Schott) accessions as revealed by morphological traits and SSR markers"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -49458,16 +46814,7 @@
         "display_name": "Alberta, Canada",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Albertson, Timothy E",
-            "url": "https://experts.ucdavis.edu/expert/0BgS2twt",
-            "works": [
-              "Identification of a Pig Strain With Maximal Islet Mass 11JRTL is supported by the Alberta Heritage Foundation for Medical Research."
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -49886,16 +47233,7 @@
       "properties": {
         "name": "Us Gulf Coast, Us",
         "display_name": "Gulf Coast, Collier County, Florida, 34110, United States",
-        "type": "residential",
-        "researchers": [
-          {
-            "name": "Barbato, Michele",
-            "url": "https://experts.ucdavis.edu/expert/kkop75cT",
-            "works": [
-              "Climate change effects on the performance of single-family residential buildings in the US Gulf Coast"
-            ]
-          }
-        ]
+        "type": "residential"
       },
       "geometry": {
         "type": "Point",
@@ -49912,23 +47250,7 @@
         "display_name": "Texas, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Pruitt, Lisa R",
-            "url": "https://experts.ucdavis.edu/expert/cmHKCIvv",
-            "works": [
-              "Commentary on Boyles v. Kerr (Texas 1993) for Feminist Judgments: Rewritten Torts Opinions"
-            ]
-          },
-          {
-            "name": "Frank, Matthias",
-            "url": "https://experts.ucdavis.edu/expert/aRLAAVir",
-            "works": [
-              "Cell fusing agent virus (Flavivirus) infection in Aedes aegypti in Texas: seasonality, comparison by trap type, and individual viral loads"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -50349,16 +47671,7 @@
         "display_name": "China, Jefferson County, Texas, 77613, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Tu, Shin-Ping",
-            "url": "https://experts.ucdavis.edu/expert/GXeltcDg",
-            "works": [
-              "Participation in colorectal cancer screening among Chinese Americans."
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -50665,16 +47978,7 @@
       "properties": {
         "name": "Cambodia, United States",
         "display_name": "Cambodia, Nicholas County, West Virginia, 26678, United States",
-        "type": "cliff",
-        "researchers": [
-          {
-            "name": "Tu, Shin-Ping",
-            "url": "https://experts.ucdavis.edu/expert/GXeltcDg",
-            "works": [
-              "Cervical Cancer Control in a Cambodian American Population."
-            ]
-          }
-        ]
+        "type": "cliff"
       },
       "geometry": {
         "type": "Point",
@@ -50691,16 +47995,7 @@
         "display_name": "Nicaragua",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "James, Michelle",
-            "url": "https://experts.ucdavis.edu/expert/dWxIQ7xg",
-            "works": [
-              "Assessment of Health Needs in Children with Congenital Upper Limb Differences in Nicaragua: Community Case Study"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -51121,16 +48416,7 @@
         "display_name": "대한민국",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Thorne, James H",
-            "url": "https://experts.ucdavis.edu/expert/2RUg4Cii",
-            "works": [
-              "Integrating the Rabinowitz rarity framework with a National Plant Inventory in South Korea"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -51720,23 +49006,7 @@
         "display_name": "Indonesia",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Hampel, Daniela",
-            "url": "https://experts.ucdavis.edu/expert/b7TxuJHP",
-            "works": [
-              "Chicken liver and eggshell crackers as a safe and affordable animal source food for overcoming micronutrient deficits during pregnancy and lactation in Indonesia: a double-blind, randomised placebo-controlled trial (SISTIK Growth Study)"
-            ]
-          },
-          {
-            "name": "Hagerman, Randi J",
-            "url": "https://experts.ucdavis.edu/expert/U8wW2G0y",
-            "works": [
-              "The aberrant behavior profile in Indonesian individuals with fragile X syndrome with limited genetic services"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -52193,16 +49463,7 @@
       "properties": {
         "name": "West Africa",
         "display_name": "West Africa, Rue d'Auxonne, Faubourg Saint-Pierre, Université, Dijon, Côte-d'Or, Bourgogne-Franche-Comté, France métropolitaine, 21000, France",
-        "type": "fast_food",
-        "researchers": [
-          {
-            "name": "Adejunmobi, Moradewun",
-            "url": "https://experts.ucdavis.edu/expert/7YwK5nUb",
-            "works": [
-              "Reading Video Film and Narrative Commerce in West Africa"
-            ]
-          }
-        ]
+        "type": "fast_food"
       },
       "geometry": {
         "type": "Point",
@@ -52219,16 +49480,7 @@
         "display_name": "Town of Oxford, Chenango County, New York, 13830, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Monroe, John G",
-            "url": "https://experts.ucdavis.edu/expert/hQCjhPbI",
-            "works": [
-              "Evolutionary Genetics: Concepts, Analysis, and Practice . By Glenn-Peter SÃ¦tre and Mark Ravinet. Oxford and New York: Oxford University Press. $95.00 (hardcover); $49.95 (paper). xvi + 310 p.; ill.; index and species index. ISBN: 978-0-19-883091-7 (hc); 978-0-19-883092-4 (pb). 2019."
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -52483,16 +49735,7 @@
       "properties": {
         "name": "Sacramento, California San Joaquin, California California",
         "display_name": "South Sacramento Street, Stockton, San Joaquin County, California, 95206, United States",
-        "type": "residential",
-        "researchers": [
-          {
-            "name": "Ding, Zhi",
-            "url": "https://experts.ucdavis.edu/expert/3UP4zYNP",
-            "works": [
-              "Novel Salinity Modeling Using Deep Learning for the Sacramentoâ€“San Joaquin Delta of California"
-            ]
-          }
-        ]
+        "type": "residential"
       },
       "geometry": {
         "type": "Point",
@@ -52509,23 +49752,7 @@
         "display_name": "Nova Scotia, Canada",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Li, Chai-Fei",
-            "url": "https://experts.ucdavis.edu/expert/FxrM2v2t",
-            "works": [
-              "FGF4L2 retrogene copy number is associated with intervertebral disc calcification and vertebral geometry in Nova Scotia Duck Tolling Retrievers."
-            ]
-          },
-          {
-            "name": "Bannasch, Danika",
-            "url": "https://experts.ucdavis.edu/expert/LRKh7uwe",
-            "works": [
-              "FGF4L2 retrogene copy number is associated with intervertebral disc calcification and vertebral geometry in Nova Scotia Duck Tolling Retrievers."
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -53605,16 +50832,7 @@
         "display_name": "Maryland, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Swett, Cassandra",
-            "url": "https://experts.ucdavis.edu/expert/wiZuzsz5",
-            "works": [
-              "First Report of Pythium aphanidermatum Causing Root Rot and Decline of Poinsettia in Maryland"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -54035,16 +51253,7 @@
         "display_name": "ישראל",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Beaufrere, Hugues H",
-            "url": "https://experts.ucdavis.edu/expert/4gQyiBPO",
-            "works": [
-              "SELECTED HEMATOLOGIC AND PLASMA BIOCHEMISTRY ANALYSIS OF FERRUGINOUS DUCKS (AYTHYA NYROCA) IN ISRAEL"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -54463,16 +51672,7 @@
       "properties": {
         "name": "Suisun Marsh",
         "display_name": "Suisun Marsh Overlook, Kildeer Road, Solano County, California, 94585, United States",
-        "type": "attraction",
-        "researchers": [
-          {
-            "name": "Durand, John R",
-            "url": "https://experts.ucdavis.edu/expert/d2J4pWKu",
-            "works": [
-              "Trends in fish and invertebrate populations of Suisun Marsh January 2018 - December 2018."
-            ]
-          }
-        ]
+        "type": "attraction"
       },
       "geometry": {
         "type": "Point",
@@ -54489,16 +51689,7 @@
         "display_name": "Austin, Travis County, Texas, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Handy, Susan L",
-            "url": "https://experts.ucdavis.edu/expert/fWPq7W8Z",
-            "works": [
-              "Urban form and pedestrian choices: study of Austin neighborhoods"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -55391,16 +52582,7 @@
         "display_name": "KwaZulu-Natal, South Africa",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Carter, Michael R",
-            "url": "https://experts.ucdavis.edu/expert/AUnUZFRr",
-            "works": [
-              "The KwaZulu-Natal Income Dynamics Study (KIDS) third wave: methods, first findings and an agenda for future research"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -55821,16 +53003,7 @@
         "display_name": "Türkiye",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Heymann, Hildegarde",
-            "url": "https://experts.ucdavis.edu/expert/VG9T2zFI",
-            "works": [
-              "EFFECTS OF ADDING TURKEY SKIN AND SODIUM SALTS TO OTHER BINDING ADJUNCTS USED FOR RESTRUCTURED TURKEY PATTIES1"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -56249,16 +53422,7 @@
       "properties": {
         "name": "Lima, Peru",
         "display_name": "Lima, Lima Metropolitana, Lima, 15083, Perú",
-        "type": "city",
-        "researchers": [
-          {
-            "name": "Stephensen, Charles B",
-            "url": "https://experts.ucdavis.edu/expert/rKtOtzu4",
-            "works": [
-              "A randomized, placebo-controlled, double-blind clinical trial of high-dose vitamin A supplements in children hospitalized with pneumonia in Lima, Peru."
-            ]
-          }
-        ]
+        "type": "city"
       },
       "geometry": {
         "type": "Point",
@@ -56275,16 +53439,7 @@
         "display_name": "San Francisco, California, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Frank, Matthias",
-            "url": "https://experts.ucdavis.edu/expert/aRLAAVir",
-            "works": [
-              "Characterization of ambient aerosols at the San Francisco International Airport using bioaerosol mass spectrometry"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -56675,16 +53830,7 @@
       "properties": {
         "name": "Middle Mississippi River",
         "display_name": "Middle Mississippi River Wetland Field Station, Gerard Road, East Cape Girardeau, Alexander County, Illinois, 62957, United States",
-        "type": "research",
-        "researchers": [
-          {
-            "name": "Pinter, Nicholas",
-            "url": "https://experts.ucdavis.edu/expert/aZ4WJBbw",
-            "works": [
-              "Retro-modeling the Middle Mississippi River"
-            ]
-          }
-        ]
+        "type": "research"
       },
       "geometry": {
         "type": "Point",
@@ -56699,16 +53845,7 @@
       "properties": {
         "name": "Mississippi River",
         "display_name": "Mississippi River, United States",
-        "type": "river",
-        "researchers": [
-          {
-            "name": "Pinter, Nicholas",
-            "url": "https://experts.ucdavis.edu/expert/aZ4WJBbw",
-            "works": [
-              "Flood trends and river engineering on the Mississippi River system"
-            ]
-          }
-        ]
+        "type": "river"
       },
       "geometry": {
         "type": "Point",
@@ -56725,16 +53862,7 @@
         "display_name": "Antarctica",
         "type": "continent",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Pavankumar, Theetha L",
-            "url": "https://experts.ucdavis.edu/expert/1515wzBb",
-            "works": [
-              "All Three Subunits of RecBCD Enzyme Are Essential for DNA Repair and Low-Temperature Growth in the Antarctic Pseudomonas syringae Lz4W"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -57119,16 +54247,7 @@
         "display_name": "조선/한국, 대한민국",
         "type": "historic",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Lee, Jee-Yon",
-            "url": "https://experts.ucdavis.edu/expert/n3wk8TNm",
-            "works": [
-              "Association between serum osteocalcin and insulin resistance in postmenopausal, but not premenopausal, women in Korea"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -57549,16 +54668,7 @@
         "display_name": "سورية, سوريا",
         "type": "claimed_administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Keel, Michael K",
-            "url": "https://experts.ucdavis.edu/expert/6xIYSVf0",
-            "works": [
-              "Severe Acute Respiratory Syndrome Coronavirus 2 Vasculopathy in a Syrian Golden Hamster Model"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -57987,16 +55097,7 @@
       "properties": {
         "name": "Arabia",
         "display_name": "Arabia, Parke County, Indiana, 47860, United States",
-        "type": "hamlet",
-        "researchers": [
-          {
-            "name": "Dini, Pouya",
-            "url": "https://experts.ucdavis.edu/expert/GWJ6zY4o",
-            "works": [
-              "Unilateral testicular enlargement in a 5-year-old Arabian stallion."
-            ]
-          }
-        ]
+        "type": "hamlet"
       },
       "geometry": {
         "type": "Point",
@@ -58013,16 +55114,7 @@
         "display_name": "Vancouver Island, British Columbia, Canada",
         "type": "island",
         "osm_type": "relation",
-        "class": "place",
-        "researchers": [
-          {
-            "name": "Beaufrere, Hugues H",
-            "url": "https://experts.ucdavis.edu/expert/4gQyiBPO",
-            "works": [
-              "Retrospective analysis of hibernation parameters and breeding success in captive Vancouver Island marmots (Marmota vancouverensis): 1997â€“2018"
-            ]
-          }
-        ]
+        "class": "place"
       },
       "geometry": {
         "type": "Polygon",
@@ -58443,16 +55535,7 @@
         "display_name": "Puget Sound, King County, Washington, United States",
         "type": "strait",
         "osm_type": "relation",
-        "class": "natural",
-        "researchers": [
-          {
-            "name": "Gilardi, Kirsten V",
-            "url": "https://experts.ucdavis.edu/expert/6oKPe1F5",
-            "works": [
-              "Marine species mortality in derelict fishing nets in Puget Sound, WA and the cost/benefits of derelict net removal"
-            ]
-          }
-        ]
+        "class": "natural"
       },
       "geometry": {
         "type": "Polygon",
@@ -58895,23 +55978,7 @@
         "display_name": "Virginia, United States",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Keel, Michael K",
-            "url": "https://experts.ucdavis.edu/expert/6xIYSVf0",
-            "works": [
-              "DEBILITATION AND MORTALITY ASSOCIATED WITH BESNOITIOSIS IN FOUR VIRGINIA OPOSSUMS (DIDELPHIS VIRGINIANA)"
-            ]
-          },
-          {
-            "name": "Baldwin, Roger A",
-            "url": "https://experts.ucdavis.edu/expert/fGozsANo",
-            "works": [
-              "DIFFERENTIAL CAPTURE SUCCESS AND THE INTERSPECIFIC ASSOCIATION OF THE VIRGINIA OPOSSUM (DIDELPHIS VIRGINIANA) AND RACCOON (PROCYON LOTOR)"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -59330,16 +56397,7 @@
       "properties": {
         "name": "Dixie Valley",
         "display_name": "Dixie Valley, Churchill County, Nevada, United States",
-        "type": "locality",
-        "researchers": [
-          {
-            "name": "Todd, Brian D",
-            "url": "https://experts.ucdavis.edu/expert/uJzyLckx",
-            "works": [
-              "KEEPING THE HEAT ON: WEIGHTED SURVEILLANCE FOR CHYTRID FUNGUS (BATRACHOCHYTRIUM DENDROBATIDIS) IN DIXIE VALLEY TOADS (ANAXYRUS [= BUFO] WILLIAMSI)"
-            ]
-          }
-        ]
+        "type": "locality"
       },
       "geometry": {
         "type": "Point",
@@ -59354,16 +56412,7 @@
       "properties": {
         "name": "Caucasus",
         "display_name": "Caucasus Mountains, ჭალისოფელი, დუშეთის მუნიციპალიტეტი, მცხეთა-მთიანეთი, საქართველო",
-        "type": "mountain_range",
-        "researchers": [
-          {
-            "name": "Anooshahr, Ali",
-            "url": "https://experts.ucdavis.edu/expert/JnvbQyuk",
-            "works": [
-              "Early Safavid Campaigns in the Caucasus"
-            ]
-          }
-        ]
+        "type": "mountain_range"
       },
       "geometry": {
         "type": "Point",
@@ -59378,16 +56427,7 @@
       "properties": {
         "name": "Southeast Asia",
         "display_name": "Tsinghua Southeast Asia Center (Tsinghua SEA), Jalan Tukad Guming, Serangan, Denpasar Selatan, Denpasar, Bali, Nusa Tenggara, 80223, Indonesia",
-        "type": "research_institute",
-        "researchers": [
-          {
-            "name": "Chen, Moon S",
-            "url": "https://experts.ucdavis.edu/expert/TA2gvwdi",
-            "works": [
-              "Cotinine levels in Southeast Asian smokers"
-            ]
-          }
-        ]
+        "type": "research_institute"
       },
       "geometry": {
         "type": "Point",
@@ -59404,16 +56444,7 @@
         "display_name": "Ouaka, Ködörösêse tî Bêafrîka / République centrafricaine",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Henn, Brenna M",
-            "url": "https://experts.ucdavis.edu/expert/hUV6lk93",
-            "works": [
-              "Understanding the genetic relationships between height and skeletal endophenotypes in UK Biobank South Asian participants"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -59790,16 +56821,7 @@
         "display_name": "Trondheim, Trøndelag, Norge",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Thy, Peter",
-            "url": "https://experts.ucdavis.edu/expert/Gft3pPNz",
-            "works": [
-              "Primary igneous load-cast deformation structures in the Fongen-Hyllingen layered basic intrusion, Trondheim Region, Norway"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -60196,16 +57218,7 @@
         "display_name": "Zambia",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Heard, Jason",
-            "url": "https://experts.ucdavis.edu/expert/KjgApZno",
-            "works": [
-              "Burn Injuries in Eastern Zambia: Impact of Multidisciplinary Teaching Teams"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -60626,16 +57639,7 @@
         "display_name": "Nigeria",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Morris, Elizabeth A",
-            "url": "https://experts.ucdavis.edu/expert/TOoRiDUO",
-            "works": [
-              "Developing a Technology Acceptability and Usage Survey (TAUS) for mHealth Intervention Planning and Evaluation in Nigeria: Pilot Study."
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -61056,16 +58060,7 @@
         "display_name": "Roma, Roma Capitale, Lazio, Italia",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Henricson, Erik K",
-            "url": "https://experts.ucdavis.edu/expert/VEQZ4ke5",
-            "works": [
-              "Patient and parent oriented tools to assess health-related quality of life, activity of daily living and caregiver burden in SMA. Rome, 13 July 2019"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -61510,16 +58505,7 @@
       "properties": {
         "name": "Elwha River",
         "display_name": "Elwha River, Clallam County, Washington, United States",
-        "type": "river",
-        "researchers": [
-          {
-            "name": "Ballard, Heidi L",
-            "url": "https://experts.ucdavis.edu/expert/VCNFgw53",
-            "works": [
-              "Lessons learned from community and citizen science monitoring on the Elwha River restoration project"
-            ]
-          }
-        ]
+        "type": "river"
       },
       "geometry": {
         "type": "Point",
@@ -61534,16 +58520,7 @@
       "properties": {
         "name": "Matamoros, Mexico Us",
         "display_name": "Puente Internacional Brownsville-Matamoros, Mexico Boulevard, Brownsville, Cameron County, Texas, 78520, United States",
-        "type": "yes",
-        "researchers": [
-          {
-            "name": "Thompson, George R",
-            "url": "https://experts.ucdavis.edu/expert/QkaaByN6",
-            "works": [
-              "Update on Outbreak of Fungal Meningitis Among US Residents Who Received Epidural Anesthesia at Two Clinics in Matamoros, Mexico"
-            ]
-          }
-        ]
+        "type": "yes"
       },
       "geometry": {
         "type": "Point",
@@ -61560,16 +58537,7 @@
         "display_name": "မြန်မာ",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Gilardi, Kirsten V",
-            "url": "https://experts.ucdavis.edu/expert/6oKPe1F5",
-            "works": [
-              "Confirmation of Skywalker Hoolock Gibbon (Hoolock tianxing) in Myanmar Extends Known Geographic Range of an Endangered Primate"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -61990,16 +58958,7 @@
         "display_name": "Northern Region, Ghana",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Adams, Katherine P",
-            "url": "https://experts.ucdavis.edu/expert/MlFlGwRj",
-            "works": [
-              "Consumption of Discretionary Salt and Salt from Bouillon among Households, Women, and Young Children in Northern Region, Ghana: A Mixed-Methods Study with the Condiment Micronutrient Innovation Trial (CoMIT) Project."
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -62420,16 +59379,7 @@
         "display_name": "Costa Rica",
         "type": "administrative",
         "osm_type": "relation",
-        "class": "boundary",
-        "researchers": [
-          {
-            "name": "Karp, Daniel S",
-            "url": "https://experts.ucdavis.edu/expert/chafMLtC",
-            "works": [
-              "Effects of agriculture and nature reserves on avian behavior in northwestern Costa Rica"
-            ]
-          }
-        ]
+        "class": "boundary"
       },
       "geometry": {
         "type": "Polygon",
@@ -62922,16 +59872,7 @@
       "properties": {
         "name": "Potchefstroom, South Africa",
         "display_name": "Potchefstroom, Tlokwe Local Municipality, Dr Kenneth Kaunda District Municipality, North West, 2520, South Africa",
-        "type": "city",
-        "researchers": [
-          {
-            "name": "Trouillas, Florent P",
-            "url": "https://experts.ucdavis.edu/expert/vFcQ9RGM",
-            "works": [
-              "Genome sequence of <i>Colletotrichum karsti</i> isolated from rose leaves exhibiting anthracnose symptoms in Potchefstroom, South Africa."
-            ]
-          }
-        ]
+        "type": "city"
       },
       "geometry": {
         "type": "Point",
