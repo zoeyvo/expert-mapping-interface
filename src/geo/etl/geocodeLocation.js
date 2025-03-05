@@ -18,112 +18,158 @@ const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
 const { normalizeLocationName } = require('./utils');
+require('dotenv').config();
 
-const LOCATIONS_FILE = path.join(__dirname, '../data', 'json', 'location_based_profiles.json');
+const MAPBOX_TOKEN = "pk.eyJ1IjoiengzIiwiYSI6ImNtN3ZoeHBvcTBjeDIybG9qZXNpdDlkZW8ifQ.7Vg3DQ4n-NnslaO2srFKqQ";
 const CACHE_FILE = path.join(__dirname, '../data', 'json', 'location_coordinates.json');
-const DELAY_MS = 100; // 0.5 second delay between requests
+const DELAY_MS = 1000; // 1 request per second as per Nominatim's usage policy
+const MAX_POINTS = 100; // Maximum points to keep in a polygon
+
+// Get locations file from command line argument or use default
+const LOCATIONS_FILE = process.argv[2] || path.join(__dirname, '../data', 'json', 'location_based_profiles.json');
+
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+function simplifyPolygon(coordinates, maxPoints) {
+    if (!Array.isArray(coordinates) || coordinates.length === 0) return coordinates;
+
+    // Handle MultiPolygon
+    if (Array.isArray(coordinates[0][0][0])) {
+        return coordinates.map(poly => simplifyPolygon(poly, maxPoints));
+    }
+
+    // Handle single Polygon
+    const totalPoints = coordinates[0].length;
+    if (totalPoints <= maxPoints) return coordinates;
+
+    // Calculate step size to reduce points
+    const step = Math.ceil(totalPoints / maxPoints);
+    
+    return coordinates.map(ring => {
+        if (ring.length <= maxPoints) return ring;
+        return ring.filter((_, index) => index % step === 0 || index === ring.length - 1);
+    });
+}
 
 async function geocodeLocation(location) {
     try {
-        const response = await axios.get('https://nominatim.openstreetmap.org/search', {
+        const response = await axios.get(`https://nominatim.openstreetmap.org/search`, {
             params: {
+                q: location,
                 format: 'json',
-                limit: 1,
-                q: location
+                polygon_geojson: 1,
+                addressdetails: 1,
+                limit: 1
             },
             headers: {
-                'User-Agent': 'GeoDataVisualizer/1.0 (https://github.com/zoeyvo/geo-data-visualizer)',
-                'Accept-Language': 'en-US,en;q=0.5'
+                'User-Agent': 'Research_Profile_Generator'
             }
         });
 
-        if (response.data && response.data[0]) {
-            return {
-                lat: parseFloat(response.data[0].lat),
-                lon: parseFloat(response.data[0].lon)
-            };
+        if (!response.data?.length) {
+            console.log(`❌ No results found for ${location}`);
+            return null;
         }
-        return null;
+
+        const result = response.data[0];
+        let geometry;
+
+        // Check if we have valid polygon data
+        if (result.geojson && 
+            (result.geojson.type === 'Polygon' || result.geojson.type === 'MultiPolygon') &&
+            result.geojson.coordinates?.length > 0) {
+            
+            geometry = {
+                type: result.geojson.type,
+                coordinates: simplifyPolygon(result.geojson.coordinates, MAX_POINTS)
+            };
+            console.log(`ℹ️ Using simplified polygon for ${location}`);
+        } else {
+            // Fallback to point geometry
+            geometry = {
+                type: "Point",
+                coordinates: [parseFloat(result.lon), parseFloat(result.lat)]
+            };
+            console.log(`ℹ️ Using point geometry for ${location}`);
+        }
+        
+        return {
+            type: "Feature",
+            properties: {
+                name: location,
+                display_name: result.display_name,
+                type: result.type
+            },
+            geometry: geometry
+        };
+
     } catch (error) {
         console.error(`Error geocoding ${location}:`, error.message);
         return null;
     }
 }
 
-async function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 async function createLocationCoordinates() {
+    if (!MAPBOX_TOKEN) {
+        console.error('❌ MAPBOX_TOKEN environment variable is required');
+        process.exit(1);
+    }
+
     const startTime = Date.now();
     let successCount = 0;
     let failureCount = 0;
+    let geoData = { 
+        type: "FeatureCollection", 
+        features: [],
+        licence: "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright"
+    };
 
-    let normalizedCoordinates = {};
-    if (fs.existsSync(CACHE_FILE)) {
-        const rawCache = JSON.parse(fs.readFileSync(CACHE_FILE, 'utf8'));
-        for (const [loc, coords] of Object.entries(rawCache)) {
-            const normalizedLoc = normalizeLocationName(loc);
-            normalizedCoordinates[normalizedLoc] = coords;
+    try {
+        if (fs.existsSync(CACHE_FILE)) {
+            geoData = JSON.parse(fs.readFileSync(CACHE_FILE, 'utf8'));
         }
-    }
 
-    const locationsData = JSON.parse(fs.readFileSync(LOCATIONS_FILE, 'utf8'));
-    const uniqueLocations = [...new Set(
-        Object.keys(locationsData).map(normalizeLocationName)
-    )];
+        const locationsData = JSON.parse(fs.readFileSync(LOCATIONS_FILE, 'utf8'));
+        const uniqueLocations = [...new Set(Object.keys(locationsData).map(normalizeLocationName))];
+        
+        console.log(`🌍 Found ${uniqueLocations.length} unique locations`);
 
-    console.log(`🌍 Found ${uniqueLocations.length} unique locations`);
-
-    const locationsToGeocode = uniqueLocations.filter(loc => !normalizedCoordinates[loc]);
-    console.log(`🔍 Geocoding ${locationsToGeocode.length} new locations...`);
-
-    for (const location of locationsToGeocode) {
-        const coords = await geocodeLocation(location);
-        if (coords) {
-            normalizedCoordinates[location] = [coords.lat, coords.lon];
-            console.log(`✅  Geocoded ${location}: ${coords.lat}, ${coords.lon}`);
-            fs.writeFileSync(CACHE_FILE, JSON.stringify(normalizedCoordinates, null, 2));
-            successCount++;
-        } else {
-            console.log(`❌  Failed to geocode ${location}`);
-            failureCount++;
+        for (const location of uniqueLocations) {
+            if (!geoData.features.some(f => f.properties.name === location)) {
+                const feature = await geocodeLocation(location);
+                if (feature) {
+                    geoData.features.push(feature);
+                    fs.writeFileSync(CACHE_FILE, JSON.stringify(geoData, null, 2));
+                    console.log(`✅ Geocoded ${location}`);
+                    successCount++;
+                } else {
+                    console.log(`❌ Failed to geocode ${location}`);
+                    failureCount++;
+                }
+                await sleep(DELAY_MS); // Respect rate limit
+            }
         }
-        await sleep(DELAY_MS);
+
+        const endTime = Date.now();
+        const duration = (endTime - startTime) / 1000;
+        console.log('\n📊 Geocoding Statistics:');
+        console.log(`⏱️  Total time: ${Math.floor(duration / 60)}m ${Math.floor(duration % 60)}s`);
+        console.log(`✅ Successfully geocoded: ${successCount} locations`);
+        console.log(`❌ Failed to geocode: ${failureCount} locations`);
+
+        return geoData;
+    } catch (error) {
+        console.error('💥 Error:', error.message);
+        process.exit(1);
     }
-
-    const endTime = Date.now();
-    const duration = (endTime - startTime) / 1000;
-    const minutes = Math.floor(duration / 60);
-    const seconds = Math.floor(duration % 60);
-    const timeFormatted = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-
-    console.log('\n📊  Geocoding Statistics:');
-    console.log(`⏱️   Total time: ${timeFormatted}`);
-    console.log(`✅  Successfully geocoded: ${successCount} locations`);
-    console.log(`❌  Failed to geocode: ${failureCount} locations`);
-    if (successCount > 0) {
-        const avgDuration = duration / successCount;
-        const avgMinutes = Math.floor(avgDuration / 60);
-        const avgSeconds = Math.floor(avgDuration % 60);
-        const avgFormatted = `${avgMinutes.toString().padStart(2, '0')}:${avgSeconds.toString().padStart(2, '0')}`;
-        console.log(`⏱️ Average time per geocode: ${avgFormatted}`);
-    }
-
-    return normalizedCoordinates;
 }
 
-// Run if called directly
+// Run if called directly (not imported)
 if (require.main === module) {
-    createLocationCoordinates()
-        .then(() => {
-            console.log('✨  Location coordinates updated');
-            process.exit(0);
-        })
-        .catch(error => {
-            console.error('💥  Error:', error);
-            process.exit(1);
-        });
+    createLocationCoordinates().catch(error => {
+        console.error('💥 Fatal error:', error);
+        process.exit(1);
+    });
 }
 
-module.exports = { createLocationCoordinates };
+module.exports = { createLocationCoordinates, geocodeLocation };

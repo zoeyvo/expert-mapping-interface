@@ -24,19 +24,13 @@ async function loadGeoJson(geoJsonPath) {
   const client = await pool.connect();
   
   try {
-    const geoJson = JSON.parse(fs.readFileSync(geoJsonPath, 'utf-8'));
-    console.log(`📖 Loading ${geoJson.features.length} features...`);
-    
     await client.query('BEGIN');
-
+    
+    const geoJson = JSON.parse(fs.readFileSync(geoJsonPath, 'utf8'));
+    
     for (const feature of geoJson.features) {
       const { geometry, properties } = feature;
       
-      // Extract researcher and location for the WHERE clause
-      const researcher = properties.researcher;
-      const location = properties.location;
-      
-      // First try to update
       const updateResult = await client.query(`
         UPDATE research_locations 
         SET 
@@ -50,11 +44,10 @@ async function loadGeoJson(geoJsonPath) {
       `, [
         JSON.stringify(geometry),
         JSON.stringify(properties),
-        researcher,
-        location
+        properties.researcher,
+        properties.location
       ]);
 
-      // If no row was updated, insert a new one
       if (updateResult.rowCount === 0) {
         await client.query(`
           INSERT INTO research_locations (

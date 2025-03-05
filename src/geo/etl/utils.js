@@ -33,7 +33,18 @@ function normalizeResearcherName(name) {
     .join(', ');
 }
 
+function storeComplexGeometry(geometry) {
+    if (geometry.type === 'Point') return geometry;
+    
+    return {
+        type: geometry.type,
+        coordinates: geometry.coordinates,
+        bbox: turf.bbox(turf.feature(geometry))
+    };
+}
+
 module.exports = {
   normalizeLocationName,
-  normalizeResearcherName
+  normalizeResearcherName,
+  storeComplexGeometry
 }; 

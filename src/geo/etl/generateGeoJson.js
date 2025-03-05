@@ -19,6 +19,7 @@ const fs = require("fs");
 const path = require("path");
 const csv = require("csv-parser");
 const { normalizeLocationName, normalizeResearcherName } = require('./utils');
+const turf = require('@turf/turf');
 
 // Define file paths
 const profilesPath = path.join(__dirname, '../data', "json", "location_based_profiles.json");
@@ -57,11 +58,10 @@ function generateGeoJSON() {
   let workCount = 0;
 
   const locationProfiles = JSON.parse(fs.readFileSync(profilesPath, "utf-8"));
-  const locationCoordinates = JSON.parse(fs.readFileSync(coordsPath, "utf-8"));
+  const locationGeoData = JSON.parse(fs.readFileSync(coordsPath, "utf-8"));
   
   const seenErrorMessages = new Set();
   
-  // Initialize GeoJSON structure
   const geoJson = {
     type: "FeatureCollection",
     features: []
@@ -69,10 +69,12 @@ function generateGeoJSON() {
 
   for (const [location, researchers] of Object.entries(locationProfiles)) {
     const normalizedLocation = normalizeLocationName(location);
-    const coordinates = locationCoordinates[normalizedLocation];
+    const locationFeature = locationGeoData.features.find(
+      f => f.properties.name === normalizedLocation
+    );
     
-    if (!coordinates) {
-      const errorMsg = `No coordinates found for: ${normalizedLocation}`;
+    if (!locationFeature) {
+      const errorMsg = `No geodata found for: ${normalizedLocation}`;
       if (!seenErrorMessages.has(errorMsg)) {
         console.warn(`⚠️ ${errorMsg}`);
         seenErrorMessages.add(errorMsg);
@@ -86,55 +88,23 @@ function generateGeoJSON() {
       const lastName = normalizedResearcher.split(',')[0].toLowerCase();
       const url = researcherUrls[lastName] || null;
 
-      if (!url) {
-        const errorMsg = `No URL found for: ${normalizedResearcher}`;
-        if (!seenErrorMessages.has(errorMsg)) {
-          console.warn(`❌  ${errorMsg}`);
-          seenErrorMessages.add(errorMsg);
-        }
-      }
-
       geoJson.features.push({
         type: "Feature",
-        geometry: {
-          type: "Point",
-          coordinates: [coordinates[1], coordinates[0]]
-        },
+        geometry: locationFeature.geometry,
         properties: {
           researcher: normalizedResearcher,
           location: normalizedLocation,
           works: data.works,
-          url: url
+          url: url,
+          locationType: locationFeature.properties.locationType,
+          centroid: locationFeature.properties.centroid,
+          hasPolygon: locationFeature.properties.hasPolygon
         }
       });
       researcherCount++;
       workCount += data.works.length;
     }
   }
-
-  // Create public/data directory if it doesn't exist
-  const publicDataDir = path.join(process.cwd(), 'public', 'data');
-  if (!fs.existsSync(publicDataDir)) {
-    fs.mkdirSync(publicDataDir, { recursive: true });
-  }
-
-  // Write to both locations (public and src)
-  const publicPath = path.join(publicDataDir, 'research_profiles.geojson');
-  const srcPath = path.join(__dirname, '../data/json/research_profiles.geojson');
-
-  // Write the files
-  fs.writeFileSync(publicPath, JSON.stringify(geoJson, null, 2), 'utf-8');
-  fs.writeFileSync(srcPath, JSON.stringify(geoJson, null, 2), 'utf-8');
-
-  const endTime = Date.now();
-  console.log(`✨ Generated GeoJSON with:
-    - ${locationCount} locations
-    - ${researcherCount} researchers
-    - ${workCount} works
-    Files written to:
-    - ${publicPath}
-    - ${srcPath}
-    Time taken: ${(endTime - startTime) / 1000}s`);
 
   return geoJson;
 }
