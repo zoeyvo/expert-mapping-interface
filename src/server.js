@@ -40,9 +40,13 @@ redisClient.on('error', (err) => {
   console.error('❌ Redis connection error:', err);
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> dbe324e (Establishing Redis cache [WIP])
+=======
+
+>>>>>>> 84c4bd0 (Created rawCache.js, parsedCache.js, and data directory)
 redisClient.on('ready', () => {
   console.log('🔄 Redis client is ready');
 });
@@ -54,10 +58,14 @@ redisClient.on('end', () => {
 // Connect to Redis
 redisClient.connect().then(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   // Test Redis connection on start up
 =======
 // Test Redis connection on start up
 >>>>>>> dbe324e (Establishing Redis cache [WIP])
+=======
+  // Test Redis connection on start up
+>>>>>>> 84c4bd0 (Created rawCache.js, parsedCache.js, and data directory)
   redisClient.ping().then((res) => {
     console.log('🖲️ Redis connected successfully');
   }).catch((err) => {
@@ -79,6 +87,7 @@ redisClient.connect().then(() => {
 
   app.use(cors());
   app.use(express.json());
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 // Connection tracking middleware
@@ -105,11 +114,17 @@ app.get('/api/research-locations', async (req, res) => {
   const client = await pool.connect();
   console.log('✅ Database connection established');
 =======
+=======
+
+>>>>>>> 84c4bd0 (Created rawCache.js, parsedCache.js, and data directory)
   // GET endpoint to fetch all research locations
   app.get('/api/research-locations', async (req, res) => {
     console.log('📍 Received request for research locations');
     const client = await pool.connect();
+<<<<<<< HEAD
 >>>>>>> 26a2542 (Created rawCache.js, parsedCache.js, and data directory)
+=======
+>>>>>>> 84c4bd0 (Created rawCache.js, parsedCache.js, and data directory)
   
   try {
     // Get total count first
@@ -281,6 +296,7 @@ app.get('/api/researchers', async (req, res) => {
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // GET endpoint to fetch researcher details by name
 app.get('/api/researchers/:name', async (req, res) => {
   const { name } = req.params;
@@ -406,19 +422,46 @@ app.get('/api/redis/cache', (req, res) => {
       //   return res.json({ message: 'GeoJSON data cached successfully' });
       // });
     }
+=======
+  // GET endpoint to fetch data from Redis cache for Map.js
+  app.get('/api/redis/geodata', (req, res) => {
+    console.log('🗺️ Map.js requesting for GeoJSON data');
+    const cacheKey = 'parsedGeoData';
+    redisClient.get(cacheKey).then((cachedData) => {
+      if (cachedData) {
+        console.log('📦 Returning cached GeoJSON data');
+        return res.json(JSON.parse(cachedData));
+      }
+      else {
+        console.log('🔍 Cache miss - Fetching data from PostgreSQL');
+        exec('node src/geo/redis/parsedCache.js', (error, stdout, stderr) => {
+          if (error) {
+            console.error('❌ Error fetching data:', error);
+            return res.status(500).json({ error: 'Internal server error', details: error.message });
+          }
+          console.log('✅ Data fetched successfully');
+          return res.json(JSON.parse(stdout));
+>>>>>>> 84c4bd0 (Created rawCache.js, parsedCache.js, and data directory)
         });
-      });
-    }
-  }).catch((err) => {
-    console.error('❌ Redis get error:', err);
-    return res.status(500).json({ error: 'Internal server error', details: err.message });
+      }
+      }).catch((err) => {
+      console.error('❌ Redis get error:', err);
+      return res.status(500).json({ error: 'Internal server error', details: err.message });
+    });
+});
+
+  const server = app.listen(PORT, () => {
+    console.log(`🚀 Server running on http://localhost:${PORT}`);
   });
+<<<<<<< HEAD
   
 });
 const server = app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
 >>>>>>> dbe324e (Establishing Redis cache [WIP])
 });
+=======
+>>>>>>> 84c4bd0 (Created rawCache.js, parsedCache.js, and data directory)
 
 <<<<<<< HEAD
   // GET endpoint to fetch data from Redis cache for Map.js
@@ -448,6 +491,7 @@ const server = app.listen(PORT, () => {
 });
 =======
 
+<<<<<<< HEAD
 // Add graceful shutdown handlers
 process.on('SIGTERM', gracefulShutdown);
 process.on('SIGINT', gracefulShutdown);
@@ -571,6 +615,34 @@ function gracefulShutdown() {
 >>>>>>> 26a2542 (Created rawCache.js, parsedCache.js, and data directory)
 =======
 >>>>>>> dbe324e (Establishing Redis cache [WIP])
+=======
+  // Add graceful shutdown handlers
+  process.on('SIGTERM', gracefulShutdown);
+  process.on('SIGINT', gracefulShutdown);
+
+  function gracefulShutdown() {
+    console.log('Received kill signal, shutting down gracefully');
+    server.close(async () => {
+      try {
+        // Close the database pool & Redis client
+        await pool.end();
+        redisClient.quit();
+        console.log('Database pool has ended');
+        console.log('Closed out remaining connections');
+        process.exit(0);
+      } catch (err) {
+        console.error('Error during shutdown:', err);
+        process.exit(1);
+      }
+    });
+
+    // Force close after 10 seconds
+    setTimeout(() => {
+      console.error('Could not close connections in time, forcefully shutting down');
+      process.exit(1);
+    }, 10000);
+  }
+>>>>>>> 84c4bd0 (Created rawCache.js, parsedCache.js, and data directory)
 }).catch((err) => {
   console.error('❌ Redis connection error:', err);
 });
