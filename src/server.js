@@ -22,12 +22,17 @@ app.use(express.json());
 // Connection tracking middleware
 app.use((req, res, next) => {
   activeConnections++;
-  console.log(`\n📈 Active connections: ${activeConnections}`);
-  console.log(`📥 ${req.method} request to ${req.path}`);
+  // Only log connection info for non-researcher endpoints
+  if (!req.path.includes('/api/researchers')) {
+    console.log(`\n📈 Active connections: ${activeConnections}`);
+    console.log(`📥 ${req.method} request to ${req.path}`);
+  }
   
   res.on('finish', () => {
     activeConnections--;
-    console.log(`\n📉 Request completed. Active connections: ${activeConnections}`);
+    if (!req.path.includes('/api/researchers')) {
+      console.log(`\n📉 Request completed. Active connections: ${activeConnections}`);
+    }
   });
   next();
 });
@@ -75,7 +80,11 @@ app.get('/api/research-locations', async (req, res) => {
 
     const geojson = {
       type: 'FeatureCollection',
-      features: allFeatures
+      features: allFeatures,
+      metadata: {
+        total_locations: totalCount,
+        generated_at: new Date().toISOString()
+      }
     };
 
     console.log(`✅ Query successful - Found ${geojson.features.length} features`);
@@ -92,86 +101,113 @@ app.get('/api/research-locations', async (req, res) => {
 
 // GET endpoint to fetch researcher profiles
 app.get('/api/researchers', async (req, res) => {
-  const { name, location, limit = 50, offset = 0 } = req.query;
-  console.log('\n📥 Received researcher profiles request:');
-  console.log('----------------------------------------');
-  console.log(`Name filter: ${name || 'none'}`);
-  console.log(`Location filter: ${location || 'none'}`);
-  console.log(`Limit: ${limit}`);
-  console.log(`Offset: ${offset}`);
+  const { name, location } = req.query;
+  // Parse limit and offset as integers with defaults
+  let limit = Math.max(1, Math.min(1000, parseInt(req.query.limit) || 50));
+  let offset = Math.max(0, parseInt(req.query.offset) || 0);
   
   const client = await pool.connect();
-  console.log('✅ Database connection established');
   
   try {
-    let query = `
-      WITH researcher_data AS (
-        SELECT 
-          l.id as location_id,
-          l.name as location_name,
-          l.properties->>'type' as location_type,
-          ST_AsGeoJSON(l.geom)::json as location_geometry,
+    // First get total count of unique researchers
+    const countQuery = `
+      SELECT COUNT(DISTINCT r->>'name') as total
+      FROM research_locations_all,
+      jsonb_array_elements(properties->'researchers') r
+      WHERE 1=1
+      ${name ? "AND r->>'name' ILIKE $1" : ""}
+      ${location ? `AND name ILIKE $${name ? 2 : 1}` : ""}
+    `;
+    
+    const countParams = [];
+    if (name) countParams.push(`%${name}%`);
+    if (location) countParams.push(`%${location}%`);
+    
+    const countResult = await client.query(countQuery, countParams);
+    const totalCount = parseInt(countResult.rows[0].total);
+
+    // Adjust offset if needed
+    if (offset >= totalCount) {
+      offset = Math.max(0, totalCount - limit);
+    }
+
+    // Get paginated results with all researcher data
+    const query = `
+      WITH unique_researchers AS (
+        SELECT DISTINCT ON (r->>'name')
           r->>'name' as researcher_name,
           r->>'url' as researcher_url,
           r->'works' as works
+        FROM research_locations_all,
+        jsonb_array_elements(properties->'researchers') r
+        WHERE 1=1
+        ${name ? "AND r->>'name' ILIKE $1" : ""}
+        ${location ? `AND name ILIKE $${name ? 2 : 1}` : ""}
+        ORDER BY r->>'name'
+        LIMIT $${countParams.length + 1} OFFSET $${countParams.length + 2}
+      ),
+      researcher_locations AS (
+        SELECT 
+          r->>'name' as researcher_name,
+          json_build_object(
+            'location_id', l.id,
+            'name', l.name,
+            'type', l.properties->>'type',
+            'geometry', ST_AsGeoJSON(l.geom)::json
+          ) as location_info
         FROM research_locations_all l,
         jsonb_array_elements(l.properties->'researchers') r
-        WHERE 1=1
+        WHERE r->>'name' IN (SELECT researcher_name FROM unique_researchers)
+      )
+      SELECT 
+        ur.researcher_name,
+        ur.researcher_url,
+        jsonb_array_length(ur.works) as work_count,
+        ur.works,
+        COALESCE(json_agg(rl.location_info) FILTER (WHERE rl.location_info IS NOT NULL), '[]') as locations
+      FROM unique_researchers ur
+      LEFT JOIN researcher_locations rl ON ur.researcher_name = rl.researcher_name
+      GROUP BY ur.researcher_name, ur.researcher_url, ur.works
+      ORDER BY ur.researcher_name
     `;
-    const params = [];
-    let paramCount = 1;
 
-    if (name) {
-      query += ` AND r->>'name' ILIKE $${paramCount}`;
-      params.push(`%${name}%`);
-      paramCount++;
-    }
-
-    if (location) {
-      query += ` AND l.name ILIKE $${paramCount}`;
-      params.push(`%${location}%`);
-      paramCount++;
-    }
-
-    query += `) SELECT 
-        researcher_name,
-        researcher_url,
-        jsonb_array_length(works) as work_count,
-        json_agg(
-          json_build_object(
-            'location_id', location_id,
-            'name', location_name,
-            'type', location_type,
-            'geometry', location_geometry
-          )
-        ) as locations
-      FROM researcher_data
-      GROUP BY researcher_name, researcher_url, works
-      ORDER BY researcher_name
-      LIMIT $${paramCount} OFFSET $${paramCount + 1}
-    `;
-    params.push(limit, offset);
-
-    console.log('🔍 Executing query...');
-    const result = await client.query(query, params);
-    console.log(`✅ Found ${result.rows.length} researchers`);
+    const queryParams = [...countParams, limit, offset];
+    const result = await client.query(query, queryParams);
     
-    if (result.rows.length > 0) {
-      console.log('\n📊 Sample results:');
-      console.log(`First researcher: ${result.rows[0].researcher_name}`);
-      console.log(`Last researcher: ${result.rows[result.rows.length - 1].researcher_name}`);
-    }
+    // Calculate batch information
+    const batchNumber = Math.floor(offset / limit) + 1;
+    const totalBatches = Math.ceil(totalCount / limit);
+    console.log(`\nBatch ${batchNumber}/${totalBatches}:`);
+    console.log(`Range: ${offset + 1}-${Math.min(offset + result.rows.length, totalCount)} of ${totalCount}`);
     
-    console.log('📤 Sending response...');
-    res.json({
+    // Calculate and show statistics
+    const totalWorks = result.rows.reduce((sum, r) => sum + r.work_count, 0);
+    const totalLocations = result.rows.reduce((sum, r) => sum + r.locations.length, 0);
+    const avgWorks = (totalWorks / result.rows.length).toFixed(2);
+    const avgLocations = (totalLocations / result.rows.length).toFixed(2);
+    
+    console.log('\nStatistics:');
+    console.log(`Total works: ${totalWorks}`);
+    console.log(`Average works per researcher: ${avgWorks}`);
+    console.log(`Total locations: ${totalLocations}`);
+    console.log(`Average locations per researcher: ${avgLocations}`);
+    
+    const response = {
+      total: totalCount,
       count: result.rows.length,
+      offset: offset,
+      limit: limit,
+      page: Math.floor(offset / limit) + 1,
+      total_pages: Math.ceil(totalCount / limit),
+      has_more: offset + result.rows.length < totalCount,
       researchers: result.rows
-    });
+    };
+    
+    res.json(response);
   } catch (error) {
     console.error('❌ Error fetching researchers:', error);
     res.status(500).json({ error: 'Internal server error', details: error.message });
   } finally {
-    console.log('👋 Releasing database connection');
     client.release();
   }
 });
@@ -190,7 +226,7 @@ app.get('/api/researchers/:name', async (req, res) => {
     console.log('🔍 Looking up researcher details...');
     const result = await client.query(`
       WITH researcher_data AS (
-        SELECT 
+        SELECT DISTINCT ON (r->>'name', l.id)
           l.id as location_id,
           l.name as location_name,
           l.properties->>'type' as location_type,
@@ -223,10 +259,27 @@ app.get('/api/researchers/:name', async (req, res) => {
       res.status(404).json({ error: 'Researcher not found' });
     } else {
       console.log('✅ Researcher found');
-      console.log(`📊 Number of locations: ${result.rows[0].locations.length}`);
-      console.log(`📚 Number of works: ${result.rows[0].works.length}`);
-      console.log('📤 Sending response...');
-      res.json(result.rows[0]);
+      const researcher = result.rows[0];
+      console.log('\n📊 Result Summary:');
+      console.log('------------------');
+      console.log(`Name: ${researcher.researcher_name}`);
+      console.log(`URL: ${researcher.researcher_url}`);
+      console.log(`Number of works: ${researcher.works.length}`);
+      console.log(`Number of locations: ${researcher.locations.length}`);
+      console.log('\nLocations:');
+      researcher.locations.forEach(loc => {
+        console.log(`- ${loc.name} (${loc.type})`);
+      });
+      console.log('\n📚 Works Sample:');
+      researcher.works.slice(0, 3).forEach((work, i) => {
+        console.log(`${i + 1}. ${work.title}`);
+      });
+      if (researcher.works.length > 3) {
+        console.log(`   ... and ${researcher.works.length - 3} more works`);
+      }
+      
+      console.log('\n📤 Sending response...');
+      res.json(researcher);
     }
   } catch (error) {
     console.error('❌ Error fetching researcher details:', error);
