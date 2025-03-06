@@ -1,90 +1,132 @@
 /**
  * loadGeoJson.js
- * 
+ *
  * Purpose:
- * Loads GeoJSON data into PostGIS database with upsert functionality.
- * Updates existing records or inserts new ones based on researcher and location.
- * 
- * Usage:
- * node src/geo/postgis/loadGeoJson.js ./public/data/research_profiles.geojson
- * 
- * Process:
- * 1. Reads GeoJSON file
- * 2. For each feature:
- *    - Attempts to update existing record
- *    - If no record exists, inserts new one
- * 3. Uses transaction to ensure data integrity
+ * Loads GeoJSON features into appropriate PostGIS tables based on geometry type.
+ * Handles both point and polygon geometries, preserving all properties.
  */
 
+const { pool } = require('./config');
 const fs = require('fs');
 const path = require('path');
-const { pool } = require('./config');
 
-async function loadGeoJson(geoJsonPath) {
+// Path to the GeoJSON file
+const GEOJSON_PATH = path.join(__dirname, '../data/json/research_profiles.geojson');
+
+async function loadGeoJsonData() {
   const client = await pool.connect();
+  let pointCount = 0;
+  let polyCount = 0;
   
   try {
+    // Read and parse GeoJSON file
+    console.log('📖 Reading GeoJSON file...');
+    const geojsonData = JSON.parse(fs.readFileSync(GEOJSON_PATH, 'utf-8'));
+    
+    // Start transaction
     await client.query('BEGIN');
-    
-    const geoJson = JSON.parse(fs.readFileSync(geoJsonPath, 'utf8'));
-    
-    for (const feature of geoJson.features) {
-      const { geometry, properties } = feature;
-      
-      const updateResult = await client.query(`
-        UPDATE research_locations 
-        SET 
-          geom = ST_SetSRID(ST_GeomFromGeoJSON($1), 4326),
-          properties = $2::jsonb,
-          updated_at = CURRENT_TIMESTAMP
-        WHERE 
-          properties->>'researcher' = $3 
-          AND properties->>'location' = $4
-        RETURNING id
-      `, [
-        JSON.stringify(geometry),
-        JSON.stringify(properties),
-        properties.researcher,
-        properties.location
-      ]);
 
-      if (updateResult.rowCount === 0) {
+    // Clear existing data
+    await client.query('TRUNCATE research_locations_point, research_locations_poly CASCADE');
+    
+    console.log('🔄 Processing features...');
+    
+    for (const feature of geojsonData.features) {
+      const { geometry, properties } = feature;
+      const { name } = properties;
+      
+      // Determine geometry type and insert into appropriate table
+      if (geometry.type === 'Point') {
         await client.query(`
-          INSERT INTO research_locations (
-            geom,
-            properties
-          ) VALUES (
-            ST_SetSRID(ST_GeomFromGeoJSON($1), 4326),
-            $2::jsonb
-          )
-        `, [
-          JSON.stringify(geometry),
-          JSON.stringify(properties)
-        ]);
+          INSERT INTO research_locations_point (name, geom, properties)
+          VALUES ($1, ST_SetSRID(ST_GeomFromGeoJSON($2), 4326), $3)
+        `, [name, JSON.stringify(geometry), properties]);
+        pointCount++;
+      } 
+      else if (geometry.type === 'Polygon') {
+        await client.query(`
+          INSERT INTO research_locations_poly (name, geom, properties)
+          VALUES ($1, ST_SetSRID(ST_GeomFromGeoJSON($2), 4326), $3)
+        `, [name, JSON.stringify(geometry), properties]);
+        polyCount++;
       }
     }
 
     await client.query('COMMIT');
-    console.log('✅ GeoJSON loaded successfully');
+    
+    // Log statistics
+    console.log('\n📊 Import Statistics:');
+    console.log(`📍 Points loaded: ${pointCount}`);
+    console.log(`🗺️  Polygons loaded: ${polyCount}`);
+    console.log(`📚 Total features: ${pointCount + polyCount}`);
+
+    // Verify spatial indexes
+    console.log('\n🔍 Verifying spatial indexes...');
+    await verifyIndexes(client);
+
   } catch (error) {
     await client.query('ROLLBACK');
-    console.error('❌ Error loading GeoJSON:', error);
+    console.error('❌ Error loading data:', error);
     throw error;
   } finally {
     client.release();
   }
 }
 
-// If this file is run directly (not required as a module)
-if (require.main === module) {
-  const filePath = process.argv[2];
-  if (!filePath) {
-    console.error('Please provide a GeoJSON file path');
-    process.exit(1);
+async function verifyIndexes(client) {
+  try {
+    // Check if indexes are being used
+    const pointIndexCheck = await client.query(`
+      EXPLAIN ANALYZE
+      SELECT id FROM research_locations_point 
+      WHERE ST_DWithin(geom, 
+        ST_SetSRID(ST_MakePoint(0, 0), 4326),
+        1);
+    `);
+    
+    const polyIndexCheck = await client.query(`
+      EXPLAIN ANALYZE
+      SELECT id FROM research_locations_poly 
+      WHERE ST_Intersects(geom, 
+        ST_SetSRID(ST_MakePoint(0, 0), 4326));
+    `);
+
+    // Check if both queries used their spatial indexes
+    const pointUsedIndex = pointIndexCheck.rows.some(row => 
+      row['QUERY PLAN'].toLowerCase().includes('index'));
+    const polyUsedIndex = polyIndexCheck.rows.some(row => 
+      row['QUERY PLAN'].toLowerCase().includes('index'));
+
+    if (pointUsedIndex && polyUsedIndex) {
+      console.log('✅ Spatial indexes verified and working');
+    } else {
+      console.warn('⚠️  Some spatial indexes may not be optimal');
+    }
+
+  } catch (error) {
+    console.warn('⚠️  Could not verify indexes:', error.message);
   }
-  loadGeoJson(filePath)
-    .then(() => process.exit(0))
-    .catch(() => process.exit(1));
 }
 
-module.exports = loadGeoJson; 
+async function main() {
+  console.log('🚀 Starting GeoJSON import process...');
+  const startTime = Date.now();
+  
+  try {
+    await loadGeoJsonData();
+    const duration = ((Date.now() - startTime) / 1000).toFixed(2);
+    console.log(`\n✨ Import completed successfully in ${duration}s`);
+  } catch (error) {
+    console.error('\n❌ Import failed:', error);
+    process.exit(1);
+  }
+}
+
+if (require.main === module) {
+  main();
+}
+
+module.exports = {
+  loadGeoJsonData,
+  verifyIndexes
+}; 

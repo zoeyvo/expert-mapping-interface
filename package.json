@@ -3,6 +3,7 @@
     "@turf/turf": "^7.2.0",
     "@types/pg": "^8.11.11",
     "axios": "^1.8.1",
+    "cors": "^2.8.5",
     "csv-parser": "^3.2.0",
     "leaflet": "^1.9.4",
     "leaflet.markercluster": "^1.5.3",
