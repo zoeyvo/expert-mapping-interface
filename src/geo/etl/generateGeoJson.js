@@ -1,24 +1,17 @@
 /**
  * generateGeoJson.js
  * 
- * Purpose:
- * Generates GeoJSON from processed location and researcher data.
- * Creates files in both public and src directories for different use cases.
+ * Generates enriched GeoJSON by combining location coordinates with researcher data.
+ * Adds researcher information, work details, and location type indicators to features.
  * 
- * Usage:
- * node src/geo/etl/generateGeoJson.js
- * 
- * Output:
- * - public/data/research_profiles.geojson
- * - src/geo/data/json/research_profiles.geojson
+ * @module generateGeoJson
  */
-
-// ~ 0.07 sec for sample data
 
 const fs = require("fs");
 const path = require("path");
 const csv = require("csv-parser");
 const { normalizeLocationName, normalizeResearcherName } = require('./utils');
+const turf = require('@turf/turf');
 
 // Define file paths
 const profilesPath = path.join(__dirname, '../data', "json", "location_based_profiles.json");
@@ -45,96 +38,129 @@ fs.createReadStream(urlsPath)
     }
   })
   .on("end", () => {
-    console.log("✅  CSV Parsed.");
+    console.log("\n✅  CSV Parsed!");
     generateGeoJSON();
   });
 
+// Memory optimization: Use Set for deduplication
+const processedLocations = new Set();
+const processedResearchers = new Set();
+
+/**
+ * Processes researcher data for a location
+ * @param {Object} researchers - Researcher data object
+ * @param {Map} researcherUrls - Map of researcher URLs
+ * @returns {Array} Array of processed researcher objects
+ */
+function processResearcherData(researchers, researcherUrls) {
+    return Object.entries(researchers)
+        .map(([researcherName, data]) => {
+            const normalizedResearcher = normalizeResearcherName(researcherName);
+            const lastName = normalizedResearcher.split(',')[0].toLowerCase();
+            const url = researcherUrls[lastName];
+            
+            if (url && !processedResearchers.has(normalizedResearcher)) {
+                processedResearchers.add(normalizedResearcher);
+                return {
+                    name: normalizedResearcher,
+                    url: url,
+                    works: data.works
+                };
+            }
+            return null;
+        })
+        .filter(Boolean);
+}
+
 // Step 3: Read location-based profiles and generate GeoJSON
 function generateGeoJSON() {
+  const totalStartTime = Date.now();
   const startTime = Date.now();
   let locationCount = 0;
   let researcherCount = 0;
   let workCount = 0;
 
-  const locationProfiles = JSON.parse(fs.readFileSync(profilesPath, "utf-8"));
-  const locationCoordinates = JSON.parse(fs.readFileSync(coordsPath, "utf-8"));
-  
-  const seenErrorMessages = new Set();
-  
-  // Initialize GeoJSON structure
-  const geoJson = {
-    type: "FeatureCollection",
-    features: []
-  };
+  console.log('🚀 Starting GeoJSON generation...');
 
+  const locationProfiles = JSON.parse(fs.readFileSync(profilesPath, "utf-8"));
+  const locationGeoData = JSON.parse(fs.readFileSync(coordsPath, "utf-8"));
+  
+  const loadTime = (Date.now() - startTime) / 1000;
+  console.log(`📖 Loaded data files in ${loadTime.toFixed(2)}s`);
+  
+  // Create a map of locations to researcher data
+  const locationResearchers = new Map();
+  
+  console.log('📖 Processing researcher data...');
+  const processingStart = Date.now();
+  
+  // First pass - collect all researcher information by location
   for (const [location, researchers] of Object.entries(locationProfiles)) {
     const normalizedLocation = normalizeLocationName(location);
-    const coordinates = locationCoordinates[normalizedLocation];
+    const researcherData = processResearcherData(researchers, researcherUrls);
     
-    if (!coordinates) {
-      const errorMsg = `No coordinates found for: ${normalizedLocation}`;
-      if (!seenErrorMessages.has(errorMsg)) {
-        console.warn(`⚠️ ${errorMsg}`);
-        seenErrorMessages.add(errorMsg);
-      }
-      continue;
+    if (researcherData.length > 0) {
+      locationResearchers.set(normalizedLocation, researcherData);
+      locationCount++;
+      researcherCount += researcherData.length;
+      workCount += researcherData.reduce((total, researcher) => total + researcher.works.length, 0);
     }
-    locationCount++;
+  }
 
-    for (const [researcherName, data] of Object.entries(researchers)) {
-      const normalizedResearcher = normalizeResearcherName(researcherName);
-      const lastName = normalizedResearcher.split(',')[0].toLowerCase();
-      const url = researcherUrls[lastName] || null;
+  const processingTime = (Date.now() - processingStart) / 1000;
+  console.log(`⏱️  Processing completed in ${processingTime.toFixed(2)}s`);
 
-      if (!url) {
-        const errorMsg = `No URL found for: ${normalizedResearcher}`;
-        if (!seenErrorMessages.has(errorMsg)) {
-          console.warn(`❌  ${errorMsg}`);
-          seenErrorMessages.add(errorMsg);
-        }
-      }
+  console.log('🗺️  Updating GeoJSON features...');
+  const updateStart = Date.now();
 
-      geoJson.features.push({
-        type: "Feature",
-        geometry: {
-          type: "Point",
-          coordinates: [coordinates[1], coordinates[0]]
-        },
+  // Update location coordinates with researcher information
+  locationGeoData.features = locationGeoData.features.map(feature => {
+    const locationName = feature.properties.name;
+    const researchers = locationResearchers.get(locationName);
+    const type = feature.properties.type;
+    
+    if (researchers) {
+      return {
+        ...feature,
         properties: {
-          researcher: normalizedResearcher,
-          location: normalizedLocation,
-          works: data.works,
-          url: url
+          ...feature.properties,
+          researchers: researchers
         }
-      });
-      researcherCount++;
-      workCount += data.works.length;
+      };
     }
-  }
+    return {
+      ...feature,
+      properties: {
+        ...feature.properties,
+      }
+    };
+  });
 
-  // Create public/data directory if it doesn't exist
-  const publicDataDir = path.join(process.cwd(), 'public', 'data');
-  if (!fs.existsSync(publicDataDir)) {
-    fs.mkdirSync(publicDataDir, { recursive: true });
-  }
+  const updateTime = (Date.now() - updateStart) / 1000;
+  console.log(`⏱️  Feature updates completed in ${updateTime.toFixed(2)}s`);
 
-  // Write to both locations (public and src)
-  const publicPath = path.join(publicDataDir, 'research_profiles.geojson');
-  const srcPath = path.join(__dirname, '../data/json/research_profiles.geojson');
+  console.log('💾 Writing files...');
+  const writeStart = Date.now();
 
-  // Write the files
-  fs.writeFileSync(publicPath, JSON.stringify(geoJson, null, 2), 'utf-8');
-  fs.writeFileSync(srcPath, JSON.stringify(geoJson, null, 2), 'utf-8');
+  // Write to both locations
+  const srcOutputPath = path.join(__dirname, '../data', 'json', 'research_profiles.geojson');
 
-  const endTime = Date.now();
-  console.log(`✨ Generated GeoJSON with:
-    - ${locationCount} locations
-    - ${researcherCount} researchers
-    - ${workCount} works
-    Files written to:
-    - ${publicPath}
-    - ${srcPath}
-    Time taken: ${(endTime - startTime) / 1000}s`);
+  // Ensure directories exist
+  fs.mkdirSync(path.dirname(srcOutputPath), { recursive: true });
 
-  return geoJson;
+  // Write files
+  fs.writeFileSync(srcOutputPath, JSON.stringify(locationGeoData, null, 2));
+
+  const writeTime = (Date.now() - writeStart) / 1000;
+  const totalTime = (Date.now() - totalStartTime) / 1000;
+
+  console.log('\n📊 GeoJSON Generation Statistics:');
+  console.log(`⏱️  Total time: ${Math.floor(totalTime / 60)}m ${(totalTime % 60).toFixed(2)}s`);
+  console.log(`\nResults:`);
+  console.log(`👥 Researchers: ${researcherCount}`);
+  console.log(`📚 Works: ${workCount}`);
+  console.log(`\n💾 GeoJSON files written to:`);
+  console.log(`   ${srcOutputPath}\n`);
+
+  return locationGeoData;
 }

@@ -1,17 +1,10 @@
 /**
  * geocodeLocation.js
  * 
- * Purpose:
- * Geocodes location names to coordinates using OpenStreetMap Nominatim.
- * Caches results to avoid repeated API calls and respect rate limits.
+ * Geocodes location names to GeoJSON features using OpenStreetMap Nominatim.
+ * Handles polygon simplification and caches results to respect rate limits.
  * 
- * Usage:
- * node src/geo/etl/geocodeLocation.js
- * 
- * Notes:
- * - Respects Nominatim's rate limit (1 request per second)
- * - Caches coordinates to avoid duplicate requests
- * - Updates existing coordinates file if it exists
+ * @module geocodeLocation
  */
 
 const fs = require('fs');
@@ -19,111 +12,239 @@ const path = require('path');
 const axios = require('axios');
 const { normalizeLocationName } = require('./utils');
 
-const LOCATIONS_FILE = path.join(__dirname, '../data', 'json', 'location_based_profiles.json');
+// Configuration constants
 const CACHE_FILE = path.join(__dirname, '../data', 'json', 'location_coordinates.json');
-const DELAY_MS = 100; // 0.5 second delay between requests
+const LOCATIONS_FILE = process.argv[2] || path.join(__dirname, '../data', 'json', 'location_based_profiles.json');
+const DELAY_MS = 1000; // Nominatim rate limit: 1 request per second
+const MAX_POINTS = 1000; // Maximum points to keep in polygon geometries
 
+/**
+ * Calculates area of a polygon for finding largest geometry
+ * @param {Array} ring - Array of coordinate pairs forming a polygon ring
+ * @returns {number} Approximate area of the polygon
+ */
+function calculatePolygonArea(ring) {
+    let area = 0;
+    for (let i = 0; i < ring.length - 1; i++) {
+        area += ring[i][0] * ring[i + 1][1] - ring[i + 1][0] * ring[i][1];
+    }
+    return Math.abs(area / 2);
+}
+
+/**
+ * Simplifies polygon coordinates to reduce point count
+ * @param {Array} coordinates - Polygon coordinates array
+ * @param {number} maxPoints - Maximum number of points to keep
+ * @returns {Array} Simplified coordinates array
+ */
+function simplifyPolygon(coordinates, maxPoints) {
+    if (!coordinates[0] || coordinates[0].length <= maxPoints) return coordinates;
+    
+    const step = Math.ceil(coordinates[0].length / maxPoints);
+    return coordinates.map(ring => 
+        ring.filter((_, index) => index % step === 0 || index === ring.length - 1)
+    );
+}
+
+/**
+ * Geocodes a location name to GeoJSON feature
+ * @param {string} location - Location name to geocode
+ * @returns {Promise<Object|null>} GeoJSON feature or null if not found
+ */
 async function geocodeLocation(location) {
     try {
-        const response = await axios.get('https://nominatim.openstreetmap.org/search', {
+        const response = await axios.get(`https://nominatim.openstreetmap.org/search`, {
             params: {
+                q: location,
                 format: 'json',
-                limit: 1,
-                q: location
+                polygon_geojson: 1,
+                addressdetails: 1,
+                limit: 10,
+                featuretype: 'city,state,country,town'
             },
             headers: {
-                'User-Agent': 'GeoDataVisualizer/1.0 (https://github.com/zoeyvo/geo-data-visualizer)',
-                'Accept-Language': 'en-US,en;q=0.5'
+                'User-Agent': 'Research_Profile_Generator'
             }
         });
 
-        if (response.data && response.data[0]) {
-            return {
-                lat: parseFloat(response.data[0].lat),
-                lon: parseFloat(response.data[0].lon)
-            };
+        if (!response.data?.length) {
+            console.log(`❌ No results found for ${location}`);
+            return null;
         }
-        return null;
+
+        // Find the best matching feature by type
+        const result = response.data.find(r => 
+            (r.type === 'administrative' || 
+             r.type === 'city' ||
+             r.type === 'town' ||
+             r.type === 'state' ||
+             r.type === 'country') &&
+            r.display_name.toLowerCase().includes(location.toLowerCase())
+        ) || response.data[0];
+
+        let geometry;
+
+        // Check if we have valid polygon data
+        if (result.geojson && result.geojson.coordinates?.length > 0) {
+            let coordinates;
+            
+            if (result.geojson.type === 'MultiPolygon') {
+                // Get the largest polygon from the MultiPolygon
+                const areas = result.geojson.coordinates.map(poly => {
+                    let area = 0;
+                    const ring = poly[0];
+                    for (let i = 0; i < ring.length - 1; i++) {
+                        area += ring[i][0] * ring[i + 1][1] - ring[i + 1][0] * ring[i][1];
+                    }
+                    return Math.abs(area / 2);
+                });
+                const largestIndex = areas.indexOf(Math.max(...areas));
+                coordinates = result.geojson.coordinates[largestIndex];
+                console.log(`ℹ️ Converting MultiPolygon to largest Polygon for ${location}`);
+            } else if (result.geojson.type === 'Polygon') {
+                coordinates = result.geojson.coordinates;
+            } else {
+                geometry = {
+                    type: "Point",
+                    coordinates: [parseFloat(result.lon), parseFloat(result.lat)]
+                };
+                console.log(`ℹ️ Using point geometry for ${location}`);
+                return createFeature(geometry, location, result);
+            }
+
+            if (coordinates[0].length > MAX_POINTS) {
+                const step = Math.ceil(coordinates[0].length / MAX_POINTS);
+                coordinates = coordinates.map(ring => 
+                    ring.filter((_, index) => index % step === 0 || index === ring.length - 1)
+                );
+            }
+
+            geometry = {
+                type: "Polygon",
+                coordinates: coordinates
+            };
+            console.log(`ℹ️ Using ${coordinates[0].length}-point polygon for ${location} (${result.type})`);
+        } else {
+            geometry = {
+                type: "Point",
+                coordinates: [parseFloat(result.lon), parseFloat(result.lat)]
+            };
+            console.log(`ℹ️ Using point geometry for ${location}`);
+        }
+        
+        return {
+            type: "Feature",
+            properties: {
+                name: location,
+                display_name: result.display_name,
+                type: result.type,
+                osm_type: result.osm_type,
+                class: result.class
+            },
+            geometry: geometry
+        };
+
     } catch (error) {
         console.error(`Error geocoding ${location}:`, error.message);
         return null;
     }
 }
 
-async function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+function createFeature(geometry, location, result) {
+    return {
+        type: "Feature",
+        properties: {
+            name: location,
+            display_name: result.display_name,
+            type: result.type
+        },
+        geometry: geometry
+    };
 }
 
 async function createLocationCoordinates() {
     const startTime = Date.now();
-    let successCount = 0;
-    let failureCount = 0;
+    let geocodeCount = 0;
+    let cacheHits = 0;
+    let cacheMisses = 0;
+    let errorCount = 0;
 
-    let normalizedCoordinates = {};
-    if (fs.existsSync(CACHE_FILE)) {
-        const rawCache = JSON.parse(fs.readFileSync(CACHE_FILE, 'utf8'));
-        for (const [loc, coords] of Object.entries(rawCache)) {
-            const normalizedLoc = normalizeLocationName(loc);
-            normalizedCoordinates[normalizedLoc] = coords;
+    let geoData = { 
+        type: "FeatureCollection", 
+        features: []
+    };
+
+    console.log('\n🚀 Starting location geocoding...');
+
+    try {
+        // Load existing cache if available
+        const cacheStart = Date.now();
+        if (fs.existsSync(CACHE_FILE)) {
+            geoData = JSON.parse(fs.readFileSync(CACHE_FILE, 'utf8'));
+            console.log(`📖 Loaded ${geoData.features.length} cached locations in ${((Date.now() - cacheStart) / 1000).toFixed(2)}s`);
         }
-    }
 
-    const locationsData = JSON.parse(fs.readFileSync(LOCATIONS_FILE, 'utf8'));
-    const uniqueLocations = [...new Set(
-        Object.keys(locationsData).map(normalizeLocationName)
-    )];
+        const locationsData = JSON.parse(fs.readFileSync(LOCATIONS_FILE, 'utf8'));
+        const uniqueLocations = [...new Set(Object.keys(locationsData).map(normalizeLocationName))];
+        
+        console.log(`🌍 Found ${uniqueLocations.length} unique locations to process`);
 
-    console.log(`🌍 Found ${uniqueLocations.length} unique locations`);
+        const geocodingStart = Date.now();
+        for (const location of uniqueLocations) {
+            if (geoData.features.some(f => f.properties.name === location)) {
+                cacheHits++;
+                continue;
+            }
 
-    const locationsToGeocode = uniqueLocations.filter(loc => !normalizedCoordinates[loc]);
-    console.log(`🔍 Geocoding ${locationsToGeocode.length} new locations...`);
+            cacheMisses++;
+            const feature = await geocodeLocation(location);
+            if (feature) {
+                geoData.features.push(feature);
+                geocodeCount++;
+                
+                // Write to both locations after each successful geocode
+                const srcOutputPath = CACHE_FILE;
 
-    for (const location of locationsToGeocode) {
-        const coords = await geocodeLocation(location);
-        if (coords) {
-            normalizedCoordinates[location] = [coords.lat, coords.lon];
-            console.log(`✅  Geocoded ${location}: ${coords.lat}, ${coords.lon}`);
-            fs.writeFileSync(CACHE_FILE, JSON.stringify(normalizedCoordinates, null, 2));
-            successCount++;
-        } else {
-            console.log(`❌  Failed to geocode ${location}`);
-            failureCount++;
+                // Ensure directories exist
+                fs.mkdirSync(path.dirname(srcOutputPath), { recursive: true });
+
+                // Write files
+                fs.writeFileSync(srcOutputPath, JSON.stringify(geoData, null, 2));
+                
+                console.log(`✅  Geocoded ${location}`);
+            } else {
+                errorCount++;
+                console.log(`❌  Failed to geocode ${location}`);
+            }
+            await sleep(DELAY_MS);
         }
-        await sleep(DELAY_MS);
+
+        const totalTime = (Date.now() - startTime) / 1000;
+        const geocodingTime = (Date.now() - geocodingStart) / 1000;
+
+        console.log('\n📊 Geocoding Statistics:');
+        console.log(`⏱️ Total time: ${Math.floor(totalTime / 60)}m ${(totalTime % 60).toFixed(2)}s`);
+        console.log(`📍 Total locations: ${uniqueLocations.length}`);
+        console.log(`💾 Cache hits: ${cacheHits}`);
+        console.log(`🌐 New geocodes: ${geocodeCount}`);
+        console.log(`❌  Failed geocodes: ${errorCount}`);
+        console.log(`\n💾 GeoJSON files written to:`);
+        console.log(`   ${CACHE_FILE}\n`);
+
+        return geoData;
+    } catch (error) {
+        console.error('💥 Error:', error.message);
+        process.exit(1);
     }
-
-    const endTime = Date.now();
-    const duration = (endTime - startTime) / 1000;
-    const minutes = Math.floor(duration / 60);
-    const seconds = Math.floor(duration % 60);
-    const timeFormatted = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-
-    console.log('\n📊  Geocoding Statistics:');
-    console.log(`⏱️   Total time: ${timeFormatted}`);
-    console.log(`✅  Successfully geocoded: ${successCount} locations`);
-    console.log(`❌  Failed to geocode: ${failureCount} locations`);
-    if (successCount > 0) {
-        const avgDuration = duration / successCount;
-        const avgMinutes = Math.floor(avgDuration / 60);
-        const avgSeconds = Math.floor(avgDuration % 60);
-        const avgFormatted = `${avgMinutes.toString().padStart(2, '0')}:${avgSeconds.toString().padStart(2, '0')}`;
-        console.log(`⏱️ Average time per geocode: ${avgFormatted}`);
-    }
-
-    return normalizedCoordinates;
 }
 
-// Run if called directly
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+
 if (require.main === module) {
-    createLocationCoordinates()
-        .then(() => {
-            console.log('✨  Location coordinates updated');
-            process.exit(0);
-        })
-        .catch(error => {
-            console.error('💥  Error:', error);
-            process.exit(1);
-        });
+    createLocationCoordinates().catch(error => {
+        console.error('💥 Fatal error:', error);
+        process.exit(1);
+    });
 }
 
-module.exports = { createLocationCoordinates };
+module.exports = { createLocationCoordinates, geocodeLocation };
