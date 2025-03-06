@@ -24,24 +24,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -81.58837577867996,
-          28.35929655
-        ]
-      },
-      "properties": {
-        "researcher": "Keegan, Theresa H",
-        "location": "Asia, United States Of America",
-        "works": [
-          "Papillary thyroid cancer incidence rates vary significantly by birthplace in Asian American women"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/U4H5hQ23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -88.26536838511842,
           41.83320225
         ]
@@ -97,13 +79,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -71.11066769180692,
-          42.3739168
+          -61.0006565,
+          -21.0002179
         ]
       },
       "properties": {
         "researcher": "Stewart, Susan L",
-        "location": "Latin America",
+        "location": "South America",
         "works": [
           "Smoking acquisition among adolescents and young Latinas The role of socioenvironmental and personal factors"
         ],
@@ -115,13 +97,31 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -71.11066769180692,
-          42.3739168
+          -61.0006565,
+          -21.0002179
+        ]
+      },
+      "properties": {
+        "researcher": "Morrison, Amy C",
+        "location": "South America",
+        "works": [
+          "Arboviral Etiologies of Acute Febrile Illnesses in Western South America, 2000â€“2007"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/Hb0RLbZ2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.0006565,
+          -21.0002179
         ]
       },
       "properties": {
         "researcher": "Hilbert, Martin R",
-        "location": "Latin America",
+        "location": "South America",
         "works": [
           "In the Midst of the Transition: Challenges and Changes for Latin American Economies"
         ],
@@ -133,13 +133,31 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -71.11066769180692,
-          42.3739168
+          -61.0006565,
+          -21.0002179
+        ]
+      },
+      "properties": {
+        "researcher": "Sykes, Jane E",
+        "location": "South America",
+        "works": [
+          "Microscopic and molecular identification of hemotropic mycoplasmas in South American coatis (Nasua nasua)"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/pOwQFwj2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.0006565,
+          -21.0002179
         ]
       },
       "properties": {
         "researcher": "Fejerman, Laura",
-        "location": "Latin America",
+        "location": "South America",
         "works": [
           "Abstract 2419: A polygenic risk score predicts breast cancer risk in Latinas"
         ],
@@ -151,13 +169,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -71.11066769180692,
-          42.3739168
+          -61.0006565,
+          -21.0002179
         ]
       },
       "properties": {
         "researcher": "Hinton, Ladson",
-        "location": "Latin America",
+        "location": "South America",
         "works": [
           "Nonpharmacologic Interventions for Family Caregivers of People Living With Dementia in Latin-America: A Scoping Review"
         ],
@@ -1704,13 +1722,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -74.01404387498147,
-          40.70447885
+          -100.445882,
+          39.7837304
         ]
       },
       "properties": {
         "researcher": "Hussain, Shehnaz K",
-        "location": "Africa, America",
+        "location": "America",
         "works": [
           "Host Determinants of HIV-1 Control in African Americans"
         ],
@@ -1722,17 +1740,1030 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -74.01404387498147,
-          40.70447885
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Springborn, Michael R",
+        "location": "America",
+        "works": [
+          "Pathwayâ€level risk analysis: the net present value of an invasive species policy in the US"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/IDsLD4jv"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Brooks, Rebecca A",
+        "location": "America",
+        "works": [
+          "Survival differences of Asian and Caucasian epithelial ovarian cancer patients in the United States"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/G5n4ZW1b"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Ton, Hendry",
+        "location": "America",
+        "works": [
+          "Discussing Depression with Vietnamese American Patients"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/ZY984vWc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Fancher, Tonya L",
+        "location": "America",
+        "works": [
+          "Discussing Depression with Vietnamese American Patients"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/FQ0Qtedg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Romano, Patrick",
+        "location": "America",
+        "works": [
+          "Effects of Resident Duty Hour Reform on Surgical and Procedural Patient Safety Indicators Among Hospitalized Veterans Health Administration and Medicare Patients",
+          "Reduced Costs of Congenital Anomalies from Fetal Ultrasound: Are They Sufficient to Justify Routine Screening in the United States?"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/ieIsrU91"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Richards, John R",
+        "location": "America",
+        "works": [
+          "Comparison of US Utilization and Technical Costs before and after Establishment of 24-hour In-house Coverage for US Examinations"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/JrqVD14L"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Sperling, Daniel",
+        "location": "America",
+        "works": [
+          "Public-Private Technology R&amp;D Partnerships: Lessons from US Partnership for a New Generation of Vehicles"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/qBgXnsS7"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Ruiz, Jeanette B",
+        "location": "America",
+        "works": [
+          "Empowerment and Aggression: Understanding Violence in America's Girls"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/JlS3humj"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Resendez, Andres",
+        "location": "America",
+        "works": [
+          "A desperate trek across America -: Cabeza!de Vaca (Alvar Nunez Cabeza!de Vaca)"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/zOqBO5Vg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Maira, Sunaina",
+        "location": "America",
+        "works": [
+          "Flexible Citizenship/Flexible Empire: South Asian Muslim Youth in Post-9/11 America"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/IYeYE4Xq"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Bissell, Michael",
+        "location": "America",
+        "works": [
+          "Family History of Breast Cancer, Breast Density, and Breast Cancer Risk in a U.S. Breast Cancer Screening Population"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/oRQvtQP9"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Keegan, Theresa H",
+        "location": "America",
+        "works": [
+          "Papillary thyroid cancer incidence rates vary significantly by birthplace in Asian American women",
+          "Factors Associated With Online Patient-Provider Communications Among Cancer Survivors in the United States During COVID-19: Cross-sectional Study (Preprint)"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/U4H5hQ23"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Joh, Elizabeth E",
+        "location": "America",
+        "works": [
+          "\"If it suffices to accuse\":: <i>United States v. Watts</i> and the reassessment of acquittals"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/E9F1Mkjg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Shaikh, Ulfat",
+        "location": "America",
+        "works": [
+          "TRANSITION OF HEALTH CARE FOR YOUTH WITH SPECIAL HEALTH CARE NEEDS (YSHCN)-USING EMR FOR TRAINING PEDIATRIC RESIDENTS"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/HNJXT3wK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Hill, Ashley E",
+        "location": "America",
+        "works": [
+          "A needs-assessment and demographic survey of infection-control and disease awareness in western US animal shelters"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/fC33uEO4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Ronald, Pamela C",
+        "location": "America",
+        "works": [
+          "KBase: The United States Department of Energy Systems Biology Knowledgebase"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/yB67kbL2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Young, Heather M",
+        "location": "America",
+        "works": [
+          "Attitudes Toward Community-Based Services Among Japanese American Families",
+          "Decision Making at End of Life Among Japanese American Families"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/nuzTTJKR"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Malogolowkin, Marcio",
+        "location": "America",
+        "works": [
+          "Increased clinical trial enrollment among adolescent and young adult cancer patients between 2006 and 2012-2013 in the United States."
+        ],
+        "url": "https://experts.ucdavis.edu/expert/dyITrmLJ"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Monier, Erwan",
+        "location": "America",
+        "works": [
+          "U.S. Air Quality and Health Benefits from Avoided Climate Change under Greenhouse Gas Mitigation",
+          "Premature mortality related to United States cross-state air pollution"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/gH0g22t0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Farmer, Diana L",
+        "location": "America",
+        "works": [
+          "Value of Global Surgical Activities for US Academic Health Centers: A Position Paper by the Association for Academic Surgery Global Affairs Committee, Society of University Surgeons Committee on Global Academic Surgery, and American College of Surgeons' Operation Giving Back"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/YA3MSdzk"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Yang, Christopher",
+        "location": "America",
+        "works": [
+          "Development of Integrated Vehicle and Fuel Scenarios in a National Energy System Model for Low Carbon U.S. Transportation Futures"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/ufi1NqKQ"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Bennett, Deborah",
+        "location": "America",
+        "works": [
+          "Consensus Modeling of Median Chemical Intake for the U.S. Population Based on Predictions of Exposure Pathways"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/BKRh7OMz"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Lim, Michele C",
+        "location": "America",
+        "works": [
+          "Medicare Incentive Payments to United States Ophthalmologists for Use of Electronic Health Records 2011â€“2016"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/ND7sn41k"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Stephensen, Charles B",
+        "location": "America",
+        "works": [
+          "Association of Lactase Persistence Genotypes (rs4988235) and Ethnicity with Dairy Intake in a Healthy U.S. Population."
+        ],
+        "url": "https://experts.ucdavis.edu/expert/rKtOtzu4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
         ]
       },
       "properties": {
         "researcher": "Mustafaa, Faheemah N",
-        "location": "Africa, America",
+        "location": "America",
         "works": [
           "Associations of Racial Discrimination and Parental Discrimination Coping Messages with African American Adolescent Racial Identity"
         ],
         "url": "https://experts.ucdavis.edu/expert/MXRxxyaX"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Bitler, Marianne P",
+        "location": "America",
+        "works": [
+          "Health Impacts of Food Assistance: Evidence from the United States"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/Am7dqCz9"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Visser, Marjorie A",
+        "location": "America",
+        "works": [
+          "Restructuring opportunity: employment change and job quality in the United States during the Great Recession"
+        ],
+        "url": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Isseroff, Roslyn R",
+        "location": "America",
+        "works": [
+          "Access to Mohs micrographic surgery through the Veterans Choice Program of the United States Department of Veterans Affairs"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/TVbemHMx"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Kravitz-Wirtz, Nicole D",
+        "location": "America",
+        "works": [
+          "Association of Medicaid Expansion With Opioid Overdose Mortality in the United States"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/18lcpdWN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Hsu, Greta",
+        "location": "America",
+        "works": [
+          "EVALUATIVE SCHEMAS AND THE ATTENTION OF CRITICS IN THE U.S. FILM INDUSTRY.",
+          "Collaborative Dynamics Among Market Incumbents in the US Airline Industry, 1989â€“2010"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/CZLErRjJ"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Feng, Bo",
+        "location": "America",
+        "works": [
+          "Internet Use, Risk Awareness, and Demographic Characteristics Associated With Engagement in Preventive Behaviors and Testing: Cross-Sectional Survey on COVID-19 in the United States (Preprint)"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/847FAevx"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Bakerjian, Deb",
+        "location": "America",
+        "works": [
+          "Appropriate Nurse Staffing Levels for U.S. Nursing Homes."
+        ],
+        "url": "https://experts.ucdavis.edu/expert/GYioi4JX"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Lane, Nancy E",
+        "location": "America",
+        "works": [
+          "Characterization of individuals with osteoarthritis in the United States and their use of prescription and over-the-counter supplements"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/oOLuaS3z"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Campbell, Michael J",
+        "location": "America",
+        "works": [
+          "Can the American Thyroid Association, K-Tirads, and Acr-Tirads Ultrasound Classification Systems Be Used to Predict Malignancy in Bethesda Category IV Nodules?"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/6brL80J9"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Pusterla, Nicola",
+        "location": "America",
+        "works": [
+          "Investigation of an EHV-1 Outbreak in the United States Caused by a New H752 Genotype"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/KKCiEGxn"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Tu, Shin-Ping",
+        "location": "America",
+        "works": [
+          "Participation in colorectal cancer screening among Chinese Americans."
+        ],
+        "url": "https://experts.ucdavis.edu/expert/GXeltcDg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Magney, Troy",
+        "location": "America",
+        "works": [
+          "Extreme events driving year-to-year differences in gross primary productivity across the US"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/BaMAjzJs"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Hsu, Hsuan L",
+        "location": "America",
+        "works": [
+          "Race, Representation, and American Environmentalism"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/CZLErRjJ"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Brinkley, Catherine",
+        "location": "America",
+        "works": [
+          "Urban land teleconnections in the United States: A graphical network approach"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/mkL4ET2y"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Magdesian, K G",
+        "location": "America",
+        "works": [
+          "Prevalence of the RAPGEF5 c.2624C>A and PLOD1 c.2032G>A variants associated with equine familial isolated hypoparathyroidism and fragile foal syndrome in the US Thoroughbred population (1988â€“2019)"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/VmOM8ENT"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Munir, Bilal",
+        "location": "America",
+        "works": [
+          "Combined atrial fibrillation ablation and left atrial appendage occlusion procedure in the United States: a propensity score matched analysis from 2016â€“2019 national readmission database"
+        ],
+        "url": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Bannasch, Danika",
+        "location": "America",
+        "works": [
+          "Ocular morphologic traits in the American Cocker Spaniel may confer primary angle closure glaucoma susceptibility"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/LRKh7uwe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Yang, Keer",
+        "location": "America",
+        "works": [
+          "The Ex Ante Effect of Bankruptcy Law: Evidence from Chapter 12"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/ufi1NqKQ"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Linquist, Bruce A",
+        "location": "America",
+        "works": [
+          "Greenhouse Gas Emissions and Management Practices that Affect Emissions in US Rice Systems"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/mqgrwoc3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Brummer, Charlie",
+        "location": "America",
+        "works": [
+          "Diversity, Stability, and Sustainable American Agriculture"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/zfUYmQ4K"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Ko, Michelle J",
+        "location": "America",
+        "works": [
+          "US Medical School Admissions Leadersâ€™ Experiences With Barriers to and Advancements in Diversity, Equity, and Inclusion"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/020bGFP0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Bang, Heejung",
+        "location": "America",
+        "works": [
+          "Implications of a New Definition of Vitamin D Deficiency in a Multiracial US Adolescent Population: The National Health and Nutrition Examination Survey III"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/SM2DNxqR"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Midboe, Amanda M",
+        "location": "America",
+        "works": [
+          "Comparison of rapid vs in-depth qualitative analytic methods from a process evaluation of academic detailing in the Veterans Health Administration"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/taSpTtgz"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Cord, Branden J",
+        "location": "America",
+        "works": [
+          "Predictors of Extended Length of Stay Following Treatment of Unruptured Adult Cerebral Aneurysms: A Study of The National Inpatient Sample"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/DkxLwA5v"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Whitmer, Rachel A",
+        "location": "America",
+        "works": [
+          "Inclusion of Vietnamese Americans: Opportunities to understand dementia disparities"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/nIF3ir59"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Decarli, Charles",
+        "location": "America",
+        "works": [
+          "Cardiovascular health and cognitive outcomes: Findings from a biracial populationâ€based study in the United States"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/pmbsK81V"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Creinin, Mitchell D",
+        "location": "America",
+        "works": [
+          "O790 Pregnancy after tubal sterilization in the United States"
+        ],
+        "url": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Herman, Daniel C",
+        "location": "America",
+        "works": [
+          "American Medical Society for Sports Medicine Position Statement: Principles for the Responsible Use of Regenerative Medicine in Sports Medicine"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/uAHnwpd7"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Bourgeois, James A",
+        "location": "America",
+        "works": [
+          "The Management of Fitness for Duty in the United States Military"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/uiP2J96c"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Fauer, Alex J",
+        "location": "America",
+        "works": [
+          "Use of gabapentinoid medications among US adults with cancer, 2005-2015."
+        ],
+        "url": "https://experts.ucdavis.edu/expert/lYmEzEqq"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Tong, Elisa K",
+        "location": "America",
+        "works": [
+          "Serious psychological distress and higher associations with tobacco and cannabis use among college students in the United States"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/Xho5YrTe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.445882,
+          39.7837304
+        ]
+      },
+      "properties": {
+        "researcher": "Taylor, Keith",
+        "location": "America",
+        "works": [
+          "The Role of Rural Electric Cooperatives in Achieving Universal Broadband Access: Evidence from the United States"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/92HA6JpM"
       }
     },
     {
@@ -1795,42 +2826,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -61.0006565,
-          -21.0002179
-        ]
-      },
-      "properties": {
-        "researcher": "Morrison, Amy C",
-        "location": "South America",
-        "works": [
-          "Arboviral Etiologies of Acute Febrile Illnesses in Western South America, 2000â€“2007"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/Hb0RLbZ2"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -61.0006565,
-          -21.0002179
-        ]
-      },
-      "properties": {
-        "researcher": "Sykes, Jane E",
-        "location": "South America",
-        "works": [
-          "Microscopic and molecular identification of hemotropic mycoplasmas in South American coatis (Nasua nasua)"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/pOwQFwj2"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           36.82884201813725,
           -1.3026148499999999
         ]
@@ -1867,8 +2862,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -58.280564190358106,
-          -3.096761426454797
+          -52.384650345694276,
+          -1.438616615729524
         ]
       },
       "properties": {
@@ -1878,909 +2873,6 @@
           "Out of the Amazon: Theobroma cacao enters the genomic era"
         ],
         "url": "https://experts.ucdavis.edu/expert/BKRh7OMz"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Springborn, Michael R",
-        "location": "Us",
-        "works": [
-          "Pathwayâ€level risk analysis: the net present value of an invasive species policy in the US"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/IDsLD4jv"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Brooks, Rebecca A",
-        "location": "Us",
-        "works": [
-          "Survival differences of Asian and Caucasian epithelial ovarian cancer patients in the United States"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/G5n4ZW1b"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Romano, Patrick",
-        "location": "Us",
-        "works": [
-          "Effects of Resident Duty Hour Reform on Surgical and Procedural Patient Safety Indicators Among Hospitalized Veterans Health Administration and Medicare Patients",
-          "Reduced Costs of Congenital Anomalies from Fetal Ultrasound: Are They Sufficient to Justify Routine Screening in the United States?"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/ieIsrU91"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Richards, John R",
-        "location": "Us",
-        "works": [
-          "Comparison of US Utilization and Technical Costs before and after Establishment of 24-hour In-house Coverage for US Examinations"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/JrqVD14L"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Sperling, Daniel",
-        "location": "Us",
-        "works": [
-          "Public-Private Technology R&amp;D Partnerships: Lessons from US Partnership for a New Generation of Vehicles"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/qBgXnsS7"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Ruiz, Jeanette B",
-        "location": "Us",
-        "works": [
-          "Empowerment and Aggression: Understanding Violence in America's Girls"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/JlS3humj"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Resendez, Andres",
-        "location": "Us",
-        "works": [
-          "A desperate trek across America -: Cabeza!de Vaca (Alvar Nunez Cabeza!de Vaca)"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/zOqBO5Vg"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Bissell, Michael",
-        "location": "Us",
-        "works": [
-          "Family History of Breast Cancer, Breast Density, and Breast Cancer Risk in a U.S. Breast Cancer Screening Population"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/oRQvtQP9"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Joh, Elizabeth E",
-        "location": "Us",
-        "works": [
-          "\"If it suffices to accuse\":: <i>United States v. Watts</i> and the reassessment of acquittals"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/E9F1Mkjg"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Shaikh, Ulfat",
-        "location": "Us",
-        "works": [
-          "TRANSITION OF HEALTH CARE FOR YOUTH WITH SPECIAL HEALTH CARE NEEDS (YSHCN)-USING EMR FOR TRAINING PEDIATRIC RESIDENTS"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/HNJXT3wK"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Hill, Ashley E",
-        "location": "Us",
-        "works": [
-          "A needs-assessment and demographic survey of infection-control and disease awareness in western US animal shelters"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/fC33uEO4"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Ronald, Pamela C",
-        "location": "Us",
-        "works": [
-          "KBase: The United States Department of Energy Systems Biology Knowledgebase"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/yB67kbL2"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Malogolowkin, Marcio",
-        "location": "Us",
-        "works": [
-          "Increased clinical trial enrollment among adolescent and young adult cancer patients between 2006 and 2012-2013 in the United States."
-        ],
-        "url": "https://experts.ucdavis.edu/expert/dyITrmLJ"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Monier, Erwan",
-        "location": "Us",
-        "works": [
-          "U.S. Air Quality and Health Benefits from Avoided Climate Change under Greenhouse Gas Mitigation",
-          "Premature mortality related to United States cross-state air pollution"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/gH0g22t0"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Farmer, Diana L",
-        "location": "Us",
-        "works": [
-          "Value of Global Surgical Activities for US Academic Health Centers: A Position Paper by the Association for Academic Surgery Global Affairs Committee, Society of University Surgeons Committee on Global Academic Surgery, and American College of Surgeons' Operation Giving Back"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/YA3MSdzk"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Yang, Christopher",
-        "location": "Us",
-        "works": [
-          "Development of Integrated Vehicle and Fuel Scenarios in a National Energy System Model for Low Carbon U.S. Transportation Futures"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/ufi1NqKQ"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Bennett, Deborah",
-        "location": "Us",
-        "works": [
-          "Consensus Modeling of Median Chemical Intake for the U.S. Population Based on Predictions of Exposure Pathways"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/BKRh7OMz"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Lim, Michele C",
-        "location": "Us",
-        "works": [
-          "Medicare Incentive Payments to United States Ophthalmologists for Use of Electronic Health Records 2011â€“2016"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/ND7sn41k"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Stephensen, Charles B",
-        "location": "Us",
-        "works": [
-          "Association of Lactase Persistence Genotypes (rs4988235) and Ethnicity with Dairy Intake in a Healthy U.S. Population."
-        ],
-        "url": "https://experts.ucdavis.edu/expert/rKtOtzu4"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Bitler, Marianne P",
-        "location": "Us",
-        "works": [
-          "Health Impacts of Food Assistance: Evidence from the United States"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/Am7dqCz9"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Visser, Marjorie A",
-        "location": "Us",
-        "works": [
-          "Restructuring opportunity: employment change and job quality in the United States during the Great Recession"
-        ],
-        "url": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Isseroff, Roslyn R",
-        "location": "Us",
-        "works": [
-          "Access to Mohs micrographic surgery through the Veterans Choice Program of the United States Department of Veterans Affairs"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/TVbemHMx"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Kravitz-Wirtz, Nicole D",
-        "location": "Us",
-        "works": [
-          "Association of Medicaid Expansion With Opioid Overdose Mortality in the United States"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/18lcpdWN"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Hsu, Greta",
-        "location": "Us",
-        "works": [
-          "EVALUATIVE SCHEMAS AND THE ATTENTION OF CRITICS IN THE U.S. FILM INDUSTRY.",
-          "Collaborative Dynamics Among Market Incumbents in the US Airline Industry, 1989â€“2010"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/CZLErRjJ"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Feng, Bo",
-        "location": "Us",
-        "works": [
-          "Internet Use, Risk Awareness, and Demographic Characteristics Associated With Engagement in Preventive Behaviors and Testing: Cross-Sectional Survey on COVID-19 in the United States (Preprint)"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/847FAevx"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Bakerjian, Deb",
-        "location": "Us",
-        "works": [
-          "Appropriate Nurse Staffing Levels for U.S. Nursing Homes."
-        ],
-        "url": "https://experts.ucdavis.edu/expert/GYioi4JX"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Lane, Nancy E",
-        "location": "Us",
-        "works": [
-          "Characterization of individuals with osteoarthritis in the United States and their use of prescription and over-the-counter supplements"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/oOLuaS3z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Campbell, Michael J",
-        "location": "Us",
-        "works": [
-          "Can the American Thyroid Association, K-Tirads, and Acr-Tirads Ultrasound Classification Systems Be Used to Predict Malignancy in Bethesda Category IV Nodules?"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/6brL80J9"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Pusterla, Nicola",
-        "location": "Us",
-        "works": [
-          "Investigation of an EHV-1 Outbreak in the United States Caused by a New H752 Genotype"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/KKCiEGxn"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Magney, Troy",
-        "location": "Us",
-        "works": [
-          "Extreme events driving year-to-year differences in gross primary productivity across the US"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/BaMAjzJs"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Hsu, Hsuan L",
-        "location": "Us",
-        "works": [
-          "Race, Representation, and American Environmentalism"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/CZLErRjJ"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Brinkley, Catherine",
-        "location": "Us",
-        "works": [
-          "Urban land teleconnections in the United States: A graphical network approach"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/mkL4ET2y"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Magdesian, K G",
-        "location": "Us",
-        "works": [
-          "Prevalence of the RAPGEF5 c.2624C>A and PLOD1 c.2032G>A variants associated with equine familial isolated hypoparathyroidism and fragile foal syndrome in the US Thoroughbred population (1988â€“2019)"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/VmOM8ENT"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Munir, Bilal",
-        "location": "Us",
-        "works": [
-          "Combined atrial fibrillation ablation and left atrial appendage occlusion procedure in the United States: a propensity score matched analysis from 2016â€“2019 national readmission database"
-        ],
-        "url": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Bannasch, Danika",
-        "location": "Us",
-        "works": [
-          "Ocular morphologic traits in the American Cocker Spaniel may confer primary angle closure glaucoma susceptibility"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/LRKh7uwe"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Yang, Keer",
-        "location": "Us",
-        "works": [
-          "The Ex Ante Effect of Bankruptcy Law: Evidence from Chapter 12"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/ufi1NqKQ"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Linquist, Bruce A",
-        "location": "Us",
-        "works": [
-          "Greenhouse Gas Emissions and Management Practices that Affect Emissions in US Rice Systems"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/mqgrwoc3"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Brummer, Charlie",
-        "location": "Us",
-        "works": [
-          "Diversity, Stability, and Sustainable American Agriculture"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/zfUYmQ4K"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Ko, Michelle J",
-        "location": "Us",
-        "works": [
-          "US Medical School Admissions Leadersâ€™ Experiences With Barriers to and Advancements in Diversity, Equity, and Inclusion"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/020bGFP0"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Bang, Heejung",
-        "location": "Us",
-        "works": [
-          "Implications of a New Definition of Vitamin D Deficiency in a Multiracial US Adolescent Population: The National Health and Nutrition Examination Survey III"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/SM2DNxqR"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Keegan, Theresa H",
-        "location": "Us",
-        "works": [
-          "Factors Associated With Online Patient-Provider Communications Among Cancer Survivors in the United States During COVID-19: Cross-sectional Study (Preprint)"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/U4H5hQ23"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Midboe, Amanda M",
-        "location": "Us",
-        "works": [
-          "Comparison of rapid vs in-depth qualitative analytic methods from a process evaluation of academic detailing in the Veterans Health Administration"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/taSpTtgz"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Cord, Branden J",
-        "location": "Us",
-        "works": [
-          "Predictors of Extended Length of Stay Following Treatment of Unruptured Adult Cerebral Aneurysms: A Study of The National Inpatient Sample"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/DkxLwA5v"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Decarli, Charles",
-        "location": "Us",
-        "works": [
-          "Cardiovascular health and cognitive outcomes: Findings from a biracial populationâ€based study in the United States"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/pmbsK81V"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Creinin, Mitchell D",
-        "location": "Us",
-        "works": [
-          "O790 Pregnancy after tubal sterilization in the United States"
-        ],
-        "url": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Herman, Daniel C",
-        "location": "Us",
-        "works": [
-          "American Medical Society for Sports Medicine Position Statement: Principles for the Responsible Use of Regenerative Medicine in Sports Medicine"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/uAHnwpd7"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Bourgeois, James A",
-        "location": "Us",
-        "works": [
-          "The Management of Fitness for Duty in the United States Military"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/uiP2J96c"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Fauer, Alex J",
-        "location": "Us",
-        "works": [
-          "Use of gabapentinoid medications among US adults with cancer, 2005-2015."
-        ],
-        "url": "https://experts.ucdavis.edu/expert/lYmEzEqq"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Tong, Elisa K",
-        "location": "Us",
-        "works": [
-          "Serious psychological distress and higher associations with tobacco and cannabis use among college students in the United States"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/Xho5YrTe"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -100.445882,
-          39.7837304
-        ]
-      },
-      "properties": {
-        "researcher": "Taylor, Keith",
-        "location": "Us",
-        "works": [
-          "The Role of Rural Electric Cooperatives in Achieving Universal Broadband Access: Evidence from the United States"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/92HA6JpM"
       }
     },
     {
@@ -3473,24 +3565,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -36.363133,
-          66.3338276
-        ]
-      },
-      "properties": {
-        "researcher": "Anastasio, Cort",
-        "location": "Summit, Greenland",
-        "works": [
-          "Light penetration in the snowpack at Summit, Greenland: Part 2 Nitrate photolysis"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/hOPw0Jcg"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -120.9375,
           -0.703107
         ]
@@ -3590,24 +3664,6 @@
         "location": "North Pacific Ocean",
         "works": [
           "Transport and diagenesis of dissolved and particulate terrigenous organic matter in the North Pacific Ocean"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/leAgBBYb"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -71.09008673552943,
-          42.30691091521712
-        ]
-      },
-      "properties": {
-        "researcher": "Hernes, Peter J",
-        "location": "Tropical Forest",
-        "works": [
-          "Mobilization of optically invisible dissolved organic matter in response to rainstorm events in a tropical forest headwater river"
         ],
         "url": "https://experts.ucdavis.edu/expert/leAgBBYb"
       }
@@ -4236,24 +4292,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.24563027311041,
-          37.87695875
-        ]
-      },
-      "properties": {
-        "researcher": "Qi, Jinyi",
-        "location": "Lbnl",
-        "works": [
-          "Development of the LBNL positron emission mammography camera"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/diXMWUQy"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           1.8883335,
           46.603354
         ]
@@ -4283,24 +4321,6 @@
           "Structure and Power in Multilateral Negotiations: An Application to French Water Policy"
         ],
         "url": "https://experts.ucdavis.edu/expert/WxgQ3TGh"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -88.04084909723116,
-          43.030802699999995
-        ]
-      },
-      "properties": {
-        "researcher": "Maira, Sunaina",
-        "location": "America, South Asia",
-        "works": [
-          "Flexible Citizenship/Flexible Empire: South Asian Muslim Youth in Post-9/11 America"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/IYeYE4Xq"
       }
     },
     {
@@ -4517,24 +4537,6 @@
           "Insights into the formation of secondary organic carbon in the summertime in urban Shanghai"
         ],
         "url": "https://experts.ucdavis.edu/expert/bnEl1scO"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          38.26699978640028,
-          36.914358575021346
-        ]
-      },
-      "properties": {
-        "researcher": "Watenpaugh, Heghnar",
-        "location": "Aleppo, Ottoman",
-        "works": [
-          "DEVIANT DERVISHES: SPACE, GENDER, AND THE CONSTRUCTION OF ANTINOMIAN PIETY IN OTTOMAN ALEPPO"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/8PkUrbq0"
       }
     },
     {
@@ -4849,6 +4851,42 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          4.3221548,
+          45.022172
+        ]
+      },
+      "properties": {
+        "researcher": "Sumner, Daniel A",
+        "location": "Mars",
+        "works": [
+          "Large wind ripples on Mars: A record of atmospheric evolution"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/Qyrz8jnD"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.3221548,
+          45.022172
+        ]
+      },
+      "properties": {
+        "researcher": "Nandi, Somen",
+        "location": "Mars",
+        "works": [
+          "Towards a Biomanufactory on Mars"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/OAnbBCzP"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           174.7631803,
           -36.852095
         ]
@@ -5047,61 +5085,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -91.8829484,
-          39.1697626
-        ]
-      },
-      "properties": {
-        "researcher": "Johnson, Kevin R",
-        "location": "U.S., Mexico",
-        "works": [
-          "An Essay on Immigration, Citizenship, and U.S./Mexico Relations: The Tale of Two Treaties"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/IgQ7KXIZ"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -91.8829484,
-          39.1697626
-        ]
-      },
-      "properties": {
-        "researcher": "Wan, Yu-Jui Yvonne",
-        "location": "U.S., Mexico",
-        "works": [
-          "Characteristics and Drinking Patterns in Alcohol Abusing Mexican American Men",
-          "Polymorphisms of the dopamine D2 receptor, serotonin transporter, and GABAA receptor Î²3 subunit genes and alcoholism in Mexican-Americans"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/DRFUFOhr"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -91.8829484,
-          39.1697626
-        ]
-      },
-      "properties": {
-        "researcher": "Robins, Richard W",
-        "location": "U.S., Mexico",
-        "works": [
-          "Prospective Relationships Between Ethnic Discrimination and Substance Use by Mexicanâ€American Adolescents"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/CtdULAUr"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           8.2319736,
           46.7985624
         ]
@@ -5131,6 +5114,43 @@
           "Indian Country's Borders: Territoriality, Immunity, and the Construction of Tribal Sovereignty"
         ],
         "url": "https://experts.ucdavis.edu/expert/6arIMdOZ"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -91.8829484,
+          39.1697626
+        ]
+      },
+      "properties": {
+        "researcher": "Wan, Yu-Jui Yvonne",
+        "location": "Mexico, America",
+        "works": [
+          "Characteristics and Drinking Patterns in Alcohol Abusing Mexican American Men",
+          "Polymorphisms of the dopamine D2 receptor, serotonin transporter, and GABAA receptor Î²3 subunit genes and alcoholism in Mexican-Americans"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/DRFUFOhr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -91.8829484,
+          39.1697626
+        ]
+      },
+      "properties": {
+        "researcher": "Robins, Richard W",
+        "location": "Mexico, America",
+        "works": [
+          "Prospective Relationships Between Ethnic Discrimination and Substance Use by Mexicanâ€American Adolescents"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/CtdULAUr"
       }
     },
     {
@@ -5570,25 +5590,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -75.9078749,
-          40.9921996
-        ]
-      },
-      "properties": {
-        "researcher": "Young, Heather M",
-        "location": "Japan, America",
-        "works": [
-          "Attitudes Toward Community-Based Services Among Japanese American Families",
-          "Decision Making at End of Life Among Japanese American Families"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/nuzTTJKR"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           14.5208584,
           59.6749712
         ]
@@ -5762,42 +5763,6 @@
           "Simulating nitrogen management impacts on maize production in the U.S. Midwest"
         ],
         "url": "https://experts.ucdavis.edu/expert/s8sPAQBh"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -106.280075,
-          43.411391
-        ]
-      },
-      "properties": {
-        "researcher": "Haddad, Maha",
-        "location": "U.S. Midwest",
-        "works": [
-          "Predictors of time to first cannulation for arteriovenous fistula in pediatric hemodialysis patients: Midwest Pediatric Nephrology Consortium study"
-        ],
-        "url": "https://experts.ucdavis.edu/expert/ozo7drir"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -106.280075,
-          43.411391
-        ]
-      },
-      "properties": {
-        "researcher": "Nadler, Steven A",
-        "location": "U.S. Midwest",
-        "works": [
-          "Genetic structure of midwestern Ascaris suum populations: a comparison of isoenzyme and RAPD markers."
-        ],
-        "url": "https://experts.ucdavis.edu/expert/UZ63Q4yH"
       }
     },
     {
@@ -6384,6 +6349,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          7.957841412940648,
+          61.8330650383424
+        ]
+      },
+      "properties": {
+        "researcher": "Post, Eric",
+        "location": "Tundra",
+        "works": [
+          "Experimental warming differentially affects vegetative and reproductive phenology of tundra plants"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/W8Wqzimf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -81.79773804250934,
           26.301141452430436
         ]
@@ -6438,35 +6421,17 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -94.3357433,
-          30.047992
+          -80.23727,
+          26.3100794
         ]
       },
       "properties": {
-        "researcher": "Tu, Shin-Ping",
-        "location": "China, United States Of America",
+        "researcher": "Wintemute, Garen J",
+        "location": "Parkland",
         "works": [
-          "Participation in colorectal cancer screening among Chinese Americans."
+          "News media coverage of extreme risk protection order policies surrounding the Parkland shooting: a mixed-methods analysis."
         ],
-        "url": "https://experts.ucdavis.edu/expert/GXeltcDg"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -80.90722997534247,
-          38.138600650634864
-        ]
-      },
-      "properties": {
-        "researcher": "Tu, Shin-Ping",
-        "location": "Cambodia, United States",
-        "works": [
-          "Cervical Cancer Control in a Cambodian American Population."
-        ],
-        "url": "https://experts.ucdavis.edu/expert/GXeltcDg"
+        "url": "https://experts.ucdavis.edu/expert/cjZxkMOH"
       }
     },
     {
@@ -6593,6 +6558,24 @@
           "Evolutionary Genetics: Concepts, Analysis, and Practice . By Glenn-Peter SÃ¦tre and Mark Ravinet. Oxford and New York: Oxford University Press. $95.00 (hardcover); $49.95 (paper). xvi + 310 p.; ill.; index and species index. ISBN: 978-0-19-883091-7 (hc); 978-0-19-883092-4 (pb). 2019."
         ],
         "url": "https://experts.ucdavis.edu/expert/hQCjhPbI"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.831154360345367,
+          53.5880864
+        ]
+      },
+      "properties": {
+        "researcher": "Kukreja, Roopali",
+        "location": "European Xfel",
+        "works": [
+          "Megahertzâ€rate ultrafast Xâ€ray scattering and holographic imaging at the European XFEL"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/7X6RA4jk"
       }
     },
     {
@@ -7241,6 +7224,24 @@
           "Effects of agriculture and nature reserves on avian behavior in northwestern Costa Rica"
         ],
         "url": "https://experts.ucdavis.edu/expert/chafMLtC"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.350124208841514,
+          52.066199600000004
+        ]
+      },
+      "properties": {
+        "researcher": "Rudolph, Maxwell L",
+        "location": "Mimas",
+        "works": [
+          "The evolution of a young ocean within Mimas"
+        ],
+        "url": "https://experts.ucdavis.edu/expert/IST9aLpd"
       }
     },
     {
