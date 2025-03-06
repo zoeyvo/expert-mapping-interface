@@ -5,12 +5,6 @@
       "works": [
         "Hepatocellular screening in hepatitis\u00e2\u20ac\u0090B infected Asian Americans"
       ]
-    },
-    "KEEGAN, Theresa H": {
-      "matches": 1,
-      "works": [
-        "Papillary thyroid cancer incidence rates vary significantly by birthplace in Asian American women"
-      ]
     }
   },
   "Fermilab": {
@@ -34,17 +28,29 @@
       ]
     }
   },
-  "Latin America": {
+  "South America": {
     "STEWART, Susan L": {
       "matches": 1,
       "works": [
         "Smoking acquisition among adolescents and young Latinas The role of socioenvironmental and personal factors"
       ]
     },
+    "MORRISON, Amy C": {
+      "matches": 1,
+      "works": [
+        "Arboviral Etiologies of Acute Febrile Illnesses in Western South America, 2000\u00e2\u20ac\u201c2007"
+      ]
+    },
     "HILBERT, Martin R": {
       "matches": 1,
       "works": [
         "In the Midst of the Transition: Challenges and Changes for Latin American Economies"
+      ]
+    },
+    "SYKES, Jane E": {
+      "matches": 1,
+      "works": [
+        "Microscopic and molecular identification of hemotropic mycoplasmas in South American coatis (Nasua nasua)"
       ]
     },
     "FEJERMAN, Laura": {
@@ -603,82 +609,13 @@
       ]
     }
   },
-  "Africa, America": {
+  "America": {
     "HUSSAIN, Shehnaz K": {
       "matches": 1,
       "works": [
         "Host Determinants of HIV-1 Control in African Americans"
       ]
     },
-    "MUSTAFAA, Faheemah N": {
-      "matches": 1,
-      "works": [
-        "Associations of Racial Discrimination and Parental Discrimination Coping Messages with African American Adolescent Racial Identity"
-      ]
-    }
-  },
-  "Sierra National Forest, Ca": {
-    "KELLY, Maggi": {
-      "matches": 1,
-      "works": [
-        "Allometric equation choice impacts lidar-based forest biomass estimates: A case study from the Sierra National Forest, CA"
-      ]
-    }
-  },
-  "Ghana": {
-    "DEWEY, Kathryn G": {
-      "matches": 2,
-      "works": [
-        "Home fortification of complementary foods with micronutrient supplements is well accepted and has positive effects on infant iron status in Ghana",
-        "Maternal supplementation with small-quantity lipid-based nutrient supplements during pregnancy and lactation does not reduce depressive symptoms at 6 months postpartum in Ghanaian women: a randomized controlled trial"
-      ]
-    },
-    "ZHOU, Huaijun": {
-      "matches": 1,
-      "works": [
-        "Genotypic and phenotypic characterisation of three local chicken ecotypes of Ghana based on principal component analysis and body measurements."
-      ]
-    }
-  },
-  "South America": {
-    "MORRISON, Amy C": {
-      "matches": 1,
-      "works": [
-        "Arboviral Etiologies of Acute Febrile Illnesses in Western South America, 2000\u00e2\u20ac\u201c2007"
-      ]
-    },
-    "SYKES, Jane E": {
-      "matches": 1,
-      "works": [
-        "Microscopic and molecular identification of hemotropic mycoplasmas in South American coatis (Nasua nasua)"
-      ]
-    }
-  },
-  "Nairobi, Kenya": {
-    "MEIER, Alan K": {
-      "matches": 1,
-      "works": [
-        "Chronic diarrhoea in HIV-1-infected adults in Nairobi, Kenya"
-      ]
-    }
-  },
-  "Xi'An, China": {
-    "KLEEMAN, Michael J": {
-      "matches": 1,
-      "works": [
-        "Source contributions to primary and secondary inorganic particulate matter during a severe wintertime PM2.5 pollution episode in Xi'an, China"
-      ]
-    }
-  },
-  "Amazon": {
-    "BENNETT, Alan B": {
-      "matches": 1,
-      "works": [
-        "Out of the Amazon: Theobroma cacao enters the genomic era"
-      ]
-    }
-  },
-  "Us": {
     "SPRINGBORN, Michael R": {
       "matches": 1,
       "works": [
@@ -689,6 +626,18 @@
       "matches": 1,
       "works": [
         "Survival differences of Asian and Caucasian epithelial ovarian cancer patients in the United States"
+      ]
+    },
+    "TON, Hendry": {
+      "matches": 1,
+      "works": [
+        "Discussing Depression with Vietnamese American Patients"
+      ]
+    },
+    "FANCHER, Tonya L": {
+      "matches": 1,
+      "works": [
+        "Discussing Depression with Vietnamese American Patients"
       ]
     },
     "ROMANO, Patrick": {
@@ -722,10 +671,23 @@
         "A desperate trek across America -: Cabeza!de Vaca (Alvar Nunez Cabeza!de Vaca)"
       ]
     },
+    "MAIRA, Sunaina": {
+      "matches": 1,
+      "works": [
+        "Flexible Citizenship/Flexible Empire: South Asian Muslim Youth in Post-9/11 America"
+      ]
+    },
     "BISSELL, Michael": {
       "matches": 1,
       "works": [
         "Family History of Breast Cancer, Breast Density, and Breast Cancer Risk in a U.S. Breast Cancer Screening Population"
+      ]
+    },
+    "KEEGAN, Theresa H": {
+      "matches": 2,
+      "works": [
+        "Papillary thyroid cancer incidence rates vary significantly by birthplace in Asian American women",
+        "Factors Associated With Online Patient-Provider Communications Among Cancer Survivors in the United States During COVID-19: Cross-sectional Study (Preprint)"
       ]
     },
     "JOH, Elizabeth E": {
@@ -750,6 +712,13 @@
       "matches": 1,
       "works": [
         "KBase: The United States Department of Energy Systems Biology Knowledgebase"
+      ]
+    },
+    "YOUNG, Heather M": {
+      "matches": 2,
+      "works": [
+        "Attitudes Toward Community-Based Services Among Japanese American Families",
+        "Decision Making at End of Life Among Japanese American Families"
       ]
     },
     "MALOGOLOWKIN, Marcio": {
@@ -793,6 +762,12 @@
       "matches": 1,
       "works": [
         "Association of Lactase Persistence Genotypes (rs4988235) and Ethnicity with Dairy Intake in a Healthy U.S. Population."
+      ]
+    },
+    "MUSTAFAA, Faheemah N": {
+      "matches": 1,
+      "works": [
+        "Associations of Racial Discrimination and Parental Discrimination Coping Messages with African American Adolescent Racial Identity"
       ]
     },
     "BITLER, Marianne P": {
@@ -854,6 +829,12 @@
       "matches": 1,
       "works": [
         "Investigation of an EHV-1 Outbreak in the United States Caused by a New H752 Genotype"
+      ]
+    },
+    "TU, Shin-Ping": {
+      "matches": 1,
+      "works": [
+        "Participation in colorectal cancer screening among Chinese Americans."
       ]
     },
     "MAGNEY, Troy": {
@@ -922,12 +903,6 @@
         "Implications of a New Definition of Vitamin D Deficiency in a Multiracial US Adolescent Population: The National Health and Nutrition Examination Survey III"
       ]
     },
-    "KEEGAN, Theresa H": {
-      "matches": 1,
-      "works": [
-        "Factors Associated With Online Patient-Provider Communications Among Cancer Survivors in the United States During COVID-19: Cross-sectional Study (Preprint)"
-      ]
-    },
     "MIDBOE, Amanda M": {
       "matches": 1,
       "works": [
@@ -938,6 +913,12 @@
       "matches": 1,
       "works": [
         "Predictors of Extended Length of Stay Following Treatment of Unruptured Adult Cerebral Aneurysms: A Study of The National Inpatient Sample"
+      ]
+    },
+    "WHITMER, Rachel A": {
+      "matches": 1,
+      "works": [
+        "Inclusion of Vietnamese Americans: Opportunities to understand dementia disparities"
       ]
     },
     "DECARLI, Charles": {
@@ -980,6 +961,53 @@
       "matches": 1,
       "works": [
         "The Role of Rural Electric Cooperatives in Achieving Universal Broadband Access: Evidence from the United States"
+      ]
+    }
+  },
+  "Sierra National Forest, Ca": {
+    "KELLY, Maggi": {
+      "matches": 1,
+      "works": [
+        "Allometric equation choice impacts lidar-based forest biomass estimates: A case study from the Sierra National Forest, CA"
+      ]
+    }
+  },
+  "Ghana": {
+    "DEWEY, Kathryn G": {
+      "matches": 2,
+      "works": [
+        "Home fortification of complementary foods with micronutrient supplements is well accepted and has positive effects on infant iron status in Ghana",
+        "Maternal supplementation with small-quantity lipid-based nutrient supplements during pregnancy and lactation does not reduce depressive symptoms at 6 months postpartum in Ghanaian women: a randomized controlled trial"
+      ]
+    },
+    "ZHOU, Huaijun": {
+      "matches": 1,
+      "works": [
+        "Genotypic and phenotypic characterisation of three local chicken ecotypes of Ghana based on principal component analysis and body measurements."
+      ]
+    }
+  },
+  "Nairobi, Kenya": {
+    "MEIER, Alan K": {
+      "matches": 1,
+      "works": [
+        "Chronic diarrhoea in HIV-1-infected adults in Nairobi, Kenya"
+      ]
+    }
+  },
+  "Xi'An, China": {
+    "KLEEMAN, Michael J": {
+      "matches": 1,
+      "works": [
+        "Source contributions to primary and secondary inorganic particulate matter during a severe wintertime PM2.5 pollution episode in Xi'an, China"
+      ]
+    }
+  },
+  "Amazon": {
+    "BENNETT, Alan B": {
+      "matches": 1,
+      "works": [
+        "Out of the Amazon: Theobroma cacao enters the genomic era"
       ]
     }
   },
@@ -1246,14 +1274,6 @@
       ]
     }
   },
-  "Summit, Greenland": {
-    "ANASTASIO, Cort": {
-      "matches": 1,
-      "works": [
-        "Light penetration in the snowpack at Summit, Greenland: Part 2 Nitrate photolysis"
-      ]
-    }
-  },
   "Pacific Ocean": {
     "ANASTASIO, Cort": {
       "matches": 1,
@@ -1295,14 +1315,6 @@
       "matches": 1,
       "works": [
         "Transport and diagenesis of dissolved and particulate terrigenous organic matter in the North Pacific Ocean"
-      ]
-    }
-  },
-  "Tropical Forest": {
-    "HERNES, Peter J": {
-      "matches": 1,
-      "works": [
-        "Mobilization of optically invisible dissolved organic matter in response to rainstorm events in a tropical forest headwater river"
       ]
     }
   },
@@ -1561,14 +1573,6 @@
       ]
     }
   },
-  "Lbnl": {
-    "QI, Jinyi": {
-      "matches": 1,
-      "works": [
-        "Development of the LBNL positron emission mammography camera"
-      ]
-    }
-  },
   "France": {
     "CHAGANTI, Seeta": {
       "matches": 1,
@@ -1580,14 +1584,6 @@
       "matches": 1,
       "works": [
         "Structure and Power in Multilateral Negotiations: An Application to French Water Policy"
-      ]
-    }
-  },
-  "America, South Asia": {
-    "MAIRA, Sunaina": {
-      "matches": 1,
-      "works": [
-        "Flexible Citizenship/Flexible Empire: South Asian Muslim Youth in Post-9/11 America"
       ]
     }
   },
@@ -1680,14 +1676,6 @@
       "matches": 1,
       "works": [
         "Insights into the formation of secondary organic carbon in the summertime in urban Shanghai"
-      ]
-    }
-  },
-  "Aleppo, Ottoman": {
-    "WATENPAUGH, Heghnar": {
-      "matches": 1,
-      "works": [
-        "DEVIANT DERVISHES: SPACE, GENDER, AND THE CONSTRUCTION OF ANTINOMIAN PIETY IN OTTOMAN ALEPPO"
       ]
     }
   },
@@ -1822,6 +1810,20 @@
       ]
     }
   },
+  "Mars": {
+    "SUMNER, Daniel A": {
+      "matches": 1,
+      "works": [
+        "Large wind ripples on Mars: A record of atmospheric evolution"
+      ]
+    },
+    "NANDI, Somen": {
+      "matches": 1,
+      "works": [
+        "Towards a Biomanufactory on Mars"
+      ]
+    }
+  },
   "Auckland, New Zealand": {
     "BROWN, Patrick H": {
       "matches": 1,
@@ -1904,27 +1906,6 @@
       ]
     }
   },
-  "U.S., Mexico": {
-    "JOHNSON, Kevin R": {
-      "matches": 1,
-      "works": [
-        "An Essay on Immigration, Citizenship, and U.S./Mexico Relations: The Tale of Two Treaties"
-      ]
-    },
-    "WAN, Yu-Jui Yvonne": {
-      "matches": 2,
-      "works": [
-        "Characteristics and Drinking Patterns in Alcohol Abusing Mexican American Men",
-        "Polymorphisms of the dopamine D2 receptor, serotonin transporter, and GABAA receptor \u00ce\u00b23 subunit genes and alcoholism in Mexican-Americans"
-      ]
-    },
-    "ROBINS, Richard W": {
-      "matches": 1,
-      "works": [
-        "Prospective Relationships Between Ethnic Discrimination and Substance Use by Mexican\u00e2\u20ac\u0090American Adolescents"
-      ]
-    }
-  },
   "Switzerland": {
     "PERI, Giovanni": {
       "matches": 1,
@@ -1938,6 +1919,21 @@
       "matches": 1,
       "works": [
         "Indian Country's Borders: Territoriality, Immunity, and the Construction of Tribal Sovereignty"
+      ]
+    }
+  },
+  "Mexico, America": {
+    "WAN, Yu-Jui Yvonne": {
+      "matches": 2,
+      "works": [
+        "Characteristics and Drinking Patterns in Alcohol Abusing Mexican American Men",
+        "Polymorphisms of the dopamine D2 receptor, serotonin transporter, and GABAA receptor \u00ce\u00b23 subunit genes and alcoholism in Mexican-Americans"
+      ]
+    },
+    "ROBINS, Richard W": {
+      "matches": 1,
+      "works": [
+        "Prospective Relationships Between Ethnic Discrimination and Substance Use by Mexican\u00e2\u20ac\u0090American Adolescents"
       ]
     }
   },
@@ -2121,15 +2117,6 @@
       ]
     }
   },
-  "Japan, America": {
-    "YOUNG, Heather M": {
-      "matches": 2,
-      "works": [
-        "Attitudes Toward Community-Based Services Among Japanese American Families",
-        "Decision Making at End of Life Among Japanese American Families"
-      ]
-    }
-  },
   "Sweden": {
     "BRINKLEY, Catherine": {
       "matches": 1,
@@ -2207,18 +2194,6 @@
       "matches": 1,
       "works": [
         "Simulating nitrogen management impacts on maize production in the U.S. Midwest"
-      ]
-    },
-    "HADDAD, Maha": {
-      "matches": 1,
-      "works": [
-        "Predictors of time to first cannulation for arteriovenous fistula in pediatric hemodialysis patients: Midwest Pediatric Nephrology Consortium study"
-      ]
-    },
-    "NADLER, Steven A": {
-      "matches": 1,
-      "works": [
-        "Genetic structure of midwestern Ascaris suum populations: a comparison of isoenzyme and RAPD markers."
       ]
     },
     "NOCCO, Mallika A": {
@@ -2463,6 +2438,14 @@
       ]
     }
   },
+  "Tundra": {
+    "POST, Eric": {
+      "matches": 1,
+      "works": [
+        "Experimental warming differentially affects vegetative and reproductive phenology of tundra plants"
+      ]
+    }
+  },
   "Us Gulf Coast, Us": {
     "BARBATO, Michele": {
       "matches": 1,
@@ -2485,19 +2468,11 @@
       ]
     }
   },
-  "China, United States Of America": {
-    "TU, Shin-Ping": {
+  "Parkland": {
+    "WINTEMUTE, Garen J": {
       "matches": 1,
       "works": [
-        "Participation in colorectal cancer screening among Chinese Americans."
-      ]
-    }
-  },
-  "Cambodia, United States": {
-    "TU, Shin-Ping": {
-      "matches": 1,
-      "works": [
-        "Cervical Cancer Control in a Cambodian American Population."
+        "News media coverage of extreme risk protection order policies surrounding the Parkland shooting: a mixed-methods analysis."
       ]
     }
   },
@@ -2552,6 +2527,14 @@
       "matches": 1,
       "works": [
         "Evolutionary Genetics: Concepts, Analysis, and Practice . By Glenn-Peter S\u00c3\u00a6tre and Mark Ravinet. Oxford and New York: Oxford University Press. $95.00 (hardcover); $49.95 (paper). xvi + 310 p.; ill.; index and species index. ISBN: 978-0-19-883091-7 (hc); 978-0-19-883092-4 (pb). 2019."
+      ]
+    }
+  },
+  "European Xfel": {
+    "KUKREJA, Roopali": {
+      "matches": 1,
+      "works": [
+        "Megahertz\u00e2\u20ac\u0090rate ultrafast X\u00e2\u20ac\u0090ray scattering and holographic imaging at the European XFEL"
       ]
     }
   },
@@ -2834,6 +2817,14 @@
       "matches": 1,
       "works": [
         "Effects of agriculture and nature reserves on avian behavior in northwestern Costa Rica"
+      ]
+    }
+  },
+  "Mimas": {
+    "RUDOLPH, Maxwell L": {
+      "matches": 1,
+      "works": [
+        "The evolution of a young ocean within Mimas"
       ]
     }
   },
