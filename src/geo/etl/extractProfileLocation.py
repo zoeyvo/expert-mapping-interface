@@ -17,9 +17,19 @@ manual_geo_name = {
   "CA" : "California",
   "California, U.S.A." : "California",
   "the United States" : "USA",
-  "U.S." : "USA",
   "Greenland" : "Greenland, Denmark",
-  "East Greenland" : "Greenland, Denmark"
+  "East Greenland" : "Greenland, Denmark",
+  "Latin America" : "South America",
+  "Tropical Forest" : "N/A",
+  # Temp fix for now
+  "Asia, United States Of America" : "America",
+  "Asia, America": "America",
+  "Africa, America" : "America",
+  "America, South Asia" : "America",
+  "Vietnam Korea United States" : "America",
+  "Vietnam, America" : "America",
+  "Japan, America" : "America",
+  "China, United States of America" : "America"
 }
 
 BATCH_SIZE = 100
@@ -123,7 +133,11 @@ geo = ["N/A"] * total_rows
 for ret in llama_results:
   ret = json.loads(ret)
   id = int(ret["custom_id"])
-  geo[id] = ret["response"]["body"]["choices"][0]["message"]["content"]
+  loc = ret["response"]["body"]["choices"][0]["message"]["content"]
+  # Some manual name changes for api
+  if loc in manual_geo_name:
+    loc = manual_geo_name[loc]
+  geo[id] = loc
 data["geo"] = geo
 
 titles = data["title"].tolist()
@@ -142,14 +156,10 @@ for batch_start in range(0, total_rows, BATCH_SIZE):
   batch_location_count = 0
   
   for location in batch_locations:
-    # Some manual name changes for api
-    if location in manual_geo_name:
-      location = manual_geo_name[location]
-    
     # Geocode and store to 'geoData' if it's a new location
     if location != "N/A":
       if location not in geoData:
-        time.sleep(0.6)
+        time.sleep(0.5)
         try:
           geo = geolocator.geocode(location)
           if geo:
@@ -183,24 +193,26 @@ filter = []
 for geo in geoData:
   filter.append(geo)
   
-chat_completion = groq_client.chat.completions.create(
-  messages=[
-      {"role": "system", "content": f'Determine invalid locations in provided text. Do not infer.'},
-      {"role": "system", "content": f'Output each invalid location in seperate line. Do not provide explainations.'},
-      {"role": "user", "content": f'Extract from this list: {filter}'}
-  ],
-  model="deepseek-r1-distill-llama-70b",
-  stream=False,
-  temperature=0
-)
-
-filtered = formatDeepSeekResult(chat_completion.choices[0].message.content)
-print(f"\nNumber of false positives: {len(filtered)}")
+filtered = []
+for batch_start in range(0, len(filter), 20):
+  batch_end = min(batch_start + 20, len(filter))
+  
+  chat_completion = groq_client.chat.completions.create(
+    messages=[
+        {"role": "system", "content": f'System will be provided with a list of texts. Determine invalid locations in provided text. Do not infer.'},
+        {"role": "system", "content": f'Output each invalid location in seperate line. Do not provide explainations.'},
+        {"role": "user", "content": f'Extract from this list: {filter[batch_start:batch_end]}'}
+    ],
+    model="deepseek-r1-distill-llama-70b",
+    stream=False,
+    temperature=0
+  )
+  for f in formatDeepSeekResult(chat_completion.choices[0].message.content):
+    filtered.append(f)
 
 for geo in filtered:
   if geo in geoData:
     geoData.pop(geo)
-    # print(geo, "\n")
 
 # Processing profiles
 for name, title, location in zip(names, titles, locations):
@@ -210,11 +222,7 @@ for name, title, location in zip(names, titles, locations):
   if name not in profiles:
     profiles[name] = Profile(name)
   profiles[name].addTitle(title)
-  
-  # Some manual name changes for api
-  if location in manual_geo_name:
-    location = manual_geo_name[location]
-        
+
   # Handle expert/title that has location
   if location in geoData:
     total_locations += 1
@@ -266,7 +274,24 @@ with open(location_based_profiles_path, "w") as file_locations:
 coordinates_path = os.path.join(json_dir, "location_coordinates.json")
 with open(coordinates_path, "w") as file_profiles:
   json.dump(coordinates, file_profiles, indent=2)
-
+  
+# Stats and confidence:
+report_path = os.path.join(json_dir, "report.txt")
+with open(report_path, "w") as file_report:
+  file_report.write("Final Statistics:\n")
+  file_report.write(f"Total unique researchers: {len(unique_researchers)}\n")
+  file_report.write(f"Total unique works (titles) parsed: {len(unique_titles)}\n")
+  file_report.write(f"Total unique locations extracted: {len(unique_locations)}\n")
+  file_report.write(f"Total works with locations: {total_locations}\n\n")
+  
+  file_report.write(f"* Incorrect format/Fail to geocode: {len(fail_to_geocode)} (filtered by Nominatim API)\n\n")
+  for fail in fail_to_geocode:
+    file_report.write(f"{fail}\n\n")
+    
+  file_report.write(f"* Low confident locations: {len(filtered)} (filtered by LLM)\n\n")
+  for geo in filtered:
+    file_report.write(f"-{geo}\n")
+  
 # Save non-geo profiles
 non_geo_profiles = {name: profile for name, profile in profiles.items() if "None" in profile.locations}
 non_geo_profiles_path = os.path.join(json_dir, "non_geo_profiles.json")
@@ -283,10 +308,8 @@ logging.info("Total unique works (titles) parsed: %d", len(unique_titles))
 logging.info("Total unique locations extracted: %d", len(unique_locations))
 logging.info("Total execution time: %.2f minutes", total_time / 60)
 
-# print("\nLocations that can't be geocoded:")
-# for loc in fail_to_geocode:
-#   print(loc, "\n")
-print(f"Fail to geocode: {len(fail_to_geocode)}")
+print(f"\nIncorrect format/Fail to geocode: {len(fail_to_geocode)}")
+print(f"\nLow confident: {len(filtered)}")
 
 print("\nFinal Statistics:")
 print(f"Total unique researchers: {len(unique_researchers)}")

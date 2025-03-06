@@ -1,0 +1,212 @@
+Final Statistics:
+Total unique researchers: 1389
+Total unique works (titles) parsed: 4956
+Total unique locations extracted: 195
+Total works with locations: 444
+
+* Incorrect format/Fail to geocode: 56 (filtered by Nominatim API)
+
+NHLBI, N/A
+
+American Indians, N/A 
+
+However, a more accurate answer based on the information that can be extracted would be: 
+N/A
+
+U.S., Mexico 
+Mexico 
+U.S.
+
+British Columbia, Canada
+Ontario, Canada
+Canada
+
+American Society of Dermatopathology, N/A
+
+Hippocampal, N/A
+
+Western Germany, Germany
+
+Arab, America 
+Muslim 
+South Asia, America 
+Asia 
+America
+
+Medicago truncatula
+
+San Diego, Little Mogadishu, Somalia
+
+Malawi
+Mozambique 
+Chilwa
+
+Gulf of California 
+Bahía Kino, Sonora, México 
+Sonora, México 
+México
+
+African American, N/A 
+Hispanic American, N/A 
+United States, N/A ->  No, the correct extraction for the countries/ locations mentioned is 
+Africa, N/A
+America, N/A
+
+National Society of Genetic Counselors
+
+American Society of Dermatopathology, USA
+
+Lake Joyce, Antarctica
+McMurdo Dry Valleys, Antarctica 
+Antarctica
+
+Sabah, Malaysia
+Sarawak, Malaysia
+Malaysia
+
+Asian Americans, United States 
+Non-Hispanic Whites, United States 
+United States
+
+California 
+Asia 
+Northern California
+
+Northern Elephant Seals, N/A
+
+Gediz Basin, Turkey
+
+NASA, United States 
+ ESA, Europe
+
+Abell 2744 Cluster
+
+African-American, N/A (since African-American is an ethnicity, not a location)
+
+World Health Organization (WHO), Centers for Disease Control and Prevention (CDC)
+
+United States, Mexico, Rio Grande/Bravo Basin
+
+Upper Silesia, Poland
+Davis, California
+
+Latin America, 
+Hispanic/Latino Individuals: No specific location, 
+Study of Latinos: No specific location, 
+Hispanic Community: No specific location.
+
+Extracted location: 
+Latin America
+
+Mytilus californianus refers to the California mussel. Given that, 
+ California, USA
+
+Andean Altiplano
+
+California, USA
+South Africa
+
+Advanced Light Source, N/A
+
+European economy, Europe
+
+Amazonian forest
+
+California, USA 
+NASA, N/A 
+ESA, N/A 
+ESO, N/A
+
+Sierra Nevada Mountains, California
+
+Hispanic/Latino is not a location, it is an ethnicity. No location was found for the given text. 
+
+N/A
+
+California, USA 
+University not specific to a city so Athena not extracted, and USA is country of University of California.
+
+Sierra Nevada, California, USA
+California, USA 
+USA
+
+Northern Hemisphere
+
+Southern house mosquito, N/A
+
+Davis, California 
+University of California, California 
+California, United States
+
+Large Magellanic Cloud, Milky Way
+
+California, USA 
+Central Valley, California
+
+Brazil 
+Southern Brazil
+
+Siskiyou, Oregon, USA 
+Oregon, USA 
+USA
+
+Tashlhiyt, Morocco
+
+Deep-sea hydrothermal vent
+
+NIH, N/A -> Changed to: United States
+
+Indo-Gangetic Plains
+
+Asian Americans, Asia, United States
+
+Tule River, California 
+San Joaquin Valley, California
+
+American Indians, N/A 
+Alternatively: 
+N/A, United States (Assumption of location based on mention of "American Indians" is avoided) 
+ Better: 
+Strong Heart Study location is not mentioned, however "American Indians" might refer to 
+United States 
+
+Best Answer: 
+United States
+
+Cuzco, Apurimac, Osaka, Japan
+
+Rabbit Heart is not a location, N/A
+
+Mouse retina
+
+* Low confident locations: 29 (filtered by LLM)
+
+-Tomato
+-Mouse
+-African America, USA
+-Summit, Greenland
+-Tropical forest
+-California \nSouthern California
+-LBNL
+-Vietnam\nKorea\nUnited States
+-Aleppo, Ottoman
+-Rabbit
+-U.S., Mexico
+-Brazil, California
+-Milky Way
+-Brain
+-Multiple Mirror Telescope
+-Lambert, Eaton
+-Latino
+-Midwest
+-Arabidopsis
+-Gulf
+-Eastern Association
+-Cambodia, United States
+-US, Global
+-OSU, N/A
+-Boeing
+-Japan, Yokai
+-Ryugu
+-Rural Communities
+-Rural State

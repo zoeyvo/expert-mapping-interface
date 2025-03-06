@@ -233,7 +233,7 @@
       "None",
       "None",
       "None",
-      "Us",
+      "America",
       "None",
       "None",
       "None"
@@ -323,7 +323,7 @@
       "None",
       "None",
       "None",
-      "Us",
+      "America",
       "Framingham",
       "None",
       "None"
@@ -339,7 +339,7 @@
     ],
     "locations": [
       "Asia, United States Of America",
-      "Latin America",
+      "South America",
       "None",
       "None",
       "California"
@@ -908,7 +908,7 @@
       "None",
       "Ireland",
       "None",
-      "Us",
+      "America",
       "Nova Scotia, Canada",
       "None"
     ]
@@ -1241,7 +1241,7 @@
       "None",
       "None",
       "None",
-      "Lbnl",
+      "None",
       "None",
       "None",
       "None",
@@ -1331,7 +1331,7 @@
       "None",
       "None",
       "None",
-      "Us",
+      "America",
       "None"
     ]
   },
@@ -1426,7 +1426,7 @@
     "locations": [
       "None",
       "None",
-      "Latin America",
+      "South America",
       "Thailand",
       "None"
     ]
@@ -1449,7 +1449,7 @@
     ],
     "locations": [
       "None",
-      "Us",
+      "America",
       "None"
     ]
   },
@@ -1740,7 +1740,7 @@
       "None",
       "None",
       "None",
-      "Us",
+      "America",
       "None",
       "None",
       "None",
@@ -1775,7 +1775,7 @@
     "locations": [
       "None",
       "None",
-      "Us",
+      "America",
       "None",
       "None",
       "None"
@@ -2433,7 +2433,7 @@
       "Duodenal Microbiome and Serum Metabolites Predict Hepatocellular Carcinoma in a Multicenter Cohort of Patients with Cirrhosis"
     ],
     "locations": [
-      "Africa, America",
+      "America",
       "None",
       "None",
       "None",
@@ -2757,7 +2757,7 @@
       "None",
       "None",
       "None",
-      "Us",
+      "America",
       "None"
     ]
   },
@@ -2774,7 +2774,7 @@
       "None",
       "None",
       "None",
-      "None",
+      "America",
       "None",
       "None"
     ]
@@ -3247,7 +3247,7 @@
       "None",
       "None",
       "None",
-      "Us",
+      "America",
       "None",
       "None",
       "None"
@@ -3624,9 +3624,9 @@
       "None",
       "None",
       "China",
-      "U.S., Mexico",
+      "Mexico, America",
       "None",
-      "U.S., Mexico",
+      "Mexico, America",
       "None",
       "None",
       "None",
@@ -3818,7 +3818,7 @@
       "None",
       "None",
       "None",
-      "Us"
+      "America"
     ]
   },
   "KOLNER, Brian H": {
@@ -3950,7 +3950,7 @@
       "Researchers' Degrees-of-Flexibility and the Credibility of Difference-in-Differences Estimates: Evidence from the Pandemic Policy Evaluations"
     ],
     "locations": [
-      "Us",
+      "America",
       "None",
       "None"
     ]
@@ -4120,7 +4120,7 @@
     ],
     "locations": [
       "None",
-      "Us",
+      "America",
       "None",
       "None",
       "None",
@@ -5074,7 +5074,7 @@
     ],
     "locations": [
       "None",
-      "Us"
+      "America"
     ]
   },
   "LIN, Lily K": {
@@ -5134,7 +5134,7 @@
       "None",
       "None",
       "None",
-      "Us"
+      "America"
     ]
   },
   "TERAN, Joseph M": {
@@ -5516,7 +5516,7 @@
     "locations": [
       "Sacramento, California",
       "None",
-      "Us",
+      "America",
       "None",
       "None",
       "None",
@@ -5534,7 +5534,7 @@
     "locations": [
       "Sierra Nevada, California",
       "None",
-      "Us",
+      "America",
       "None",
       "None"
     ]
@@ -5861,7 +5861,7 @@
       "None",
       "None",
       "Mexico",
-      "U.S., Mexico",
+      "Mexico, America",
       "None",
       "None",
       "None"
@@ -6086,7 +6086,7 @@
     ],
     "locations": [
       "None",
-      "None"
+      "Mimas"
     ]
   },
   "ALY, Sharif S": {
@@ -6315,8 +6315,8 @@
       "None",
       "None",
       "California",
-      "Us",
-      "Us",
+      "America",
+      "America",
       "None",
       "None",
       "None",
@@ -6447,7 +6447,7 @@
     "locations": [
       "None",
       "None",
-      "Summit, Greenland",
+      "None",
       "None",
       "Pacific Ocean",
       "None",
@@ -6769,7 +6769,7 @@
     ],
     "locations": [
       "None",
-      "None",
+      "America",
       "None",
       "None",
       "None"
@@ -6961,7 +6961,7 @@
       "None",
       "None",
       "None",
-      "Us",
+      "America",
       "None"
     ]
   },
@@ -7306,7 +7306,7 @@
       "None",
       "None",
       "None",
-      "Us"
+      "America"
     ]
   },
   "HUBENY, Veronika E": {
@@ -7551,14 +7551,6 @@
       "None"
     ]
   },
-  "TON, Hendry": {
-    "titles": [
-      "Discussing Depression with Vietnamese American Patients"
-    ],
-    "locations": [
-      "None"
-    ]
-  },
   "LIU, Jie": {
     "titles": [
       "Regulation of Homologous Recombination in Eukaryotes",
@@ -7762,7 +7754,7 @@
       "California",
       "None",
       "None",
-      "None",
+      "Mars",
       "North Korea",
       "None"
     ]
@@ -7906,7 +7898,7 @@
     "locations": [
       "None",
       "None",
-      "Us"
+      "America"
     ]
   },
   "HORWATH, William R": {
@@ -8050,6 +8042,16 @@
       "None",
       "San Francisco Bay",
       "California",
+      "None"
+    ]
+  },
+  "HERNES, Peter J": {
+    "titles": [
+      "Transport and diagenesis of dissolved and particulate terrigenous organic matter in the North Pacific Ocean",
+      "Mobilization of optically invisible dissolved organic matter in response to rainstorm events in a tropical forest headwater river"
+    ],
+    "locations": [
+      "North Pacific Ocean",
       "None"
     ]
   },
@@ -8276,9 +8278,9 @@
     ],
     "locations": [
       "None",
-      "Us",
+      "America",
       "Eurasia",
-      "Us"
+      "America"
     ]
   },
   "GRADZIEL, Thomas": {
@@ -8304,7 +8306,7 @@
     "locations": [
       "None",
       "None",
-      "Us",
+      "America",
       "None",
       "None"
     ]
@@ -8489,7 +8491,7 @@
     "locations": [
       "San Miguel Island, California",
       "None",
-      "U.S. Midwest",
+      "None",
       "None"
     ]
   },
@@ -8561,7 +8563,7 @@
     ],
     "locations": [
       "None",
-      "Us",
+      "America",
       "Mexico"
     ]
   },
@@ -8720,7 +8722,7 @@
       "None",
       "California",
       "None",
-      "None",
+      "Parkland",
       "None",
       "California"
     ]
@@ -9147,7 +9149,7 @@
     "locations": [
       "None",
       "None",
-      "Us",
+      "America",
       "None",
       "None",
       "None"
@@ -9566,7 +9568,7 @@
     "locations": [
       "None",
       "California",
-      "Us"
+      "America"
     ]
   },
   "SZE, Julie": {
@@ -9587,7 +9589,7 @@
       "Introduction"
     ],
     "locations": [
-      "America, South Asia",
+      "America",
       "None",
       "None",
       "None"
@@ -9876,7 +9878,7 @@
     ],
     "locations": [
       "None",
-      "Us"
+      "America"
     ]
   },
   "GRAY, John A": {
@@ -10024,7 +10026,7 @@
     "locations": [
       "Americas",
       "None",
-      "Us"
+      "America"
     ]
   },
   "ZWIENIECKI, Maciej A": {
@@ -10178,7 +10180,7 @@
     ],
     "locations": [
       "None",
-      "None"
+      "European Xfel"
     ]
   },
   "DE LOERA, Jesus": {
@@ -10220,6 +10222,14 @@
     ],
     "locations": [
       "None",
+      "None"
+    ]
+  },
+  "WATENPAUGH, Heghnar": {
+    "titles": [
+      "DEVIANT DERVISHES: SPACE, GENDER, AND THE CONSTRUCTION OF ANTINOMIAN PIETY IN OTTOMAN ALEPPO"
+    ],
+    "locations": [
       "None"
     ]
   },
@@ -10603,7 +10613,7 @@
       "None",
       "None",
       "None",
-      "Us",
+      "America",
       "None"
     ]
   },
@@ -10893,14 +10903,14 @@
     "locations": [
       "California",
       "California",
-      "Asia, United States Of America",
+      "America",
       "None",
       "None",
       "California",
       "California",
       "None",
       "None",
-      "Us"
+      "America"
     ]
   },
   "HILBERT, Martin R": {
@@ -10910,7 +10920,7 @@
       "#BigTech @Minors: Social Media Algorithms Personalize Minors\u00e2\u20ac\u2122 Content After a Single Session, but Not for Their Protection"
     ],
     "locations": [
-      "Latin America",
+      "South America",
       "None",
       "None"
     ]
@@ -11660,7 +11670,7 @@
       "Supplementary Figure S1 from Impact of BMI on Prevalence of Dense Breasts by Race and Ethnicity"
     ],
     "locations": [
-      "Us",
+      "America",
       "None",
       "None"
     ]
@@ -11697,7 +11707,7 @@
     ],
     "locations": [
       "None",
-      "U.S., Mexico",
+      "None",
       "None"
     ]
   },
@@ -11721,8 +11731,8 @@
     ],
     "locations": [
       "None",
-      "Us",
-      "Us"
+      "America",
+      "America"
     ]
   },
   "HIGGINS, Chelle": {
@@ -12346,7 +12356,7 @@
     "locations": [
       "None",
       "None",
-      "Us",
+      "America",
       "None",
       "None",
       "None",
@@ -12563,8 +12573,8 @@
       "None",
       "None",
       "None",
-      "Japan, America",
-      "Japan, America",
+      "America",
+      "America",
       "None",
       "None",
       "None",
@@ -12800,7 +12810,7 @@
     ],
     "locations": [
       "None",
-      "None"
+      "Tundra"
     ]
   },
   "JI, Peng": {
@@ -12873,8 +12883,8 @@
     ],
     "locations": [
       "None",
-      "China, United States Of America",
-      "Cambodia, United States"
+      "America",
+      "None"
     ]
   },
   "ROYER, Christopher M": {
@@ -13159,7 +13169,7 @@
     ],
     "locations": [
       "Sweden",
-      "Us",
+      "America",
       "None"
     ]
   },
@@ -13609,7 +13619,7 @@
       "Cost Analysis of Teleophthalmology Screening for Diabetic Retinopathy Using Teleophthalmology Billing Codes."
     ],
     "locations": [
-      "Us",
+      "America",
       "None"
     ]
   },
@@ -14068,7 +14078,7 @@
     ],
     "locations": [
       "Peru",
-      "Latin America",
+      "South America",
       "Peru",
       "None",
       "California",
@@ -14178,7 +14188,7 @@
     "locations": [
       "None",
       "Arctic",
-      "Us"
+      "America"
     ]
   },
   "HADDAD, Maha": {
@@ -14187,7 +14197,7 @@
       "Developmental Changes in Proximal Tubule Tight Junction Proteins"
     ],
     "locations": [
-      "U.S. Midwest",
+      "None",
       "None"
     ]
   },
@@ -14423,7 +14433,7 @@
       "Residential Segregation and Racial/Ethnic Disparities in Ambient Air Pollution"
     ],
     "locations": [
-      "Us",
+      "America",
       "None"
     ]
   },
@@ -14570,7 +14580,7 @@
     ],
     "locations": [
       "None",
-      "None"
+      "Mars"
     ]
   },
   "PARIKH, Mamta": {
@@ -14703,7 +14713,7 @@
       "CMS national partnership to improve dementia care in nursing homes"
     ],
     "locations": [
-      "Us",
+      "America",
       "None"
     ]
   },
@@ -15026,7 +15036,7 @@
     "locations": [
       "California",
       "None",
-      "Us"
+      "America"
     ]
   },
   "YEH, Jay": {
@@ -15660,7 +15670,7 @@
     ],
     "locations": [
       "San Diego, California Uc San Diego",
-      "Us",
+      "America",
       "None",
       "None",
       "None",
@@ -16614,7 +16624,7 @@
       "None",
       "None",
       "None",
-      "Us",
+      "America",
       "None",
       "None"
     ]
