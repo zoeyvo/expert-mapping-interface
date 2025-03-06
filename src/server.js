@@ -3,6 +3,9 @@ const cors = require('cors');
 const { pool, tables } = require('./geo/postgis/config');
 const { createClient } = require('redis');
 const { exec } = require('child_process');
+const { format } = require('path');
+const fs = require('fs');
+const path = require('path');
 
 const app = express();
 const PORT = 3001;
@@ -342,6 +345,57 @@ app.get('/api/researchers/:name', async (req, res) => {
     });
 });
 
+  app.get('/api/redis/query', async (req, res) => {
+    console.log('🔍 Querying Redis cache');
+    try {
+      const expertKeys = await redisClient.keys('expert:*');
+      console.log(`🔑 Found ${expertKeys.length} keys`);
+      const geoFile = {
+        type: 'FeatureCollection',
+        features: []
+      };
+
+      for (const key of expertKeys) {
+        const data = await redisClient.hGetAll(key);
+        const feature = {
+          type: 'Feature',
+          geometry: {
+            type: 'Point',
+            coordinates: [
+              data.longitude,
+              data.latitude
+            ]
+          },
+          properties: {
+            researcher: data.researcher,
+            location: data.location,
+            works: JSON.parse(data.works),
+            url: data.url
+          }
+        };
+        geoFile.features.push(feature);
+      }
+
+      console.log('✅ GeoJSON constructed successfully');
+      // Cache the GeoJSON data in Redis
+      const cacheKey = 'expertGeoData';
+      formattedData = JSON.stringify(geoFile, null, 2);
+      const debugFilePath = path.join(__dirname, 'geo/redis/data', 'expertGeoData.json');
+      fs.writeFileSync(debugFilePath, formattedData, 'utf8');
+      console.log(`📝 GeoJSON data written to ${debugFilePath} for debugging purposes`);
+      redisClient.set(cacheKey, 3600, formattedData).then(() => {
+        console.log('📦 GeoJSON data cached successfully');
+      }).catch((err) => {
+        console.error('❌ Error caching GeoJSON data:', err);
+      });
+
+      res.setHeader('Content-Type', 'application/json');
+      res.json(formattedData);
+    } catch (error) {
+      console.error('❌ Error constructing GeoJSON:', error);
+      res.status(500).json({ error: 'Internal server error', details: error.message });
+    }
+  });
   const server = app.listen(PORT, () => {
     console.log(`🚀 Server running on http://localhost:${PORT}`);
   });

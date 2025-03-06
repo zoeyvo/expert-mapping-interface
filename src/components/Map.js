@@ -15,7 +15,8 @@ const ResearchMap = () => {
   const popupTimeoutRef = useRef(null);
 
   useEffect(() => {
-    fetch("http://localhost:3001/api/redis/geodata")
+    fetch("http://localhost:3001/api/redis/query")
+    // Want to query Redis database for GeoJson data
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
