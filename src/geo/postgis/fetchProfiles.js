@@ -3,14 +3,16 @@
  * 
  * Purpose:
  * Command-line tool to fetch and display researcher profiles
- * using the API endpoints.
+ * using the API endpoints and output as GeoJSON.
  */
 
 const { 
     fetchResearcherProfiles, 
     fetchResearcherDetails,
-    searchResearchers 
+    searchResearchers,
+    fetchResearchLocations 
 } = require('../../api/fetchProfiles');
+const fs = require('fs').promises;
 
 async function displayResearcherStats(researchers) {
     console.log('\nResearcher Summary:');
@@ -82,17 +84,64 @@ async function fetchAllResearchers() {
     return allResearchers;
 }
 
+function convertToGeoJSON(researchers) {
+    // Create a feature for each researcher-location combination
+    const features = researchers.flatMap(researcher => {
+        return researcher.locations.map(location => {
+            const geometry = location.geometry;
+            
+            return {
+                type: 'Feature',
+                geometry: geometry,
+                properties: {
+                    researcher_name: researcher.researcher_name,
+                    researcher_url: researcher.researcher_url,
+                    work_count: researcher.work_count,
+                    location_name: location.name,
+                    location_type: location.type,
+                    location_id: location.location_id
+                }
+            };
+        });
+    });
+
+    return {
+        type: 'FeatureCollection',
+        features: features,
+        metadata: {
+            total_researchers: researchers.length,
+            total_locations: features.length,
+            generated_at: new Date().toISOString()
+        }
+    };
+}
+
+async function saveGeoJSON(geojson, filename) {
+    try {
+        await fs.writeFile(filename, JSON.stringify(geojson, null, 2));
+        console.log(`\n✅ GeoJSON saved to ${filename}`);
+    } catch (error) {
+        console.error('Error saving GeoJSON:', error);
+    }
+}
+
 async function main() {
     try {
         // Parse command line arguments
         const searchName = process.argv[2];
         const limit = process.argv[3] ? parseInt(process.argv[3]) : 0;
+        const outputFile = process.argv[4] || 'researcher_locations.geojson';
 
         if (searchName) {
-            // If name provided, show detailed info
-            await displayResearcherDetails(searchName);
+            // If name provided, show detailed info and save specific researcher
+            const details = await fetchResearcherDetails(searchName);
+            if (details) {
+                await displayResearcherDetails(searchName);
+                const geojson = convertToGeoJSON([details]);
+                await saveGeoJSON(geojson, outputFile);
+            }
         } else {
-            // Otherwise show general statistics
+            // Otherwise show general statistics and save all researchers
             let researchers;
             if (limit > 0) {
                 // If limit specified, fetch just that amount
@@ -103,6 +152,12 @@ async function main() {
                 // Otherwise fetch all researchers
                 researchers = await fetchAllResearchers();
                 console.log(`\n✅ Fetched all ${researchers.length} researchers`);
+            }
+
+            if (researchers.length > 0) {
+                await displayResearcherStats(researchers);
+                const geojson = convertToGeoJSON(researchers);
+                await saveGeoJSON(geojson, outputFile);
             }
         }
     } catch (error) {
@@ -116,5 +171,6 @@ if (require.main === module) {
 
 module.exports = {
     displayResearcherStats,
-    displayResearcherDetails
+    displayResearcherDetails,
+    convertToGeoJSON
 };
