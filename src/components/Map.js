@@ -157,7 +157,7 @@ const ResearchMap = () => {
         padding: "15px", 
         borderLeft: "2px solid #aaa", 
         position: "relative", 
-        height: "850px",  
+        height: "400px",  
         minHeight: "auto", 
         overflowY: "auto", 
       }}>
