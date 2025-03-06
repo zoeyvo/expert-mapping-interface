@@ -2,11 +2,7 @@
  * parsedCache.js
  * 
  * Purpose:
-<<<<<<< HEAD
  * Fetches data from PostgreSQL, parses it, and stores it in Redis as the primary database.
-=======
- * Fetches data from PostgreSQL, parses it, and populates the Redis cache with its raw data.
->>>>>>> 26a2542 (Created rawCache.js, parsedCache.js, and data directory)
  * 
  * Usage:
  * node src/geo/redis/parsedCache.js
@@ -52,16 +48,15 @@ redisClient.on('end', () => {
 });
 
 redisClient.on('connect', () => {
-  //console.log('✅ Connected to Redis');
+  console.log('✅ Connected to Redis');
 });
 
 redisClient.on('ready', () => {
-  //console.log('🔄 Redis client is ready');
+  console.log('🔄 Redis client is ready');
 });
 
 redisClient.on('end', () => {
-  //console.log('🔌 Redis connection closed');
->>>>>>> 26a2542 (Created rawCache.js, parsedCache.js, and data directory)
+  console.log('🔌 Redis connection closed');
 });
 
 redisClient.connect().then(async () => {
@@ -72,14 +67,14 @@ redisClient.connect().then(async () => {
       SELECT COUNT(*) FROM research_locations WHERE geom IS NOT NULL;
     `);
     const totalCount = parseInt(countResult.rows[0].count);
-    //console.log(`📊 Total locations in database: ${totalCount}`);
+    console.log(`📊 Total locations in database: ${totalCount}`);
 
     // Get all features in batches
     const batchSize = 100;
-    let allFeatures = [];
+    let index = 1;
 
     for (let offset = 0; offset < totalCount; offset += batchSize) {
-      //console.log(`🔍 Fetching batch ${offset / batchSize + 1}...`);
+      console.log(`🔍 Fetching batch ${offset / batchSize + 1}...`);
 
 <<<<<<< HEAD
       // const result = await client.query(`
@@ -114,7 +109,7 @@ redisClient.connect().then(async () => {
     // };
 =======
       const result = await client.query(`
-        SELECT json_build_object(
+        SELECT id, json_build_object(
           'type', 'Feature',
           'geometry', json_build_object(
             'type', 'Point',
@@ -136,58 +131,36 @@ redisClient.connect().then(async () => {
         LIMIT $1 OFFSET $2;
       `, [batchSize, offset]);
 
-      allFeatures = allFeatures.concat(result.rows.map(row => row.feature));
+      // Store each feature as a Redis hash
+      for (const row of result.rows) {
+        const featureId = index++;
+        const feature = row.feature;
+        const properties = feature.properties;
+
+        const { coordinates } = feature.geometry;
+        const [longitude, latitude] = coordinates;
+
+        redisClient.hSet(`feature:${featureId}`, [
+          'type', feature.type,
+          'geometry', JSON.stringify(feature.geometry),
+          'latitude', latitude,
+          'longitude', longitude,
+          'researcher', properties.researcher,
+          'location', properties.location,
+          'works', JSON.stringify(properties.works),
+          'url', properties.url
+        ]).then(reply => {
+          console.log(`✅ Cached feature ${featureId} in Redis:`, reply);
+        }).catch(err => {
+          console.error(`❌ Error caching feature ${featureId}:`, err);
+        });
+      }
     }
 
-    const geojson = {
-      type: 'FeatureCollection',
-      features: allFeatures
-    };
->>>>>>> 26a2542 (Created rawCache.js, parsedCache.js, and data directory)
-
-    //console.log(`✅ Query successful - Found ${geojson.features.length} features`);
-    //console.log(`📋 First feature: ${geojson.features[0].properties.researcher}`);
-    //console.log(`📋 Last feature: ${geojson.features[geojson.features.length - 1].properties.researcher}`);
-<<<<<<< HEAD
-    // // Parse and format the JSON
-    // const formattedJson = JSON.stringify(geojson, null, 2);
-=======
-    // Parse and format the JSON
-    const formattedJson = JSON.stringify(geojson, null, 2);
->>>>>>> 26a2542 (Created rawCache.js, parsedCache.js, and data directory)
-    
-    // // Save to timestamped file
-    // const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-    // const filePath = path.join(outputDir, `formatted_response_${timestamp}.json`);
-    // fs.writeFileSync(filePath, formattedJson);
-  
-    // // Save/update latest version (copy instead of symlink)
-    // const latestPath = path.join(outputDir, 'formatted_response_latest.json');
-    // fs.copyFileSync(filePath, latestPath);
-    
-    // console.log(`✅ Saved formatted response to: ${filePath}`);
-    // console.log(`📄 Updated latest copy: ${latestPath}`);
-<<<<<<< HEAD
-  } catch (err) {
-    console.error('❌ Error fetching data:', err);
-  } finally {
-    client.release();
-    redisClient.disconnect();
-  }
-=======
-
-    redisClient.setEx('parsedGeoData',86400,formattedJson).then(() => {
-      //console.log('✅ Cached parsed data in Redis');
-      // Output the formatted JSON to stdout
-      console.log(formattedJson);
-      // Close connection and exit process
-      redisClient.quit(() => {
-        process.exit(0);
-      });
-    }).catch(error => {
-      console.error('❌ Error caching parsed data:', error);
-      // Close connection
-      redisClient.quit();
+    console.log(`✅ All features have been cached in Redis`);
+    // Close connection and exit process
+    redisClient.quit(() => {
+      process.exit(0);
     });
   } catch (error) {
     console.error('❌ Error fetching profiles:', error);
