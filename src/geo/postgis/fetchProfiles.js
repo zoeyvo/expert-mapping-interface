@@ -83,7 +83,7 @@ async function displayResearcherStats(researchers) {
     console.log('\nResearcher Summary:');
     console.log('-------------------');
     console.log(`Total Researchers: ${researchers.length}`);
-    
+
     // Calculate work statistics
     const workCounts = researchers.map(r => r.work_count);
     const totalWorks = workCounts.reduce((a, b) => a + b, 0);
@@ -136,11 +136,11 @@ async function fetchAllResearchers() {
     console.log('📊 Fetching all researcher profiles...');
 
     while (true) {
-        const result = await fetchResearcherProfiles({ 
-            limit: batchSize, 
-            offset: offset 
+        const result = await fetchResearcherProfiles({
+            limit: batchSize,
+            offset: offset
         });
-        
+
         if (!result.researchers || result.researchers.length === 0) {
             break;
         }
@@ -151,7 +151,7 @@ async function fetchAllResearchers() {
         offset += batchSize;
 
         console.log(`📥 Fetched ${totalFetched} of ${totalAvailable} researchers (${Math.round(totalFetched/totalAvailable * 100)}%)...`);
-        
+
         // Break if we've fetched all available researchers
         if (!result.has_more || totalFetched >= totalAvailable) {
             break;
@@ -167,7 +167,7 @@ function convertToGeoJSON(researchers) {
     const features = researchers.flatMap(researcher => {
         return researcher.locations.map(location => {
             const geometry = location.geometry;
-            
+
             return {
                 type: 'Feature',
                 geometry: geometry,
@@ -204,6 +204,7 @@ async function saveGeoJSON(geojson, filename) {
 }
 
 async function main() {
+    const startTime = Date.now();
     try {
         // Parse command line arguments
         const searchName = process.argv[2];
@@ -240,6 +241,10 @@ async function main() {
     } catch (error) {
         console.error('Error:', error);
     }
+    finally {
+        const endTime = Date.now();
+        console.log(`⏳ Total execution time: ${(endTime - startTime) / 1000} seconds`);
+    }
 }
 
 // Run if called directly
@@ -257,4 +262,4 @@ module.exports = {
     displayResearcherDetails,
     convertToGeoJSON,
     saveGeoJSON
-}; 
+};
