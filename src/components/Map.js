@@ -157,9 +157,9 @@ const ResearchMap = () => {
         padding: "15px", 
         borderLeft: "2px solid #aaa", 
         position: "relative", 
-        height: "auto",  // Full height
-        minHeight: "auto", // Ensures panel takes at least full viewport height
-        overflowY: "auto", // Makes the panel scrollable if content overflows
+        height: "850px",  
+        minHeight: "auto", 
+        overflowY: "auto", 
       }}>
           <button 
             onClick={() => setPanelOpen(false)} 
@@ -172,6 +172,7 @@ const ResearchMap = () => {
               padding: "5px", 
               cursor: "pointer", 
               fontSize: "16px"
+              
             }}
           >×</button>
   
@@ -190,6 +191,7 @@ const ResearchMap = () => {
               borderRadius: "5px", 
               marginBottom: "15px",
               background: "#f9f9f9"
+              
             }}>
               <div style={{ fontWeight: "bold", fontSize: "16px", color: "#13639e" }}>
                 {expert.researcher}
