@@ -2,10 +2,8 @@
   "dependencies": {
     "@turf/turf": "^7.2.0",
     "@types/pg": "^8.11.11",
-<<<<<<< HEAD
+
     "axios": "^1.8.1",
-=======
-    "axios": "^1.7.9",
     "cors": "^2.8.5",
     "csv-parser": "^3.2.0",
     "leaflet": "^1.9.4",
@@ -17,7 +15,7 @@
     "react-leaflet": "^3.2.5",
     "react-leaflet-markercluster": "^4.2.1",
     "react-scripts": "5.0.1",
-    "redis": "^4.7.0"
+    "turf": "^3.0.14"
   },
   "name": "geo-data-visualizer",
   "version": "1.0.0",

@@ -15,19 +15,10 @@ const ResearchMap = () => {
   const popupTimeoutRef = useRef(null);
 
   useEffect(() => {
-    fetch("http://localhost:3001/api/redis/query")
-    // Want to query Redis database for GeoJson data
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
+    fetch("api/redis/query")
+      .then((response) => response.json())
       .then((data) => setGeoData(data))
-      .catch((error) => {
-        console.error("Error loading GeoJSON:", error);
-        alert("Failed to load GeoJSON data. Please try again later.");
-      });
+      .catch((error) => console.error("Error loading GeoJSON:", error));
   }, []);
 
   useEffect(() => {
@@ -239,4 +230,3 @@ const ResearchMap = () => {
 };
 
 export default ResearchMap;
-
