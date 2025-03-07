@@ -245,21 +245,8 @@ async function main() {
         const endTime = Date.now();
         console.log(`⏳ Total execution time: ${(endTime - startTime) / 1000} seconds`);
     }
-}
-
-// Run if called directly
-if (require.main === module) {
-    main();
-}
-
-// Export all functions for use as a module
-module.exports = {
-    fetchResearcherProfiles,
-    fetchResearcherDetails,
-    fetchResearchLocations,
-    fetchAllResearchers,
-    displayResearcherStats,
-    displayResearcherDetails,
-    convertToGeoJSON,
-    saveGeoJSON
-};
+  });
+}).on('error', (error) => {
+  console.error('❌ Error fetching data:', error);
+  process.exit(1);
+});
