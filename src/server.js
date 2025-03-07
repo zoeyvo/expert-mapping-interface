@@ -37,13 +37,13 @@ redisClient.connect().then(() => {
   });
 
 // Test database connection on startup
-  pool.query('SELECT NOW()', (err, res) => {
+pool.query('SELECT NOW()', (err, res) => {
   if (err) {
     console.error('❌ Database connection error:', err);
   } else {
     console.log('✅ Database connected successfully');
   }
-  });
+});
 
 app.use(cors());
 app.use(express.json());
@@ -439,14 +439,15 @@ app.get('/api/redis/geodata', (req, res) => {
       res.status(500).json({ error: 'Internal server error', details: error.message });
     }
   });
-  const server = app.listen(PORT, () => {
-    console.log(`🚀 Server running on http://localhost:${PORT}`);
-  });
+});
 
+const server = app.listen(PORT, () => {
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
+});
 
-  // Add graceful shutdown handlers
-  process.on('SIGTERM', gracefulShutdown);
-  process.on('SIGINT', gracefulShutdown);
+// Add graceful shutdown handlers
+process.on('SIGTERM', gracefulShutdown);
+process.on('SIGINT', gracefulShutdown);
 
 function gracefulShutdown() {
   console.log('\n🛑 Received kill signal, shutting down gracefully');

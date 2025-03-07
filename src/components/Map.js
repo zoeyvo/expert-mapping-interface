@@ -15,7 +15,7 @@ const ResearchMap = () => {
   const popupTimeoutRef = useRef(null);
 
   useEffect(() => {
-    fetch("api/redis/query")
+    fetch("http://localhost:3001/api/redis/query")
       .then((response) => response.json())
       .then((data) => setGeoData(data))
       .catch((error) => console.error("Error loading GeoJSON:", error));
