@@ -7,6 +7,15 @@ const PORT = 3001;
 
 let activeConnections = 0;
 
+// Redis connection and event handling
+const { createClient } = require('redis');
+const redisClient = createClient();
+
+redisClient.on('error', (err) => { console.error('❌ Redis connection error:', err); });
+redisClient.on('connect', () => { console.log('✅ Connected to Redis'); });
+redisClient.on('ready', () => { console.log('🔄 Redis client is ready'); });
+redisClient.on('end', () => { console.log('🔌 Redis connection closed'); });
+
 // Test database connection on startup
 pool.query('SELECT NOW()', (err, res) => {
   if (err) {
@@ -318,6 +327,37 @@ app.get('/api/redis/query', async (req, res) => {
     });
   });
 });
+
+app.get('/api/redis/query', async (req, res) => {
+  redisClient.connect().then(async () => {
+    console.log('🗺️ Received request for GeoJSON data');
+    const cacheKey = 'geojson';
+    redisClient.get(cacheKey).then(async (cachedData) => {
+      if (cachedData) {
+        console.log('📦 Returning cached GeoJSON data');
+        return res.json(JSON.parse(cachedData));
+      } else {
+        try {
+          console.log('🔍 Cache miss - querying database');
+          const expertKeys = await redisClient.keys('expert:*');
+          console.log(`🔑 Found ${expertKeys.length} keys`);
+          // Query redis for expert and grant data here...
+  
+        } catch (err) {
+          console.error('❌ Error fetching data:', err);
+          res.status(500).json({ error: 'Internal server error', details: err.message });
+        } finally {
+          redisClient.disconnect();
+        }
+      }
+    }).catch(err => {
+      console.error('❌ Error fetching cached data:', err);
+      res.status(500).json({ error: 'Internal server error', details: err.message });
+    });
+  });
+});
+
+
 const server = app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
