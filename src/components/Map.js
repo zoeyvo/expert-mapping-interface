@@ -6,12 +6,6 @@ import "leaflet/dist/leaflet.css";
 import "leaflet.markercluster/dist/MarkerCluster.css";
 import "leaflet.markercluster/dist/MarkerCluster.Default.css";
 
-function getBorderWidthBasedOnArea(area) {
-  // Normalize the area to a value between 1 and 10 for border width (adjust as needed)
-  const normalizedArea = Math.min(area / 1000000, 1); // Adjust 1000000 to control the scale
-  return Math.max(1, normalizedArea * 10); // Border width between 1 and 10
-}
-
 const ResearchMap = () => {
   const [geoData, setGeoData] = useState(null);
   const [selectedExperts, setSelectedExperts] = useState([]);
@@ -80,42 +74,30 @@ const ResearchMap = () => {
           return color;
         }
   
-        // Handle Polygons and MultiPolygons
         if (geometry.type === "Polygon") {
           const coordinates = geometry.coordinates[0];
           if (Array.isArray(coordinates) && Array.isArray(coordinates[0])) {
             const flippedCoordinates = coordinates.map(([lng, lat]) => [lat, lng]);
-  
-            const randomColor = getRandomColor();  // Generate random color for each polygon
-  
+
+            const randomColor = getRandomColor();
+
             const polygon = L.polygon(flippedCoordinates, {
               color: '#13639e',
               weight: 2,
               fillColor: '#d8db9a',
               fillOpacity: 0.3,
             }).addTo(mapRef.current);
-  
+
             polygon.bindPopup(`<strong>${feature.properties.location_name}</strong>`);
+
+            polygon.on("mouseover", () => polygon.setStyle({ color: "red" }));
+            polygon.on("mouseout", () => polygon.setStyle({ color: "#13639e" }));
           }
+       
+        
+        
+        
   
-        } else if (geometry.type === "MultiPolygon") {
-          const coordinates = geometry.coordinates;
-          if (Array.isArray(coordinates)) {
-            const flippedCoordinates = coordinates.map(polygon =>
-              polygon.map(([lng, lat]) => [lat, lng])
-            );
-  
-            const randomColor = getRandomColor();  // Generate random color for each multi-polygon
-  
-            const multiPolygon = L.multiPolygon(flippedCoordinates, {
-              color: randomColor,
-              weight: 2,
-              fillColor: randomColor,
-              fillOpacity: 0.3,
-            }).addTo(mapRef.current);
-  
-            multiPolygon.bindPopup(`<strong>${feature.properties.location_name}</strong>`);
-          }
         } else if (geometry.type === "Point" || geometry.type === "MultiPoint") {
           const coordinates = geometry.coordinates;
           if (Array.isArray(coordinates) && coordinates.length === 2) {
