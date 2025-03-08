@@ -1,26 +1,22 @@
 const express = require('express');
 const cors = require('cors');
-const { pool, tables } = require('./geo/postgis/config');
-const { createClient } = require('redis');
-const { exec } = require('child_process');
-const { format } = require('path');
-const fs = require('fs');
-const path = require('path');
+const { pool } = require('./geo/postgis/config');
 
 const app = express();
 const PORT = 3001;
 
 let activeConnections = 0;
 
+const { createClient } = require('redis');
 
 // Test database connection on startup
-  pool.query('SELECT NOW()', (err, res) => {
+pool.query('SELECT NOW()', (err, res) => {
   if (err) {
     console.error('❌ Database connection error:', err);
   } else {
     console.log('✅ Database connected successfully');
   }
-  });
+});
 
 app.use(cors());
 app.use(express.json());
@@ -296,43 +292,52 @@ app.get('/api/researchers/:name', async (req, res) => {
   }
 });
 
-app.get('/api/redis/query', async (req, res) => {
-  redisClient.connect().then(async () => {
-    console.log('🗺️ Received request for GeoJSON data');
-    const cacheKey = 'geojson';
-    redisClient.get(cacheKey).then(async (cachedData) => {
-      if (cachedData) {
-        console.log('📦 Returning cached GeoJSON data');
-        return res.json(JSON.parse(cachedData));
-      } else {
-        try {
-          console.log('🔍 Cache miss - querying database');
-          const expertKeys = await redisClient.keys('expert:*');
-          console.log(`🔑 Found ${expertKeys.length} keys`);
-          // Query redis for expert and grant data here...
+app.get('api/redis/query', async (req, res) => {
+  const client = createClient();
+  await client.connect();
   
-        } catch (err) {
-          console.error('❌ Error fetching data:', err);
-          res.status(500).json({ error: 'Internal server error', details: err.message });
-        } finally {
-          redisClient.disconnect();
+  try {
+    const keys = await client.keys('feature:*');
+    const features = await Promise.all(keys.map(async key => {
+      const data = await client.hGetAll(key);
+      return {
+        type: 'Feature',
+        geometry: {
+          type: data.geometry_type,
+          coordinates: JSON.parse(data.coordinates)
+      },
+        properties: {
+          researcher_name: data.researcher_name,
+          researcher_url: data.researcher_url,
+          work_count: data.work_count,
+          location_name: data.location_name,
+          location_type: data.location_type,
+          location_id: data.location_id
         }
-      }
-    }).catch(err => {
-      console.error('❌ Error fetching cached data:', err);
-      res.status(500).json({ error: 'Internal server error', details: err.message });
-    });
-  });
+      };
+    }));
+    
+    const geojson = {
+      type: 'FeatureCollection',
+      features: features
+    };
+    
+    res.json(geojson);
+  } catch (error) {
+    console.error('❌ Error querying Redis:', error);
+    res.status(500).json({ error: 'Internal server error', details: error.message });
+  } finally {
+    await client.quit();
+  }
 });
 
-  const server = app.listen(PORT, () => {
-    console.log(`🚀 Server running on http://localhost:${PORT}`);
-  });
+const server = app.listen(PORT, () => {
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
+});
 
-
-  // Add graceful shutdown handlers
-  process.on('SIGTERM', gracefulShutdown);
-  process.on('SIGINT', gracefulShutdown);
+// Add graceful shutdown handlers
+process.on('SIGTERM', gracefulShutdown);
+process.on('SIGINT', gracefulShutdown);
 
 function gracefulShutdown() {
   console.log('\n🛑 Received kill signal, shutting down gracefully');
@@ -341,7 +346,6 @@ function gracefulShutdown() {
   server.close(async () => {
     try {
       await pool.end();
-      redisClient.quit();
       console.log('✅ Database pool has ended');
       console.log('✅ Closed out remaining connections');
       process.exit(0);
@@ -356,6 +360,3 @@ function gracefulShutdown() {
     process.exit(1);
   }, 10000);
 }
-}).catch((err) => {
-  console.error('❌ Redis connection error:', err);
-});

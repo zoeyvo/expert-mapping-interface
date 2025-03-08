@@ -51,7 +51,7 @@ async function populateRedis() {
 
     console.log('✅ Profiles cached in Redis');
     // Remove researcher_locations.geojson from postgis directory
-    // await fs.unlink(geojsonFilePath);
+    await fs.unlink(geojsonFilePath);
     // console.log('✅ researcher_locations.geojson removed');
   } catch (error) {
     console.error('❌ Error fetching profiles:', error);
