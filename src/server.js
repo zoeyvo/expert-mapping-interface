@@ -16,7 +16,7 @@
 
 const express = require('express');
 const cors = require('cors');
-<<<<<<< HEAD
+
 const { pool } = require('./geo/postgis/config');
 =======
 const { pool, tables } = require('./geo/postgis/config');
@@ -32,40 +32,14 @@ const PORT = 3001;
 
 <<<<<<< HEAD
 let activeConnections = 0;
-=======
-// Create a Redis client
-const redisClient = createClient();
-
-redisClient.on('error', (err) => {
-  console.error('❌ Redis connection error:', err);
-});
-
-redisClient.on('ready', () => {
-  console.log('🔄 Redis client is ready');
-});
-
-redisClient.on('end', () => {
-  console.log('🔌 Redis connection closed');
-});
-
-// Connect to Redis
-redisClient.connect().then(() => {
-  // Test Redis connection on start up
-  redisClient.ping().then((res) => {
-    console.log('🖲️ Redis connected successfully');
-  }).catch((err) => {
-    console.error('❌ Redis connection error:', err);
-  });
->>>>>>> 7e3fe9c (Establishing Redis cache [WIP])
-
 // Test database connection on startup
-  pool.query('SELECT NOW()', (err, res) => {
+pool.query('SELECT NOW()', (err, res) => {
   if (err) {
     console.error('❌ Database connection error:', err);
   } else {
     console.log('✅ Database connected successfully');
   }
-  });
+});
 
   app.use(cors());
   app.use(express.json());
@@ -348,40 +322,52 @@ app.get('/api/researchers/:name', async (req, res) => {
   }
 });
 
-  // GET endpoint to fetch data from Redis cache for Map.js
-  app.get('/api/redis/geodata', (req, res) => {
-    console.log('🗺️ Map.js requesting for GeoJSON data');
-    const cacheKey = 'parsedGeoData';
-    redisClient.get(cacheKey).then((cachedData) => {
-      if (cachedData) {
-        console.log('📦 Returning cached GeoJSON data');
-        return res.json(JSON.parse(cachedData));
-      }
-      else {
-        console.log('🔍 Cache miss - Fetching data from PostgreSQL');
-        exec('node src/geo/redis/parsedCache.js', (error, stdout, stderr) => {
-          if (error) {
-            console.error('❌ Error fetching data:', error);
-            return res.status(500).json({ error: 'Internal server error', details: error.message });
-          }
-          console.log('✅ Data fetched successfully');
-          return res.json(JSON.parse(stdout));
-        });
-      }
-      }).catch((err) => {
-      console.error('❌ Redis get error:', err);
-      return res.status(500).json({ error: 'Internal server error', details: err.message });
-    });
+app.get('api/redis/query', async (req, res) => {
+  const client = createClient();
+  await client.connect();
+  
+  try {
+    const keys = await client.keys('feature:*');
+    const features = await Promise.all(keys.map(async key => {
+      const data = await client.hGetAll(key);
+      return {
+        type: 'Feature',
+        geometry: {
+          type: data.geometry_type,
+          coordinates: JSON.parse(data.coordinates)
+      },
+        properties: {
+          researcher_name: data.researcher_name,
+          researcher_url: data.researcher_url,
+          work_count: data.work_count,
+          location_name: data.location_name,
+          location_type: data.location_type,
+          location_id: data.location_id
+        }
+      };
+    }));
+    
+    const geojson = {
+      type: 'FeatureCollection',
+      features: features
+    };
+    
+    res.json(geojson);
+  } catch (error) {
+    console.error('❌ Error querying Redis:', error);
+    res.status(500).json({ error: 'Internal server error', details: error.message });
+  } finally {
+    await client.quit();
+  }
 });
 
-  const server = app.listen(PORT, () => {
-    console.log(`🚀 Server running on http://localhost:${PORT}`);
-  });
+const server = app.listen(PORT, () => {
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
+});
 
-
-  // Add graceful shutdown handlers
-  process.on('SIGTERM', gracefulShutdown);
-  process.on('SIGINT', gracefulShutdown);
+// Add graceful shutdown handlers
+process.on('SIGTERM', gracefulShutdown);
+process.on('SIGINT', gracefulShutdown);
 
 <<<<<<< HEAD
 function gracefulShutdown() {
@@ -391,7 +377,6 @@ function gracefulShutdown() {
   server.close(async () => {
     try {
       await pool.end();
-<<<<<<< HEAD
       console.log('✅ Database pool has ended');
       console.log('✅ Closed out remaining connections');
 =======
