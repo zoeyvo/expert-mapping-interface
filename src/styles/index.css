@@ -11,6 +11,7 @@
   width: 100vw;
   height: 100vh;
   position: absolute;
+  
 }
 
 
@@ -22,11 +23,13 @@ html, body {
   overflow: hidden;
 }
 
+
 #map {
   flex: 1;
   height: 100%;
   width: 100%;
-  max-height: 80vh; 
+  max-height: 82vh; 
+
 }
 
 .map-container {
@@ -35,4 +38,11 @@ html, body {
   height: 80vh; 
   width: 100%;
   overflow: hidden;
+  
 }
+
+.map-title {
+  font-size: 1.5rem; /* Adjust the size as needed */
+  font-weight: 600; /* If you still want it semi-bold */
+}
+
