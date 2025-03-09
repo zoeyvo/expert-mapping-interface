@@ -61,42 +61,51 @@ const ResearchMap = () => {
       markerClusterGroupRef.current.clearLayers();
       const locationMap = new Map();
   
-      geoData.features.forEach((feature) => {
-        const geometry = feature.geometry;
-  
-        // Random color generator function
-        function getRandomColor() {
-          const letters = '0123456789ABCDEF';
-          let color = '#';
-          for (let i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-          }
-          return color;
+    const locationExpertCounts = new Map();
+
+    // First, count how many experts exist for each location_id
+    geoData.features.forEach((feature) => {
+      if (feature.properties.location_id) {
+        const locationId = feature.properties.location_id;
+        locationExpertCounts.set(locationId, (locationExpertCounts.get(locationId) || 0) + 1);
+      }
+    });
+
+    // Now, process features and assign expert counts to polygons
+    geoData.features.forEach((feature) => {
+      const geometry = feature.geometry;
+
+      if (geometry.type === "Polygon") {
+        const coordinates = geometry.coordinates[0];
+        if (Array.isArray(coordinates) && Array.isArray(coordinates[0])) {
+          const flippedCoordinates = coordinates.map(([lng, lat]) => [lat, lng]);
+
+          const polygon = L.polygon(flippedCoordinates, {
+            color: '#13639e',
+            weight: 2,
+            fillColor: '#d8db9a',
+            fillOpacity: 0.3,
+          }).addTo(mapRef.current);
+
+          // Get expert count for this polygon's location
+          const locationId = feature.properties.location_id;
+          const expertCount = locationExpertCounts.get(locationId) || 0;
+
+          // Update hover popup to show location & expert count
+          polygon.on("mouseover", (event) => {
+            polygon.setStyle({ color: "red" });
+
+            const popupContent = `<strong>${feature.properties.location_name}</strong><br>Experts: ${expertCount}`;
+            polygon.bindPopup(popupContent).openPopup(event.latlng);
+          });
+
+          polygon.on("mouseout", () => {
+            polygon.setStyle({ color: "#13639e" });
+            polygon.closePopup();
+          });
         }
-  
-        if (geometry.type === "Polygon") {
-          const coordinates = geometry.coordinates[0];
-          if (Array.isArray(coordinates) && Array.isArray(coordinates[0])) {
-            const flippedCoordinates = coordinates.map(([lng, lat]) => [lat, lng]);
+      
 
-            const randomColor = getRandomColor();
-
-            const polygon = L.polygon(flippedCoordinates, {
-              color: '#13639e',
-              weight: 2,
-              fillColor: '#d8db9a',
-              fillOpacity: 0.3,
-            }).addTo(mapRef.current);
-
-            polygon.bindPopup(`<strong>${feature.properties.location_name}</strong>`);
-
-            polygon.on("mouseover", () => polygon.setStyle({ color: "red" }));
-            polygon.on("mouseout", () => polygon.setStyle({ color: "#13639e" }));
-          }
-       
-        
-        
-        
   
         } else if (geometry.type === "Point" || geometry.type === "MultiPoint") {
           const coordinates = geometry.coordinates;
