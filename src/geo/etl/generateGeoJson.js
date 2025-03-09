@@ -53,23 +53,23 @@ const processedResearchers = new Set();
  * @returns {Array} Array of processed researcher objects
  */
 function processResearcherData(researchers, researcherUrls) {
-    return Object.entries(researchers)
-        .map(([researcherName, data]) => {
-            const normalizedResearcher = normalizeResearcherName(researcherName);
-            const lastName = normalizedResearcher.split(',')[0].toLowerCase();
-            const url = researcherUrls[lastName];
-            
-            if (url && !processedResearchers.has(normalizedResearcher)) {
-                processedResearchers.add(normalizedResearcher);
-                return {
-                    name: normalizedResearcher,
-                    url: url,
-                    works: data.works
-                };
-            }
-            return null;
-        })
-        .filter(Boolean);
+  return Object.entries(researchers)
+    .map(([researcherName, data]) => {
+      const normalizedResearcher = normalizeResearcherName(researcherName);
+      const lastName = normalizedResearcher.split(',')[0].toLowerCase();
+      const url = researcherUrls[lastName];
+
+      if (url && !processedResearchers.has(normalizedResearcher)) {
+        processedResearchers.add(normalizedResearcher);
+        return {
+          name: normalizedResearcher,
+          url: url,
+          works: data.works
+        };
+      }
+      return null;
+    })
+    .filter(Boolean);
 }
 
 // Step 3: Read location-based profiles and generate GeoJSON
@@ -84,27 +84,37 @@ function generateGeoJSON() {
 
   const locationProfiles = JSON.parse(fs.readFileSync(profilesPath, "utf-8"));
   const locationGeoData = JSON.parse(fs.readFileSync(coordsPath, "utf-8"));
-  
+
   const loadTime = (Date.now() - startTime) / 1000;
   console.log(`📖 Loaded data files in ${loadTime.toFixed(2)}s`);
-  
+
   // Create a map of locations to researcher data
   const locationResearchers = new Map();
-  
+  const locationConfidence = new Map();
+
   console.log('📖 Processing researcher data...');
   const processingStart = Date.now();
-  
+
   // First pass - collect all researcher information by location
   for (const [location, researchers] of Object.entries(locationProfiles)) {
     const normalizedLocation = normalizeLocationName(location);
     const researcherData = processResearcherData(researchers, researcherUrls);
-    
+
     if (researcherData.length > 0) {
       locationResearchers.set(normalizedLocation, researcherData);
       locationCount++;
       researcherCount += researcherData.length;
       workCount += researcherData.reduce((total, researcher) => total + researcher.works.length, 0);
     }
+
+    let confidence = "Low";
+    for (const researcher of Object.entries(researchers)) {
+      if (researcher[1].confident === "High") {
+        confidence = "High";
+        break;
+      }
+    }
+    locationConfidence.set(normalizedLocation, confidence);
   }
 
   const processingTime = (Date.now() - processingStart) / 1000;
@@ -117,13 +127,15 @@ function generateGeoJSON() {
   locationGeoData.features = locationGeoData.features.map(feature => {
     const locationName = feature.properties.name;
     const researchers = locationResearchers.get(locationName);
+    const confidence = locationConfidence.get(locationName);
     const type = feature.properties.type;
-    
+
     if (researchers) {
       return {
         ...feature,
         properties: {
           ...feature.properties,
+          confidence: confidence,
           researchers: researchers
         }
       };
