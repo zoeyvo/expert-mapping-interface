@@ -22,7 +22,7 @@ manual_geo_name = {
   "Latin America" : "South America",
   "Tropical Forest" : "N/A",
   # Temp fix for now
-  "Asia, United States Of America" : "America",
+  "Asia, United States of America" : "America",
   "Asia, America": "America",
   "Africa, America" : "America",
   "America, South Asia" : "America",
@@ -88,18 +88,19 @@ def profileToJson(profile: Profile):
   return {"titles": profile.titles, "locations": profile.locations}
 
 class GeoProfileMapping:
-  def __init__(self, name, location):
+  def __init__(self, name, location, confident):
     self.name = name
     self.location = location
     self.relatedWork = []
     self.matchesCount = 0
+    self.confident = confident
 
   def addRelatedWork(self, work):
     self.relatedWork.append(work)
     self.matchesCount += 1
 
 def geoProfileMappingToJson(mapping: GeoProfileMapping):
-  return {"matches": mapping.matchesCount, "works": mapping.relatedWork}
+  return {"matches": mapping.matchesCount, "confident": mapping.confident, "works": mapping.relatedWork}
 
 
 # -----Main-----
@@ -193,7 +194,7 @@ filter = []
 for geo in geoData:
   filter.append(geo)
   
-filtered = []
+filtered = set()
 for batch_start in range(0, len(filter), 20):
   batch_end = min(batch_start + 20, len(filter))
   
@@ -208,11 +209,7 @@ for batch_start in range(0, len(filter), 20):
     temperature=0
   )
   for f in formatDeepSeekResult(chat_completion.choices[0].message.content):
-    filtered.append(f)
-
-for geo in filtered:
-  if geo in geoData:
-    geoData.pop(geo)
+    filtered.add(f)
 
 # Processing profiles
 for name, title, location in zip(names, titles, locations):
@@ -240,11 +237,16 @@ for name, title, location in zip(names, titles, locations):
     # Add location to expert's profile
     profiles[name].addLocation(location_name)
     
+    # Confident
+    confident = "High"
+    if location in filtered:
+      confident = "Low"
+    
     # Update location-based profile mapping
     if location_name not in location_based:
       location_based[location_name] = {}
     if name not in location_based[location_name]:
-      location_based[location_name][name] = GeoProfileMapping(name, location_name)
+      location_based[location_name][name] = GeoProfileMapping(name, location_name, confident)
 
     location_based[location_name][name].addRelatedWork(title)
   else:
@@ -270,10 +272,10 @@ location_based_profiles_path = os.path.join(json_dir, "location_based_profiles.j
 with open(location_based_profiles_path, "w") as file_locations:
   json.dump(location_based, file_locations, default=geoProfileMappingToJson, indent=2)
   
-# Save coordinate
-coordinates_path = os.path.join(json_dir, "location_coordinates.json")
-with open(coordinates_path, "w") as file_profiles:
-  json.dump(coordinates, file_profiles, indent=2)
+# # Save coordinate
+# coordinates_path = os.path.join(json_dir, "location_coordinates.json")
+# with open(coordinates_path, "w") as file_profiles:
+#   json.dump(coordinates, file_profiles, indent=2)
   
 # Stats and confidence:
 report_path = os.path.join(json_dir, "report.txt")

@@ -1,50 +1,25 @@
 Final Statistics:
 Total unique researchers: 1389
 Total unique works (titles) parsed: 4956
-Total unique locations extracted: 195
-Total works with locations: 444
+Total unique locations extracted: 220
+Total works with locations: 473
 
 * Incorrect format/Fail to geocode: 56 (filtered by Nominatim API)
 
-NHLBI, N/A
+European economy, Europe
 
-American Indians, N/A 
+California, USA 
+NASA, N/A 
+ESA, N/A 
+ESO, N/A
 
-However, a more accurate answer based on the information that can be extracted would be: 
-N/A
+Mytilus californianus refers to the California mussel. Given that, 
+ California, USA
 
-U.S., Mexico 
-Mexico 
-U.S.
+Sierra Nevada Mountains, California
 
-British Columbia, Canada
-Ontario, Canada
-Canada
-
-American Society of Dermatopathology, N/A
-
-Hippocampal, N/A
-
-Western Germany, Germany
-
-Arab, America 
-Muslim 
-South Asia, America 
-Asia 
-America
-
-Medicago truncatula
-
-San Diego, Little Mogadishu, Somalia
-
-Malawi
-Mozambique 
-Chilwa
-
-Gulf of California 
-Bahía Kino, Sonora, México 
-Sonora, México 
-México
+Tule River, California 
+San Joaquin Valley, California
 
 African American, N/A 
 Hispanic American, N/A 
@@ -52,43 +27,108 @@ United States, N/A ->  No, the correct extraction for the countries/ locations m
 Africa, N/A
 America, N/A
 
-National Society of Genetic Counselors
+Davis, California 
+University of California, California 
+California, United States
+
+American Society of Dermatopathology, N/A
+
+Brazil 
+Southern Brazil
+
+Gediz Basin, Turkey
+
+United States, Mexico, Rio Grande/Bravo Basin
 
 American Society of Dermatopathology, USA
 
-Lake Joyce, Antarctica
-McMurdo Dry Valleys, Antarctica 
-Antarctica
+American Indians, N/A 
+
+However, a more accurate answer based on the information that can be extracted would be: 
+N/A
+
+Sierra Nevada, California, USA
+California, USA 
+USA
+
+Abell 2744 Cluster
+
+Asian Americans, Asia, United States
+
+Medicago truncatula
+
+British Columbia, Canada
+Ontario, Canada
+Canada
+
+Hispanic/Latino is not a location, it is an ethnicity. No location was found for the given text. 
+
+N/A
+
+Indo-Gangetic Plains
+
+National Society of Genetic Counselors
+
+San Diego, Little Mogadishu, Somalia
+
+Cuzco, Apurimac, Osaka, Japan
+
+Arab, America 
+Muslim 
+South Asia, America 
+Asia 
+America
+
+World Health Organization (WHO), Centers for Disease Control and Prevention (CDC)
+
+Northern Hemisphere
+
+Southern house mosquito, N/A
+
+Tashlhiyt, Morocco
+
+Western Germany, Germany
 
 Sabah, Malaysia
 Sarawak, Malaysia
 Malaysia
 
+African-American, N/A (since African-American is an ethnicity, not a location)
+
+Rabbit Heart is not a location, N/A
+
+Deep-sea hydrothermal vent
+
+NIH, N/A -> Changed to: United States
+
+Siskiyou, Oregon, USA 
+Oregon, USA 
+USA
+
+Mouse retina
+
+Malawi
+Mozambique 
+Chilwa
+
+Large Magellanic Cloud, Milky Way
+
 Asian Americans, United States 
 Non-Hispanic Whites, United States 
 United States
 
-California 
-Asia 
-Northern California
+Advanced Light Source, N/A
 
-Northern Elephant Seals, N/A
+California, USA
+South Africa
 
-Gediz Basin, Turkey
+Hippocampal, N/A
 
 NASA, United States 
  ESA, Europe
 
-Abell 2744 Cluster
-
-African-American, N/A (since African-American is an ethnicity, not a location)
-
-World Health Organization (WHO), Centers for Disease Control and Prevention (CDC)
-
-United States, Mexico, Rio Grande/Bravo Basin
-
-Upper Silesia, Poland
-Davis, California
+California, USA 
+University not specific to a city so Athena not extracted, and USA is country of University of California.
 
 Latin America, 
 Hispanic/Latino Individuals: No specific location, 
@@ -98,70 +138,20 @@ Hispanic Community: No specific location.
 Extracted location: 
 Latin America
 
-Mytilus californianus refers to the California mussel. Given that, 
- California, USA
-
-Andean Altiplano
-
-California, USA
-South Africa
-
-Advanced Light Source, N/A
-
-European economy, Europe
-
-Amazonian forest
-
-California, USA 
-NASA, N/A 
-ESA, N/A 
-ESO, N/A
-
-Sierra Nevada Mountains, California
-
-Hispanic/Latino is not a location, it is an ethnicity. No location was found for the given text. 
-
-N/A
-
-California, USA 
-University not specific to a city so Athena not extracted, and USA is country of University of California.
-
-Sierra Nevada, California, USA
-California, USA 
-USA
-
-Northern Hemisphere
-
-Southern house mosquito, N/A
-
-Davis, California 
-University of California, California 
-California, United States
-
-Large Magellanic Cloud, Milky Way
+Gulf of California 
+Bahía Kino, Sonora, México 
+Sonora, México 
+México
 
 California, USA 
 Central Valley, California
 
-Brazil 
-Southern Brazil
+Upper Silesia, Poland
+Davis, California
 
-Siskiyou, Oregon, USA 
-Oregon, USA 
-USA
-
-Tashlhiyt, Morocco
-
-Deep-sea hydrothermal vent
-
-NIH, N/A -> Changed to: United States
-
-Indo-Gangetic Plains
-
-Asian Americans, Asia, United States
-
-Tule River, California 
-San Joaquin Valley, California
+California 
+Asia 
+Northern California
 
 American Indians, N/A 
 Alternatively: 
@@ -173,40 +163,59 @@ United States
 Best Answer: 
 United States
 
-Cuzco, Apurimac, Osaka, Japan
+Northern Elephant Seals, N/A
 
-Rabbit Heart is not a location, N/A
+NHLBI, N/A
 
-Mouse retina
+U.S., Mexico 
+Mexico 
+U.S.
 
-* Low confident locations: 29 (filtered by LLM)
+Amazonian forest
 
--Tomato
--Mouse
--African America, USA
--Summit, Greenland
--Tropical forest
--California \nSouthern California
--LBNL
--Vietnam\nKorea\nUnited States
--Aleppo, Ottoman
--Rabbit
--U.S., Mexico
--Brazil, California
--Milky Way
+Lake Joyce, Antarctica
+McMurdo Dry Valleys, Antarctica 
+Antarctica
+
+Andean Altiplano
+
+* Low confident locations: 38 (filtered by LLM)
+
+-Latino
 -Brain
 -Multiple Mirror Telescope
--Lambert, Eaton
--Latino
--Midwest
--Arabidopsis
--Gulf
--Eastern Association
--Cambodia, United States
--US, Global
--OSU, N/A
--Boeing
--Japan, Yokai
+-Mars
+-Tropical forest
 -Ryugu
+-Arabidopsis
+-Brazil, California
 -Rural Communities
+-Meiji, Japan
+-Tundra
+-US, Global
+-Mexico, America
+-Japan, Yokai
+-Boeing
+-Southern California
+-Tropical region
+-Cambodia, United States
+-Matamoros, Mexico \nUS
+-U.S., Mexico
+-African America, USA
+-Eastern Association
+-Tomato
+-LBNL
+-Mouse
+-Milky Way
+-OSU, N/A
+-Sacramento, California \nSan Joaquin, California \nCalifornia
+-Aleppo, Ottoman
+-Lambert, Eaton
 -Rural State
+-Mimas
+-Southern Chile, Chile
+-San Diego, California \nUC San Diego
+-Rabbit
+-Gulf
+-Great Plains
+-Mesoamerica
