@@ -32,6 +32,9 @@ const PORT = 3001;
 
 <<<<<<< HEAD
 let activeConnections = 0;
+
+const { createClient } = require('redis');
+
 // Test database connection on startup
 pool.query('SELECT NOW()', (err, res) => {
   if (err) {

@@ -18,11 +18,8 @@
     "react-leaflet": "^3.2.5",
     "react-leaflet-markercluster": "^4.2.1",
     "react-scripts": "5.0.1",
-<<<<<<< HEAD
-    "turf": "^3.0.14"
-=======
+    "turf": "^3.0.14",
     "redis": "^4.7.0"
->>>>>>> 7e3fe9c (Establishing Redis cache [WIP])
   },
   "name": "geo-data-visualizer",
   "version": "1.0.0",
