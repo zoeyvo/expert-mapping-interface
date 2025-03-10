@@ -16,7 +16,7 @@ const { normalizeLocationName } = require('./utils');
 const CACHE_FILE = path.join(__dirname, '../data', 'json', 'location_coordinates.json');
 const LOCATIONS_FILE = process.argv[2] || path.join(__dirname, '../data', 'json', 'location_based_profiles.json');
 const DELAY_MS = 1000; // Nominatim rate limit: 1 request per second
-const MAX_POINTS = 1000; // Maximum points to keep in polygon geometries
+const MAX_POINTS = 2048; // Maximum points to keep in polygon geometries
 
 /**
  * Calculates area of a polygon for finding largest geometry

@@ -1,3 +1,19 @@
+/**
+ * Expert Mapping Interface Server
+ * 
+ * This Express server provides the backend API for the Expert Mapping Interface application.
+ * It handles geospatial data retrieval and researcher information management through a
+ * PostgreSQL/PostGIS database connection.
+ * 
+ * Key features:
+ * - Serves GeoJSON data for research locations
+ * - Manages researcher profiles and their associated locations
+ * - Implements connection tracking and logging
+ * - Provides paginated and searchable researcher data
+ * 
+ * @module server
+ */
+
 const express = require('express');
 const cors = require('cors');
 const { pool } = require('./geo/postgis/config');
