@@ -21,6 +21,20 @@ const { pool } = require('./geo/postgis/config');
 const app = express();
 const PORT = 3001;
 
+const { createClient } = require('redis');
+
+// Redis event handlers
+const redisClient = createClient();
+redisClient.on('error', (err) => {
+  console.error('❌ Redis error:', err);
+});
+redisClient.on('connect', () => {
+  console.log('✅ Redis connected successfully');
+});
+redisClient.on('end', () => {
+  console.log('🔌 Redis connection closed')
+});
+
 let activeConnections = 0;
 
 // Test database connection on startup
@@ -307,6 +321,57 @@ app.get('/api/researchers/:name', async (req, res) => {
   } finally {
     console.log('👋 Releasing database connection');
     client.release();
+  }
+});
+
+app.get('/api/redis/query', async (req, res) => {
+  console.log('📍 Received request for Redis data');
+  await redisClient.connect();
+  
+  try {
+    const keys = await redisClient.keys('feature:*');
+    const sortedKeys = keys.sort((a, b) => {
+      const numA = parseInt(a.split(':')[1], 10);
+      const numB = parseInt(b.split(':')[1], 10);
+      return numA - numB;
+    });
+
+    const features = [];
+    for (const key of sortedKeys) {
+      const data = await redisClient.hGetAll(key);
+      features.push({
+      type: 'Feature',
+      geometry: {
+        type: data.geometry_type,
+        coordinates: JSON.parse(data.coordinates)
+      },
+      properties: {
+        researcher_name: data.researcher_name,
+        researcher_url: data.researcher_url,
+        work_count: data.work_count,
+        location_name: data.location_name,
+        location_type: data.location_type,
+        location_id: data.location_id
+      },
+      });
+    }
+    const metaData = await redisClient.hGetAll('metadata');
+    const geojson = {
+      type: 'FeatureCollection',
+      features: features,
+      metadata: {
+        total_locations: metaData.total_locations,
+        total_researchers: metaData.total_researchers,
+        generated_at: metaData.generated_at
+      }
+    };
+
+    res.json(geojson);
+  } catch (error) {
+    console.error('❌ Error querying Redis:', error);
+    res.status(500).json({ error: 'Internal server error', details: error.message });
+  } finally {
+    await redisClient.quit();
   }
 });
 

@@ -95,7 +95,7 @@ const ResearchMap = () => {
   const popupTimeoutRef = useRef(null);
 
   useEffect(() => {
-    fetch("/data/researcher_locations.geojson")
+    fetch("http://localhost:3001/api/redis/query")
       .then(async (response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
