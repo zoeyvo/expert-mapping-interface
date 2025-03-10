@@ -2,11 +2,7 @@
   "dependencies": {
     "@turf/turf": "^7.2.0",
     "@types/pg": "^8.11.11",
-<<<<<<< HEAD
     "axios": "^1.8.1",
-=======
-    "axios": "^1.7.9",
->>>>>>> 7e3fe9c (Establishing Redis cache [WIP])
     "cors": "^2.8.5",
     "csv-parser": "^3.2.0",
     "leaflet": "^1.9.4",
