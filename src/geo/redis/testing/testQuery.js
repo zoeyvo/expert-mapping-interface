@@ -19,7 +19,7 @@ async function testQuery() {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const data = await response.json();
-    const filename = 'src/geo/redis/testGeoJson.geojson';
+    const filename = 'src/geo/redis/testing/testGeoJson.geojson';
     await fs.writeFile(filename, JSON.stringify(data, null, 2));
     console.log('✅ Successfully fetched researcher profiles');
   } catch (error) {
