@@ -1,4 +1,5 @@
-/**
+/*
+ * [DEPRECATED] this script is no longer used
  * parsedCache.js
  * 
  * Purpose:
