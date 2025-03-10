@@ -80,6 +80,7 @@ app.get('/api/research-locations', async (req, res) => {
           'geometry', ST_AsGeoJSON(geom)::json,
           'properties', json_build_object(
             'id', id,
+            'confidence',properties->>confidence,
             'name', name,
             'type', properties->>'type',
             'researchers', properties->'researchers',
@@ -169,7 +170,8 @@ app.get('/api/researchers', async (req, res) => {
             'location_id', l.id,
             'name', l.name,
             'type', l.properties->>'type',
-            'geometry', ST_AsGeoJSON(l.geom)::json
+            'geometry', ST_AsGeoJSON(l.geom)::json,
+            'confidence', (l.properties->>'confidence')::text
           ) as location_info
         FROM research_locations_all l,
         jsonb_array_elements(l.properties->'researchers') r
@@ -249,7 +251,8 @@ app.get('/api/researchers/:name', async (req, res) => {
           ST_AsGeoJSON(l.geom)::json as location_geometry,
           r->>'name' as researcher_name,
           r->>'url' as researcher_url,
-          r->'works' as works
+          r->'works' as works,
+          (l.properties->>'confidence')::text as confidence
         FROM research_locations_all l,
         jsonb_array_elements(l.properties->'researchers') r
         WHERE r->>'name' = $1
@@ -263,7 +266,8 @@ app.get('/api/researchers/:name', async (req, res) => {
             'location_id', location_id,
             'name', location_name,
             'type', location_type,
-            'geometry', location_geometry
+            'geometry', location_geometry,
+            'confidence', confidence
           )
         ) as locations
       FROM researcher_data

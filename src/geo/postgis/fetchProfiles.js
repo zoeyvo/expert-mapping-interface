@@ -175,6 +175,7 @@ function convertToGeoJSON(researchers) {
                     researcher_name: researcher.researcher_name,
                     researcher_url: researcher.researcher_url,
                     work_count: researcher.work_count,
+                    confidence: location.confidence,
                     location_name: location.name,
                     location_type: location.type,
                     location_id: location.location_id
